@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "44CC44F01B15CB0400E2F545"
-               BuildableName = "BVTournamentCalendar.app"
-               BlueprintName = "BVTournamentCalendar"
+               BuildableName = "Beachvolleyta&#x308;vlingar.app"
+               BlueprintName = "Beachvolleyt&#xe4;vlingar"
                ReferencedContainer = "container:BVTournamentCalendar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "44CC45071B15CB0500E2F545"
-               BuildableName = "BVTournamentCalendarTests.xctest"
-               BlueprintName = "BVTournamentCalendarTests"
+               BuildableName = "BeachvolleytavlingarTests.xctest"
+               BlueprintName = "BeachvolleytavlingarTests"
                ReferencedContainer = "container:BVTournamentCalendar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "44CC45071B15CB0500E2F545"
-               BuildableName = "BVTournamentCalendarTests.xctest"
-               BlueprintName = "BVTournamentCalendarTests"
+               BuildableName = "BeachvolleytavlingarTests.xctest"
+               BlueprintName = "BeachvolleytavlingarTests"
                ReferencedContainer = "container:BVTournamentCalendar.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "44CC44F01B15CB0400E2F545"
-            BuildableName = "BVTournamentCalendar.app"
-            BlueprintName = "BVTournamentCalendar"
+            BuildableName = "Beachvolleyta&#x308;vlingar.app"
+            BlueprintName = "Beachvolleyt&#xe4;vlingar"
             ReferencedContainer = "container:BVTournamentCalendar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "44CC44F01B15CB0400E2F545"
-            BuildableName = "BVTournamentCalendar.app"
-            BlueprintName = "BVTournamentCalendar"
+            BuildableName = "Beachvolleyta&#x308;vlingar.app"
+            BlueprintName = "Beachvolleyt&#xe4;vlingar"
             ReferencedContainer = "container:BVTournamentCalendar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "44CC44F01B15CB0400E2F545"
-            BuildableName = "BVTournamentCalendar.app"
-            BlueprintName = "BVTournamentCalendar"
+            BuildableName = "Beachvolleyta&#x308;vlingar.app"
+            BlueprintName = "Beachvolleyt&#xe4;vlingar"
             ReferencedContainer = "container:BVTournamentCalendar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

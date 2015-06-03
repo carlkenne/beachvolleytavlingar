@@ -13,6 +13,13 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        var image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("sand", ofType: "png")!)
+        image?.drawInRect(self.view.bounds)
+        var i = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        view.backgroundColor = UIColor(patternImage: i)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +29,6 @@ class FirstViewController: UIViewController {
 
 
 }
+
+
 
