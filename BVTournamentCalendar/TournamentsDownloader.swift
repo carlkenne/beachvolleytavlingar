@@ -37,7 +37,7 @@ class TournamentsDownloader {
             for var t = 1; t < allCells.count/7 ; t++
             {
                 let startAt = t * 7
-                var cell = allCells[startAt+4] as TFHppleElement
+                var cell = allCells[startAt+4] as! TFHppleElement
                 let from = Date.parse(cleanValue(allCells[startAt]))
                 let level = cleanValue(allCells[startAt+5])
                 let name = cleanValue(allCells[startAt+4])
@@ -53,8 +53,8 @@ class TournamentsDownloader {
                     level: level,
                     levelCategory: getLevelCategory(level.lowercaseString, name: name.lowercaseString),
                     type: cleanValue(allCells[startAt+6]),
-                    link: self.baseURL + link,
-                    moreInfo: link.length > 0
+                    link: self.baseURL + (link as String),
+                    moreInfo: count(link) > 0
                 )
                 tournaments.append(tournament)
             }
@@ -62,7 +62,7 @@ class TournamentsDownloader {
         return tournaments
     }
     
-    func getLevelCategory(level:String, name:String) -> NSString{
+    func getLevelCategory(level:String, name:String) -> String{
         if(level == "mixed" || name.rangeOfString("mixed") != nil){
             return "mixed"
         }
@@ -78,7 +78,7 @@ class TournamentsDownloader {
         return "misc"
     }
     
-    func getPeriodName(shortSectionName:NSString) -> NSString {
+    func getPeriodName(shortSectionName:String) -> String {
         var periods = TournamentPeriods()
         var range = periods.getPeriodRangeForPeriod(shortSectionName)
         
@@ -89,19 +89,19 @@ class TournamentsDownloader {
         return shortSectionName + " (" + range + ")"
     }
     
-    func getHref(element:AnyObject) -> NSString{
-        var tfElement = element as TFHppleElement
+    func getHref(element:AnyObject) -> String{
+        var tfElement = element as! TFHppleElement
         if(tfElement.attributes["href"] != nil) {
-            return tfElement.attributes["href"] as NSString
+            return tfElement.attributes["href"] as! String
         }
         return tfElement.children
             .map({ self.getHref($0) })
-            .filter({ $0.length > 0 })
+            .filter({ count($0) > 0 })
             .reduce(""){ $0 + $1}
     }
     
     func cleanValue(value:AnyObject) -> String {
-        return (value as TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
 }
 

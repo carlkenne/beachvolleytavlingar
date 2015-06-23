@@ -85,7 +85,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             }).allObjects
 
             self.results = sectionNames.map {
-                var sectionName:String = $0 as String
+                var sectionName:String = $0 as! String
                 return PeriodTableSection(title: sectionName, tournaments: data.filter( {(tournament: Tournament) -> Bool in
                     tournament.period == sectionName
                 }))
@@ -94,7 +94,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
             var currentPeriod = -1
             for var p = 0; p < self.results.count; p++ {
-                if(self.results[p].title.rangeOfString(currentPeriodName) != nil) {
+                if(self.results[p].title.rangeOfString(currentPeriodName as String) != nil) {
                     currentPeriod = p
                 }
             }
@@ -132,7 +132,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         if(tournament.moreInfo){
             cellName = "MoreInfo"
         }
-        let cell = table.dequeueReusableCellWithIdentifier(cellName) as UITableViewCell
+        let cell = table.dequeueReusableCellWithIdentifier(cellName) as! UITableViewCell
         cell.textLabel?.text = tournament.name
         cell.detailTextLabel?.text = tournament.formattedFrom + " - " + tournament.organiser
         
@@ -172,7 +172,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexPath = table.indexPathForSelectedRow()!
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.selectedTournament = self.results[indexPath.section].tournaments[indexPath.row]
         self.performSegueWithIdentifier("ShowTournament", sender: self)
         table.beginUpdates()
@@ -182,8 +182,8 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
 
         if segue.identifier == "ShowSettings" {
-            let nav = segue.destinationViewController as UINavigationController
-            let filterViewController = nav.visibleViewController as FilterSettingsViewController
+            let nav = segue.destinationViewController as! UINavigationController
+            let filterViewController = nav.visibleViewController as! FilterSettingsViewController
             filterViewController.addSettings(doNotInclude)
             filterViewController.prepopulateSettings()
         }

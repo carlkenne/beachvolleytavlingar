@@ -19,7 +19,7 @@ class TournamentApplicantsDownloader {
     }
     
     func redirectDownload(url: NSString,tournament:Tournament, callback:([Applicants]) -> Void) {
-        HttpDownloader().httpGetOld("http://www.profixio.com" + url) {
+        HttpDownloader().httpGetOld("http://www.profixio.com" + (url as String)) {
              (data, error) -> Void in
             sleep(1)
             self.participantsDownload(tournament, callback:callback)
@@ -48,7 +48,7 @@ class TournamentApplicantsDownloader {
             var applicants = Applicants(
                 players: cleanValue(allCells[td]).stringByReplacingOccurrencesOfString("(Väntelista)", withString: ""),
                 club: cleanValue(allCells[td+1]),
-                type: cleanValue(allCells[td+2]) + getReserveCode(allCells[td]),
+                type: (cleanValue(allCells[td+2]) as String) + (getReserveCode(allCells[td]) as String),
                 time: cleanValue(allCells[td+3]),
                 rankingPoints: cleanValue(allCells[td+4]),
                 entryPoints: cleanValue(allCells[td+5]),
@@ -69,6 +69,6 @@ class TournamentApplicantsDownloader {
     }
     
     func cleanValue(value:AnyObject) -> NSString {
-        return (value as TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
 }

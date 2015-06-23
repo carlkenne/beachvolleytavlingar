@@ -44,7 +44,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     
     func tableView(UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
-        let cell = table.dequeueReusableCellWithIdentifier("Applicant") as UITableViewCell
+        let cell = table.dequeueReusableCellWithIdentifier("Applicant") as! UITableViewCell
 
         cell.textLabel?.text = applicants.players
         cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row+1) (\(applicants.points())p) \(applicants.club)"
@@ -82,8 +82,8 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     
     func showTournament(){
         loading.startAnimating()
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        var tournament = appDelegate.selectedTournament?
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var tournament = appDelegate.selectedTournament
         parentViewController?.title = tournament?.name
         
         TournamentApplicantsDownloader().downloadHTML(tournament!){
@@ -96,7 +96,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
             }).allObjects
             
             self.dataSource = sectionNames.map {
-            var sectionName:String = $0 as String
+            var sectionName:String = $0 as! String
                 return ApplicantsTableSection(title: sectionName, applicants: listOfApplicants.filter( {(applicant: Applicants) -> Bool in
                     applicant.type == sectionName
                 }))

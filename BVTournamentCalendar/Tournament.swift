@@ -10,20 +10,20 @@ import Foundation
 
 struct Tournament {
     let from: NSDate
-    let formattedFrom: NSString
-    let to: NSString
-    let period: NSString
-    let organiser: NSString
-    let name: NSString
-    let level: NSString
-    let levelCategory: NSString
-    let type: NSString
-    let link: NSString
+    let formattedFrom: String
+    let to: String
+    let period: String
+    let organiser: String
+    let name: String
+    let level: String
+    let levelCategory: String
+    let type: String
+    let link: String
     let moreInfo: Bool
 }
 
 struct Applicants {
-    let players: NSString
+    let players: String
     let club: NSString
     let type: NSString
     let time: NSString

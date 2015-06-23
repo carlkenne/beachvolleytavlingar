@@ -537,13 +537,13 @@
                   symbolName = "Beachvolleyta&#x308;vlingar.TournamentsDownloader.downloadHTML (Beachvolleyta&#x308;vlingar.TournamentsDownloader)((Swift.Array&lt;Beachvolleyta&#x308;vlingar.Tournament&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Beachvolleyta&#x308;vlingar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/carlkenne/Development/iphone/BVTournamentCalendar/BVTournamentCalendar/TournamentsDownloader.swift"
-                  timestampString = "455842170.23918"
+                  urlString = "file:///Users/carlkenne/Development/beachvolleytavlingar/BVTournamentCalendar/TournamentsDownloader.swift"
+                  timestampString = "456752224.213103"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "31">
+                  offsetFromSymbolStart = "23">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -552,12 +552,12 @@
                   symbolName = "Beachvolleyta&#x308;vlingar.TournamentsDownloader.(downloadHTML (Beachvolleyta&#x308;vlingar.TournamentsDownloader) -&gt; ((Swift.Array&lt;Beachvolleyta&#x308;vlingar.Tournament&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Beachvolleyta&#x308;vlingar"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/carlkenne/Development/iphone/BVTournamentCalendar/BVTournamentCalendar/TournamentsDownloader.swift"
-                  timestampString = "455842170.239363"
+                  urlString = "file:///Users/carlkenne/Development/beachvolleytavlingar/BVTournamentCalendar/TournamentsDownloader.swift"
+                  timestampString = "456752224.213279"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
                   offsetFromSymbolStart = "57">
                </Location>
             </Locations>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BVTournamentCalendar/TournamentApplicantsDownloader.swift"
-            timestampString = "455892457.941704"
+            timestampString = "456752096.495489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "parseHTML(_:HTMLData:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -694,7 +694,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BVTournamentCalendar/TournamentPeriods.swift"
@@ -704,6 +704,54 @@
             startingLineNumber = "15"
             endingLineNumber = "15"
             landmarkName = "getPeriodNameForDate(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BVTournamentCalendar/TournamentApplicantsDownloader.swift"
+            timestampString = "456750649.265008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "cleanValue(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BVTournamentCalendar/TournamentsDownloader.swift"
+            timestampString = "456752235.787892"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "downloadHTML(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BVTournamentCalendar/TournamentsDownloader.swift"
+            timestampString = "456752247.584412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "downloadHTML(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

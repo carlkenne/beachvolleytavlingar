@@ -20,7 +20,7 @@ class TournamentDownloader {
     }
     
     func delayedDownload(tournament:Tournament, callback:(TournamentDetail) -> Void) {
-        HttpDownloader().httpGetOld(tournament.link){
+        HttpDownloader().httpGetOld(tournament.link as String){
             (data, error) -> Void in
             if error != nil {
                 println(error)
@@ -37,8 +37,8 @@ class TournamentDownloader {
         var anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
         return TournamentDetail(
             link: tournament.link,
-            table: (allCells[1] as TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
-            redirectURL: self.extractOnClickLink((anmalan[0] as TFHppleElement).attributes["onclick"] as NSString))
+            table: (allCells[1] as! TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
+            redirectURL: self.extractOnClickLink((anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString))
     }
     
     func extractOnClickLink(onclickString: NSString) -> NSString {
@@ -48,6 +48,6 @@ class TournamentDownloader {
     }
     
     func cleanValue(value:AnyObject) -> String {
-        return (value as TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
 }

@@ -140,7 +140,7 @@ class TournamentPeriods {
         return 16
     }
     
-    func getPeriodRangeForPeriod(date: NSString) -> NSString{
+    func getPeriodRangeForPeriod(date: NSString) -> String{
         if(date == "TP 01")
         {
             return "1 jan - 22 mars"
