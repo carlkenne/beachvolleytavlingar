@@ -9,8 +9,8 @@
 import UIKit
 
 class PeriodsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet var table : UITableView!
-    @IBOutlet var loading : UIActivityIndicatorView!
+    @IBOutlet weak var table : UITableView!
+    @IBOutlet weak var loading : UIActivityIndicatorView!
 
     var results = [PeriodTableSection]()
     var filter = FilterSettings()
@@ -60,11 +60,19 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         UIGraphicsEndImageContext()
         
         view.backgroundColor = UIColor(patternImage: i)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        table.hidden = true
         loadData()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+    }
+    
     func loadData() {
-        table.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
         TournamentsDownloader().downloadHTML(){(_data) -> Void in
 
@@ -163,21 +171,16 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let indexPath = table.indexPathForSelectedRow()!
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        appDelegate.selectedTournament = self.results[indexPath.section].tournaments[indexPath.row]
         self.performSegueWithIdentifier("ShowTournament", sender: self)
         table.beginUpdates()
         table.endUpdates()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "ShowTournament" {
-            let tournamentDetailViewController = segue.destinationViewController as TournamentViewController
-            let indexPath = table.indexPathForSelectedRow()!
-            var tournament = self.results[indexPath.section].tournaments[indexPath.row]
-            
-            tournamentDetailViewController.title = tournament.name
-            tournamentDetailViewController.tournament = tournament
-            tournamentDetailViewController.showTournament()
-        }
+
         if segue.identifier == "ShowSettings" {
             let nav = segue.destinationViewController as UINavigationController
             let filterViewController = nav.visibleViewController as FilterSettingsViewController

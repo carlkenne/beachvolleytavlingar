@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AmP-o0-pXB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AmP-o0-pXB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEw-Mn-g0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501.5" y="-712.5"/>
+            <point key="canvasLocation" x="319.5" y="-804.5"/>
         </scene>
         <!--Filter-->
         <scene sceneID="d5e-w4-svZ">
@@ -239,7 +239,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GES-Ht-4rP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="50D-ed-iac" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="70"/>
+            <point key="canvasLocation" x="1419" y="-121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IdG-e7-qLB">
@@ -256,7 +256,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wz-Cy-q0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1133" y="-97"/>
+            <point key="canvasLocation" x="849" y="-121"/>
         </scene>
         <!--Beachvolleytävlingar-->
         <scene sceneID="v2I-K7-iLw">
@@ -372,17 +372,102 @@
                     <connections>
                         <outlet property="loading" destination="4Ot-4c-XKL" id="BPk-Xj-OAA"/>
                         <outlet property="table" destination="Sih-Yd-ZGr" id="KiH-dZ-EgN"/>
-                        <segue destination="oQp-3O-Qli" kind="show" identifier="ShowTournament" id="6FG-u3-iBI"/>
+                        <segue destination="IoU-4k-bbK" kind="show" identifier="ShowTournament" id="gr4-lo-RHH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZP-m5-2pi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1133" y="-746"/>
+            <point key="canvasLocation" x="849" y="-804"/>
         </scene>
-        <!--Tournament View Controller-->
+        <!--Anmälningslista-->
+        <scene sceneID="TYc-ix-QCU">
+            <objects>
+                <viewController id="HOh-SD-uTL" customClass="TournamentApplicantsViewController" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OUX-QD-yY9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ynh-QF-UAy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hj4-2T-VqB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-YH-qav">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="oUS-5N-um8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.0" green="0.27615591340000001" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Applicant" textLabel="atC-9d-mHI" detailTextLabel="A9a-tv-35B" style="IBUITableViewCellStyleSubtitle" id="JMK-cq-S9w">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JMK-cq-S9w" id="C3M-sM-tIC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Carl Kenne / Nicklas Berger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="atC-9d-mHI">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="#1 (34p) Bromma VK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A9a-tv-35B">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oUS-5N-um8" firstAttribute="leading" secondItem="hj4-2T-VqB" secondAttribute="leading" id="Mbl-mD-yug"/>
+                            <constraint firstItem="ynh-QF-UAy" firstAttribute="top" secondItem="oUS-5N-um8" secondAttribute="bottom" id="NQA-zr-Pvb"/>
+                            <constraint firstAttribute="centerY" secondItem="3vX-YH-qav" secondAttribute="centerY" id="Rgj-Ip-4Ud"/>
+                            <constraint firstAttribute="trailing" secondItem="oUS-5N-um8" secondAttribute="trailing" id="S3J-Bf-ua0"/>
+                            <constraint firstItem="oUS-5N-um8" firstAttribute="top" secondItem="OUX-QD-yY9" secondAttribute="bottom" id="Yen-Kv-wFy"/>
+                            <constraint firstAttribute="centerX" secondItem="3vX-YH-qav" secondAttribute="centerX" id="hR6-NQ-0oG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anmälningslista" image="game" id="BvP-pd-WZR"/>
+                    <connections>
+                        <outlet property="loading" destination="3vX-YH-qav" id="FtJ-8M-rnB"/>
+                        <outlet property="table" destination="oUS-5N-um8" id="3pn-AY-KqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWt-WL-cIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881.5" y="-1546.5"/>
+        </scene>
+        <!--Turneringssidan-->
+        <scene sceneID="xti-IT-sh2">
+            <objects>
+                <tabBarController title="Turneringssidan" id="IoU-4k-bbK" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tQW-90-bBn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oQp-3O-Qli" kind="relationship" relationship="viewControllers" id="mhn-yo-w3Z"/>
+                        <segue destination="HOh-SD-uTL" kind="relationship" relationship="viewControllers" id="qZm-WX-xGA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gN9-Yf-8E5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303.5" y="-1546.5"/>
+        </scene>
+        <!--Info-->
         <scene sceneID="sEv-KH-34a">
             <objects>
-                <viewController id="oQp-3O-Qli" customClass="TournamentViewController" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Info" id="oQp-3O-Qli" customClass="TournamentViewController" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7P5-1V-ewj"/>
                         <viewControllerLayoutGuide type="bottom" id="m6d-y8-iuS"/>
@@ -392,7 +477,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDI-DU-mQY">
-                                <rect key="frame" x="16" y="64" width="299" height="416"/>
+                                <rect key="frame" x="16" y="0.0" width="299" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="Uqn-fP-PiL"/>
@@ -410,22 +495,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="m6d-y8-iuS" firstAttribute="top" secondItem="zDI-DU-mQY" secondAttribute="bottom" id="74J-9N-3lO"/>
+                            <constraint firstItem="zDI-DU-mQY" firstAttribute="top" secondItem="7P5-1V-ewj" secondAttribute="bottom" id="3uR-HZ-44i"/>
+                            <constraint firstItem="zDI-DU-mQY" firstAttribute="leading" secondItem="jQt-vn-jPo" secondAttribute="leadingMargin" id="Rpz-Yg-jKA"/>
+                            <constraint firstItem="zDI-DU-mQY" firstAttribute="bottom" secondItem="m6d-y8-iuS" secondAttribute="top" id="TWM-xw-gFN"/>
+                            <constraint firstItem="zDI-DU-mQY" firstAttribute="top" secondItem="jQt-vn-jPo" secondAttribute="top" id="Tf3-Cx-gAr"/>
                             <constraint firstAttribute="centerX" secondItem="lIs-sk-5TG" secondAttribute="centerX" id="XIY-cP-VZm"/>
                             <constraint firstAttribute="centerY" secondItem="lIs-sk-5TG" secondAttribute="centerY" id="cil-WJ-fKU"/>
                             <constraint firstItem="zDI-DU-mQY" firstAttribute="trailing" secondItem="jQt-vn-jPo" secondAttribute="trailingMargin" id="d5f-GY-JMf"/>
                             <constraint firstItem="zDI-DU-mQY" firstAttribute="leading" secondItem="jQt-vn-jPo" secondAttribute="leadingMargin" id="fcw-it-it4"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="trailing" secondItem="jQt-vn-jPo" secondAttribute="trailing" constant="-5" id="rP9-TH-lZC"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="leading" secondItem="jQt-vn-jPo" secondAttribute="leadingMargin" id="ruH-q3-By9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zDI-DU-mQY" secondAttribute="trailing" constant="-11" id="s0Z-e8-Icb"/>
                             <constraint firstItem="zDI-DU-mQY" firstAttribute="top" secondItem="7P5-1V-ewj" secondAttribute="bottom" id="u9r-Vt-Dk1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="3uR-HZ-44i"/>
                                 <exclude reference="d5f-GY-JMf"/>
                                 <exclude reference="fcw-it-it4"/>
+                                <exclude reference="u9r-Vt-Dk1"/>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="info" image="info" id="Zev-O8-MHB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="loading" destination="lIs-sk-5TG" id="cwn-XR-KZX"/>
@@ -434,13 +524,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2X-Ef-AQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585.5" y="-746.5"/>
+            <point key="canvasLocation" x="1303" y="-786"/>
         </scene>
     </scenes>
     <resources>
         <image name="black.png" width="300" height="300"/>
         <image name="blue.png" width="300" height="300"/>
+        <image name="game" width="25" height="25"/>
         <image name="green.png" width="300" height="300"/>
+        <image name="info" width="25" height="25"/>
         <image name="normal.png" width="300" height="300"/>
         <image name="red.png" width="300" height="300"/>
         <image name="second" width="30" height="30"/>

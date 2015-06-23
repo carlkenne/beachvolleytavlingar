@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4425305D1B1CDFE4006CD74B /* TournamentDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425305C1B1CDFE4006CD74B /* TournamentDownloader.swift */; };
+		442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */; };
+		442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */; };
+		442A74231B2F004700875705 /* normal-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 442A74221B2F004700875705 /* normal-back.png */; };
 		44686A141B15EFBD004307E7 /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A121B15EFBD004307E7 /* HttpDownloader.swift */; };
 		44686A151B15EFBD004307E7 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A131B15EFBD004307E7 /* StringHelper.swift */; };
 		44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A161B16139F004307E7 /* PeriodsViewController.swift */; };
@@ -17,7 +20,6 @@
 		44686A251B165096004307E7 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 44686A221B165096004307E7 /* XPathQuery.m */; };
 		44686A271B17049D004307E7 /* TournamentsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A261B17049D004307E7 /* TournamentsDownloader.swift */; };
 		44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A281B170D3E004307E7 /* TournamentViewController.swift */; };
-		44686A2C1B1734C1004307E7 /* sand.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 44686A2B1B1734C1004307E7 /* sand.JPG */; };
 		44686A2E1B17356C004307E7 /* IMG_2993.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 44686A2D1B17356C004307E7 /* IMG_2993.JPG */; };
 		44686A301B174188004307E7 /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A2F1B174188004307E7 /* sand.png */; };
 		44686A371B185161004307E7 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A311B185161004307E7 /* black.png */; };
@@ -25,17 +27,6 @@
 		44686A391B185161004307E7 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A331B185161004307E7 /* green.png */; };
 		44686A3A1B185161004307E7 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A341B185161004307E7 /* normal.png */; };
 		44686A3B1B185161004307E7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A351B185161004307E7 /* red.png */; };
-		44686A3C1B185161004307E7 /* undefined.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A361B185161004307E7 /* undefined.png */; };
-		44686A451B1864B7004307E7 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A3E1B1864B7004307E7 /* icon72.png */; };
-		44686A461B1864B7004307E7 /* icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A3F1B1864B7004307E7 /* icon76.png */; };
-		44686A471B1864B7004307E7 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A401B1864B7004307E7 /* icon114.png */; };
-		44686A481B1864B7004307E7 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A411B1864B7004307E7 /* icon120.png */; };
-		44686A491B1864B7004307E7 /* icon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A421B1864B7004307E7 /* icon144.png */; };
-		44686A4A1B1864B7004307E7 /* icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A431B1864B7004307E7 /* icon152.png */; };
-		44686A4E1B1865CA004307E7 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A4B1B1865CA004307E7 /* icon80.png */; };
-		44686A4F1B1865CA004307E7 /* icon87.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A4C1B1865CA004307E7 /* icon87.png */; };
-		44686A501B1865CA004307E7 /* icon180.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A4D1B1865CA004307E7 /* icon180.png */; };
-		44686A521B18661F004307E7 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A511B18661F004307E7 /* icon58.png */; };
 		44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A531B1C50F4004307E7 /* TournamentPeriods.swift */; };
 		44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */; };
 		44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F61B15CB0400E2F545 /* AppDelegate.swift */; };
@@ -59,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		4425305C1B1CDFE4006CD74B /* TournamentDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDownloader.swift; sourceTree = "<group>"; };
+		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
+		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
+		442A74221B2F004700875705 /* normal-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal-back.png"; sourceTree = "<group>"; };
 		44686A121B15EFBD004307E7 /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpDownloader.swift; path = ../../../SandSports/SandSports/Framework/HttpDownloader.swift; sourceTree = "<group>"; };
 		44686A131B15EFBD004307E7 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringHelper.swift; path = ../../../SandSports/SandSports/Framework/StringHelper.swift; sourceTree = "<group>"; };
 		44686A161B16139F004307E7 /* PeriodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodsViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +66,6 @@
 		44686A221B165096004307E7 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		44686A261B17049D004307E7 /* TournamentsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentsDownloader.swift; sourceTree = "<group>"; };
 		44686A281B170D3E004307E7 /* TournamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
-		44686A2B1B1734C1004307E7 /* sand.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sand.JPG; sourceTree = "<group>"; };
 		44686A2D1B17356C004307E7 /* IMG_2993.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2993.JPG; sourceTree = "<group>"; };
 		44686A2F1B174188004307E7 /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand.png; sourceTree = "<group>"; };
 		44686A311B185161004307E7 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
@@ -80,17 +73,6 @@
 		44686A331B185161004307E7 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		44686A341B185161004307E7 /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
 		44686A351B185161004307E7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
-		44686A361B185161004307E7 /* undefined.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undefined.png; sourceTree = "<group>"; };
-		44686A3E1B1864B7004307E7 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon72.png; sourceTree = "<group>"; };
-		44686A3F1B1864B7004307E7 /* icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon76.png; sourceTree = "<group>"; };
-		44686A401B1864B7004307E7 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
-		44686A411B1864B7004307E7 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
-		44686A421B1864B7004307E7 /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon144.png; sourceTree = "<group>"; };
-		44686A431B1864B7004307E7 /* icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon152.png; sourceTree = "<group>"; };
-		44686A4B1B1865CA004307E7 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
-		44686A4C1B1865CA004307E7 /* icon87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon87.png; sourceTree = "<group>"; };
-		44686A4D1B1865CA004307E7 /* icon180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon180.png; sourceTree = "<group>"; };
-		44686A511B18661F004307E7 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		44686A531B1C50F4004307E7 /* TournamentPeriods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentPeriods.swift; sourceTree = "<group>"; };
 		44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSettingsViewController.swift; sourceTree = "<group>"; };
 		44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beachvolleytävlingar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +123,7 @@
 				44686A261B17049D004307E7 /* TournamentsDownloader.swift */,
 				44686A531B1C50F4004307E7 /* TournamentPeriods.swift */,
 				4425305C1B1CDFE4006CD74B /* TournamentDownloader.swift */,
+				442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -162,25 +145,14 @@
 		44686A2A1B1734C0004307E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				44686A511B18661F004307E7 /* icon58.png */,
-				44686A4B1B1865CA004307E7 /* icon80.png */,
-				44686A4C1B1865CA004307E7 /* icon87.png */,
-				44686A4D1B1865CA004307E7 /* icon180.png */,
-				44686A3E1B1864B7004307E7 /* icon72.png */,
-				44686A3F1B1864B7004307E7 /* icon76.png */,
-				44686A401B1864B7004307E7 /* icon114.png */,
-				44686A411B1864B7004307E7 /* icon120.png */,
-				44686A421B1864B7004307E7 /* icon144.png */,
-				44686A431B1864B7004307E7 /* icon152.png */,
+				442A74221B2F004700875705 /* normal-back.png */,
 				44686A311B185161004307E7 /* black.png */,
 				44686A321B185161004307E7 /* blue.png */,
 				44686A331B185161004307E7 /* green.png */,
 				44686A341B185161004307E7 /* normal.png */,
 				44686A351B185161004307E7 /* red.png */,
-				44686A361B185161004307E7 /* undefined.png */,
 				44686A2F1B174188004307E7 /* sand.png */,
 				44686A2D1B17356C004307E7 /* IMG_2993.JPG */,
-				44686A2B1B1734C1004307E7 /* sand.JPG */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +192,7 @@
 				44686A161B16139F004307E7 /* PeriodsViewController.swift */,
 				44686A281B170D3E004307E7 /* TournamentViewController.swift */,
 				44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */,
+				442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */,
 			);
 			path = BVTournamentCalendar;
 			sourceTree = "<group>";
@@ -331,25 +304,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */,
-				44686A481B1864B7004307E7 /* icon120.png in Resources */,
-				44686A491B1864B7004307E7 /* icon144.png in Resources */,
+				442A74231B2F004700875705 /* normal-back.png in Resources */,
 				44686A371B185161004307E7 /* black.png in Resources */,
-				44686A3C1B185161004307E7 /* undefined.png in Resources */,
-				44686A451B1864B7004307E7 /* icon72.png in Resources */,
-				44686A461B1864B7004307E7 /* icon76.png in Resources */,
-				44686A4F1B1865CA004307E7 /* icon87.png in Resources */,
 				44CC45031B15CB0500E2F545 /* LaunchScreen.xib in Resources */,
-				44686A4A1B1864B7004307E7 /* icon152.png in Resources */,
 				44686A391B185161004307E7 /* green.png in Resources */,
 				44686A381B185161004307E7 /* blue.png in Resources */,
 				44686A2E1B17356C004307E7 /* IMG_2993.JPG in Resources */,
 				44686A3A1B185161004307E7 /* normal.png in Resources */,
-				44686A521B18661F004307E7 /* icon58.png in Resources */,
-				44686A501B1865CA004307E7 /* icon180.png in Resources */,
-				44686A4E1B1865CA004307E7 /* icon80.png in Resources */,
-				44686A2C1B1734C1004307E7 /* sand.JPG in Resources */,
 				44686A3B1B185161004307E7 /* red.png in Resources */,
-				44686A471B1864B7004307E7 /* icon114.png in Resources */,
 				44CC45001B15CB0400E2F545 /* Images.xcassets in Resources */,
 				44686A301B174188004307E7 /* sand.png in Resources */,
 			);
@@ -379,8 +341,10 @@
 				44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */,
 				44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */,
 				44686A241B165096004307E7 /* TFHppleElement.m in Sources */,
+				442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */,
 				44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */,
 				44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */,
+				442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */,
 				44686A271B17049D004307E7 /* TournamentsDownloader.swift in Sources */,
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
 			);

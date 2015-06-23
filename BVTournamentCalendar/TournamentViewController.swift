@@ -11,20 +11,16 @@ import Foundation
 
 class TournamentViewController: UIViewController, UIWebViewDelegate
 {
-    var tournament:Tournament?
-    var loaded = false
+
     @IBOutlet var loading : UIActivityIndicatorView!
     @IBOutlet var text : UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loaded = true
         text.delegate = self
-        if(tournament != nil){
-            showTournament()
-        }
+        showTournament()
     }
-
+ 
     func webView(webView: UIWebView,
         shouldStartLoadWithRequest request: NSURLRequest,
         navigationType: UIWebViewNavigationType) -> Bool {
@@ -42,18 +38,20 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
     }
     
     func showTournament(){
-        if(loaded == true) {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let tournament = appDelegate.selectedTournament?
+        parentViewController?.title = tournament?.name
+
             loading.startAnimating()
-            TournamentDownloader().downloadHTML(self.tournament!){
+            TournamentDownloader().downloadHTML(tournament!){
                 (res) -> Void in
-                let link:NSString? = self.tournament?.link
+                let link:NSString? = tournament?.link
                 
-                var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style>body>table {max-width:430px; }</style>" + res.table + "<br/><br/>sidlänk:  <a href=\"" + link! + " \">" + link! + "</a></body></html>"
+                var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style>body>table {max-width:430px; }.uh{font-weight: bold;padding-right:6px;  vertical-align: top;}body>table>tbody>tr>td{padding-bottom:7px;}.startkont {text-align: right;}td{padding-right:15px;}</style>" + res.table + "<br/><br/>sidlänk:  <a href=\"" + link! + " \">" + link! + "</a></body></html>"
                 
                 self.text.loadHTMLString(html, baseURL: NSURL(string:"http://www.profixio.com"))
                 
                 self.loading.stopAnimating()
             }
-        }
     }
 }

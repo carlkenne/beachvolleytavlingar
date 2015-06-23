@@ -9,30 +9,24 @@
 import Foundation
 
 class TournamentDownloader {
-    var t:Tournament? = nil
-    var c:((TournamentDetail) -> Void)? = nil
-    
     
     func downloadHTML(tournament:Tournament, callback:(TournamentDetail) -> Void) {
         //renew the session
-        t = tournament
-        c = callback
         
         TournamentsDownloader().downloadHTML(){ (data) -> Void in
             sleep(1)
-            //var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: NSSelectorFromString("delayedDownload"), userInfo: nil, repeats: true)
-            self.delayedDownload()
+            self.delayedDownload(tournament, callback: callback)
         }
     }
     
-    func delayedDownload() {
-        HttpDownloader().httpGetOld(t!.link){
+    func delayedDownload(tournament:Tournament, callback:(TournamentDetail) -> Void) {
+        HttpDownloader().httpGetOld(tournament.link){
             (data, error) -> Void in
             if error != nil {
                 println(error)
             } else {
-                var results = self.parseHTML(self.t!, HTMLData: data!)
-                self.c!(results)
+                var results = self.parseHTML(tournament, HTMLData: data!)
+                callback(results)
             }
         }
         
@@ -40,7 +34,17 @@ class TournamentDownloader {
     
     func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
-        return TournamentDetail(link: tournament.link, table: (allCells[1] as TFHppleElement).raw)
+        var anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
+        return TournamentDetail(
+            link: tournament.link,
+            table: (allCells[1] as TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
+            redirectURL: self.extractOnClickLink((anmalan[0] as TFHppleElement).attributes["onclick"] as NSString))
+    }
+    
+    func extractOnClickLink(onclickString: NSString) -> NSString {
+        var str = onclickString.stringByReplacingOccurrencesOfString("window.open(\"..", withString: "")
+        str = str.stringByReplacingOccurrencesOfString("\", \"_blank\")", withString: "")
+        return str
     }
     
     func cleanValue(value:AnyObject) -> String {

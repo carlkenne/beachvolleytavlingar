@@ -22,9 +22,32 @@ struct Tournament {
     let moreInfo: Bool
 }
 
+struct Applicants {
+    let players: NSString
+    let club: NSString
+    let type: NSString
+    let time: NSString
+    let rankingPoints: NSString
+    let entryPoints: NSString
+    let status: Bool
+    
+    func points() -> Int {
+        if(rankingPoints.length>0) {
+            return (rankingPoints as String).toInt()!
+        }
+        return (entryPoints as String).toInt()!
+    }
+}
+
+struct ApplicantsTableSection {
+    let title: String
+    let applicants: [Applicants]
+}
+
 struct TournamentDetail {
     let link: NSString
     let table: NSString
+    let redirectURL: NSString
 }
 
 struct PeriodTableSection {
