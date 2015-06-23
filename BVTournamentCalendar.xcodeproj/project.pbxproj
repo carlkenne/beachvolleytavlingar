@@ -11,8 +11,6 @@
 		442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */; };
 		442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */; };
 		442A74231B2F004700875705 /* normal-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 442A74221B2F004700875705 /* normal-back.png */; };
-		44686A141B15EFBD004307E7 /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A121B15EFBD004307E7 /* HttpDownloader.swift */; };
-		44686A151B15EFBD004307E7 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A131B15EFBD004307E7 /* StringHelper.swift */; };
 		44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A161B16139F004307E7 /* PeriodsViewController.swift */; };
 		44686A1A1B1614BC004307E7 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A191B1614BC004307E7 /* Tournament.swift */; };
 		44686A231B165096004307E7 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 44686A1E1B165096004307E7 /* TFHpple.m */; };
@@ -29,6 +27,8 @@
 		44686A3B1B185161004307E7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A351B185161004307E7 /* red.png */; };
 		44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A531B1C50F4004307E7 /* TournamentPeriods.swift */; };
 		44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */; };
+		448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D22F81B3972C700D1D2CB /* HttpDownloader.swift */; };
+		448D22FB1B3972C700D1D2CB /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D22F91B3972C700D1D2CB /* StringHelper.swift */; };
 		44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F61B15CB0400E2F545 /* AppDelegate.swift */; };
 		44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F81B15CB0400E2F545 /* FirstViewController.swift */; };
 		44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CC44FC1B15CB0400E2F545 /* Main.storyboard */; };
@@ -53,8 +53,6 @@
 		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
 		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
 		442A74221B2F004700875705 /* normal-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal-back.png"; sourceTree = "<group>"; };
-		44686A121B15EFBD004307E7 /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpDownloader.swift; path = ../../../SandSports/SandSports/Framework/HttpDownloader.swift; sourceTree = "<group>"; };
-		44686A131B15EFBD004307E7 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringHelper.swift; path = ../../../SandSports/SandSports/Framework/StringHelper.swift; sourceTree = "<group>"; };
 		44686A161B16139F004307E7 /* PeriodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodsViewController.swift; sourceTree = "<group>"; };
 		44686A191B1614BC004307E7 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		44686A1C1B165096004307E7 /* SandSports-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SandSports-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		44686A351B185161004307E7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		44686A531B1C50F4004307E7 /* TournamentPeriods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentPeriods.swift; sourceTree = "<group>"; };
 		44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSettingsViewController.swift; sourceTree = "<group>"; };
+		448D22F81B3972C700D1D2CB /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDownloader.swift; sourceTree = "<group>"; };
+		448D22F91B3972C700D1D2CB /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beachvolleytävlingar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CC44F51B15CB0400E2F545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44CC44F61B15CB0400E2F545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 		44686A111B15EE9B004307E7 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				44686A121B15EFBD004307E7 /* HttpDownloader.swift */,
-				44686A131B15EFBD004307E7 /* StringHelper.swift */,
+				448D22F81B3972C700D1D2CB /* HttpDownloader.swift */,
+				448D22F91B3972C700D1D2CB /* StringHelper.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -336,17 +336,17 @@
 				44686A251B165096004307E7 /* XPathQuery.m in Sources */,
 				44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */,
 				44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */,
-				44686A141B15EFBD004307E7 /* HttpDownloader.swift in Sources */,
-				44686A151B15EFBD004307E7 /* StringHelper.swift in Sources */,
 				44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */,
 				44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */,
 				44686A241B165096004307E7 /* TFHppleElement.m in Sources */,
 				442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */,
 				44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */,
+				448D22FB1B3972C700D1D2CB /* StringHelper.swift in Sources */,
 				44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */,
 				442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */,
 				44686A271B17049D004307E7 /* TournamentsDownloader.swift in Sources */,
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
+				448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
