@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Carl Kenne. All rights reserved.
 //
 
-import Foundation
 
 class TournamentApplicantsDownloader {
     func downloadHTML(tournament:Tournament, callback:([Applicants]) -> Void) {

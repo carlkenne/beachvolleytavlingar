@@ -72,6 +72,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "BVTournamentCalendar.PeriodsViewController.(viewDidLoad (BVTournamentCalendar.PeriodsViewController) -&gt; () -&gt; ()).(closure #1)"
                   moduleName = "BVTournamentCalendar"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/carlkenne/Development/iphone/BVTournamentCalendar/BVTournamentCalendar/PeriodsViewController.swift"
                   timestampString = "454447981.555055"
                   startingColumnNumber = "9223372036854775807"
@@ -86,6 +87,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "BVTournamentCalendar.PeriodsViewController.(viewDidLoad (BVTournamentCalendar.PeriodsViewController) -&gt; () -&gt; ()).(closure #1).(closure #1)"
                   moduleName = "BVTournamentCalendar"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/carlkenne/Development/iphone/BVTournamentCalendar/BVTournamentCalendar/PeriodsViewController.swift"
                   timestampString = "454447981.555264"
                   startingColumnNumber = "9223372036854775807"
@@ -534,6 +536,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "Beachvolleyta&#x308;vlingar.TournamentsDownloader.downloadHTML (Beachvolleyta&#x308;vlingar.TournamentsDownloader)((Swift.Array&lt;Beachvolleyta&#x308;vlingar.Tournament&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Beachvolleyta&#x308;vlingar"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/carlkenne/Development/iphone/BVTournamentCalendar/BVTournamentCalendar/TournamentsDownloader.swift"
                   timestampString = "455842170.23918"
                   startingColumnNumber = "9223372036854775807"
@@ -548,6 +551,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "Beachvolleyta&#x308;vlingar.TournamentsDownloader.(downloadHTML (Beachvolleyta&#x308;vlingar.TournamentsDownloader) -&gt; ((Swift.Array&lt;Beachvolleyta&#x308;vlingar.Tournament&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "Beachvolleyta&#x308;vlingar"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/carlkenne/Development/iphone/BVTournamentCalendar/BVTournamentCalendar/TournamentsDownloader.swift"
                   timestampString = "455842170.239363"
                   startingColumnNumber = "9223372036854775807"
@@ -684,6 +688,22 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "showTournament()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BVTournamentCalendar/TournamentPeriods.swift"
+            timestampString = "456747096.167729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getPeriodNameForDate(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
