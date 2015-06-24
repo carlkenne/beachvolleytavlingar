@@ -80,7 +80,7 @@ class TournamentsDownloader {
     
     func getPeriodName(shortSectionName:String) -> String {
         var periods = TournamentPeriods()
-        var range = periods.getPeriodRangeForPeriod(shortSectionName)
+        var range = periods.getDateRangeForPeriod(shortSectionName)
         
         if(shortSectionName == periods.getPeriodNameForDate(NSDate()))
         {

@@ -16,20 +16,31 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     
     @IBOutlet weak var table: UITableView!
     
+    var refreshControl:UIRefreshControl!
+    func refresh(sender:AnyObject)
+    {
+        // Updating your data here...
+        showTournament()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        showTournament()
+        loading.startAnimating()
         self.table.dataSource = self
+        showTournament()
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         var image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("normal-back", ofType: "png")!)
-
         image?.drawInRect(self.view.bounds, blendMode: CGBlendMode(kCGBlendModeNormal.value), alpha: 1)
-        
         var i = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         view.backgroundColor = UIColor(patternImage: i)
+        
+        self.refreshControl = UIRefreshControl()
+        //self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.table.addSubview(refreshControl)
        
     }
 
@@ -81,12 +92,11 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     }
     
     func showTournament(){
-        loading.startAnimating()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var tournament = appDelegate.selectedTournament
         parentViewController?.title = tournament?.name
         
-        TournamentApplicantsDownloader().downloadHTML(tournament!){
+        TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail){
             (data) -> Void in
             var listOfApplicants = data
             listOfApplicants.sort({ $0.points() > $1.points() })
@@ -105,6 +115,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
             self.dataSource.sort({ $0.title < $1.title })
             
             self.table.reloadData()
+            self.refreshControl.endRefreshing()
             self.loading.stopAnimating()
         }
     }

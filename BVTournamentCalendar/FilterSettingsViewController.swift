@@ -15,6 +15,8 @@ class FilterSettingsViewController: UITableViewController {
     @IBOutlet weak var challenger: UISwitch!
     @IBOutlet weak var Mixed: UISwitch!
     @IBOutlet weak var misc: UISwitch!
+    @IBOutlet weak var hideOld: UISwitch!
+    
     var loaded:Bool = false
     var settingsToExclude = NSSet()
     
@@ -53,6 +55,8 @@ class FilterSettingsViewController: UITableViewController {
         if(settingsToExclude.containsObject("misc")){
             misc.on = false
         }
-        
+        if(settingsToExclude.containsObject("hideOld")){
+            hideOld.on = false
+        }
     }
 }

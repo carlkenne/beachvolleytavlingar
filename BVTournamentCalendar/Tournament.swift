@@ -18,7 +18,7 @@ struct Tournament {
     let level: String
     let levelCategory: String
     let type: String
-    let link: String
+    let link: String //link to the tournament detail page
     let moreInfo: Bool
 }
 
@@ -45,9 +45,9 @@ struct ApplicantsTableSection {
 }
 
 struct TournamentDetail {
-    let link: NSString
+    let link: NSString //link to the tournament detail page should always be the same as tournament.link
     let table: NSString
-    let redirectURL: NSString
+    let setServerSessionCookieUrl: NSString //this must be requested first to set the server session cookie
 }
 
 struct PeriodTableSection {

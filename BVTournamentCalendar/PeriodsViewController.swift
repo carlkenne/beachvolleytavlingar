@@ -35,19 +35,31 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             if(!filterSettings.misc.on){
                 excludes.append("misc")
             }
+            if(!filterSettings.hideOld.on){
+                excludes.append("hideOld")
+            }
             
-            filter = FilterSettings(
+         /* filter = FilterSettings(
                 black:filterSettings.black.on,
                 green:filterSettings.green.on,
                 challenger:filterSettings.challenger.on,
                 mixed:filterSettings.Mixed.on,
-                misc:filterSettings.misc.on)
+                misc:filterSettings.misc.on
+            ) */
 
             doNotInclude = NSSet(array: excludes)
 
             loadData()
         }
 
+    }
+    
+    var refreshControl:UIRefreshControl!
+    
+    func refresh(sender:AnyObject)
+    {
+        // Updating your data here...
+        loadData()
     }
     
     override func viewDidLoad() {
@@ -60,16 +72,14 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         UIGraphicsEndImageContext()
         
         view.backgroundColor = UIColor(patternImage: i)
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         table.hidden = true
+        loading.startAnimating()
         loadData()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
         
+        self.refreshControl = UIRefreshControl()
+        //self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.table.addSubview(refreshControl)
     }
     
     func loadData() {
@@ -80,9 +90,17 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
                 !self.doNotInclude.containsObject(tournament.levelCategory)
             })
             
+            if(!self.doNotInclude.containsObject("hideOld")){
+                var now = NSDate()
+                var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
+                data = data.filter( {(tournament: Tournament) -> Bool in
+                    tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil
+                })
+            }
+            
             let sectionNames = NSSet(array: data.map {
                 return $0.period
-            }).allObjects
+            }).allObjects   
 
             self.results = sectionNames.map {
                 var sectionName:String = $0 as! String
@@ -91,17 +109,14 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
                 }))
             }
             self.results.sort({ $0.title < $1.title })
-            var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
-            var currentPeriod = -1
-            for var p = 0; p < self.results.count; p++ {
-                if(self.results[p].title.rangeOfString(currentPeriodName as String) != nil) {
-                    currentPeriod = p
-                }
-            }
+            
+            var currentPeriod = self.getCurrentPeriod()
             
             self.table.reloadData()
             self.table.hidden = false
             self.loading.stopAnimating()
+            self.refreshControl.endRefreshing()
+            
             println(currentPeriod)
             if(currentPeriod > -1) {
                 self.table.scrollToRowAtIndexPath(
@@ -109,9 +124,19 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
         
-        loading.startAnimating()
+
         table.dataSource = self
         table.delegate = self
+    }
+    
+    func getCurrentPeriod() -> Int{
+        var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
+        for var p = 0; p < self.results.count; p++ {
+            if(self.results[p].title.rangeOfString(currentPeriodName) != nil) {
+                return p
+            }
+        }
+        return -1
     }
     
     override func didReceiveMemoryWarning() {

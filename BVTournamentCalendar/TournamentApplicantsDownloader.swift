@@ -8,22 +8,25 @@
 
 
 class TournamentApplicantsDownloader {
-    func downloadHTML(tournament:Tournament, callback:([Applicants]) -> Void) {
+    func downloadHTML(tournament:Tournament, detail: TournamentDetail?, callback:([Applicants]) -> Void) {
         //renew the session
-
-        TournamentDownloader().downloadHTML(tournament) {
-            (data) -> Void in
-            sleep(1)
-            self.redirectDownload(data.redirectURL, tournament: tournament, callback: callback)
+        
+        if(detail != nil){
+            self.setServerCookieRequest(detail!.setServerSessionCookieUrl, tournament: tournament, callback: callback)
+        } else {
+            TournamentDetailDownloader().downloadHTML(tournament) {
+                (data) -> Void in
+                sleep(1)
+                self.setServerCookieRequest(data.setServerSessionCookieUrl, tournament: tournament, callback: callback)
+            }
         }
     }
     
-    func redirectDownload(url: NSString,tournament:Tournament, callback:([Applicants]) -> Void) {
+    func setServerCookieRequest(url: NSString,tournament:Tournament, callback:([Applicants]) -> Void) {
         HttpDownloader().httpGetOld("http://www.profixio.com" + (url as String)) {
              (data, error) -> Void in
             sleep(1)
             self.participantsDownload(tournament, callback:callback)
-            
         }
     }
     
@@ -50,8 +53,8 @@ class TournamentApplicantsDownloader {
                 club: cleanValue(allCells[td+1]),
                 type: (cleanValue(allCells[td+2]) as String) + (getReserveCode(allCells[td]) as String),
                 time: cleanValue(allCells[td+3]),
-                rankingPoints: cleanValue(allCells[td+4]),
-                entryPoints: cleanValue(allCells[td+5]),
+                rankingPoints: cleanValue(allCells[td+4]).stringByReplacingOccurrencesOfString("*", withString:""),
+                entryPoints: cleanValue(allCells[td+5]).stringByReplacingOccurrencesOfString("*", withString:""),
                 status: cleanValue(allCells[td+6]).isEqualToString("OK")
             )
 

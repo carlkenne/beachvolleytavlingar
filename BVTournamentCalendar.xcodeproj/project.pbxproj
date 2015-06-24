@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4425305D1B1CDFE4006CD74B /* TournamentDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425305C1B1CDFE4006CD74B /* TournamentDownloader.swift */; };
+		4425305D1B1CDFE4006CD74B /* TournamentDetailDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */; };
 		442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */; };
 		442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */; };
 		442A74231B2F004700875705 /* normal-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 442A74221B2F004700875705 /* normal-back.png */; };
@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4425305C1B1CDFE4006CD74B /* TournamentDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDownloader.swift; sourceTree = "<group>"; };
+		4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDetailDownloader.swift; sourceTree = "<group>"; };
 		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
 		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
 		442A74221B2F004700875705 /* normal-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal-back.png"; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				44686A191B1614BC004307E7 /* Tournament.swift */,
 				44686A261B17049D004307E7 /* TournamentsDownloader.swift */,
 				44686A531B1C50F4004307E7 /* TournamentPeriods.swift */,
-				4425305C1B1CDFE4006CD74B /* TournamentDownloader.swift */,
+				4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */,
 				442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */,
 			);
 			name = Domain;
@@ -332,7 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44686A1A1B1614BC004307E7 /* Tournament.swift in Sources */,
-				4425305D1B1CDFE4006CD74B /* TournamentDownloader.swift in Sources */,
+				4425305D1B1CDFE4006CD74B /* TournamentDetailDownloader.swift in Sources */,
 				44686A251B165096004307E7 /* XPathQuery.m in Sources */,
 				44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */,
 				44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */,

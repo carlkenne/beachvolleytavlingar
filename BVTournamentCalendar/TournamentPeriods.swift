@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class TournamentPeriods {
-    func getPeriodNameForDate(date: NSDate) -> NSString {
+    func getPeriodNameForDate(date: NSDate) -> String {
         
         if(date.earlierDate(Date.from(year: 2015, month: 3, day: 22)).isEqualToDate(date))
         {
@@ -140,64 +140,64 @@ class TournamentPeriods {
         return 16
     }
     
-    func getPeriodRangeForPeriod(date: NSString) -> String{
-        if(date == "TP 01")
+    func getDateRangeForPeriod(periodName: NSString) -> String{
+        if(periodName == "TP 01")
         {
             return "1 jan - 22 mars"
         }
-        if(date == "TP 02")
+        if(periodName == "TP 02")
         {
             return "23 mars - 3 maj"
         }
-        if(date == "TP 03")
+        if(periodName == "TP 03")
         {
             return "4 maj - 24 maj"
         }
-        if(date == "TP 04")
+        if(periodName == "TP 04")
         {
             return "25 maj - 31 maj"
         }
-        if(date == "TP 05")
+        if(periodName == "TP 05")
         {
             return "1 jun - 7 jun"
         }
-        if(date == "TP 06")
+        if(periodName == "TP 06")
         {
             return "8 jun - 21 jun"
         }
-        if(date == "TP 07")
+        if(periodName == "TP 07")
         {
             return "22 jun - 28 jun"
         }
-        if(date == "TP 08")
+        if(periodName == "TP 08")
         {
             return "29 jun - 5 jul"
         }
-        if(date == "TP 09")
+        if(periodName == "TP 09")
         {
             return "6 jul - 12 jul"
         }
-        if(date == "TP 10")
+        if(periodName == "TP 10")
         {
             return "13 jul - 19 jul"
         }
-        if(date == "TP 11")
+        if(periodName == "TP 11")
         {
             return "20 jul - 26 jul"
         }
-        if(date == "TP 12")
+        if(periodName == "TP 12")
         {
             return "27 jul - 2 aug"
         }
-        if(date == "TP 13")
+        if(periodName == "TP 13")
         {
             return "3 aug - 9 aug"
         }
-        if(date == "TP 14")
+        if(periodName == "TP 14")
         {
             return "10 aug - 16 aug"
         }
-        if(date == "TP 15")
+        if(periodName == "TP 15")
         {
             return "17 aug - 30 aug"
         }

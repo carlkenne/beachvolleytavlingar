@@ -25,11 +25,11 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         shouldStartLoadWithRequest request: NSURLRequest,
         navigationType: UIWebViewNavigationType) -> Bool {
             
-            if (navigationType == UIWebViewNavigationType.LinkClicked){
-                UIApplication.sharedApplication().openURL(request.URL!)
-                return false
-            }
-            return true
+        if (navigationType == UIWebViewNavigationType.LinkClicked){
+            UIApplication.sharedApplication().openURL(request.URL!)
+            return false
+        }
+        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,18 +40,23 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
     func showTournament(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let tournament = appDelegate.selectedTournament
+        
         parentViewController?.title = tournament?.name
+        appDelegate.selectedTournamentDetail = nil
 
+        
             loading.startAnimating()
-            TournamentDownloader().downloadHTML(tournament!){
+            TournamentDetailDownloader().downloadHTML(tournament!){
                 (res) -> Void in
                 let link:String = tournament!.link
                 
-                var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style>body>table {max-width:430px; }.uh{font-weight: bold;padding-right:6px;  vertical-align: top;}body>table>tbody>tr>td{padding-bottom:7px;}.startkont {text-align: right;}td{padding-right:15px;}</style>\(res.table)<br/><br/>sidlänk:  <a href=\"\(link)\">\(link)</a></body></html>"
+                var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style>body>table>tbody>tr:first-child{display:none;}.uh{font-weight: bold;padding-right:6px;  vertical-align: top;}body>table>tbody>tr>td{padding-bottom:7px;}.startkont {text-align: right;}td{padding-right:15px;   max-width: 350px;overflow: hidden; text-overflow: ellipsis;}</style>\(res.table)<br/><br/><b>Sidlänk</a>  <a href=\"\(link)\" style=\"font-size:14px; padding-left:20px\">\(link)</a></body></html>"
                 
                 self.text.loadHTMLString(html, baseURL: NSURL(string:"http://www.profixio.com"))
                 
                 self.loading.stopAnimating()
+                
+                appDelegate.selectedTournamentDetail = res
             }
     }
 }
