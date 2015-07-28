@@ -12,9 +12,11 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var table : UITableView!
     @IBOutlet weak var loading : UIActivityIndicatorView!
 
+    @IBOutlet weak var Open: UIBarButtonItem!
     var results = [PeriodTableSection]()
     var filter = FilterSettings()
     var doNotInclude = NSSet()
+    var rawDownloadedData = [Tournament]()
     
     @IBAction func saveFilterSettings(segue:UIStoryboardSegue) {
         if let filterSettings = segue.sourceViewController as? FilterSettingsViewController {
@@ -38,18 +40,10 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             if(!filterSettings.hideOld.on){
                 excludes.append("hideOld")
             }
-            
-         /* filter = FilterSettings(
-                black:filterSettings.black.on,
-                green:filterSettings.green.on,
-                challenger:filterSettings.challenger.on,
-                mixed:filterSettings.Mixed.on,
-                misc:filterSettings.misc.on
-            ) */
 
             doNotInclude = NSSet(array: excludes)
 
-            loadData()
+            filterData()
         }
 
     }
@@ -64,20 +58,19 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Open.target = self.revealViewController()
+        Open.action = Selector("revealToggle:")
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        var image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("sand", ofType: "png")!)
-        image?.drawInRect(self.view.bounds)
-        var i = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        setBackgroundImage("sand", ofType: "png")
         
-        view.backgroundColor = UIColor(patternImage: i)
         table.hidden = true
         loading.startAnimating()
+        table.dataSource = self
+        table.delegate = self
         loadData()
         
         self.refreshControl = UIRefreshControl()
-        //self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
     }
@@ -85,48 +78,46 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     func loadData() {
         // Do any additional setup after loading the view, typically from a nib.
         TournamentsDownloader().downloadHTML(){(_data) -> Void in
-
-            var data = _data.filter( {(tournament: Tournament) -> Bool in
-                !self.doNotInclude.containsObject(tournament.levelCategory)
+            self.rawDownloadedData = _data;
+            self.filterData()
+        }
+    }
+    
+    func filterData(){
+        var data = self.rawDownloadedData.filter( {(tournament: Tournament) -> Bool in
+            !self.doNotInclude.containsObject(tournament.levelCategory)
+        })
+        
+        if(!self.doNotInclude.containsObject("hideOld")){
+            var now = NSDate()
+            var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
+            data = data.filter( {(tournament: Tournament) -> Bool in
+                tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil
             })
-            
-            if(!self.doNotInclude.containsObject("hideOld")){
-                var now = NSDate()
-                var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
-                data = data.filter( {(tournament: Tournament) -> Bool in
-                    tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil
-                })
-            }
-            
-            let sectionNames = NSSet(array: data.map {
-                return $0.period
-            }).allObjects   
-
-            self.results = sectionNames.map {
-                var sectionName:String = $0 as! String
-                return PeriodTableSection(title: sectionName, tournaments: data.filter( {(tournament: Tournament) -> Bool in
-                    tournament.period == sectionName
-                }))
-            }
-            self.results.sort({ $0.title < $1.title })
-            
-            var currentPeriod = self.getCurrentPeriod()
-            
-            self.table.reloadData()
-            self.table.hidden = false
-            self.loading.stopAnimating()
-            self.refreshControl.endRefreshing()
-            
-            println(currentPeriod)
-            if(currentPeriod > -1) {
-                self.table.scrollToRowAtIndexPath(
-                    NSIndexPath(forItem: 0, inSection: currentPeriod), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
-            }
         }
         
-
-        table.dataSource = self
-        table.delegate = self
+        let sectionNames = NSSet(array: data.map {
+            return $0.period
+            }).allObjects
+        
+        self.results = sectionNames.map {
+            var sectionName:String = $0 as! String
+            return PeriodTableSection(title: sectionName, tournaments: data.filter( {(tournament: Tournament) -> Bool in
+                tournament.period == sectionName
+            }))
+        }
+        self.results.sort({ $0.title < $1.title })
+        self.table.reloadData()
+        self.table.hidden = false
+        self.loading.stopAnimating()
+        self.refreshControl.endRefreshing()
+        
+        var currentPeriod = self.getCurrentPeriod()
+        println(currentPeriod)
+        if(currentPeriod > -1) {
+            self.table.scrollToRowAtIndexPath(
+                NSIndexPath(forItem: 0, inSection: currentPeriod), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
+        }
     }
     
     func getCurrentPeriod() -> Int{

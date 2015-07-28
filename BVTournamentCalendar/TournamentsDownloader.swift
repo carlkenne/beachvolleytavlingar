@@ -15,6 +15,7 @@ class TournamentsDownloader {
             (data, error) -> Void in
             if error != nil {
                 println(error)
+                callback([])
             } else {
                 var results = self.parseHTML(data!)
                 callback(results)
@@ -46,7 +47,7 @@ class TournamentsDownloader {
                 let tournament = Tournament(
                     from: from,
                     formattedFrom: dayTimePeriodFormatter.stringFromDate(from),
-                    to: cleanValue(allCells[startAt+1]),
+                    to: getDate(allCells[startAt+1]),
                     period: getPeriodName(cleanValue(allCells[startAt+2])),
                     organiser: cleanValue(allCells[startAt+3]),
                     name: name,
@@ -62,6 +63,15 @@ class TournamentsDownloader {
         return tournaments
     }
     
+    func getDate(value: AnyObject) -> NSDate{
+        var date = cleanValue(value)
+        if(date.isEmpty){
+            return NSDate()
+        }
+        
+        return Date.parse("2015." + date)
+    }
+    
     func getLevelCategory(level:String, name:String) -> String{
         if(level == "mixed" || name.rangeOfString("mixed") != nil){
             return "mixed"
@@ -71,6 +81,9 @@ class TournamentsDownloader {
         }
         else if(level == "open svart" || name.rangeOfString("svart") != nil || name.rangeOfString("open") != nil){
             return "open svart"
+        }
+        else if(level == "swedish beach tour"){
+            return "swedish beach tour"
         }
         else if(level == "challenger" || name.rangeOfString("challenger") != nil || name.rangeOfString("ch1") != nil || name.rangeOfString("ch2") != nil){
             return "challenger"

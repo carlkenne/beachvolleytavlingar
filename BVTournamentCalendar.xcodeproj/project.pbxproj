@@ -27,8 +27,19 @@
 		44686A3B1B185161004307E7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A351B185161004307E7 /* red.png */; };
 		44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A531B1C50F4004307E7 /* TournamentPeriods.swift */; };
 		44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */; };
+		446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D30541B42E3A3002955BD /* AddGestureVC.swift */; };
 		448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D22F81B3972C700D1D2CB /* HttpDownloader.swift */; };
 		448D22FB1B3972C700D1D2CB /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D22F91B3972C700D1D2CB /* StringHelper.swift */; };
+		4492BE8F1B417AB800F24441 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492BE8E1B417AB800F24441 /* SWRevealViewController.m */; };
+		4492BE911B419DB400F24441 /* RankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4492BE901B419DB400F24441 /* RankingVC.swift */; };
+		4492BE931B42B45F00F24441 /* skyleft.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE921B42B45F00F24441 /* skyleft.PNG */; };
+		4492BE951B42C51B00F24441 /* skyleft_menu.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE941B42C51B00F24441 /* skyleft_menu.PNG */; };
+		4492BE971B42C68D00F24441 /* skyleft_menu_highlight.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE961B42C68D00F24441 /* skyleft_menu_highlight.PNG */; };
+		4492BE9A1B42C79000F24441 /* sand_menu_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE981B42C79000F24441 /* sand_menu_highlight.png */; };
+		4492BE9B1B42C79000F24441 /* sand_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE991B42C79000F24441 /* sand_menu.png */; };
+		44B00B1D1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B1C1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift */; };
+		44B00B1F1B541BC2009CAF43 /* PointsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */; };
+		44B00B211B543A42009CAF43 /* PlayerRankingDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B201B543A42009CAF43 /* PlayerRankingDownloader.swift */; };
 		44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F61B15CB0400E2F545 /* AppDelegate.swift */; };
 		44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F81B15CB0400E2F545 /* FirstViewController.swift */; };
 		44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CC44FC1B15CB0400E2F545 /* Main.storyboard */; };
@@ -73,8 +84,20 @@
 		44686A351B185161004307E7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		44686A531B1C50F4004307E7 /* TournamentPeriods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentPeriods.swift; sourceTree = "<group>"; };
 		44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSettingsViewController.swift; sourceTree = "<group>"; };
+		446D30541B42E3A3002955BD /* AddGestureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGestureVC.swift; sourceTree = "<group>"; };
 		448D22F81B3972C700D1D2CB /* HttpDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDownloader.swift; sourceTree = "<group>"; };
 		448D22F91B3972C700D1D2CB /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		4492BE8D1B417AB800F24441 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		4492BE8E1B417AB800F24441 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		4492BE901B419DB400F24441 /* RankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingVC.swift; sourceTree = "<group>"; };
+		4492BE921B42B45F00F24441 /* skyleft.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyleft.PNG; sourceTree = "<group>"; };
+		4492BE941B42C51B00F24441 /* skyleft_menu.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyleft_menu.PNG; sourceTree = "<group>"; };
+		4492BE961B42C68D00F24441 /* skyleft_menu_highlight.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyleft_menu_highlight.PNG; sourceTree = "<group>"; };
+		4492BE981B42C79000F24441 /* sand_menu_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand_menu_highlight.png; sourceTree = "<group>"; };
+		4492BE991B42C79000F24441 /* sand_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand_menu.png; sourceTree = "<group>"; };
+		44B00B1C1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVewControllerExtensions.swift; sourceTree = "<group>"; };
+		44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTableVC.swift; sourceTree = "<group>"; };
+		44B00B201B543A42009CAF43 /* PlayerRankingDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingDownloader.swift; sourceTree = "<group>"; };
 		44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beachvolleytävlingar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CC44F51B15CB0400E2F545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44CC44F61B15CB0400E2F545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +135,7 @@
 			children = (
 				448D22F81B3972C700D1D2CB /* HttpDownloader.swift */,
 				448D22F91B3972C700D1D2CB /* StringHelper.swift */,
+				44B00B1C1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -124,6 +148,8 @@
 				44686A531B1C50F4004307E7 /* TournamentPeriods.swift */,
 				4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */,
 				442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */,
+				44B00B201B543A42009CAF43 /* PlayerRankingDownloader.swift */,
+				44686A111B15EE9B004307E7 /* Framework */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -131,6 +157,8 @@
 		44686A1B1B165096004307E7 /* TFHpple */ = {
 			isa = PBXGroup;
 			children = (
+				4492BE8D1B417AB800F24441 /* SWRevealViewController.h */,
+				4492BE8E1B417AB800F24441 /* SWRevealViewController.m */,
 				44686A1C1B165096004307E7 /* SandSports-Bridging-Header.h */,
 				44686A1D1B165096004307E7 /* TFHpple.h */,
 				44686A1E1B165096004307E7 /* TFHpple.m */,
@@ -145,6 +173,11 @@
 		44686A2A1B1734C0004307E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4492BE981B42C79000F24441 /* sand_menu_highlight.png */,
+				4492BE991B42C79000F24441 /* sand_menu.png */,
+				4492BE961B42C68D00F24441 /* skyleft_menu_highlight.PNG */,
+				4492BE941B42C51B00F24441 /* skyleft_menu.PNG */,
+				4492BE921B42B45F00F24441 /* skyleft.PNG */,
 				442A74221B2F004700875705 /* normal-back.png */,
 				44686A311B185161004307E7 /* black.png */,
 				44686A321B185161004307E7 /* blue.png */,
@@ -157,9 +190,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4492BE861B4178B000F24441 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		44CC44E81B15CB0400E2F545 = {
 			isa = PBXGroup;
 			children = (
+				4492BE861B4178B000F24441 /* SWRevealViewController */,
 				44686A1B1B165096004307E7 /* TFHpple */,
 				44CC45181B15CB9400E2F545 /* libxml2.dylib */,
 				44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */,
@@ -182,7 +223,6 @@
 			children = (
 				44686A2A1B1734C0004307E7 /* Resources */,
 				44686A181B1614AB004307E7 /* Domain */,
-				44686A111B15EE9B004307E7 /* Framework */,
 				44CC44F61B15CB0400E2F545 /* AppDelegate.swift */,
 				44CC44F81B15CB0400E2F545 /* FirstViewController.swift */,
 				44CC44FC1B15CB0400E2F545 /* Main.storyboard */,
@@ -193,6 +233,9 @@
 				44686A281B170D3E004307E7 /* TournamentViewController.swift */,
 				44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */,
 				442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */,
+				4492BE901B419DB400F24441 /* RankingVC.swift */,
+				446D30541B42E3A3002955BD /* AddGestureVC.swift */,
+				44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */,
 			);
 			path = BVTournamentCalendar;
 			sourceTree = "<group>";
@@ -308,11 +351,16 @@
 				44686A371B185161004307E7 /* black.png in Resources */,
 				44CC45031B15CB0500E2F545 /* LaunchScreen.xib in Resources */,
 				44686A391B185161004307E7 /* green.png in Resources */,
+				4492BE9A1B42C79000F24441 /* sand_menu_highlight.png in Resources */,
+				4492BE951B42C51B00F24441 /* skyleft_menu.PNG in Resources */,
 				44686A381B185161004307E7 /* blue.png in Resources */,
 				44686A2E1B17356C004307E7 /* IMG_2993.JPG in Resources */,
 				44686A3A1B185161004307E7 /* normal.png in Resources */,
+				4492BE9B1B42C79000F24441 /* sand_menu.png in Resources */,
+				4492BE931B42B45F00F24441 /* skyleft.PNG in Resources */,
 				44686A3B1B185161004307E7 /* red.png in Resources */,
 				44CC45001B15CB0400E2F545 /* Images.xcassets in Resources */,
+				4492BE971B42C68D00F24441 /* skyleft_menu_highlight.PNG in Resources */,
 				44686A301B174188004307E7 /* sand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +382,8 @@
 				44686A1A1B1614BC004307E7 /* Tournament.swift in Sources */,
 				4425305D1B1CDFE4006CD74B /* TournamentDetailDownloader.swift in Sources */,
 				44686A251B165096004307E7 /* XPathQuery.m in Sources */,
+				4492BE911B419DB400F24441 /* RankingVC.swift in Sources */,
+				44B00B211B543A42009CAF43 /* PlayerRankingDownloader.swift in Sources */,
 				44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */,
 				44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */,
 				44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */,
@@ -342,10 +392,14 @@
 				442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */,
 				44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */,
 				448D22FB1B3972C700D1D2CB /* StringHelper.swift in Sources */,
+				4492BE8F1B417AB800F24441 /* SWRevealViewController.m in Sources */,
 				44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */,
+				44B00B1F1B541BC2009CAF43 /* PointsTableVC.swift in Sources */,
+				44B00B1D1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift in Sources */,
 				442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */,
 				44686A271B17049D004307E7 /* TournamentsDownloader.swift in Sources */,
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
+				446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */,
 				448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

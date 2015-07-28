@@ -12,63 +12,63 @@ import UIKit
 class TournamentPeriods {
     func getPeriodNameForDate(date: NSDate) -> String {
         
-        if(date.earlierDate(Date.from(year: 2015, month: 3, day: 22)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 3, day: 23)).isEqualToDate(date))
         {
             return "TP 01"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 3)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 4)).isEqualToDate(date))
         {
             return "TP 02"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 24)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 25)).isEqualToDate(date))
         {
             return "TP 03"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 31)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 1)).isEqualToDate(date))
         {
             return "TP 04"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 7)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 8)).isEqualToDate(date))
         {
             return "TP 05"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 21)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 22)).isEqualToDate(date))
         {
             return "TP 06"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 28)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 29)).isEqualToDate(date))
         {
             return "TP 07"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 5)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 6)).isEqualToDate(date))
         {
             return "TP 08"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 12)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 13)).isEqualToDate(date))
         {
             return "TP 09"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 19)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 20)).isEqualToDate(date))
         {
             return "TP 10"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 26)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 27)).isEqualToDate(date))
         {
             return "TP 11"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 2)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 3)).isEqualToDate(date))
         {
             return "TP 12"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 9)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 10)).isEqualToDate(date))
         {
             return "TP 13"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 16)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 17)).isEqualToDate(date))
         {
             return "TP 14"
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 30)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 31)).isEqualToDate(date))
         {
             return "TP 15"
         }
@@ -77,63 +77,63 @@ class TournamentPeriods {
 
     func getPeriodNumberForDate(date: NSDate) -> Int{
         
-        if(date.earlierDate(Date.from(year: 2015, month: 3, day: 22)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 3, day: 23)).isEqualToDate(date))
         {
             return 1
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 3)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 4)).isEqualToDate(date))
         {
             return 2
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 24)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 25)).isEqualToDate(date))
         {
             return 3
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 5, day: 31)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 1)).isEqualToDate(date))
         {
             return 4
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 7)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 8)).isEqualToDate(date))
         {
             return 5
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 21)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 22)).isEqualToDate(date))
         {
             return 6
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 28)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 6, day: 29)).isEqualToDate(date))
         {
             return 7
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 5)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 6)).isEqualToDate(date))
         {
             return 8
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 12)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 13)).isEqualToDate(date))
         {
             return 9
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 19)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 20)).isEqualToDate(date))
         {
             return 10
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 26)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 7, day: 27)).isEqualToDate(date))
         {
             return 11
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 2)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 3)).isEqualToDate(date))
         {
             return 12
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 9)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 10)).isEqualToDate(date))
         {
             return 13
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 16)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 17)).isEqualToDate(date))
         {
             return 14
         }
-        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 30)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2015, month: 8, day: 31)).isEqualToDate(date))
         {
             return 15
         }

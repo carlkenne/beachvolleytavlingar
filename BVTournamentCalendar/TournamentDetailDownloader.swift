@@ -12,6 +12,8 @@ class TournamentDetailDownloader {
     var retries = 1
     
     func downloadHTML(tournament:Tournament, callback:(TournamentDetail) -> Void) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.selectedTournamentDetail = nil
         HttpDownloader().httpGetOld(tournament.link as String){
             (data, error) -> Void in
             if (error != nil) {
@@ -19,8 +21,9 @@ class TournamentDetailDownloader {
                 callback(self.createFailedResponse(tournament))
             } else {
                 if(self.areWeStillLoggedIn(data!) == true) {
-                    var results = self.parseHTML(tournament, HTMLData: data!)
-                    callback(results)
+                    var tournamentDetail = self.parseHTML(tournament, HTMLData: data!)
+                    callback(tournamentDetail)
+                    appDelegate.selectedTournamentDetail = tournamentDetail
                 }
                 else {
                     self.retries = self.retries - 1
@@ -43,7 +46,10 @@ class TournamentDetailDownloader {
         return TournamentDetail(
             link: tournament.link,
             table: "Could not get any information, please try again later.",
-            setServerSessionCookieUrl: ""
+            setServerSessionCookieUrl: "",
+            fromHour: "",
+            toHour: "",
+            maxNoOfParticipants: 0
         )
     }
     
@@ -54,10 +60,21 @@ class TournamentDetailDownloader {
     func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
         var anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
+      //  var fromTo = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table/tbody/tr[4]//tr[2]")
+        var maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
+        var maxNo = 100
+        if(count(maxNoOfParticipants) > 0){
+            maxNo = maxNoOfParticipants.toInt()!
+        }
+        
         return TournamentDetail(
             link: tournament.link,
             table: (allCells[1] as! TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
-            setServerSessionCookieUrl: self.extractOnClickLink((anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString))
+            setServerSessionCookieUrl: self.extractOnClickLink((anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString),
+            fromHour: "",
+            toHour: "",
+            maxNoOfParticipants: maxNo
+        )
     }
     
     func extractOnClickLink(onclickString: NSString) -> NSString {

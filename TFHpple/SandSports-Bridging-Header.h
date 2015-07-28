@@ -12,5 +12,6 @@
 #import "XPathQuery.h"
 #import "TFHppleElement.h"
 #import "TFHpple.h"
+#import "SWRevealViewController.h"
 
 #endif

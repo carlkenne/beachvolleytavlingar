@@ -9,6 +9,19 @@
 import UIKit
 import Foundation
 
+class GroupSize : UITableViewCell
+{
+    @IBOutlet weak var groupsSlider: UISlider!
+    @IBOutlet weak var groupsText: UITextField!
+    
+    func sliderMoved(sender: UISlider) {
+        print(sender)
+        var round = roundf(sender.value)
+        sender.value = round
+        groupsText.text = "\(Int(round))"
+    }
+}
+
 class TournamentApplicantsViewController: UIViewController, UITableViewDataSource
 {
     @IBOutlet weak var loading : UIActivityIndicatorView!
@@ -29,16 +42,9 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         self.table.dataSource = self
         showTournament()
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        var image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("normal-back", ofType: "png")!)
-        image?.drawInRect(self.view.bounds, blendMode: CGBlendMode(kCGBlendModeNormal.value), alpha: 1)
-        var i = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        view.backgroundColor = UIColor(patternImage: i)
+        setBackgroundImage("normal-back", ofType: "png")
         
         self.refreshControl = UIRefreshControl()
-        //self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
        
@@ -54,41 +60,33 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     }
     
     func tableView(UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
+        /*if(cellForRowAtIndexPath.row == 0){
+            //table.registerClass(GroupSize, forCellReuseIdentifier: <#String#>)
+            //table.dequ
+            var cell = table.dequeueReusableCellWithIdentifier("Group size") as! UITableViewCell
+            let slider = cell.viewWithTag(1) as! UISlider
+            slider.addTarget(cell, action: "sliderMoved:", forControlEvents: .ValueChanged)
+          return cell
+        }*/
+        
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
         let cell = table.dequeueReusableCellWithIdentifier("Applicant") as! UITableViewCell
 
         cell.textLabel?.text = applicants.players
         cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row+1) (\(applicants.points())p) \(applicants.club)"
-        
         return cell
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var title = dataSource[section].title
-        if( dataSource[section].title == "H" ) {
-            title = "Herr"
-        }
-        if( dataSource[section].title == "HV" ) {
-            title = "Herr Väntelista"
-        }
-        if( dataSource[section].title == "D" ) {
-            title = "Dam"
-        }
-        if( dataSource[section].title == "DV" ) {
-            title = "Dam Väntelista"
-        }
-        if( dataSource[section].title == "M" ) {
-            title = "Mixed"
-        }
-        if( dataSource[section].title == "MV" ) {
-            title = "Mixed Väntelista"
-        }
-
-        return title + " (\(dataSource[section].applicants.count))"
+        return dataSource[section].title + " (\(dataSource[section].applicants.count))"
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return dataSource.count;
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController!.navigationItem.rightBarButtonItem = nil;
     }
     
     func showTournament(){
@@ -106,10 +104,17 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
             }).allObjects
             
             self.dataSource = sectionNames.map {
-            var sectionName:String = $0 as! String
-                return ApplicantsTableSection(title: sectionName, applicants: listOfApplicants.filter( {(applicant: Applicants) -> Bool in
+                var sectionName:String = $0 as! String
+                var list = listOfApplicants.filter( {(applicant: Applicants) -> Bool in
                     applicant.type == sectionName
-                }))
+                })
+                return ApplicantsTableSection(isSlider:false, title: list[0].getTypeName(), applicants: list)
+            }
+            
+            if(self.dataSource.count == 0) {
+                self.dataSource = [
+                    ApplicantsTableSection(isSlider:false, title: "Inga lag är anmälda ännu", applicants: [])
+                ]
             }
             
             self.dataSource.sort({ $0.title < $1.title })

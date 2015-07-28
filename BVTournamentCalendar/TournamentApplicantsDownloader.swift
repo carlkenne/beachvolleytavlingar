@@ -7,6 +7,7 @@
 //
 
 
+
 class TournamentApplicantsDownloader {
     func downloadHTML(tournament:Tournament, detail: TournamentDetail?, callback:([Applicants]) -> Void) {
         //renew the session
@@ -35,6 +36,7 @@ class TournamentApplicantsDownloader {
             (data, error) -> Void in
             if error != nil {
                 println(error)
+                callback([])
             } else {
                 var results = self.parseHTML(tournament, HTMLData: data!)
                 callback( results )

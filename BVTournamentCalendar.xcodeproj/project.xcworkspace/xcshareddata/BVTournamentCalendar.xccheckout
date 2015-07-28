@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CF910A24-ACCE-4A59-A2E8-C6D7D322C66D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>BVTournamentCalendar</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CB3DE665069C09E54B79AE8F1D0FE050309B9474</key>
 		<string>https://github.com/carlkenne/beachvolleytavlingar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BVTournamentCalendar.xcodeproj</string>
+	<string>BVTournamentCalendar.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CB3DE665069C09E54B79AE8F1D0FE050309B9474</key>
