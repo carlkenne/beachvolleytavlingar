@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlayerRankingDownloader {
+class PlayerRankingsDownloader {
     func downloadHTML(type:String, callback:([PlayerRanking]) -> Void) {
         //renew the session
         
@@ -55,10 +55,13 @@ class PlayerRankingDownloader {
                 name: cleanValue(allCells[td+1]),
                 club: cleanValue(allCells[td+2]),
                 points: cleanValue(allCells[td+3]).toInt()!,
-                entryPoints: cleanValue(allCells[td+4]).toInt()!
+                entryPoints: cleanValue(allCells[td+4]).toInt()!,
+                detailsUrl: getRankingDetailUrl(allCells[td+1]) //"rand=0.7901839658152312&spid=8728&klasse=H&tp="
             )
             
             results.append(ranking)
+            
+           
         }
         
         return results
@@ -67,5 +70,21 @@ class PlayerRankingDownloader {
     func cleanValue(value:AnyObject) -> String {
         return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
+    
+    func getAttribute(value:AnyObject, name: String) -> String {
+        var child = (value as! TFHppleElement).children[0] as! TFHppleElement
+        return child.attributes[name]! as! String
+    }
+    
+    func getRankingDetailUrl(value:AnyObject) -> String {
+        var str = getAttribute(value, name: "onclick")
+        str = str.stringByReplacingOccurrencesOfString("vis_rankdetaljer(", withString: "")
+        str = str.stringByReplacingOccurrencesOfString(", '', event)", withString: "")
+        str = str.stringByReplacingOccurrencesOfString("'", withString: "")
+        str = str.stringByReplacingOccurrencesOfString(" ", withString: "")
+        var both = split(str) {$0 == ","}
+        return "rand=0.7901839658152312&spid=\(both[0])&klasse=\(both[1])&tp="
+    }
 }
+
 

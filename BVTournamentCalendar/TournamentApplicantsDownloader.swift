@@ -51,29 +51,46 @@ class TournamentApplicantsDownloader {
         for var row = 0; row < (allCells.count-7)/8 ; row++ {
             var td = (row * 8)+7
             var applicants = Applicants(
-                players: cleanValue(allCells[td]).stringByReplacingOccurrencesOfString("(Väntelista)", withString: ""),
+                players: cleanValue(allCells[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
                 club: cleanValue(allCells[td+1]),
                 type: (cleanValue(allCells[td+2]) as String) + (getReserveCode(allCells[td]) as String),
                 time: cleanValue(allCells[td+3]),
-                rankingPoints: cleanValue(allCells[td+4]).stringByReplacingOccurrencesOfString("*", withString:""),
-                entryPoints: cleanValue(allCells[td+5]).stringByReplacingOccurrencesOfString("*", withString:""),
-                status: cleanValue(allCells[td+6]).isEqualToString("OK")
+                rankingPoints: cleanValue(allCells[td+4]).removeAll("*"),
+                entryPoints: cleanValue(allCells[td+5]).removeAll("*"),
+                status: cleanValue(allCells[td+6]) == "OK"
             )
-
             results.append(applicants)
+            //println(applicants.players)
         }
-        
         return results
     }
     
-    func getReserveCode(value:AnyObject) -> NSString {
-        if( cleanValue(value).containsString("Väntelista")){
+    func getReserveCode(value:AnyObject) -> String {
+        if( cleanValue(value).rangeOfString("Väntelista") != nil){
             return "V"
+        }
+        if( cleanValue(value).rangeOfString("önskas") != nil){
+            return "Ö"
         }
         return ""
     }
     
-    func cleanValue(value:AnyObject) -> NSString {
-        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-    }
+    func cleanValue(value:AnyObject) -> String {
+        var content = (value as! TFHppleElement).content
+        
+
+        content = content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+                .stringByReplacingOccurrencesOfString("Ã¶", withString: "ö")
+                .stringByReplacingOccurrencesOfString("Ã¥", withString: "å")
+                .stringByReplacingOccurrencesOfString("Ã©", withString: "é")
+                .stringByReplacingOccurrencesOfString("Ã", withString: "Ö")
+                .stringByReplacingOccurrencesOfString("Ã", withString: "É")
+                .stringByReplacingOccurrencesOfString("Ã¤", withString: "ä")
+
+        content = content.removeOccurancesUTF16( 133)
+        content = content.replaceOccurancesUTF16( 195, with: "Å")
+        return content
+        }
+        
+
 }

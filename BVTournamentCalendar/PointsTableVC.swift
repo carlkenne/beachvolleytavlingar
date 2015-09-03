@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct PointsTableSection {
-    let title: String
-    let pointsTable: [String]
-}
-
 class PointsTableViewController: UIViewController, UITableViewDataSource {
     
     var dataSource = [PointsTableSection]()
@@ -45,8 +40,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
             let herr = listOfApplicants.filter({ $0.type == "H" })
             let mixed = listOfApplicants.filter({ $0.type == "M" })
             
-            self.addPointsFor(herr, tournament: tournament!)
             self.addPointsFor(dam, tournament: tournament!)
+            self.addPointsFor(herr, tournament: tournament!)
             self.addPointsFor(mixed, tournament: tournament!)
             
             if(listOfApplicants.count == 0) {
@@ -86,6 +81,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         var rank = ["1:a", "2:a", "3:dje", "5:e", "9:de", "13:de", "17:de", "25:e", "33:dje", "49:de"]
         var rankShort = ["1:a", "2:a", "3:dje", "5:e", "7:de", "9:de", "13:de"] //used for SBT etc..
 
+
+        
         dataSource.append(
             PointsTableSection(
                 title: "\(listOfApplicants[0].getTypeName()) (\(pointTable.title))",
@@ -94,8 +91,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                         : rank[index]
                     return " \(rankTitle) - \(element) poäng"
                 }
-            )
-        )
+            ))
+        
     }
     
     func getPointsForLevel(noOfApplicants: Int, tournament: Tournament) -> PointTable {
@@ -156,8 +153,5 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
     }
 }
 
-struct PointTable {
-    let table: [Int]
-    let title: String
-}
+
 

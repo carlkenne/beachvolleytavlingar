@@ -21,26 +21,45 @@ extension String {
     subscript (r: Range<Int>) -> String {
         return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
     }
-}
-
-class Date {
     
-    class func from(#year:Int, month:Int, day:Int) -> NSDate {
-        var c = NSDateComponents()
-        c.year = year
-        c.month = month
-        c.day = day
+
+    func removeAll(str: String) -> String{
+       return self.stringByReplacingOccurrencesOfString(str, withString: "")
+    }
         
-        var gregorian = NSCalendar(identifier:NSCalendarIdentifierGregorian)
-        var date = gregorian?.dateFromComponents(c)
-        return date!
+    init(htmlEncodedString: String) {
+            var encodedData = htmlEncodedString.dataUsingEncoding(NSUnicodeStringEncoding)!
+            let attributedOptions = [String: AnyObject]()
+            let attributedString = NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil, error: nil)!
+            self.init(attributedString.string)
+    }
+  
+
+    func replaceOccurancesUTF16(utf16Nbr: Int, with: Character) -> String {
+        var chars = Array(self)
+        var utf16arr = Array(self.utf16)
+        for var row = 0; row < utf16arr.count ; row++ {
+            if(Int(utf16arr[row]) == utf16Nbr) {
+                println(Int(utf16arr[row]))
+                chars[row] = with
+            }
+        }
+        var str = String()
+        str.extend(chars)
+        return str
     }
     
-    class func parse(dateStr:String, format:String="yyyy.MM.dd") -> NSDate {
-            
-            var dateFmt = NSDateFormatter()
-            dateFmt.timeZone = NSTimeZone.defaultTimeZone()
-            dateFmt.dateFormat = format
-            return dateFmt.dateFromString(dateStr)!
+    func removeOccurancesUTF16(utf16Nbr: Int) -> String {
+        var chars = Array(self)
+        var utf16arr = Array(self.utf16)
+        for var row = 0; row < utf16arr.count ; row++ {
+            if(Int(utf16arr[row]) == utf16Nbr) {
+                println(Int(utf16arr[row]))
+                chars.removeAtIndex(row)
+            }
+        }
+        var str = String()
+        str.extend(chars)
+        return str
     }
 }

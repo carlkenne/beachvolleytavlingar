@@ -6,4 +6,12 @@
 //  Copyright (c) 2015 Carl Kenne. All rights reserved.
 //
 
-import Foundation
+struct PointsTableSection {
+    let title: String
+    let pointsTable: [String]
+}
+
+struct PointTable {
+    let table: [Int]
+    let title: String
+}

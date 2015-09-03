@@ -113,7 +113,6 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.refreshControl.endRefreshing()
         
         var currentPeriod = self.getCurrentPeriod()
-        println(currentPeriod)
         if(currentPeriod > -1) {
             self.table.scrollToRowAtIndexPath(
                 NSIndexPath(forItem: 0, inSection: currentPeriod), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
@@ -151,24 +150,27 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = table.dequeueReusableCellWithIdentifier(cellName) as! UITableViewCell
         cell.textLabel?.text = tournament.name
         cell.detailTextLabel?.text = tournament.formattedFrom + " - " + tournament.organiser
-        
-        if(tournament.levelCategory == "mixed"){
+        addImage(cell, levelCategory: tournament.levelCategory)
+     
+        return cell
+    }
+    
+    func addImage(cell: UITableViewCell, levelCategory: String) {
+        if(levelCategory == "mixed"){
             cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("blue", ofType: "png")!)
         }
-        else if(tournament.levelCategory == "open grön"){
-           cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("green", ofType: "png")!)
+        else if(levelCategory == "open grön"){
+            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("green", ofType: "png")!)
         }
-        else if(tournament.levelCategory == "open svart"){
+        else if(levelCategory == "open svart"){
             cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("black", ofType: "png")!)
         }
-        else if(tournament.levelCategory == "challenger"){
+        else if(levelCategory == "challenger"){
             cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("red", ofType: "png")!)
         }
         else {
             cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("normal", ofType: "png")!)
         }
-
-        return cell
     }
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

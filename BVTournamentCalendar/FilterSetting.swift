@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct FilterSettings{
+    var black: Bool = true
+    var green: Bool = true
+    var challenger: Bool = true
+    var mixed: Bool = true
+    var misc: Bool = true
+}

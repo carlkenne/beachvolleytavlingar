@@ -9,19 +9,6 @@
 import UIKit
 import Foundation
 
-class GroupSize : UITableViewCell
-{
-    @IBOutlet weak var groupsSlider: UISlider!
-    @IBOutlet weak var groupsText: UITextField!
-    
-    func sliderMoved(sender: UISlider) {
-        print(sender)
-        var round = roundf(sender.value)
-        sender.value = round
-        groupsText.text = "\(Int(round))"
-    }
-}
-
 class TournamentApplicantsViewController: UIViewController, UITableViewDataSource
 {
     @IBOutlet weak var loading : UIActivityIndicatorView!
@@ -70,8 +57,14 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         }*/
         
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
-        let cell = table.dequeueReusableCellWithIdentifier("Applicant") as! UITableViewCell
-
+        var cell : UITableViewCell
+        if(applicants.type == "D"){
+            cell = table.dequeueReusableCellWithIdentifier("ApplicantDam") as! UITableViewCell
+        } else if (applicants.type == "H"){
+            cell = table.dequeueReusableCellWithIdentifier("ApplicantHerr") as! UITableViewCell
+        } else {
+            cell = table.dequeueReusableCellWithIdentifier("Applicant") as! UITableViewCell
+        }
         cell.textLabel?.text = applicants.players
         cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row+1) (\(applicants.points())p) \(applicants.club)"
         return cell
@@ -123,5 +116,17 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
             self.refreshControl.endRefreshing()
             self.loading.stopAnimating()
         }
+    }
+}
+class GroupSize : UITableViewCell
+{
+    @IBOutlet weak var groupsSlider: UISlider!
+    @IBOutlet weak var groupsText: UITextField!
+    
+    func sliderMoved(sender: UISlider) {
+        print(sender)
+        var round = roundf(sender.value)
+        sender.value = round
+        groupsText.text = "\(Int(round))"
     }
 }

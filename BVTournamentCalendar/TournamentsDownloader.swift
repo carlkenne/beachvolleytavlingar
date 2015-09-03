@@ -44,6 +44,8 @@ class TournamentsDownloader {
                 let name = cleanValue(allCells[startAt+4])
                 let link = getHref(allCells[startAt+4])
                 
+                println("")
+                
                 let tournament = Tournament(
                     from: from,
                     formattedFrom: dayTimePeriodFormatter.stringFromDate(from),
@@ -52,7 +54,7 @@ class TournamentsDownloader {
                     organiser: cleanValue(allCells[startAt+3]),
                     name: name,
                     level: level,
-                    levelCategory: getLevelCategory(level.lowercaseString, name: name.lowercaseString),
+                    levelCategory: getLevelCategory(level.lowercaseString, name: name),
                     type: cleanValue(allCells[startAt+6]),
                     link: self.baseURL + (link as String),
                     moreInfo: count(link) > 0
@@ -73,6 +75,7 @@ class TournamentsDownloader {
     }
     
     func getLevelCategory(level:String, name:String) -> String{
+        var name = name.lowercaseString
         if(level == "mixed" || name.rangeOfString("mixed") != nil){
             return "mixed"
         }
@@ -82,7 +85,7 @@ class TournamentsDownloader {
         else if(level == "open svart" || name.rangeOfString("svart") != nil || name.rangeOfString("open") != nil){
             return "open svart"
         }
-        else if(level == "swedish beach tour"){
+        else if(level == "swedish beach tour" || level == "swedish beach tour final"){
             return "swedish beach tour"
         }
         else if(level == "challenger" || name.rangeOfString("challenger") != nil || name.rangeOfString("ch1") != nil || name.rangeOfString("ch2") != nil){

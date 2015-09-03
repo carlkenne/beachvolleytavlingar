@@ -11,9 +11,7 @@ import Foundation
 class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdating
 {
     @IBOutlet weak var sortBy: UISegmentedControl!
-  
     @IBOutlet weak var navBar: UINavigationBar!
-    @IBOutlet weak var searchbarplaceholder: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var Open: UIBarButtonItem!
     @IBOutlet weak var table: UITableView!
@@ -22,12 +20,7 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     }
     
     @IBOutlet weak var bbi: UIBarButtonItem!
-    
-    @IBOutlet weak var sbar: UISearchBar!
-    
-    
     @IBOutlet weak var placeholder: UIView!
-    
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -40,6 +33,7 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Open.target = self.revealViewController()
         Open.action = Selector("revealToggle:")
         
@@ -48,17 +42,13 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.searchBarStyle = .Minimal
-      //  searchController.searchBar.scopeButtonTitles = [AnyObject]()
 
         searchController.dimsBackgroundDuringPresentation = false
-       // navBar.addSubview(searchController.searchBar)
         searchController.searchBar.showsScopeBar = false
         
         searchController.searchBar.barStyle = UIBarStyle.Default
         placeholder.addSubview(searchController.searchBar)
-       
-      searchController.searchBar.sizeToFit()
-        
+        searchController.searchBar.sizeToFit()
         
         setBackgroundImage("skyleft", ofType: "PNG")
         
@@ -67,14 +57,10 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
         loadData()
     }
     
-    
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (self.searchController.active)
-        {
+        if (self.searchController.active) {
             return self.searchData.count
-        } else
-        {
+        } else {
             return self.rawDownloadedData.count
         }
     }
@@ -88,9 +74,7 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
             cell.detailTextLabel!.text = "Rankingpoäng: \(data.points), Entry points: \(data.entryPoints)"
             cell.textLabel?.text = "\(rank) - " + data.name
             return cell
-        }
-        else
-        {
+        } else {
             let cell = table.dequeueReusableCellWithIdentifier("PlayerRanking") as! UITableViewCell
             var data = self.rawDownloadedData[indexPath.row]
             var rank = data.rankByPoints
@@ -109,19 +93,17 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (self.searchController.active) {
             return 55
-        }
-        else {
+        } else {
             return 33
         }
     }
-    
     
     func loadData() {
         // Do any additional setup after loading the view, typically from a nib.
         var datatype = type == "Herr" ? "H" :
             type == "Dam" ? "D" : "M"
         
-        PlayerRankingDownloader().downloadHTML(datatype){(_data) -> Void in
+        PlayerRankingsDownloader().downloadHTML(datatype){(_data) -> Void in
             self.rawDownloadedData = _data;
             self.filterData()
         }
@@ -155,9 +137,17 @@ extension RankingVC: UISearchResultsUpdating
 
 extension RankingVC: UITableViewDelegate
 {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let indexPath = table.indexPathForSelectedRow()!
+        let viewController = segue.destinationViewController as! PlayerRankingVC
+        
+        if segue.identifier == "ShowPlayerFromSearch" {
+            viewController.addPlayer(self.searchData[indexPath.row])
+        }
+        
+        if segue.identifier == "ShowPlayer" {
+            viewController.addPlayer(self.rawDownloadedData[indexPath.row])
+        }
     }
 }
 

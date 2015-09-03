@@ -60,7 +60,6 @@ class TournamentDetailDownloader {
     func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
         var anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
-      //  var fromTo = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table/tbody/tr[4]//tr[2]")
         var maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
         var maxNo = 100
         if(count(maxNoOfParticipants) > 0){
@@ -70,14 +69,20 @@ class TournamentDetailDownloader {
         return TournamentDetail(
             link: tournament.link,
             table: (allCells[1] as! TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
-            setServerSessionCookieUrl: self.extractOnClickLink((anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString),
+            setServerSessionCookieUrl: self.extractOnClickLink(anmalan),
             fromHour: "",
             toHour: "",
             maxNoOfParticipants: maxNo
         )
     }
     
-    func extractOnClickLink(onclickString: NSString) -> NSString {
+    func extractOnClickLink(anmalan: [AnyObject]) -> NSString {
+        if(anmalan.count == 0) {
+            return ""
+        }
+        
+        var onclickString = (anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString
+        
         var str = onclickString.stringByReplacingOccurrencesOfString("window.open(\"..", withString: "")
         str = str.stringByReplacingOccurrencesOfString("\", \"_blank\")", withString: "")
         return str

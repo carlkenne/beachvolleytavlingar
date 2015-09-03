@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D2134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9DU-v2-Chf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9DU-v2-Chf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -26,12 +26,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sC0-X1-Ifj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-243" y="-850"/>
+            <point key="canvasLocation" x="-395" y="-858"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu-->
         <scene sceneID="Nok-cd-nNj">
             <objects>
-                <tableViewController id="EZx-Ur-N7A" sceneMemberID="viewController">
+                <tableViewController id="EZx-Ur-N7A" userLabel="Menu" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uZ4-Kx-oPu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="RaE-7U-3RD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="coC-6k-R2o"/>
+                                            <segue destination="mOF-fv-Ddc" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="1Pn-Fy-Jiw"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -124,10 +124,11 @@
             </objects>
             <point key="canvasLocation" x="-243" y="-212"/>
         </scene>
-        <!--Rankinglistan-->
+        <!--Ranking Tab Bar-->
         <scene sceneID="juZ-tj-fDX">
             <objects>
-                <tabBarController title="Rankinglistan" id="RaE-7U-3RD" sceneMemberID="viewController">
+                <tabBarController title="Rankinglistan" id="RaE-7U-3RD" userLabel="Ranking Tab Bar" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eat-hr-HVw"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="H0K-jp-eCU">
@@ -145,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="-243" y="427"/>
         </scene>
-        <!--Herr-->
+        <!--Ranking Herr-->
         <scene sceneID="j6H-ng-ynW">
             <objects>
-                <viewController id="Afi-Z8-fae" customClass="AddGestureVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Afi-Z8-fae" userLabel="Ranking Herr" customClass="AddGestureVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iER-hF-hpJ"/>
                         <viewControllerLayoutGuide type="bottom" id="OH5-e2-pKn"/>
@@ -179,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="295" y="427"/>
         </scene>
-        <!--Tävlingsperioder-->
+        <!--Säsongskalendern Navigation-->
         <scene sceneID="Zwa-M9-S4M">
             <objects>
-                <navigationController title="Tävlingsperioder" id="AmP-o0-pXB" sceneMemberID="viewController">
+                <navigationController title="Tävlingsperioder" id="AmP-o0-pXB" userLabel="Säsongskalendern Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tävlingar" image="second" id="MW4-Ax-Khe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2K3-Su-qWM">
@@ -460,10 +461,10 @@
             </objects>
             <point key="canvasLocation" x="849" y="-121"/>
         </scene>
-        <!--Mixed-->
+        <!--Ranking Mixed-->
         <scene sceneID="ZXP-07-Pq4">
             <objects>
-                <viewController title="Mixed" id="oiV-mz-52v" customClass="AddGestureVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mixed" id="oiV-mz-52v" userLabel="Ranking Mixed" customClass="AddGestureVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fY-Dg-Yxv"/>
                         <viewControllerLayoutGuide type="bottom" id="lhL-gX-KhR"/>
@@ -488,17 +489,16 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mixed" image="mixed" id="e1q-Uv-IFh"/>
-                    <navigationItem key="navigationItem" id="fq5-qn-fGT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWj-Lb-lWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="191" y="666"/>
+            <point key="canvasLocation" x="201" y="866"/>
         </scene>
-        <!--Ranking-->
+        <!--Ranking Container-->
         <scene sceneID="QyJ-5J-ddr">
             <objects>
-                <viewController title="Herr" id="Yfb-sY-nxn" userLabel="Ranking" customClass="RankingVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Herr" id="Yfb-sY-nxn" userLabel="Ranking Container" customClass="RankingVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qqq-wx-HYb"/>
                         <viewControllerLayoutGuide type="bottom" id="Bqs-nF-nh0"/>
@@ -545,9 +545,9 @@
                                 <rect key="frame" x="0.0" y="90" width="320" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerRanking" textLabel="JMD-Qz-Fc9" detailTextLabel="a91-bC-oy8" rowHeight="33" style="IBUITableViewCellStyleValue1" id="vV2-T4-RM0">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerRanking" textLabel="JMD-Qz-Fc9" detailTextLabel="a91-bC-oy8" rowHeight="33" style="IBUITableViewCellStyleValue1" id="vV2-T4-RM0">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="vV2-T4-RM0" id="OkB-em-F61">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vV2-T4-RM0" id="OkB-em-F61">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JMD-Qz-Fc9">
@@ -565,8 +565,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Puu-hs-LcN" kind="show" identifier="ShowPlayer" id="q34-Ax-YhV"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResult" textLabel="r6Q-aq-9tx" detailTextLabel="dQW-Gw-HbE" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="ErZ-Po-zij">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResult" textLabel="r6Q-aq-9tx" detailTextLabel="dQW-Gw-HbE" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="ErZ-Po-zij">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="ErZ-Po-zij" id="2CC-Xw-Eox">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -586,6 +589,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Puu-hs-LcN" kind="show" identifier="ShowPlayerFromSearch" id="CoT-rS-VL0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -659,7 +665,91 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="789" y="666"/>
+            <point key="canvasLocation" x="849" y="634"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xEw-U6-rJ7">
+            <objects>
+                <navigationController id="mOF-fv-Ddc" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="siD-gm-TOx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RaE-7U-3RD" kind="relationship" relationship="rootViewController" id="qim-d2-8el"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9we-ZF-yqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="329"/>
+        </scene>
+        <!--Ranking Player Details-->
+        <scene sceneID="C88-IW-h6O">
+            <objects>
+                <tableViewController id="Puu-hs-LcN" userLabel="Ranking Player Details" customClass="PlayerRankingVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="8" sectionFooterHeight="8" id="QeW-JT-X8o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameRankedSimple" textLabel="gU0-NU-JmN" detailTextLabel="N8k-Zl-SSx" style="IBUITableViewCellStyleValue2" id="0ZD-z7-fVP">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ZD-z7-fVP" id="oap-h7-kKB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="open grön" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gU0-NU-JmN">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="93%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N8k-Zl-SSx">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameRanked" textLabel="in8-7w-EqN" detailTextLabel="aki-CO-tDe" imageView="50X-z9-7wc" style="IBUITableViewCellStyleSubtitle" id="dTh-yc-gsU">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dTh-yc-gsU" id="cMJ-Ht-yW6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Örebro 750år Mixed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="in8-7w-EqN">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sun, 14 Jun - Beachbrothers BC " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aki-CO-tDe">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="black.png" id="50X-z9-7wc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Puu-hs-LcN" id="5wY-em-rRz"/>
+                            <outlet property="delegate" destination="Puu-hs-LcN" id="BwF-4K-uoc"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ou-zH-zUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="634"/>
         </scene>
         <!--Säsongskalendern-->
         <scene sceneID="v2I-K7-iLw">
@@ -754,7 +844,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Säsongskalendern" id="ti0-XZ-MfM">
+                    <navigationItem key="navigationItem" title="Säsongskalendern" id="ti0-XZ-MfM" userLabel="Säsongskalend">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="ldu-vJ-ED2"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wZd-6j-0V4">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uua-K1-p9c">
@@ -831,7 +921,7 @@
                                             <outlet property="groupsText" destination="5hR-t8-VVa" id="ZUf-TJ-ESD"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Applicant" textLabel="FbW-BQ-uMW" detailTextLabel="OxY-3n-URo" style="IBUITableViewCellStyleSubtitle" id="nY1-81-33h">
+                                    <tableViewCell userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApplicantHerr" textLabel="FbW-BQ-uMW" detailTextLabel="OxY-3n-URo" style="IBUITableViewCellStyleSubtitle" id="nY1-81-33h">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nY1-81-33h" id="QGT-TD-bHk">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -852,7 +942,53 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.9647059440612793" green="0.97254908084869385" blue="0.98823535442352295" alpha="0.80000000000000004" colorSpace="deviceRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ApplicantDam" textLabel="jPb-7U-7XH" detailTextLabel="92f-dS-Hl9" style="IBUITableViewCellStyleSubtitle" id="37f-yh-4tE">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="37f-yh-4tE" id="Dvv-GE-aOS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Stina Persson / Jessica Nordlöf" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jPb-7U-7XH">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="#1 (34p) Bromma VK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="92f-dS-Hl9">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99215692281723022" green="0.97647064924240112" blue="0.9803922176361084" alpha="0.84999999999999998" colorSpace="deviceRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Applicant" textLabel="Ja1-9Z-hzS" detailTextLabel="2Vr-V0-qhk" style="IBUITableViewCellStyleSubtitle" id="QiY-c9-hoU">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QiY-c9-hoU" id="H3r-UO-6ja">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Carl Kenne / Nicklas Berger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ja1-9Z-hzS">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="#1 (34p) Bromma VK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Vr-V0-qhk">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -927,10 +1063,10 @@
             </objects>
             <point key="canvasLocation" x="1853" y="-498"/>
         </scene>
-        <!--Turneringssidan-->
+        <!--Turnering Tab Bar-->
         <scene sceneID="xti-IT-sh2">
             <objects>
-                <tabBarController title="Turneringssidan" id="IoU-4k-bbK" sceneMemberID="viewController">
+                <tabBarController title="Turneringssidan" id="IoU-4k-bbK" userLabel="Turnering Tab Bar" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="tQW-90-bBn">
@@ -1010,10 +1146,10 @@
             </objects>
             <point key="canvasLocation" x="1816" y="-1351"/>
         </scene>
-        <!--Dam-->
+        <!--Ranking Dam-->
         <scene sceneID="FXr-Vl-CO0">
             <objects>
-                <viewController title="Dam" id="Oho-FV-Uuv" customClass="AddGestureVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dam" id="Oho-FV-Uuv" userLabel="Ranking Dam" customClass="AddGestureVC" customModule="Beachvolleytävlingar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aab-JO-lsd"/>
                         <viewControllerLayoutGuide type="bottom" id="fFA-CU-pdp"/>
@@ -1038,9 +1174,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dam" image="bikini" id="9yR-zm-cKY"/>
-                    <navigationItem key="navigationItem" id="RXM-Kt-wxY">
-                        <barButtonItem key="leftBarButtonItem" title="open" id="l5z-Lf-Wzy"/>
-                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMW-Ky-cga" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1069,7 +1202,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="G6Z-pK-14J"/>
-        <segue reference="2jj-vD-r8w"/>
         <segue reference="w7x-oO-b6C"/>
+        <segue reference="CoT-rS-VL0"/>
+        <segue reference="otI-ZO-YF2"/>
     </inferredMetricsTieBreakers>
 </document>

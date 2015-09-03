@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+struct PlayerRanking {
+    var rankByPoints: Int
+    var rankByEntryPoints: Int
+    var name: String
+    var club: String
+    var points: Int
+    var entryPoints: Int
+    var detailsUrl: String
+}
+
+struct PlayerRankingGame {
+    var period: String
+    var year: String
+    var name: String
+    var points: Int
+    var result: String
+    var levelCategory: String
+    var isEntryPoint: Bool
+}
