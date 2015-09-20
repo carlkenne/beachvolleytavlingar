@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlayerRankingGameListDownloader {
+class PlayerRankingGameListDownloader : DownloaderBase {
     func downloadHTML(detailsUrl:String, callback:([PlayerRankingGame]) -> Void) {
         //renew the session
         
@@ -70,15 +70,6 @@ class PlayerRankingGameListDownloader {
         return results
     }
     
-    func cleanValue(value:AnyObject) -> String {
-        
-        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-            .stringByReplacingOccurrencesOfString("ZoumlZ", withString: "ö")
-            .stringByReplacingOccurrencesOfString("ZOumlZ", withString: "Ö")
-            .stringByReplacingOccurrencesOfString("ZaumlZ", withString: "ä")
-            .stringByReplacingOccurrencesOfString("ZAumlZ", withString: "ä")
-            .stringByReplacingOccurrencesOfString("ZaringZ", withString: "å")
-            .stringByReplacingOccurrencesOfString("ZAringZ", withString: "Å")
-    }
+
 }
 

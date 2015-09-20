@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TournamentDetailDownloader {
+class TournamentDetailDownloader: DownloaderBase {
     var retries = 1
     
     func downloadHTML(tournament:Tournament, callback:(TournamentDetail) -> Void) {
@@ -87,8 +87,5 @@ class TournamentDetailDownloader {
         str = str.stringByReplacingOccurrencesOfString("\", \"_blank\")", withString: "")
         return str
     }
-    
-    func cleanValue(value:AnyObject) -> String {
-        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-    }
+
 }

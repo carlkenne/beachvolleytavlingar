@@ -18,12 +18,3 @@ struct PlayerRanking {
     var detailsUrl: String
 }
 
-struct PlayerRankingGame {
-    var period: String
-    var year: String
-    var name: String
-    var points: Int
-    var result: String
-    var levelCategory: String
-    var isEntryPoint: Bool
-}

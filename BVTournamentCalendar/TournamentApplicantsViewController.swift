@@ -109,6 +109,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         }
     }
 }
+
 class GroupSize : UITableViewCell
 {
     @IBOutlet weak var groupsSlider: UISlider!

@@ -19,7 +19,6 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         super.viewDidLoad()
         text.delegate = self
         showTournament()
-        
     }
  
     func webView(webView: UIWebView,
@@ -31,55 +30,6 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
             return false
         }
         return true
-    }
-    
-    
-    func share(sender:AnyObject) {
-   /*     let tournament = (UIApplication.sharedApplication().delegate as! AppDelegate).selectedTournament
-        var sec = tournament?.from.timeIntervalSinceDate(Date.parse("2001.01.01"))
-        UIApplication.sharedApplication().openURL(NSURL(string:("calshow:\(sec!)"))!)
-        println("calshow:\(sec!)")
-        
-        */
-        
-       /* let textToShare = "Swift is awesome!  Check out this website about it!"
-        
-        if let myWebsite = NSURL(string: "http://www.codingexplorer.com/")
-        {
-            let objectsToShare = [textToShare, myWebsite]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationA)
-            
-            self.presentViewController(activityVC, animated: true, completion: nil)
-            
-            
-        }
-        
-        var eventStore : EKEventStore = EKEventStore()
-        
-        // 'EKEntityTypeReminder' or 'EKEntityTypeEvent'
-        
-        eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: {
-            (granted, error) in
-            
-            if (granted) && (error == nil) {
-                println("granted \(granted)")
-                println("error \(error)")
-                
-                let tournament = (UIApplication.sharedApplication().delegate as! AppDelegate).selectedTournament
-                
-                
-                var event:EKEvent = EKEvent(eventStore: eventStore)
-                
-                event.title = tournament?.name
-                event.startDate = tournament?.from
-                event.endDate = tournament?.to
-                event.calendar = eventStore.defaultCalendarForNewEvents
-                
-                eventStore.saveEvent(event, span: EKSpanThisEvent, error: nil) 
-                
-                println("Saved Event") 
-            } 
-        })*/
     }
     
     override func didReceiveMemoryWarning() {

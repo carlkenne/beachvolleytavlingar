@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TournamentsDownloader {
+class TournamentsDownloader : DownloaderBase {
     let baseURL = "https://www.profixio.com/fx/"
     func downloadHTML(callback:([Tournament]) -> Void) {
         HttpDownloader().httpGetOld(baseURL + "terminliste.php?org=SVBF.SE.SVB&p=36"){
@@ -113,10 +113,6 @@ class TournamentsDownloader {
             .map({ self.getHref($0) })
             .filter({ $0.characters.count > 0 })
             .reduce(""){ $0 + $1}
-    }
-    
-    func cleanValue(value:AnyObject) -> String {
-        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
 }
 
