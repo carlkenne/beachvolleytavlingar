@@ -42,28 +42,19 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(UITableView, numberOfRowsInSection: Int) -> Int {
+    func tableView(_: UITableView, numberOfRowsInSection: Int) -> Int {
         return dataSource[numberOfRowsInSection].applicants.count
     }
     
-    func tableView(UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
-        /*if(cellForRowAtIndexPath.row == 0){
-            //table.registerClass(GroupSize, forCellReuseIdentifier: <#String#>)
-            //table.dequ
-            var cell = table.dequeueReusableCellWithIdentifier("Group size") as! UITableViewCell
-            let slider = cell.viewWithTag(1) as! UISlider
-            slider.addTarget(cell, action: "sliderMoved:", forControlEvents: .ValueChanged)
-          return cell
-        }*/
-        
+    func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
         var cell : UITableViewCell
         if(applicants.type == "D"){
-            cell = table.dequeueReusableCellWithIdentifier("ApplicantDam") as! UITableViewCell
+            cell = table.dequeueReusableCellWithIdentifier("ApplicantDam") as UITableViewCell!
         } else if (applicants.type == "H"){
-            cell = table.dequeueReusableCellWithIdentifier("ApplicantHerr") as! UITableViewCell
+            cell = table.dequeueReusableCellWithIdentifier("ApplicantHerr") as UITableViewCell!
         } else {
-            cell = table.dequeueReusableCellWithIdentifier("Applicant") as! UITableViewCell
+            cell = table.dequeueReusableCellWithIdentifier("Applicant") as UITableViewCell!
         }
         cell.textLabel?.text = applicants.players
         cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row+1) (\(applicants.points())p) \(applicants.club)"
@@ -84,20 +75,20 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     
     func showTournament(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var tournament = appDelegate.selectedTournament
+        let tournament = appDelegate.selectedTournament
         parentViewController?.title = tournament?.name
         
         TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail){
             (data) -> Void in
             var listOfApplicants = data
-            listOfApplicants.sort({ $0.points() > $1.points() })
+            listOfApplicants.sortInPlace({ $0.points() > $1.points() })
             
             let sectionNames = NSSet(array: listOfApplicants.map {
                 return $0.type
             }).allObjects
             
             self.dataSource = sectionNames.map {
-                var sectionName:String = $0 as! String
+                let sectionName:String = $0 as! String
                 var list = listOfApplicants.filter( {(applicant: Applicants) -> Bool in
                     applicant.type == sectionName
                 })
@@ -110,7 +101,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
                 ]
             }
             
-            self.dataSource.sort({ $0.title < $1.title })
+            self.dataSource.sortInPlace({ $0.title < $1.title })
             
             self.table.reloadData()
             self.refreshControl.endRefreshing()
@@ -124,8 +115,8 @@ class GroupSize : UITableViewCell
     @IBOutlet weak var groupsText: UITextField!
     
     func sliderMoved(sender: UISlider) {
-        print(sender)
-        var round = roundf(sender.value)
+        print(sender, terminator: "")
+        let round = roundf(sender.value)
         sender.value = round
         groupsText.text = "\(Int(round))"
     }

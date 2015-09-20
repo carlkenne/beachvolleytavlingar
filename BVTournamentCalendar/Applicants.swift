@@ -19,9 +19,9 @@ struct Applicants {
     
     func points() -> Int {
         if(rankingPoints.length>0) {
-            return (rankingPoints as String).toInt()!
+            return Int((rankingPoints as String))!
         }
-        return (entryPoints as String).toInt()!
+        return Int((entryPoints as String))!
     }
     
     func getTypeName() -> String {

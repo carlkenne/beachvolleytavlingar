@@ -89,8 +89,8 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         })
         
         if(!self.doNotInclude.containsObject("hideOld")){
-            var now = NSDate()
-            var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
+            let now = NSDate()
+            let currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
             data = data.filter( {(tournament: Tournament) -> Bool in
                 tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil
             })
@@ -101,18 +101,18 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             }).allObjects
         
         self.results = sectionNames.map {
-            var sectionName:String = $0 as! String
+            let sectionName:String = $0 as! String
             return PeriodTableSection(title: sectionName, tournaments: data.filter( {(tournament: Tournament) -> Bool in
                 tournament.period == sectionName
             }))
         }
-        self.results.sort({ $0.title < $1.title })
+        self.results.sortInPlace({ $0.title < $1.title })
         self.table.reloadData()
         self.table.hidden = false
         self.loading.stopAnimating()
         self.refreshControl.endRefreshing()
         
-        var currentPeriod = self.getCurrentPeriod()
+        let currentPeriod = self.getCurrentPeriod()
         if(currentPeriod > -1) {
             self.table.scrollToRowAtIndexPath(
                 NSIndexPath(forItem: 0, inSection: currentPeriod), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
@@ -120,7 +120,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getCurrentPeriod() -> Int{
-        var currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
+        let currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
         for var p = 0; p < self.results.count; p++ {
             if(self.results[p].title.rangeOfString(currentPeriodName) != nil) {
                 return p
@@ -137,17 +137,17 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     //
     //UIViewTableDataSource
     //
-    func tableView(UITableView, numberOfRowsInSection: Int) -> Int {
+    func tableView(_: UITableView, numberOfRowsInSection: Int) -> Int {
         return results[numberOfRowsInSection].tournaments.count
     }
     
-    func tableView(UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
         let tournament = self.results[cellForRowAtIndexPath.section].tournaments[cellForRowAtIndexPath.row]
         var cellName = "NoInfo"
         if(tournament.moreInfo){
             cellName = "MoreInfo"
         }
-        let cell = table.dequeueReusableCellWithIdentifier(cellName) as! UITableViewCell
+        let cell = table.dequeueReusableCellWithIdentifier(cellName) as UITableViewCell!
         cell.textLabel?.text = tournament.name
         cell.detailTextLabel?.text = tournament.formattedFrom + " - " + tournament.organiser
         addImage(cell, levelCategory: tournament.levelCategory)
@@ -175,8 +175,8 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let view = view as? UITableViewHeaderFooterView {
-            view.textLabel.backgroundColor = UIColor.clearColor()
-            view.textLabel.textColor = UIColor.blackColor()
+            view.textLabel!.backgroundColor = UIColor.clearColor()
+            view.textLabel!.textColor = UIColor.blackColor()
         }
     }
     
@@ -189,7 +189,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let indexPath = table.indexPathForSelectedRow()!
+        let indexPath = table.indexPathForSelectedRow!
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.selectedTournament = self.results[indexPath.section].tournaments[indexPath.row]
         self.performSegueWithIdentifier("ShowTournament", sender: self)

@@ -10,7 +10,7 @@ import Foundation
 
 extension UIViewController {
     func hideEmptyRows(_table: UITableView){
-        var tblView =  UIView(frame: CGRectZero)
+        let tblView =  UIView(frame: CGRectZero)
         _table.tableFooterView = tblView
         _table.tableFooterView!.hidden = true
         _table.backgroundColor = UIColor.clearColor()
@@ -18,9 +18,9 @@ extension UIViewController {
     
     func setBackgroundImage(name:String, ofType:String){
         UIGraphicsBeginImageContext(self.view.frame.size)
-        var image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource(name, ofType: ofType)!)
+        let image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource(name, ofType: ofType)!)
         image?.drawInRect(self.view.bounds)
-        var i = UIGraphicsGetImageFromCurrentImageContext()
+        let i = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         view.backgroundColor = UIColor(patternImage: i)
     }

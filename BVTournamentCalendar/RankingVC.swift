@@ -68,15 +68,15 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if (self.searchController.active)
         {
-            let cell = table.dequeueReusableCellWithIdentifier("SearchResult") as! UITableViewCell
-            var data = self.searchData[indexPath.row]
-            var rank = (sortBy.selectedSegmentIndex == 0) ? data.rankByPoints : data.rankByEntryPoints
+            let cell = table.dequeueReusableCellWithIdentifier("SearchResult") as UITableViewCell!
+            let data = self.searchData[indexPath.row]
+            let rank = (sortBy.selectedSegmentIndex == 0) ? data.rankByPoints : data.rankByEntryPoints
             cell.detailTextLabel!.text = "Rankingpoäng: \(data.points), Entry points: \(data.entryPoints)"
             cell.textLabel?.text = "\(rank) - " + data.name
             return cell
         } else {
-            let cell = table.dequeueReusableCellWithIdentifier("PlayerRanking") as! UITableViewCell
-            var data = self.rawDownloadedData[indexPath.row]
+            let cell = table.dequeueReusableCellWithIdentifier("PlayerRanking") as UITableViewCell!
+            let data = self.rawDownloadedData[indexPath.row]
             var rank = data.rankByPoints
             if(sortBy.selectedSegmentIndex == 0) {
                 cell.detailTextLabel!.text = "\(data.points)"
@@ -100,7 +100,7 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     
     func loadData() {
         // Do any additional setup after loading the view, typically from a nib.
-        var datatype = type == "Herr" ? "H" :
+        let datatype = type == "Herr" ? "H" :
             type == "Dam" ? "D" : "M"
         
         PlayerRankingsDownloader().downloadHTML(datatype){(_data) -> Void in
@@ -113,9 +113,9 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     
     func filterData(){
         if(sortBy.selectedSegmentIndex == 0){
-            self.rawDownloadedData.sort({ $0.rankByPoints < $1.rankByPoints })
+            self.rawDownloadedData.sortInPlace({ $0.rankByPoints < $1.rankByPoints })
         } else {
-            self.rawDownloadedData.sort({ $0.rankByEntryPoints < $1.rankByEntryPoints })
+            self.rawDownloadedData.sortInPlace({ $0.rankByEntryPoints < $1.rankByEntryPoints })
         }
         
         self.table.reloadData()
@@ -124,12 +124,12 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     }
 }
 
-extension RankingVC: UISearchResultsUpdating
+extension RankingVC
 {
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         self.searchData = self.rawDownloadedData.filter({(player:PlayerRanking) -> Bool in
-            var stringMatch = player.name.lowercaseString.rangeOfString(searchController.searchBar.text.lowercaseString)
+            let stringMatch = player.name.lowercaseString.rangeOfString(searchController.searchBar.text!.lowercaseString)
             return stringMatch != nil
         })
     }
@@ -138,7 +138,7 @@ extension RankingVC: UISearchResultsUpdating
 extension RankingVC: UITableViewDelegate
 {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        let indexPath = table.indexPathForSelectedRow()!
+        let indexPath = table.indexPathForSelectedRow!
         let viewController = segue.destinationViewController as! PlayerRankingVC
         
         if segue.identifier == "ShowPlayerFromSearch" {

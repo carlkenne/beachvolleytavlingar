@@ -31,14 +31,14 @@ class PlayerRankingVC : UITableViewController
             self.noOfEnttryPoints = self.results.filter(){ $0.isEntryPoint }.count
             self.rankingStartIndex = self.noOfEnttryPoints + 1 + self.entrypointsStartIndex
             
-            var levels = NSSet(array: _data.map {
+            let levels = NSSet(array: _data.map {
                 return $0.levelCategory
             }).allObjects
                 
             self.summary = levels.map {
-                var sectionName:String = $0 as! String
-                var rating =  RatingSection(title: sectionName, rating: self.getRating(sectionName))
-                println("\(rating.title) \(rating.rating)")
+                let sectionName:String = $0 as! String
+                let rating =  RatingSection(title: sectionName, rating: self.getRating(sectionName))
+                print("\(rating.title) \(rating.rating)")
                 return rating
             }
 
@@ -52,11 +52,11 @@ class PlayerRankingVC : UITableViewController
         greens = self.results.filter( {(tournament: PlayerRankingGame) -> Bool in
             tournament.levelCategory == level
         }).map {
-            var tre = split($0.result) {$0 == " "}
+            var tre = $0.result.characters.split {$0 == " "}.map { String($0) }
             
             if(tre.count == 3) {
-                var plats = Float(tre[0].toInt()!)
-                var total = Float(tre[2].toInt()!)
+                var plats = Float(Int(tre[0])!)
+                var total = Float(Int(tre[2])!)
                 total = total - floor(total / 4) // cut off the bottom percentile since it's never really counted
                 plats = min(plats, total)
                 return round((total - plats) / (total - 1) * 100)
@@ -112,7 +112,7 @@ class PlayerRankingVC : UITableViewController
         if(section == snittresultatStartIndex){
             return "Snittresultat"
         } else if(section == entrypointsStartIndex){
-            var ep = player!.entryPoints
+            let ep = player!.entryPoints
             
             return "Entrypoints (\(ep))"
         } else if(section == rankingStartIndex || section == self.results.count + 3){
@@ -127,25 +127,25 @@ class PlayerRankingVC : UITableViewController
         let header:UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
 
         if(section == entrypointsStartIndex || section == rankingStartIndex || section == snittresultatStartIndex) {
-            header.textLabel.textColor = UIColor.blackColor()
+            header.textLabel!.textColor = UIColor.blackColor()
         } else {
-            header.textLabel.textColor = UIColor(red:0.427451, green:0.427451, blue:0.447059, alpha: 1.0)
+            header.textLabel!.textColor = UIColor(red:0.427451, green:0.427451, blue:0.447059, alpha: 1.0)
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if(indexPath.section == snittresultatStartIndex ){
-            let cell = tableView.dequeueReusableCellWithIdentifier("GameRankedSimple") as! UITableViewCell
-            var rating = summary[indexPath.row]
+            let cell = tableView.dequeueReusableCellWithIdentifier("GameRankedSimple") as UITableViewCell!
+            let rating = summary[indexPath.row]
             cell.detailTextLabel?.text = rating.title
             cell.textLabel?.text = "\(rating.rating)%"
             return cell
         }
-        var index = indexPath.section > rankingStartIndex ? indexPath.section - 3 : indexPath.section - 2
-        var tourney = self.results[index]
+        let index = indexPath.section > rankingStartIndex ? indexPath.section - 3 : indexPath.section - 2
+        let tourney = self.results[index]
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("GameRanked") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("GameRanked") as UITableViewCell!
         cell.textLabel?.text = "plats: \(tourney.result) - (\(tourney.points) poäng)"
         cell.detailTextLabel?.text = "\(tourney.name)"
         addImage(cell, levelCategory: tourney.levelCategory)

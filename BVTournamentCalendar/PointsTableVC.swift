@@ -29,12 +29,12 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
     
     func showTournament() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var tournament = appDelegate.selectedTournament
+        let tournament = appDelegate.selectedTournament
         parentViewController?.title = tournament?.name
         loading.startAnimating()
         TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail){
             (data) -> Void in
-            var listOfApplicants = data
+            let listOfApplicants = data
             
             let dam = listOfApplicants.filter({ $0.type == "D" })
             let herr = listOfApplicants.filter({ $0.type == "H" })
@@ -61,8 +61,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         return dataSource.count
     }
     
-    func tableView(UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell {
-        var cell =  UITableViewCell()
+    func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell {
+        let cell =  UITableViewCell()
         cell.textLabel?.text = dataSource[cellForRowAtIndexPath.section].pointsTable[cellForRowAtIndexPath.row]
         return cell
     }
@@ -75,9 +75,9 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         if(listOfApplicants.count == 0) { return }
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var count = listOfApplicants.count > appDelegate.selectedTournamentDetail?.maxNoOfParticipants ? appDelegate.selectedTournamentDetail?.maxNoOfParticipants : listOfApplicants.count
+        let count = listOfApplicants.count > appDelegate.selectedTournamentDetail?.maxNoOfParticipants ? appDelegate.selectedTournamentDetail?.maxNoOfParticipants : listOfApplicants.count
         
-        var pointTable = getPointsForLevel(count!, tournament: tournament)
+        let pointTable = getPointsForLevel(count!, tournament: tournament)
         var rank = ["1:a", "2:a", "3:dje", "5:e", "9:de", "13:de", "17:de", "25:e", "33:dje", "49:de"]
         var rankShort = ["1:a", "2:a", "3:dje", "5:e", "7:de", "9:de", "13:de"] //used for SBT etc..
 
@@ -86,8 +86,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         dataSource.append(
             PointsTableSection(
                 title: "\(listOfApplicants[0].getTypeName()) (\(pointTable.title))",
-                pointsTable: map(enumerate(pointTable.table)){ (index, element) in
-                    var rankTitle = ((index == 4 && listOfApplicants.count < 9) || (tournament.levelCategory == "swedish beach tour" )) ? rankShort[index]
+                pointsTable: pointTable.table.enumerate().map(){ (index: Int, element:Int) in
+                    let rankTitle = ((index == 4 && listOfApplicants.count < 9) || (tournament.levelCategory == "swedish beach tour" )) ? rankShort[index]
                         : rank[index]
                     return " \(rankTitle) - \(element) poäng"
                 }

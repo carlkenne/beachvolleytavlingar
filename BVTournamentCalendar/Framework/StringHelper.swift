@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[advance(self.startIndex, i)]
+        return self[self.startIndex.advancedBy(i)]
     }
     
     subscript (i: Int) -> String {
@@ -19,7 +19,7 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
+        return substringWithRange(Range(start: startIndex.advancedBy(r.startIndex), end: startIndex.advancedBy(r.endIndex)))
     }
     
 
@@ -28,38 +28,34 @@ extension String {
     }
         
     init(htmlEncodedString: String) {
-            var encodedData = htmlEncodedString.dataUsingEncoding(NSUnicodeStringEncoding)!
+            let encodedData = htmlEncodedString.dataUsingEncoding(NSUnicodeStringEncoding)!
             let attributedOptions = [String: AnyObject]()
-            let attributedString = NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil, error: nil)!
+            let attributedString = try! NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
             self.init(attributedString.string)
     }
   
 
     func replaceOccurancesUTF16(utf16Nbr: Int, with: Character) -> String {
-        var chars = Array(self)
+        var chars = Array(self.characters)
         var utf16arr = Array(self.utf16)
         for var row = 0; row < utf16arr.count ; row++ {
             if(Int(utf16arr[row]) == utf16Nbr) {
-                println(Int(utf16arr[row]))
+                print(Int(utf16arr[row]))
                 chars[row] = with
             }
         }
-        var str = String()
-        str.extend(chars)
-        return str
+        return String(chars)
     }
     
     func removeOccurancesUTF16(utf16Nbr: Int) -> String {
-        var chars = Array(self)
+        var chars = Array(self.characters)
         var utf16arr = Array(self.utf16)
         for var row = 0; row < utf16arr.count ; row++ {
             if(Int(utf16arr[row]) == utf16Nbr) {
-                println(Int(utf16arr[row]))
+                print(Int(utf16arr[row]))
                 chars.removeAtIndex(row)
             }
         }
-        var str = String()
-        str.extend(chars)
-        return str
+        return String(chars)
     }
 }

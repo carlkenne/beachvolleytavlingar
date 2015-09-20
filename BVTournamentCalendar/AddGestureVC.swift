@@ -20,7 +20,7 @@ class AddGestureVC : UIViewController
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var target = segue.destinationViewController as! RankingVC
+        let target = segue.destinationViewController as! RankingVC
         target.type = (self.tabBarItem.title!)
     }
     

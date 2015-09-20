@@ -126,7 +126,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Klasser</td><td>",withString:"<tr class=\"section\"><td class=\"uh section\">Klasser</td><td class=\"section\">")
  
             
-            self.text.loadHTMLString(html, baseURL: NSURL(string:"http://www.profixio.com"))
+            self.text.loadHTMLString(html, baseURL: NSURL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()
         }
     }

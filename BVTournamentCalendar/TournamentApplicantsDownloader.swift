@@ -24,7 +24,7 @@ class TournamentApplicantsDownloader {
     }
     
     func setServerCookieRequest(url: NSString,tournament:Tournament, callback:([Applicants]) -> Void) {
-        HttpDownloader().httpGetOld("http://www.profixio.com" + (url as String)) {
+        HttpDownloader().httpGetOld("https://www.profixio.com" + (url as String)) {
              (data, error) -> Void in
             sleep(1)
             self.participantsDownload(tournament, callback:callback)
@@ -32,13 +32,13 @@ class TournamentApplicantsDownloader {
     }
     
     func participantsDownload(tournament:Tournament, callback:([Applicants]) -> Void) {
-        HttpDownloader().httpGetOld("http://www.profixio.com/pamelding/vis_paamelding.php") {
+        HttpDownloader().httpGetOld("https://www.profixio.com/pamelding/vis_paamelding.php") {
             (data, error) -> Void in
             if error != nil {
-                println(error)
+                print(error)
                 callback([])
             } else {
-                var results = self.parseHTML(tournament, HTMLData: data!)
+                let results = self.parseHTML(tournament, HTMLData: data!)
                 callback( results )
             }
         }
@@ -49,8 +49,8 @@ class TournamentApplicantsDownloader {
         var results = [Applicants]()
         
         for var row = 0; row < (allCells.count-7)/8 ; row++ {
-            var td = (row * 8)+7
-            var applicants = Applicants(
+            let td = (row * 8)+7
+            let applicants = Applicants(
                 players: cleanValue(allCells[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
                 club: cleanValue(allCells[td+1]),
                 type: (cleanValue(allCells[td+2]) as String) + (getReserveCode(allCells[td]) as String),

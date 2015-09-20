@@ -9,27 +9,27 @@
 import Foundation
 
 class TournamentsDownloader {
-    let baseURL = "http://www.profixio.com/fx/"
+    let baseURL = "https://www.profixio.com/fx/"
     func downloadHTML(callback:([Tournament]) -> Void) {
         HttpDownloader().httpGetOld(baseURL + "terminliste.php?org=SVBF.SE.SVB&p=36"){
             (data, error) -> Void in
             if error != nil {
-                println(error)
+                print(error)
                 callback([])
             } else {
-                var results = self.parseHTML(data!)
+                let results = self.parseHTML(data!)
                 callback(results)
             }
         }
     }
     
     func parseHTML(HTMLData:NSData) -> [Tournament] {
-        var error: NSError?
+        let error: NSError? = nil
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table//td")
 
         var tournaments = [Tournament]()
-        if let error = error {
-            println("Error : \(error)")
+        if let error2 = error {
+            print("Error : \(error2)")
         } else {
             let dayTimePeriodFormatter = NSDateFormatter()
             dayTimePeriodFormatter.dateFormat = "EEE, d MMM"
@@ -38,13 +38,12 @@ class TournamentsDownloader {
             for var t = 1; t < allCells.count/7 ; t++
             {
                 let startAt = t * 7
-                var cell = allCells[startAt+4] as! TFHppleElement
                 let from = Date.parse(cleanValue(allCells[startAt]))
                 let level = cleanValue(allCells[startAt+5])
                 let name = cleanValue(allCells[startAt+4])
                 let link = getHref(allCells[startAt+4])
                 
-                println("")
+                print("")
                 
                 let tournament = Tournament(
                     from: from,
@@ -57,7 +56,7 @@ class TournamentsDownloader {
                     levelCategory: getLevelCategory(level.lowercaseString, name: name),
                     type: cleanValue(allCells[startAt+6]),
                     link: self.baseURL + (link as String),
-                    moreInfo: count(link) > 0
+                    moreInfo: link.characters.count > 0
                 )
                 tournaments.append(tournament)
             }
@@ -66,7 +65,7 @@ class TournamentsDownloader {
     }
     
     func getDate(value: AnyObject) -> NSDate{
-        var date = cleanValue(value)
+        let date = cleanValue(value)
         if(date.isEmpty){
             return NSDate()
         }
@@ -75,7 +74,7 @@ class TournamentsDownloader {
     }
     
     func getLevelCategory(level:String, name:String) -> String{
-        var name = name.lowercaseString
+        let name = name.lowercaseString
         if(level == "mixed" || name.rangeOfString("mixed") != nil){
             return "mixed"
         }
@@ -95,8 +94,8 @@ class TournamentsDownloader {
     }
     
     func getPeriodName(shortSectionName:String) -> String {
-        var periods = TournamentPeriods()
-        var range = periods.getDateRangeForPeriod(shortSectionName)
+        let periods = TournamentPeriods()
+        let range = periods.getDateRangeForPeriod(shortSectionName)
         
         if(shortSectionName == periods.getPeriodNameForDate(NSDate()))
         {
@@ -106,13 +105,13 @@ class TournamentsDownloader {
     }
     
     func getHref(element:AnyObject) -> String{
-        var tfElement = element as! TFHppleElement
+        let tfElement = element as! TFHppleElement
         if(tfElement.attributes["href"] != nil) {
             return tfElement.attributes["href"] as! String
         }
         return tfElement.children
             .map({ self.getHref($0) })
-            .filter({ count($0) > 0 })
+            .filter({ $0.characters.count > 0 })
             .reduce(""){ $0 + $1}
     }
     

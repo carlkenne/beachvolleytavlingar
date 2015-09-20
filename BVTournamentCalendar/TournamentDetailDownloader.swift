@@ -17,11 +17,11 @@ class TournamentDetailDownloader {
         HttpDownloader().httpGetOld(tournament.link as String){
             (data, error) -> Void in
             if (error != nil) {
-                println(error)
+                print(error)
                 callback(self.createFailedResponse(tournament))
             } else {
                 if(self.areWeStillLoggedIn(data!) == true) {
-                    var tournamentDetail = self.parseHTML(tournament, HTMLData: data!)
+                    let tournamentDetail = self.parseHTML(tournament, HTMLData: data!)
                     callback(tournamentDetail)
                     appDelegate.selectedTournamentDetail = tournamentDetail
                 }
@@ -59,11 +59,11 @@ class TournamentDetailDownloader {
     
     func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
-        var anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
-        var maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
+        let anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
+        let maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
         var maxNo = 100
-        if(count(maxNoOfParticipants) > 0){
-            maxNo = maxNoOfParticipants.toInt()!
+        if(maxNoOfParticipants.characters.count > 0){
+            maxNo = Int(maxNoOfParticipants)!
         }
         
         return TournamentDetail(
@@ -81,7 +81,7 @@ class TournamentDetailDownloader {
             return ""
         }
         
-        var onclickString = (anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString
+        let onclickString = (anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString
         
         var str = onclickString.stringByReplacingOccurrencesOfString("window.open(\"..", withString: "")
         str = str.stringByReplacingOccurrencesOfString("\", \"_blank\")", withString: "")
