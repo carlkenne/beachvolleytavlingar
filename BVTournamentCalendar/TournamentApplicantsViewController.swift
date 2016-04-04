@@ -49,9 +49,9 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
         var cell : UITableViewCell
-        if(applicants.type == "D"){
+        if(applicants.type == "D" && applicants.status){
             cell = table.dequeueReusableCellWithIdentifier("ApplicantDam") as UITableViewCell!
-        } else if (applicants.type == "H"){
+        } else if (applicants.type == "H" && applicants.status){
             cell = table.dequeueReusableCellWithIdentifier("ApplicantHerr") as UITableViewCell!
         } else {
             cell = table.dequeueReusableCellWithIdentifier("Applicant") as UITableViewCell!
