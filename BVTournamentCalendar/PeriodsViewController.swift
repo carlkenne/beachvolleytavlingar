@@ -90,9 +90,9 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         if(!self.doNotInclude.containsObject("hideOld")){
             let now = NSDate()
-            let currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
+            let currentPeriodName = TournamentPeriods().getPeriodNameForDate(now)
             data = data.filter( {(tournament: Tournament) -> Bool in
-                tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil
+                ((tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil))
             })
         }
         

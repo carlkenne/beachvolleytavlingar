@@ -11,6 +11,7 @@
 		442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */; };
 		442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */; };
 		442A74231B2F004700875705 /* normal-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 442A74221B2F004700875705 /* normal-back.png */; };
+		444E4E101C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 444E4E0F1C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg */; };
 		44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A161B16139F004307E7 /* PeriodsViewController.swift */; };
 		44686A1A1B1614BC004307E7 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A191B1614BC004307E7 /* Tournament.swift */; };
 		44686A231B165096004307E7 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 44686A1E1B165096004307E7 /* TFHpple.m */; };
@@ -44,8 +45,8 @@
 		4492BE971B42C68D00F24441 /* skyleft_menu_highlight.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE961B42C68D00F24441 /* skyleft_menu_highlight.PNG */; };
 		4492BE9A1B42C79000F24441 /* sand_menu_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE981B42C79000F24441 /* sand_menu_highlight.png */; };
 		4492BE9B1B42C79000F24441 /* sand_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4492BE991B42C79000F24441 /* sand_menu.png */; };
-		44AEE2811BAEE74200F0825B /* PlayerRankingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEE2801BAEE74200F0825B /* PlayerRankingGame.swift */; settings = {ASSET_TAGS = (); }; };
-		44AEE2831BAEE86000F0825B /* DownloaderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEE2821BAEE86000F0825B /* DownloaderBase.swift */; settings = {ASSET_TAGS = (); }; };
+		44AEE2811BAEE74200F0825B /* PlayerRankingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEE2801BAEE74200F0825B /* PlayerRankingGame.swift */; };
+		44AEE2831BAEE86000F0825B /* DownloaderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEE2821BAEE86000F0825B /* DownloaderBase.swift */; };
 		44B00B1D1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B1C1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift */; };
 		44B00B1F1B541BC2009CAF43 /* PointsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */; };
 		44B00B211B543A42009CAF43 /* PlayerRankingsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B201B543A42009CAF43 /* PlayerRankingsDownloader.swift */; };
@@ -74,6 +75,7 @@
 		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
 		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
 		442A74221B2F004700875705 /* normal-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal-back.png"; sourceTree = "<group>"; };
+		444E4E0F1C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10363442_2876931804806_5184986262509690354_o.jpg; sourceTree = "<group>"; };
 		44686A161B16139F004307E7 /* PeriodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodsViewController.swift; sourceTree = "<group>"; };
 		44686A191B1614BC004307E7 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		44686A1C1B165096004307E7 /* SandSports-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SandSports-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		44686A2A1B1734C0004307E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				444E4E0F1C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg */,
 				4492BE981B42C79000F24441 /* sand_menu_highlight.png */,
 				4492BE991B42C79000F24441 /* sand_menu.png */,
 				4492BE961B42C68D00F24441 /* skyleft_menu_highlight.PNG */,
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */,
+				444E4E101C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg in Resources */,
 				442A74231B2F004700875705 /* normal-back.png in Resources */,
 				44686A371B185161004307E7 /* black.png in Resources */,
 				44CC45031B15CB0500E2F545 /* LaunchScreen.xib in Resources */,
@@ -619,6 +623,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TFHpple/SandSports-Bridging-Header.h";
 			};
 			name = Debug;
@@ -638,6 +643,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TFHpple/SandSports-Bridging-Header.h";
 			};
 			name = Release;

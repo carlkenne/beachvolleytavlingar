@@ -27,14 +27,14 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         super.viewDidLoad()
         loading.startAnimating()
         self.table.dataSource = self
-        showTournament()
-        
-        setBackgroundImage("normal-back", ofType: "png")
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
-       
+        
+        showTournament()
+        
+        setBackgroundImage("normal-back", ofType: "png")
     }
 
     override func didReceiveMemoryWarning() {

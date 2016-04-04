@@ -11,7 +11,7 @@ import Foundation
 class TournamentsDownloader : DownloaderBase {
     let baseURL = "https://www.profixio.com/fx/"
     func downloadHTML(callback:([Tournament]) -> Void) {
-        HttpDownloader().httpGetOld(baseURL + "terminliste.php?org=SVBF.SE.SVB&p=36"){
+        HttpDownloader().httpGetOld(baseURL + "terminliste.php?org=SVBF.SE.SVB&p=40"){
             (data, error) -> Void in
             if error != nil {
                 print(error)
@@ -70,7 +70,7 @@ class TournamentsDownloader : DownloaderBase {
             return NSDate()
         }
         
-        return Date.parse("2015." + date)
+        return Date.parse("2016." + date)
     }
     
     func getLevelCategory(level:String, name:String) -> String{

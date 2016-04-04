@@ -12,6 +12,11 @@ struct PointsTableSection {
 }
 
 struct PointTable {
-    let table: [Int]
+    let table: [PointsRank]
     let title: String
+}
+
+struct PointsRank {
+    let points: Int
+    let rank: String
 }

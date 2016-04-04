@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9DU-v2-Chf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9DU-v2-Chf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -432,7 +432,7 @@
                     <navigationItem key="navigationItem" title="Filter" id="yPe-14-XRu">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Acd-ao-kiz">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dZm-Dd-RGr">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="klar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -736,7 +736,7 @@
                                             <rect key="frame" x="112" y="15" width="25" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -891,7 +891,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="ldu-vJ-ED2"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wZd-6j-0V4">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uua-K1-p9c">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="filtrera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1084,7 +1084,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="RTD-Br-glN">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FRI-p1-rqB">
@@ -1106,7 +1106,7 @@
                             <constraint firstAttribute="bottom" secondItem="RTD-Br-glN" secondAttribute="bottom" id="4a6-5l-gZ8"/>
                             <constraint firstAttribute="trailing" secondItem="RTD-Br-glN" secondAttribute="trailing" id="oVc-ZG-q2V"/>
                             <constraint firstItem="RTD-Br-glN" firstAttribute="leading" secondItem="xv0-yv-fQg" secondAttribute="leading" id="sfP-WJ-h4Y"/>
-                            <constraint firstItem="RTD-Br-glN" firstAttribute="top" secondItem="xv0-yv-fQg" secondAttribute="top" constant="64" id="v57-cu-EyT"/>
+                            <constraint firstItem="RTD-Br-glN" firstAttribute="top" secondItem="xv0-yv-fQg" secondAttribute="top" id="v57-cu-EyT"/>
                             <constraint firstAttribute="centerX" secondItem="Jdb-pa-RjP" secondAttribute="centerX" id="w4P-Ru-2EF"/>
                             <constraint firstAttribute="centerY" secondItem="Jdb-pa-RjP" secondAttribute="centerY" id="ziO-uZ-Hct"/>
                         </constraints>

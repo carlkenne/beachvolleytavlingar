@@ -13,7 +13,11 @@ class TournamentApplicantsDownloader {
         //renew the session
         
         if(detail != nil){
-            self.setServerCookieRequest(detail!.setServerSessionCookieUrl, tournament: tournament, callback: callback)
+            if (detail!.setServerSessionCookieUrl == "") {
+                callback([Applicants]());
+            } else {
+                self.setServerCookieRequest(detail!.setServerSessionCookieUrl, tournament: tournament, callback: callback)
+            }
         } else {
             TournamentDetailDownloader().downloadHTML(tournament) {
                 (data) -> Void in
