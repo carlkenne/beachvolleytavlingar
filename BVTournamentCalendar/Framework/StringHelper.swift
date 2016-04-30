@@ -38,7 +38,7 @@ extension String {
     func replaceOccurancesUTF16(utf16Nbr: Int, with: Character) -> String {
         var chars = Array(self.characters)
         var utf16arr = Array(self.utf16)
-        for var row = 0; row < utf16arr.count ; row++ {
+        for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {
                 print(Int(utf16arr[row]))
                 chars[row] = with
@@ -50,7 +50,7 @@ extension String {
     func removeOccurancesUTF16(utf16Nbr: Int) -> String {
         var chars = Array(self.characters)
         var utf16arr = Array(self.utf16)
-        for var row = 0; row < utf16arr.count ; row++ {
+        for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {
                 print(Int(utf16arr[row]))
                 chars.removeAtIndex(row)

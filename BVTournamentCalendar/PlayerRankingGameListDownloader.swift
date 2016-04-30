@@ -59,11 +59,11 @@ class PlayerRankingGameListDownloader : DownloaderBase {
         print(entryPoints.count/5)
         print(others.count/5)
         
-        for var row = 0; row < (entryPoints.count)/5 ; row++ {
+        for row in 0 ..< (entryPoints.count)/5  {
             results.append(self.createRanking((row * 5), allCells: entryPoints, isEntryPoint: true))
         }
         
-        for var row = 0; row < (others.count)/5 ; row++ {
+        for row in 0 ..< (others.count)/5  {
             results.append(self.createRanking((row * 5), allCells: others, isEntryPoint: false))
         }
         

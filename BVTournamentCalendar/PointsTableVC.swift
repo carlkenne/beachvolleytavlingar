@@ -47,10 +47,12 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
     
     func showTournament() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
         let tournament = appDelegate.selectedTournament
         parentViewController?.title = tournament?.name
         loading.startAnimating()
-        TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail){
+        
+        TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail) {
             (data) -> Void in
             let listOfApplicants = data
             
@@ -101,9 +103,6 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
             PointsTableSection(
                 title: "\(listOfApplicants[0].getTypeName()) (\(pointTable.title))",
                 pointsTable: pointTable.table.enumerate().map(){ (index: Int, element:PointsRank) in
-                    let rankTitle = ((index == 4 && listOfApplicants.count < 9) ||
-                        (tournament.levelCategory == "swedish beach tour" ))
-                    
                     return " \(element.rank) - \(element.points) poäng"
                 }
             ))

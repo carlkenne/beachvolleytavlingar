@@ -35,7 +35,7 @@ class TournamentsDownloader : DownloaderBase {
             dayTimePeriodFormatter.dateFormat = "EEE, d MMM"
             dayTimePeriodFormatter.locale = NSLocale(localeIdentifier: "sv_SE")
 
-            for var t = 1; t < allCells.count/7 ; t++
+            for t in 1 ..< allCells.count/7 
             {
                 let startAt = t * 7
                 let from = Date.parse(cleanValue(allCells[startAt]))

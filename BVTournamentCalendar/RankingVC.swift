@@ -35,7 +35,7 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
         super.viewDidLoad()
         
         Open.target = self.revealViewController()
-        Open.action = Selector("revealToggle:")
+        Open.action = #selector(SWRevealViewController.revealToggle(_:))
         
         hideEmptyRows(table)
         

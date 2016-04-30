@@ -52,7 +52,7 @@ class TournamentApplicantsDownloader {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("/html/body/table[1]//td")
         var results = [Applicants]()
         
-        for var row = 0; row < (allCells.count-7)/8 ; row++ {
+        for row in 0 ..< (allCells.count-7)/8  {
             let td = (row * 8)+7
             let applicants = Applicants(
                 players: cleanValue(allCells[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),

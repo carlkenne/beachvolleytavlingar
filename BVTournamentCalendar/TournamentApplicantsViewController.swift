@@ -29,7 +29,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         self.table.dataSource = self
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(TournamentApplicantsViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
         
         showTournament()

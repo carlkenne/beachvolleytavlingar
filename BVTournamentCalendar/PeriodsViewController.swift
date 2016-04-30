@@ -59,7 +59,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         Open.target = self.revealViewController()
-        Open.action = Selector("revealToggle:")
+        Open.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         setBackgroundImage("sand", ofType: "png")
@@ -71,7 +71,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         loadData()
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(PeriodsViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
     }
     
@@ -121,7 +121,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func getCurrentPeriod() -> Int{
         let currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
-        for var p = 0; p < self.results.count; p++ {
+        for p in 0 ..< self.results.count {
             if(self.results[p].title.rangeOfString(currentPeriodName) != nil) {
                 return p
             }

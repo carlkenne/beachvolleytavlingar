@@ -33,13 +33,13 @@ class PlayerRankingsDownloader {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table[2]//tr/td")
         var results = [PlayerRanking]()
         
-        for var row = 1; row < (allCells.count)/5 ; row++ {
+        for row in 1 ..< (allCells.count)/5  {
             let td = (row * 5)
             if(cleanValue(allCells[td]) == "Spelare utan licens"){ //after this point the table is completly different
                 
                 results.sortInPlace({ $0.entryPoints > $1.entryPoints })
                 results[0].rankByEntryPoints = 1
-                for var res = 1; res < (results.count); res++ {
+                for res in 1 ..< (results.count) {
                     if(results[res].entryPoints == results[res-1].entryPoints){
                         results[res].rankByEntryPoints = results[res-1].rankByEntryPoints
                     } else {
