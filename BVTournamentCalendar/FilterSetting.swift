@@ -13,5 +13,7 @@ struct FilterSettings{
     var green: Bool = true
     var challenger: Bool = true
     var mixed: Bool = true
+    var tour: Bool = true
+    var sm: Bool = true
     var misc: Bool = true
 }

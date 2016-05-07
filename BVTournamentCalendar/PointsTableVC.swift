@@ -118,7 +118,20 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
     
     func getPointsForLevel(noOfApplicants: Int, tournament: Tournament) -> PointTable {
         
-        if(tournament.levelCategory == "swedish beach tour"){
+        if(tournament.levelCategory == "sm") {
+            let points = [
+                PointsRank(points:1500, rank: _1),
+                PointsRank(points:900, rank: _2),
+                PointsRank(points:540, rank: _3),
+                PointsRank(points:300, rank: _5),
+                PointsRank(points:195, rank: _9),
+                PointsRank(points:120, rank: _17),
+                PointsRank(points:60, rank: _25),
+            ]
+            
+            return PointTable(table: points, title: "0 - 32")
+        }
+        else if(tournament.levelCategory == "swedish beach tour"){
             if(noOfApplicants >=  17) {
                 let points = [
                     PointsRank(points:1000, rank: _1),

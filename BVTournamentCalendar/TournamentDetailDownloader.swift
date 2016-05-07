@@ -22,8 +22,8 @@ class TournamentDetailDownloader: DownloaderBase {
             } else {
                 if(self.areWeStillLoggedIn(data!) == true) {
                     let tournamentDetail = self.parseHTML(tournament, HTMLData: data!)
-                    callback(tournamentDetail)
                     appDelegate.selectedTournamentDetail = tournamentDetail
+                    callback(tournamentDetail)
                 }
                 else {
                     self.retries = self.retries - 1
@@ -45,6 +45,7 @@ class TournamentDetailDownloader: DownloaderBase {
     func createFailedResponse(tournament: Tournament) -> TournamentDetail{
         return TournamentDetail(
             resultatLink: "",
+            registrationLink: "",
             link: tournament.link,
             table: "Could not get any information, please try again later.",
             setServerSessionCookieUrl: "",
@@ -58,14 +59,20 @@ class TournamentDetailDownloader: DownloaderBase {
         return TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//h4[contains(.,'Gjestetilgang')]").count == 0
     }
     
+    func getTextFromTD(HTMLData:NSData, query:String) -> String {
+        let array = TFHpple(HTMLData: HTMLData).searchWithXPathQuery(query)
+        
+        if(array.count > 0){
+            return cleanValue(array[0])
+        }
+        return ""
+    }
+    
     func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
         let anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
-        let resultatLinkArray = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[contains(.,'resultater/vis.php')]")
-        var resultatLink:String = ""
-        if(resultatLinkArray.count > 0){
-            resultatLink = cleanValue(resultatLinkArray[0])
-        }
+        let resultatLink = getTextFromTD(HTMLData, query:"//td[contains(.,'resultater/vis.php')]")
+        let registrationLink = getTextFromTD(HTMLData, query:"//td[contains(.,'pamelding/redirect.php')]")
         
         let maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
         var maxNo = 100
@@ -75,6 +82,7 @@ class TournamentDetailDownloader: DownloaderBase {
         
         return TournamentDetail(
             resultatLink: resultatLink.stringByReplacingOccurrencesOfString("http:", withString: "https:"),
+            registrationLink: registrationLink.stringByReplacingOccurrencesOfString("http:", withString: "https:"),
             link: tournament.link,
             table: (allCells[1] as! TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
             setServerSessionCookieUrl: self.extractOnClickLink(anmalan),

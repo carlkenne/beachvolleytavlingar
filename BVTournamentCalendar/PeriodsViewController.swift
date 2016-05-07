@@ -35,7 +35,13 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
                 excludes.append("mixed")
             }
             if(!filterSettings.misc.on){
-                excludes.append("misc")
+                excludes.append("övrigt")
+            }
+            if(!filterSettings.swedishBeachTour.on){
+                excludes.append("swedish beach tour")
+            }
+            if(!filterSettings.sm.on){
+                excludes.append("sm")
             }
             if(!filterSettings.hideOld.on){
                 excludes.append("hideOld")

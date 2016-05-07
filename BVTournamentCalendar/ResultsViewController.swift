@@ -82,9 +82,16 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("H&nbsp;-&nbsp;", withString:"")
                 .stringByReplacingOccurrencesOfString("#DDDDDD", withString:"#F7F0DF")
                 .stringByReplacingOccurrencesOfString("#EEEEEE", withString:"#FFFBF0")
+                .stringByReplacingOccurrencesOfString("<td>Bana", withString:"<td style=\"display:none\">Bana")
+                .stringByReplacingOccurrencesOfString("<td> </td>", withString:"")
             print(table)
             
-            let html = "<html><head><meta name=\"viewport\" content=\"width=450\"/><style>.kampnr{display:none;} table td{font-size:16px; padding:3px; font-family:helvetica} </style></head><body>\(table)<br/><br/><b>Sidlänk</a>  <a href=\"\(link)\" style=\"font-size:14px !important; padding-left:20px; font-family:helvetica\">\(link)</a></body></html>"
+            var aLink = "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 20px; text-decoration: none;\">Till resultatsidan &gt;</a>"
+            if(link == ""){
+                aLink = ""
+            }
+            
+            let html = "<html><head><meta name=\"viewport\" content=\"width=450\"/><style>.kampnr{display:none;} table td{font-size:16px; padding:3px; font-family:helvetica} </style></head><body>\(table)<br/>\(aLink)</body></html>"
             
             self.text.loadHTMLString(html, baseURL: NSURL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()

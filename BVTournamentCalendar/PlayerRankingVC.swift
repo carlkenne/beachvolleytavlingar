@@ -40,7 +40,9 @@ class PlayerRankingVC : UITableViewController
                 let rating =  RatingSection(title: sectionName, rating: self.getRating(sectionName))
                 print("\(rating.title) \(rating.rating)")
                 return rating
-            }
+                }.filter( {(rating: RatingSection) -> Bool in
+                    rating.rating > 0
+                })
 
             self.tableView.reloadData()
         }

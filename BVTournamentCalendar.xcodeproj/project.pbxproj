@@ -19,7 +19,6 @@
 		44686A251B165096004307E7 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 44686A221B165096004307E7 /* XPathQuery.m */; };
 		44686A271B17049D004307E7 /* TournamentsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A261B17049D004307E7 /* TournamentsDownloader.swift */; };
 		44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A281B170D3E004307E7 /* TournamentViewController.swift */; };
-		44686A2E1B17356C004307E7 /* IMG_2993.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 44686A2D1B17356C004307E7 /* IMG_2993.JPG */; };
 		44686A301B174188004307E7 /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A2F1B174188004307E7 /* sand.png */; };
 		44686A371B185161004307E7 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A311B185161004307E7 /* black.png */; };
 		44686A381B185161004307E7 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A321B185161004307E7 /* blue.png */; };
@@ -89,7 +88,6 @@
 		44686A221B165096004307E7 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		44686A261B17049D004307E7 /* TournamentsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentsDownloader.swift; sourceTree = "<group>"; };
 		44686A281B170D3E004307E7 /* TournamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
-		44686A2D1B17356C004307E7 /* IMG_2993.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2993.JPG; sourceTree = "<group>"; };
 		44686A2F1B174188004307E7 /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand.png; sourceTree = "<group>"; };
 		44686A311B185161004307E7 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		44686A321B185161004307E7 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				44686A341B185161004307E7 /* normal.png */,
 				44686A351B185161004307E7 /* red.png */,
 				44686A2F1B174188004307E7 /* sand.png */,
-				44686A2D1B17356C004307E7 /* IMG_2993.JPG */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */,
-				448B30481B81BFD700DBB7E7 /* PointsTableSection.swift */,
 			);
 			name = "PointsTable Controller";
 			sourceTree = "<group>";
@@ -263,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				44686A281B170D3E004307E7 /* TournamentViewController.swift */,
+				448B30481B81BFD700DBB7E7 /* PointsTableSection.swift */,
 				448B30581B81E3F000DBB7E7 /* TournamentDetail.swift */,
 				4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */,
 			);
@@ -444,7 +441,6 @@
 				4492BE9A1B42C79000F24441 /* sand_menu_highlight.png in Resources */,
 				4492BE951B42C51B00F24441 /* skyleft_menu.PNG in Resources */,
 				44686A381B185161004307E7 /* blue.png in Resources */,
-				44686A2E1B17356C004307E7 /* IMG_2993.JPG in Resources */,
 				44686A3A1B185161004307E7 /* normal.png in Resources */,
 				4492BE9B1B42C79000F24441 /* sand_menu.png in Resources */,
 				4492BE931B42B45F00F24441 /* skyleft.PNG in Resources */,

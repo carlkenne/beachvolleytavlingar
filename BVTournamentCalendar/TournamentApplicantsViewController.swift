@@ -19,7 +19,6 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     var refreshControl:UIRefreshControl!
     func refresh(sender:AnyObject)
     {
-        // Updating your data here...
         showTournament()
     }
     

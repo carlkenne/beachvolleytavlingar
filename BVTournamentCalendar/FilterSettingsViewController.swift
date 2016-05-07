@@ -14,8 +14,10 @@ class FilterSettingsViewController: UITableViewController {
     @IBOutlet weak var black: UISwitch!
     @IBOutlet weak var challenger: UISwitch!
     @IBOutlet weak var Mixed: UISwitch!
-    @IBOutlet weak var misc: UISwitch!
     @IBOutlet weak var hideOld: UISwitch!
+    @IBOutlet weak var swedishBeachTour: UISwitch!
+    @IBOutlet weak var misc: UISwitch!
+    @IBOutlet weak var sm: UISwitch!
     
     var loaded:Bool = false
     var settingsToExclude = NSSet()
@@ -52,8 +54,14 @@ class FilterSettingsViewController: UITableViewController {
         if(settingsToExclude.containsObject("challenger")){
             challenger.on = false
         }
-        if(settingsToExclude.containsObject("misc")){
+        if(settingsToExclude.containsObject("övrigt")){
             misc.on = false
+        }
+        if(settingsToExclude.containsObject("swedish beach tour")){
+            swedishBeachTour.on = false
+        }
+        if(settingsToExclude.containsObject("sm")){
+            sm.on = false
         }
         if(settingsToExclude.containsObject("hideOld")){
             hideOld.on = false

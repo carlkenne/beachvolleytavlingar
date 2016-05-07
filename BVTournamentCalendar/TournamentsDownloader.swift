@@ -84,13 +84,16 @@ class TournamentsDownloader : DownloaderBase {
         else if(level == "open svart" || name.rangeOfString("svart") != nil || name.rangeOfString("open") != nil){
             return "open svart"
         }
-        else if(level == "swedish beach tour" || level == "swedish beach tour final"){
+        else if(level == "swedish beach Ttur" || level == "swedish beach tour final" || name.rangeOfString("swedish beach tour") != nil){
             return "swedish beach tour"
+        }
+        else if(level == "Veteran-SM" || level == "Ungdoms-SM" || level == "Mixed-SM" || level == "SM-slutspel" || name.rangeOfString("senior-sm") != nil){
+            return "sm"
         }
         else if(level == "challenger" || name.rangeOfString("challenger") != nil || name.rangeOfString("ch1") != nil || name.rangeOfString("ch2") != nil){
             return "challenger"
         }
-        return "misc"
+        return "övrigt"
     }
     
     func getPeriodName(shortSectionName:String) -> String {

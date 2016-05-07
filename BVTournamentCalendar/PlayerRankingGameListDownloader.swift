@@ -39,8 +39,8 @@ class PlayerRankingGameListDownloader : DownloaderBase {
             name: name,
             points: Int(cleanValue(allCells[index+3]).removeAll(".00"))!,
             result: cleanValue(allCells[index+4])
-                .stringByReplacingOccurrencesOfString("(H)", withString: "okänd")
-                .stringByReplacingOccurrencesOfString("(D)", withString: "okänd")
+                .stringByReplacingOccurrencesOfString("(H)", withString: "?")
+                .stringByReplacingOccurrencesOfString("(D)", withString: "?")
                 .removeAll("(H - ")
                 .removeAll("(D - ")
                 .removeAll("(M - ")

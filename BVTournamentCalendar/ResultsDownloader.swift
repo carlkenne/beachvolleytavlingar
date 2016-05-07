@@ -28,14 +28,14 @@ class ResultsDownloader {
             } else {
                 HttpDownloader().httpGetOld("https://www.profixio.com/resultater/viskamper_soek.php") {
                     (data, error) -> Void in
-                    let klassCode = (TFHpple(HTMLData: data).searchWithXPathQuery("//option[contains(.,\""+klass+"\")]")[0] as! TFHppleElement).attributes["value"]! as! String
+                    let klassCode = (TFHpple(HTMLData: data).searchWithXPathQuery("//option[contains(.,\"\(klass)\")]")[0] as! TFHppleElement).attributes["value"]! as! String
                     
                     print(klassCode)
                     print(klass)
                     HttpDownloader().httpPost("https://www.profixio.com/resultater/vis_oppsett.php",
                                               //bodyData: "kamper=on&puljeinndeling=on&klasse=alle&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
                         //bodyData: "resultatliste=on&tabeller=on&klasse=alle&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
-                    bodyData: "klasse="+klassCode+"&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
+                    bodyData: "klasse=\(klassCode)&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
                         (postResponse, String) -> Void in
                         let results = self.parseHTML(tournament, HTMLData: postResponse!)
                         callback( results )

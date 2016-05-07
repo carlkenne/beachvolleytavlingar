@@ -62,7 +62,6 @@ class TournamentApplicantsDownloader {
                 status: cleanValue(allCells[td+6]) == "OK"
             )
             results.append(applicants)
-            //println(applicants.players)
         }
         return results
     }
