@@ -58,6 +58,8 @@
 		44CC450F1B15CB0500E2F545 /* BVTournamentCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC450E1B15CB0500E2F545 /* BVTournamentCalendarTests.swift */; };
 		44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CC45181B15CB9400E2F545 /* libxml2.dylib */; };
 		44EDE1781B7E24C300BB9C0D /* PlayerRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */; };
+		44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A501CDC571A0072B359 /* ResultsViewController.swift */; };
+		44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A531CDC576F0072B359 /* ResultsDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		44CC450E1B15CB0500E2F545 /* BVTournamentCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVTournamentCalendarTests.swift; sourceTree = "<group>"; };
 		44CC45181B15CB9400E2F545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
+		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,7 @@
 		44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				44F39A521CDC572A0072B359 /* Results Controller */,
 				448B30571B81E3BD00DBB7E7 /* Tournament Details Controller */,
 				448B30561B81E2F400DBB7E7 /* Tournament Applicants Controller */,
 				448B30551B81C1BE00DBB7E7 /* Ranking Controller */,
@@ -336,6 +341,15 @@
 				44CC450D1B15CB0500E2F545 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44F39A521CDC572A0072B359 /* Results Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44F39A501CDC571A0072B359 /* ResultsViewController.swift */,
+				44F39A531CDC576F0072B359 /* ResultsDownloader.swift */,
+			);
+			name = "Results Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +480,7 @@
 				44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */,
 				448B30541B81C16E00DBB7E7 /* PlayerRankingGameListDownloader.swift in Sources */,
 				44686A541B1C50F5004307E7 /* TournamentPeriods.swift in Sources */,
+				44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */,
 				44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */,
 				448B30511B81C0ED00DBB7E7 /* FilterSetting.swift in Sources */,
 				448B304D1B81C06900DBB7E7 /* Applicants.swift in Sources */,
@@ -477,6 +492,7 @@
 				44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */,
 				448B30491B81BFD700DBB7E7 /* PointsTableSection.swift in Sources */,
 				448D22FB1B3972C700D1D2CB /* StringHelper.swift in Sources */,
+				44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */,
 				4492BE8F1B417AB800F24441 /* SWRevealViewController.m in Sources */,
 				44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */,
 				44B00B1F1B541BC2009CAF43 /* PointsTableVC.swift in Sources */,

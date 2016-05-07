@@ -44,6 +44,7 @@ class TournamentDetailDownloader: DownloaderBase {
     
     func createFailedResponse(tournament: Tournament) -> TournamentDetail{
         return TournamentDetail(
+            resultatLink: "",
             link: tournament.link,
             table: "Could not get any information, please try again later.",
             setServerSessionCookieUrl: "",
@@ -60,6 +61,12 @@ class TournamentDetailDownloader: DownloaderBase {
     func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
         let anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
+        let resultatLinkArray = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[contains(.,'resultater/vis.php')]")
+        var resultatLink:String = ""
+        if(resultatLinkArray.count > 0){
+            resultatLink = cleanValue(resultatLinkArray[0])
+        }
+        
         let maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
         var maxNo = 100
         if(maxNoOfParticipants.characters.count > 0){
@@ -67,6 +74,7 @@ class TournamentDetailDownloader: DownloaderBase {
         }
         
         return TournamentDetail(
+            resultatLink: resultatLink.stringByReplacingOccurrencesOfString("http:", withString: "https:"),
             link: tournament.link,
             table: (allCells[1] as! TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
             setServerSessionCookieUrl: self.extractOnClickLink(anmalan),
@@ -87,5 +95,4 @@ class TournamentDetailDownloader: DownloaderBase {
         str = str.stringByReplacingOccurrencesOfString("\", \"_blank\")", withString: "")
         return str
     }
-
 }

@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Carl Kenne. All rights reserved.
 //
 
-
-
 class TournamentApplicantsDownloader {
     func downloadHTML(tournament:Tournament, detail: TournamentDetail?, callback:([Applicants]) -> Void) {
         //renew the session
@@ -16,39 +14,39 @@ class TournamentApplicantsDownloader {
             if (detail!.setServerSessionCookieUrl == "") {
                 callback([Applicants]());
             } else {
-                self.setServerCookieRequest(detail!.setServerSessionCookieUrl, tournament: tournament, callback: callback)
+                self.setServerCookieRequest(detail!.setServerSessionCookieUrl, callback: callback)
             }
         } else {
             TournamentDetailDownloader().downloadHTML(tournament) {
                 (data) -> Void in
                 sleep(1)
-                self.setServerCookieRequest(data.setServerSessionCookieUrl, tournament: tournament, callback: callback)
+                self.setServerCookieRequest(data.setServerSessionCookieUrl, callback: callback)
             }
         }
     }
     
-    func setServerCookieRequest(url: NSString,tournament:Tournament, callback:([Applicants]) -> Void) {
+    func setServerCookieRequest(url: NSString, callback:([Applicants]) -> Void) {
         HttpDownloader().httpGetOld("https://www.profixio.com" + (url as String)) {
              (data, error) -> Void in
             sleep(1)
-            self.participantsDownload(tournament, callback:callback)
+            self.participantsDownload(callback)
         }
     }
     
-    func participantsDownload(tournament:Tournament, callback:([Applicants]) -> Void) {
+    func participantsDownload(callback:([Applicants]) -> Void) {
         HttpDownloader().httpGetOld("https://www.profixio.com/pamelding/vis_paamelding.php") {
             (data, error) -> Void in
             if error != nil {
                 print(error)
                 callback([])
             } else {
-                let results = self.parseHTML(tournament, HTMLData: data!)
+                let results = self.parseHTML(data!)
                 callback( results )
             }
         }
     }
     
-    func parseHTML(tournament:Tournament, HTMLData:NSData) -> [Applicants] {
+    func parseHTML(HTMLData:NSData) -> [Applicants] {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("/html/body/table[1]//td")
         var results = [Applicants]()
         
@@ -81,7 +79,6 @@ class TournamentApplicantsDownloader {
     
     func cleanValue(value:AnyObject) -> String {
         var content = (value as! TFHppleElement).content
-        
 
         content = content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                 .stringByReplacingOccurrencesOfString("Ã¶", withString: "ö")
@@ -94,7 +91,5 @@ class TournamentApplicantsDownloader {
         content = content.removeOccurancesUTF16( 133)
         content = content.replaceOccurancesUTF16( 195, with: "Å")
         return content
-        }
-        
-
+    }
 }

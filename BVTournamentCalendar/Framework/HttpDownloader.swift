@@ -11,7 +11,9 @@ import Foundation
 class HttpDownloader{
     
     func httpPost(request1: String, bodyData: String, callback: (NSData?, String?) -> Void){
-        
+        print("POST")
+        print(request1)
+        print(bodyData)
         let request = NSMutableURLRequest(URL: NSURL(string: request1)!)
         request.HTTPMethod = "POST"
         request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);

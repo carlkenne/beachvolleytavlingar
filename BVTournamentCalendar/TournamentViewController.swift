@@ -56,7 +56,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
             table = table.stringByReplacingOccurrencesOfString("<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td><td/><td/></tr>", withString: "")
             
             
-            var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style> body>table>tbody>tr:first-child{display:none;} body>table>tbody>tr:nth-child(6){\(hideKlassDiv)} .uh{font-weight: bold;padding-right:6px;  vertical-align: top;} body>table>tbody>tr>td{padding-bottom:7px;} .startkont {text-align: right;} td{padding-right:15px;max-width:450px;overflow: hidden; text-overflow: ellipsis;} .section{background-color:#F8F8F8; padding-top:15px; padding-bottom:15px; padding-left:15px; } *{font-size:12pt !important;}</style>\(table)<br/><br/><b>Sidlänk</a>  <a href=\"\(link)\" style=\"font-size:14px !important; padding-left:20px\">\(link)</a></body></html>"
+            var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style> body>table>tbody>tr:first-child{display:none;} body>table>tbody>tr:nth-child(6){\(hideKlassDiv)} .uh{font-weight: bold;padding-right:6px;  vertical-align: top;} body>table>tbody>tr>td{padding-bottom:7px;} .startkont {text-align: right;} td{padding-right:15px;max-width:450px;overflow: hidden; text-overflow: ellipsis;} .section{background-color:#F8F8F8; padding-top:15px; padding-bottom:15px; padding-left:15px; } .section td{font-size:18pt} *{font-size:13pt !important;; font-family:helvetica}</style>\(table)<br/><br/></body></html>"
             
             html = html
                 .stringByReplacingOccurrencesOfString("<td class=\"uh\">Arrangör</td><td>",withString:"<td colspan=2 style=\"font-weight:bold\">")
@@ -74,8 +74,9 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("<td>&#13;",withString:"<td class=\"section\" colspan=2>")
                 .stringByReplacingOccurrencesOfString("<td class=\"uh\">Tävlingsledare</td><td class=\"uh\">Tävlingsledare</td>",withString:"<td colspan=2 class=\"uh\">Tävlingsledare</td>")
                 .stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Klasser</td><td>",withString:"<tr class=\"section\"><td class=\"uh section\">Klasser</td><td class=\"section\">")
+                .stringByReplacingOccurrencesOfString("</table><br/><br/>",withString:"<tr><td class=\"uh\">Sidlänk</td><td>\(link)</td></tr></table><br/><br/>")
  
-            
+            print (html)
             self.text.loadHTMLString(html, baseURL: NSURL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()
         }
