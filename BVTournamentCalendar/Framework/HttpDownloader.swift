@@ -31,7 +31,6 @@ class HttpDownloader{
             }
         })
     }
-
     
     func httpGetOld(request1: String, callback: (NSData?, String?) -> Void) {
         let request = NSMutableURLRequest(URL: NSURL(string: request1)!)

@@ -57,7 +57,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
             var table = res.table.stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Segerpremie</td><td/></tr>", withString: "")
             table = table.stringByReplacingOccurrencesOfString("<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td><td/><td/></tr>", withString: "")
             
-            var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style> body>table>tbody>tr:first-child{display:none;} body>table>tbody>tr:nth-child(6){\(hideKlassDiv)} .uh{font-weight: bold;padding-right:6px;  vertical-align: top;} body>table>tbody>tr>td{padding-bottom:7px;} .startkont {text-align: right;} td{padding-right:15px;max-width:450px;overflow: hidden; text-overflow: ellipsis;} .section{background-color:#F8F8F8; padding-top:15px; padding-bottom:15px; padding-left:15px; } .section td{font-size:18pt} *{font-size:14pt !important; font-family:helvetica}</style>\(table)<br/><a href=\"\(registrationLink)\" style=\"padding-bottom:20px; font-family:helvetica; font-size: 18px; text-decoration: none;\">Till anmälan &gt;</a><br/><a href=\"\(resultLink)\" style=\"padding-bottom:20px; font-family:helvetica; font-size: 18px; text-decoration: none;\">Till spelschema och resultat &gt;</a><br/><a href=\"\(link)\" style=\"padding-bottom:20px; font-family:helvetica; font-size: 18px; text-decoration: none;\">Till sidan &gt;</a></body></html>"
+            var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style> body>table>tbody>tr:first-child{display:none;} body>table>tbody>tr:nth-child(6){\(hideKlassDiv)} .uh{font-weight:bold;padding-right:6px; } body>table>tbody>tr>td{padding-bottom:7px;} .startkont {text-align: right;} td{padding-right:15px;max-width:450px;overflow: hidden; text-overflow: ellipsis;} .section{background-color:#F8F8F8; padding-top:15px; padding-bottom:15px; padding-left:15px; } *{font-size:13pt !important; font-family:helvetica}</style>\(table)<br/><a href=\"\(registrationLink)\" style=\"padding-bottom:10px; display:inline-block;  text-decoration: none; font-size:22px !important;\">Till anmälan &gt;</a><br/><a href=\"\(resultLink)\" style=\"padding-bottom:10px; display:inline-block; text-decoration: none; font-size:22px !important;\">Till spelschema och resultat &gt;</a><br/><a href=\"\(link)\" style=\"padding-bottom:10px; display:inline-block; text-decoration: none; font-size:22px !important;\">Till sidan &gt;</a></body></html>"
             
             html = html
                 .stringByReplacingOccurrencesOfString("<td class=\"uh\">Arrangör</td><td>",withString:"<td colspan=2 style=\"font-weight:bold\">")
@@ -70,14 +70,34 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("Klassdetaljer",withString:"Klasser")
                 .stringByReplacingOccurrencesOfString("Sista anmäliningsdag",withString:"Anmäl dig senast")
                 .removeAll("<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Namn</td><td/><td/></tr>&#13;")
+                .stringByReplacingOccurrencesOfString("<td style=\"padding-bottom:4px;\" class=\"uh\">Namn</td>", withString:"<td/>")
+                .stringByReplacingOccurrencesOfString("<td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td>",withString:"<td/>")
+                .stringByReplacingOccurrencesOfString("<td style=\"padding-bottom:4px;\" class=\"uh\">Epost</td>",withString:"<td/>")
                 .removeAll("<tr><td class=\"uh\">Övrig info</td><td/></tr>&#13;")
                 .removeAll("&#13;")
+                .removeAll("<td style=\"padding-bottom:4px;\"/>")
                 .stringByReplacingOccurrencesOfString("<td>&#13;",withString:"<td class=\"section\" colspan=2>")
-                .stringByReplacingOccurrencesOfString("<td class=\"uh\">Tävlingsledare</td><td class=\"uh\">Tävlingsledare</td>",withString:"<td colspan=2 class=\"uh\">Tävlingsledare</td>")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh\">Tävlingsledare</td><td class=\"uh\">Tävlingsledare</td>",withString:"<td colspan=3 class=\"uh\" style=\"padding-bottom:4px;font-size:16px !important\">TÄVLINGSLEDARE</td>")
                 .stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Klasser</td><td>",withString:"<tr class=\"section\"><td class=\"uh section\">Klasser</td><td class=\"section\">")
                 .stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Anmälan",withString:"<tr style=\"display:none\"><td class=\"uh\">Anmälan")
                 .stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Spelschema",withString:"<tr style=\"display:none\"><td class=\"uh\">Spelschema")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh\">Anmäl dig senast</td><td",withString:"<td class=\"uh\" colspan=\"2\" style=\"padding-bottom:4px;padding-top:20px;font-size:8pt !important;\">ANMÄL DIG SENAST</td></tr><tr><td colspan=\"2\" style=\"padding-left:20px\"")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh\">Övrig info</td><td",withString:"<td class=\"uh\" colspan=\"2\" style=\"padding-bottom:4px;padding-top:20px;font-size:8pt !important;\">ÖVRIG INFO</td></tr><tr><td colspan=\"2\" style=\"padding-left:20px\"")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh\">Betalning</td><td",withString:"<td class=\"uh\" colspan=\"2\" style=\"padding-bottom:4px;padding-top:20px;font-size:8pt !important;\">BETALNING</td></tr><tr><td colspan=\"2\" style=\"padding-left:20px\"")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh section\">Klasser</td>",withString:"")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh\">D</td>",withString:"<td class=\"uh\">Damer</td>")
+                .stringByReplacingOccurrencesOfString("<td class=\"uh\">H</td>",withString:"<td class=\"uh\">Herrar</td>")
+                .stringByReplacingOccurrencesOfString("<td style=\"padding-bottom:4px;\" class=\"uh\">Från:",withString:"<td class=\"uh\">FRÅN")
+                .stringByReplacingOccurrencesOfString("Till:",withString:"TILL")
+                .stringByReplacingOccurrencesOfString("ca kl:",withString:"CA KL")
+                .stringByReplacingOccurrencesOfString("<td style=\"padding-bottom:4px;\" class=\"uh\">kl:",withString:"<td class=\"uh\">KL")
+                .stringByReplacingOccurrencesOfString(">Antal",withString:">ANTAL")
+                .stringByReplacingOccurrencesOfString(">Startavgift",withString:">STARTAVGIFT")
+                .stringByReplacingOccurrencesOfString("0.00",withString:"0 kr")
+            
  
+            print(html)
+            
             self.text.loadHTMLString(html, baseURL: NSURL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()
         }

@@ -8,9 +8,9 @@
 
 import Foundation
 
-
 struct Results {
     let HTML: String
+    let hasResults: Bool
 }
 
 class ResultsDownloader {
@@ -24,11 +24,18 @@ class ResultsDownloader {
             (data, error) -> Void in
             if error != nil {
                 print(error)
-                callback(Results(HTML: "RESULTAT KUNDE EJ HÄMTAS"))
+                callback(Results(HTML: "<br/>RESULTAT EJ TILLGÄNGLIGT", hasResults: false))
             } else {
                 HttpDownloader().httpGetOld("https://www.profixio.com/resultater/viskamper_soek.php") {
                     (data, error) -> Void in
-                    let klassCode = (TFHpple(HTMLData: data).searchWithXPathQuery("//option[contains(.,\"\(klass)\")]")[0] as! TFHppleElement).attributes["value"]! as! String
+                    let klassCodeArray = TFHpple(HTMLData: data).searchWithXPathQuery("//option[contains(.,\"\(klass)\")]")
+                    
+                    if(klassCodeArray.count == 0){
+                        callback(Results(HTML: "<br/>Finns inget resultat för \(klass)", hasResults: false))
+                        return
+                    }
+                    
+                    let klassCode = (klassCodeArray[0] as! TFHppleElement).attributes["value"]! as! String
                     
                     print(klassCode)
                     print(klass)
@@ -45,10 +52,9 @@ class ResultsDownloader {
         }
     }
     
-    
     func parseHTML(tournament:TournamentDetail, HTMLData:NSData) -> Results {
         let allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
-        let results = Results(HTML:(allCells[0] as! TFHppleElement).raw )
+        let results = Results(HTML:(allCells[0] as! TFHppleElement).raw, hasResults: true )
         return results
     }
     

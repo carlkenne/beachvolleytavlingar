@@ -87,7 +87,7 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
             print(table)
             
             var aLink = "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 20px; text-decoration: none;\">Till resultatsidan &gt;</a>"
-            if(link == ""){
+            if(!res.hasResults){
                 aLink = ""
             }
             
