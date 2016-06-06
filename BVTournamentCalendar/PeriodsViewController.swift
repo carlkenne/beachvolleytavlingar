@@ -1,11 +1,3 @@
-//
-//  FirstViewController.swift
-//  BVTournamentCalendar
-//
-//  Created by Carl Kenne on 27/05/15.
-//  Copyright (c) 2015 Carl Kenne. All rights reserved.
-//
-
 import UIKit
 
 class PeriodsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -15,8 +7,9 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var Open: UIBarButtonItem!
     var results = [PeriodTableSection]()
     var filter = FilterSettings()
-    var doNotInclude = NSSet()
+    var typesToExclude = NSSet()
     var rawDownloadedData = [Tournament]()
+    var filterSaveKey = "TournamentFilter"
     
     @IBAction func saveFilterSettings(segue:UIStoryboardSegue) {
         if let filterSettings = segue.sourceViewController as? FilterSettingsViewController {
@@ -47,18 +40,18 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
                 excludes.append("hideOld")
             }
 
-            doNotInclude = NSSet(array: excludes)
-
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(excludes, forKey: filterSaveKey)
+            defaults.synchronize()
+            
+            typesToExclude = NSSet(array: excludes)
             filterData()
         }
-
     }
     
     var refreshControl:UIRefreshControl!
     
-    func refresh(sender:AnyObject)
-    {
-        // Updating your data here...
+    func refresh(sender:AnyObject) {
         loadData()
     }
     
@@ -82,7 +75,12 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func loadData() {
-        // Do any additional setup after loading the view, typically from a nib.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let excludes = defaults.objectForKey(filterSaveKey) {
+            typesToExclude = NSSet(array: excludes as! [AnyObject])
+        }
+        
         TournamentsDownloader().downloadHTML(){(_data) -> Void in
             self.rawDownloadedData = _data;
             self.filterData()
@@ -91,10 +89,10 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func filterData(){
         var data = self.rawDownloadedData.filter( {(tournament: Tournament) -> Bool in
-            !self.doNotInclude.containsObject(tournament.levelCategory)
+            !self.typesToExclude.containsObject(tournament.levelCategory)
         })
         
-        if(!self.doNotInclude.containsObject("hideOld")){
+        if(!self.typesToExclude.containsObject("hideOld")){
             let now = NSDate()
             let currentPeriodName = TournamentPeriods().getPeriodNameForDate(now)
             data = data.filter( {(tournament: Tournament) -> Bool in
@@ -137,12 +135,8 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //
-    //UIViewTableDataSource
-    //
     func tableView(_: UITableView, numberOfRowsInSection: Int) -> Int {
         return results[numberOfRowsInSection].tournaments.count
     }
@@ -208,7 +202,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         if segue.identifier == "ShowSettings" {
             let nav = segue.destinationViewController as! UINavigationController
             let filterViewController = nav.visibleViewController as! FilterSettingsViewController
-            filterViewController.addSettings(doNotInclude)
+            filterViewController.addSettings(typesToExclude)
             filterViewController.prepopulateSettings()
         }
     }

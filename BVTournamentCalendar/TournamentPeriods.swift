@@ -16,59 +16,59 @@ class TournamentPeriods {
         {
             return "TP 01"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 5, day: 33)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 5, day: 23)).isEqualToDate(date))
         {
             return "TP 02"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 6)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 7)).isEqualToDate(date))
         {
             return "TP 03"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 12)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 13)).isEqualToDate(date))
         {
             return "TP 04"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 26)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 27)).isEqualToDate(date))
         {
             return "TP 05"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 3)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 4)).isEqualToDate(date))
         {
             return "TP 06"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 10)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 11)).isEqualToDate(date))
         {
             return "TP 07"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 17)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 18)).isEqualToDate(date))
         {
             return "TP 08"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 24)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 25)).isEqualToDate(date))
         {
             return "TP 09"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 31)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 1)).isEqualToDate(date))
         {
             return "TP 10"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 7)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 8)).isEqualToDate(date))
         {
             return "TP 11"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 14)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 15)).isEqualToDate(date))
         {
             return "TP 12"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 21)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 22)).isEqualToDate(date))
         {
             return "TP 13"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 9, day: 4)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 9, day: 5)).isEqualToDate(date))
         {
             return "TP 14"
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 10, day: 16)).isEqualToDate(date))
+        if(date.earlierDate(Date.from(year: 2016, month: 10, day: 17)).isEqualToDate(date))
         {
             return "TP 15"
         }

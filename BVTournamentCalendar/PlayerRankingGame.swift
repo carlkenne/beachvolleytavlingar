@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct PlayerRankingDetails {
+    var games: [PlayerRankingGame]
+    var age: Int
+}
+
 struct PlayerRankingGame {
     var period: String
     var year: String

@@ -16,5 +16,6 @@ struct PlayerRanking {
     var points: Int
     var entryPoints: Int
     var detailsUrl: String
+    var id: Int
 }
 

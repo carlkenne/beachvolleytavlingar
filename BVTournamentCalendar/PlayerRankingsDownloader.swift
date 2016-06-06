@@ -56,12 +56,11 @@ class PlayerRankingsDownloader {
                 club: cleanValue(allCells[td+2]),
                 points: Int(cleanValue(allCells[td+3]))!,
                 entryPoints: Int(cleanValue(allCells[td+4]))!,
-                detailsUrl: getRankingDetailUrl(allCells[td+1]) //"rand=0.7901839658152312&spid=8728&klasse=H&tp="
+                detailsUrl: getRankingDetailUrl(allCells[td+1]), //"rand=0.7901839658152312&spid=8728&klasse=H&tp="
+                id: 1
             )
             
             results.append(ranking)
-            
-           
         }
         
         return results

@@ -15,7 +15,7 @@ struct RatingSection{
 
 class PlayerRankingVC : UITableViewController
 {
-    var results = [PlayerRankingGame]()
+    var results = PlayerRankingDetails( games :[PlayerRankingGame](), age:0)
     var summary = [RatingSection]()
     var rankingStartIndex = 7
     var entrypointsStartIndex = 1
@@ -23,15 +23,20 @@ class PlayerRankingVC : UITableViewController
     var snittresultatStartIndex = 0
     var player : PlayerRanking?
     
-    func addPlayer(ranking:PlayerRanking){
-        title = ranking.name + " (\(ranking.club))"
+    func addPlayer(ranking:PlayerRanking) {
         player = ranking
         PlayerRankingGameListDownloader().downloadHTML(ranking.detailsUrl){(_data) -> Void in
+            
             self.results = _data
-            self.noOfEnttryPoints = self.results.filter(){ $0.isEntryPoint }.count
+            if(self.results.age > 0 ){
+                self.title = ranking.name + " (\(self.results.age)år, \(ranking.club))"
+            } else {
+                self.title = ranking.name + " (\(ranking.club))"
+            }
+            self.noOfEnttryPoints = self.results.games.filter(){ $0.isEntryPoint }.count
             self.rankingStartIndex = self.noOfEnttryPoints + 1 + self.entrypointsStartIndex
             
-            let levels = NSSet(array: _data.map {
+            let levels = NSSet(array: self.results.games.map {
                 return $0.levelCategory
             }).allObjects
                 
@@ -51,7 +56,7 @@ class PlayerRankingVC : UITableViewController
     func getRating(level: String) -> Int {
         var greens: [Float]
         
-        greens = self.results.filter( {(tournament: PlayerRankingGame) -> Bool in
+        greens = self.results.games.filter( {(tournament: PlayerRankingGame) -> Bool in
             tournament.levelCategory == level
         }).map {
             var tre = $0.result.characters.split {$0 == " "}.map { String($0) }
@@ -94,10 +99,10 @@ class PlayerRankingVC : UITableViewController
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if(self.results.count > noOfEnttryPoints) {
-            return self.results.count + 3;
-        } else if(self.results.count > 0) {
-            return self.results.count + 2
+        if(self.results.games.count > noOfEnttryPoints) {
+            return self.results.games.count + 3;
+        } else if(self.results.games.count > 0) {
+            return self.results.games.count + 2
         } else {
             return 0
         }
@@ -117,12 +122,12 @@ class PlayerRankingVC : UITableViewController
             let ep = player!.entryPoints
             
             return "Entrypoints (\(ep))"
-        } else if(section == rankingStartIndex || section == self.results.count + 3){
+        } else if(section == rankingStartIndex || section == self.results.games.count + 3){
             return "Övriga"
         } else if(section < rankingStartIndex){
-            return "\(self.results[section - 2].period)  (\(self.results[section - 2].year))"
+            return "\(self.results.games[section - 2].period)  (\(self.results.games[section - 2].year))"
         }
-        return "\(self.results[section - 3].period)  (\(self.results[section - 3].year))"
+        return "\(self.results.games[section - 3].period)  (\(self.results.games[section - 3].year))"
     }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -145,7 +150,7 @@ class PlayerRankingVC : UITableViewController
             return cell
         }
         let index = indexPath.section > rankingStartIndex ? indexPath.section - 3 : indexPath.section - 2
-        let tourney = self.results[index]
+        let tourney = self.results.games[index]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("GameRanked") as UITableViewCell!
         cell.textLabel?.text = "plats: \(tourney.result) - (\(tourney.points) poäng)"
