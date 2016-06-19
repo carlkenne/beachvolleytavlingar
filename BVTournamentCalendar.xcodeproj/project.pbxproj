@@ -11,6 +11,7 @@
 		442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */; };
 		442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */; };
 		442A74231B2F004700875705 /* normal-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 442A74221B2F004700875705 /* normal-back.png */; };
+		444792BC1D06146A00F22024 /* EMBadgedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444792BB1D06146A00F22024 /* EMBadgedBarButtonItem.swift */; };
 		444E4E101C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 444E4E0F1C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg */; };
 		44686A171B16139F004307E7 /* PeriodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A161B16139F004307E7 /* PeriodsViewController.swift */; };
 		44686A1A1B1614BC004307E7 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A191B1614BC004307E7 /* Tournament.swift */; };
@@ -76,6 +77,7 @@
 		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
 		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
 		442A74221B2F004700875705 /* normal-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal-back.png"; sourceTree = "<group>"; };
+		444792BB1D06146A00F22024 /* EMBadgedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMBadgedBarButtonItem.swift; sourceTree = "<group>"; };
 		444E4E0F1C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10363442_2876931804806_5184986262509690354_o.jpg; sourceTree = "<group>"; };
 		44686A161B16139F004307E7 /* PeriodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodsViewController.swift; sourceTree = "<group>"; };
 		44686A191B1614BC004307E7 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				44686A191B1614BC004307E7 /* Tournament.swift */,
 				44686A261B17049D004307E7 /* TournamentsDownloader.swift */,
 				44686A531B1C50F4004307E7 /* TournamentPeriods.swift */,
+				444792BB1D06146A00F22024 /* EMBadgedBarButtonItem.swift */,
 			);
 			name = "Tournament List Controller";
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
 				446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */,
 				448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */,
+				444792BC1D06146A00F22024 /* EMBadgedBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

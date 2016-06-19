@@ -52,6 +52,7 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
             
             let link:String = appDelegate.selectedTournamentDetail!.resultatLink
             let table = res.HTML
+                .stringByReplacingOccurrencesOfString(" / ", withString:"<br/>")
                 .stringByReplacingOccurrencesOfString("&nbsp;", withString:" ")
                 .stringByReplacingOccurrencesOfString("<td/>", withString:"")
                 .stringByReplacingOccurrencesOfString("<td> - </td>", withString:"")
@@ -86,12 +87,16 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("<td> </td>", withString:"")
             print(table)
             
-            var aLink = "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 20px; text-decoration: none;\">Till resultatsidan &gt;</a>"
+            var aLink = "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 20px; text-decoration: none;\">Till resultatsidan (Safari) &gt;</a>"
             if(!res.hasResults){
                 aLink = ""
             }
             
-            let html = "<html><head><meta name=\"viewport\" content=\"width=450\"/><style>.kampnr{display:none;} table td{font-size:16px; padding:3px; font-family:helvetica} </style></head><body>\(table)<br/>\(aLink)</body></html>"
+            let html = "<html><head><meta name=\"viewport\" content=\"width=450\"/>" +
+                "<style>.kampnr{display:none;}" +
+                "table td {font-size:16px; padding:3px; font-family:helvetica;}" +
+                "table {width:100%;}" +
+                "</style></head><body>\(table)<br/>\(aLink)</body></html>"
             
             self.text.loadHTMLString(html, baseURL: NSURL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()

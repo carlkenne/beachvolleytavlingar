@@ -4,6 +4,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var table : UITableView!
     @IBOutlet weak var loading : UIActivityIndicatorView!
 
+    @IBOutlet weak var filterLabel: UIButton!
     @IBOutlet weak var Open: UIBarButtonItem!
     var results = [PeriodTableSection]()
     var filter = FilterSettings()
@@ -57,6 +58,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -72,6 +74,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: #selector(PeriodsViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
+        
     }
     
     func loadData() {
@@ -121,6 +124,11 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
             self.table.scrollToRowAtIndexPath(
                 NSIndexPath(forItem: 0, inSection: currentPeriod), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
         }
+        var label = "filtrera"
+        if(typesToExclude.count > 0) {
+            label = "filter(\(typesToExclude.count))"
+        }
+        filterLabel.setTitle(label, forState: UIControlState.Normal)
     }
     
     func getCurrentPeriod() -> Int{
