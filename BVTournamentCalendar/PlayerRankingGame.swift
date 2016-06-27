@@ -15,6 +15,7 @@ struct PlayerRankingDetails {
 
 struct PlayerRankingGame {
     var period: String
+    var periodInt: Int
     var year: String
     var name: String
     var points: Int

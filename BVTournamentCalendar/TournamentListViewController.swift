@@ -1,6 +1,6 @@
 import UIKit
 
-class PeriodsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TournamentListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var table : UITableView!
     @IBOutlet weak var loading : UIActivityIndicatorView!
 
@@ -72,7 +72,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         loadData()
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(PeriodsViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(TournamentListViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.table.addSubview(refreshControl)
         
     }
@@ -97,7 +97,7 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         if(!self.typesToExclude.containsObject("hideOld")){
             let now = NSDate()
-            let currentPeriodName = TournamentPeriods().getPeriodNameForDate(now)
+            let currentPeriodName = TournamentListHelper().getPeriodForDate(now).name
             data = data.filter( {(tournament: Tournament) -> Bool in
                 ((tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil))
             })
@@ -119,26 +119,11 @@ class PeriodsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.loading.stopAnimating()
         self.refreshControl.endRefreshing()
         
-        let currentPeriod = self.getCurrentPeriod()
-        if(currentPeriod > -1) {
-            self.table.scrollToRowAtIndexPath(
-                NSIndexPath(forItem: 0, inSection: currentPeriod), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
-        }
         var label = "filtrera"
         if(typesToExclude.count > 0) {
             label = "filter(\(typesToExclude.count))"
         }
         filterLabel.setTitle(label, forState: UIControlState.Normal)
-    }
-    
-    func getCurrentPeriod() -> Int{
-        let currentPeriodName = TournamentPeriods().getPeriodNameForDate(NSDate())
-        for p in 0 ..< self.results.count {
-            if(self.results[p].title.rangeOfString(currentPeriodName) != nil) {
-                return p
-            }
-        }
-        return -1
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,19 +8,35 @@
 
 import Foundation
 
-struct RatingSection{
+struct SnittresultatCell {
     let title: String
     let rating: Int
 }
 
+struct UpcomingCell {
+    let period: Int
+    let entrypoint: String
+}
+
+struct PlayerRankingViewModel {
+    let snittresultatStartIndex = 0
+    var snittresultatList = [SnittresultatCell]()
+    
+    var entrypointsStartIndex = -1
+    var entrypointsList = [PlayerRankingGame]()
+    
+    var rankingpointsStartIndex = -1
+    var rankingpointsList = [PlayerRankingGame]()
+    
+    var remainingRankingsStartIndex = -1
+    var remainingRankings = [UpcomingCell]()
+}
+
 class PlayerRankingVC : UITableViewController
 {
-    var results = PlayerRankingDetails( games :[PlayerRankingGame](), age:0)
-    var summary = [RatingSection]()
-    var rankingStartIndex = 7
-    var entrypointsStartIndex = 1
-    var noOfEnttryPoints = 5
-    var snittresultatStartIndex = 0
+    var viewModel = PlayerRankingViewModel()
+    var results = PlayerRankingDetails( games :[PlayerRankingGame](), age:0 )
+    
     var player : PlayerRanking?
     
     func addPlayer(ranking:PlayerRanking) {
@@ -33,22 +49,79 @@ class PlayerRankingVC : UITableViewController
             } else {
                 self.title = ranking.name + " (\(ranking.club))"
             }
-            self.noOfEnttryPoints = self.results.games.filter(){ $0.isEntryPoint }.count
-            self.rankingStartIndex = self.noOfEnttryPoints + 1 + self.entrypointsStartIndex
+            let entrypointsList = self.results.games.filter(){ $0.isEntryPoint }
+            let rankingpointsList = self.results.games.filter(){ !$0.isEntryPoint }
+            let entrypointsStartIndex = 1
+            let rankingStartIndex = entrypointsList.count + entrypointsStartIndex + 1
+            let remainingRankingsStartIndex = rankingpointsList.count + rankingStartIndex + 1
             
             let levels = NSSet(array: self.results.games.map {
                 return $0.levelCategory
             }).allObjects
                 
-            self.summary = levels.map {
+            let snittresultatList = levels.map {
                 let sectionName:String = $0 as! String
-                let rating =  RatingSection(title: sectionName, rating: self.getRating(sectionName))
-                print("\(rating.title) \(rating.rating)")
+                let rating =  SnittresultatCell(title: sectionName, rating: self.getRating(sectionName))
                 return rating
-                }.filter( {(rating: RatingSection) -> Bool in
-                    rating.rating > 0
+            }.filter( {(rating: SnittresultatCell) -> Bool in
+                rating.rating > 0
+            })
+            
+            let now = min(TournamentListHelper().getCurrentPeriod()+1, 16)
+            var remainingList = [UpcomingCell]()
+            
+            for index in now...16 {
+                
+                var start = index-10
+                var year = 2016
+                if(start < 0){
+                    start = 16 + start
+                    year = 2015
+                }
+                var topRankings = self.results.games.filter( {(ranking: PlayerRankingGame) -> Bool in
+                    if(Int(ranking.year)! < year) {
+                        return false
+                    }
+                    if(Int(ranking.year)! == year && ranking.periodInt >= start) {
+                        return true
+                    }
+                    return Int(ranking.year)! > year
                 })
+                topRankings.sortInPlace ({ $0.points > $1.points })
+                
+                let n = min(5, topRankings.count)
+                let total = topRankings[0..<n]
+                    .map({
+                        return $0.points
+                    })
+                    .reduce(0){ $0 + $1 }
+            
+                let upcoming = UpcomingCell(
+                    period: index,
+                    entrypoint: "\(total)"
+                )
+                if(remainingList.count > 0){
+                    if(remainingList[remainingList.count-1].entrypoint != upcoming.entrypoint) {
+                        remainingList.append(upcoming)
+                    }
+                } else {
+                    remainingList.append(upcoming)
+                }
+            }
 
+            self.viewModel = PlayerRankingViewModel(
+                snittresultatList: snittresultatList,
+                
+                entrypointsStartIndex: entrypointsStartIndex,
+                entrypointsList: entrypointsList,
+                
+                rankingpointsStartIndex: rankingStartIndex,
+                rankingpointsList: rankingpointsList,
+                
+                remainingRankingsStartIndex: remainingRankingsStartIndex,
+                remainingRankings: remainingList
+            )
+            
             self.tableView.reloadData()
         }
     }
@@ -90,50 +163,65 @@ class PlayerRankingVC : UITableViewController
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == snittresultatStartIndex){
-            return summary.count
-        } else if(section == entrypointsStartIndex || section == rankingStartIndex){
+        if(section == viewModel.snittresultatStartIndex){
+            return viewModel.snittresultatList.count
+        } else if(section == viewModel.entrypointsStartIndex ||
+            section == viewModel.rankingpointsStartIndex) {
             return 0
+        } else if (section == viewModel.remainingRankingsStartIndex){
+            return viewModel.remainingRankings.count + 1
         }
         return 1
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if(self.results.games.count > noOfEnttryPoints) {
-            return self.results.games.count + 3;
-        } else if(self.results.games.count > 0) {
-            return self.results.games.count + 2
-        } else {
-            return 0
+        if(self.results.games.count > 0) {
+            return self.results.games.count + 4;
         }
+        return 0
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(section != entrypointsStartIndex && section != rankingStartIndex && section != snittresultatStartIndex){
+        if(section != viewModel.entrypointsStartIndex &&
+            section != viewModel.rankingpointsStartIndex &&
+            section != viewModel.snittresultatStartIndex &&
+            section != viewModel.remainingRankingsStartIndex) {
+            return 20
+        }
+        return 40
+    }
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if(indexPath.section == viewModel.remainingRankingsStartIndex && indexPath.row == 0) {
             return 20
         }
         return 40
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section == snittresultatStartIndex){
+        if(section == viewModel.snittresultatStartIndex){
             return "Snittresultat"
-        } else if(section == entrypointsStartIndex){
-            let ep = player!.entryPoints
-            
-            return "Entrypoints (\(ep))"
-        } else if(section == rankingStartIndex || section == self.results.games.count + 3){
+        } else if(section == viewModel.entrypointsStartIndex){
+            let entryPoints = player!.entryPoints
+            return "Entrypoints (\(entryPoints))"
+        } else if(section == viewModel.rankingpointsStartIndex){
             return "Övriga"
-        } else if(section < rankingStartIndex){
+        } else if(section == viewModel.remainingRankingsStartIndex) {
+            return "Hur länge varar alla entrypoints?"
+        } else if(section < viewModel.rankingpointsStartIndex){
             return "\(self.results.games[section - 2].period)  (\(self.results.games[section - 2].year))"
         }
         return "\(self.results.games[section - 3].period)  (\(self.results.games[section - 3].year))"
+        
     }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header:UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
 
-        if(section == entrypointsStartIndex || section == rankingStartIndex || section == snittresultatStartIndex) {
+        if(section == viewModel.entrypointsStartIndex ||
+            section == viewModel.rankingpointsStartIndex ||
+            section == viewModel.snittresultatStartIndex ||
+            section == viewModel.remainingRankingsStartIndex) {
+            
             header.textLabel!.textColor = UIColor.blackColor()
         } else {
             header.textLabel!.textColor = UIColor(red:0.427451, green:0.427451, blue:0.447059, alpha: 1.0)
@@ -142,14 +230,26 @@ class PlayerRankingVC : UITableViewController
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if(indexPath.section == snittresultatStartIndex ){
+        if(indexPath.section == viewModel.snittresultatStartIndex) {
             let cell = tableView.dequeueReusableCellWithIdentifier("GameRankedSimple") as UITableViewCell!
-            let rating = summary[indexPath.row]
+            let rating = viewModel.snittresultatList[indexPath.row]
             cell.detailTextLabel?.text = rating.title
             cell.textLabel?.text = "\(rating.rating)%"
             return cell
         }
-        let index = indexPath.section > rankingStartIndex ? indexPath.section - 3 : indexPath.section - 2
+        if(indexPath.section == viewModel.remainingRankingsStartIndex) {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Upcoming") as UITableViewCell!
+            if(indexPath.row == 0) {
+                cell.detailTextLabel?.text = "entrypoints"
+                cell.textLabel?.text = "tävlingsperiod"
+            } else {
+                let ranking = viewModel.remainingRankings[indexPath.row-1]
+                cell.detailTextLabel?.text = "\(ranking.entrypoint)"
+                cell.textLabel?.text = "TP \(ranking.period)"
+            }
+            return cell
+        }
+        let index = indexPath.section > viewModel.rankingpointsStartIndex ? indexPath.section - 3 : indexPath.section - 2
         let tourney = self.results.games[index]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("GameRanked") as UITableViewCell!

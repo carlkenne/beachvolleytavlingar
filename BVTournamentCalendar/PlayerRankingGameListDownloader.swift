@@ -35,6 +35,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
         
         return PlayerRankingGame(
             period: cleanValue(allCells[index]),
+            periodInt: periodToInt(cleanValue(allCells[index])),
             year: cleanValue(allCells[index+1]),
             name: name,
             points: Int(cleanValue(allCells[index+3]).removeAll(".00"))!,
@@ -49,6 +50,11 @@ class PlayerRankingGameListDownloader : DownloaderBase {
             levelCategory: levelCategory,
             isEntryPoint: isEntryPoint
         )
+    }
+    
+    func periodToInt(period:String) -> Int {
+        let p = period.stringByReplacingOccurrencesOfString("TP", withString: "")
+        return Int(p)!;
     }
     
     func parseHTML(HTMLData:NSData) -> PlayerRankingDetails {

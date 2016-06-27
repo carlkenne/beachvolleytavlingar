@@ -97,10 +97,9 @@ class TournamentsDownloader : DownloaderBase {
     }
     
     func getPeriodName(shortSectionName:String) -> String {
-        let periods = TournamentPeriods()
-        let range = periods.getDateRangeForPeriod(shortSectionName)
+        let range = TournamentListHelper().getDateRangeForPeriod(shortSectionName)
         
-        if(shortSectionName == periods.getPeriodNameForDate(NSDate()))
+        if(shortSectionName == TournamentListHelper().getPeriodForDate(NSDate()).name)
         {
             return shortSectionName + " (nuvarande, " + range + ")"
         }

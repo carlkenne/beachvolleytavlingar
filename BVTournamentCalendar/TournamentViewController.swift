@@ -47,7 +47,6 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         TournamentDetailDownloader().downloadHTML(tournament!){
             (res) -> Void in
             let link:String = res.link
-            let resultLink:String = res.resultatLink
             let registrationLink:String = res.registrationLink
             var hideKlassDiv = ""
             if(tournament?.levelCategory == "open grön" || tournament?.levelCategory == "open svart" || tournament?.levelCategory == "mixed" || tournament?.levelCategory == "challenger"){
