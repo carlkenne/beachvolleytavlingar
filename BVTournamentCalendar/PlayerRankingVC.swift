@@ -15,7 +15,8 @@ struct SnittresultatCell {
 
 struct UpcomingCell {
     let period: Int
-    let entrypoint: String
+    let entrypoint: Int
+    let numberOfTournaments: Int
 }
 
 struct PlayerRankingViewModel {
@@ -74,7 +75,7 @@ class PlayerRankingVC : UITableViewController
                 
                 var start = index-10
                 var year = 2016
-                if(start < 0){
+                if(start <= 0){
                     start = 16 + start
                     year = 2015
                 }
@@ -98,10 +99,18 @@ class PlayerRankingVC : UITableViewController
             
                 let upcoming = UpcomingCell(
                     period: index,
-                    entrypoint: "\(total)"
+                    entrypoint: total,
+                    numberOfTournaments: n
                 )
                 if(remainingList.count > 0){
                     if(remainingList[remainingList.count-1].entrypoint != upcoming.entrypoint) {
+                        print("TP: \(index)")
+                        topRankings[0..<n]
+                            .map({
+                                print($0)
+                            })
+
+                        
                         remainingList.append(upcoming)
                     }
                 } else {
@@ -244,7 +253,16 @@ class PlayerRankingVC : UITableViewController
                 cell.textLabel?.text = "tävlingsperiod"
             } else {
                 let ranking = viewModel.remainingRankings[indexPath.row-1]
-                cell.detailTextLabel?.text = "\(ranking.entrypoint)"
+                
+                var extraText = "(\(ranking.numberOfTournaments) tävlingar)"
+                if(ranking.numberOfTournaments == 0){
+                    extraText = ""
+                }
+                if(ranking.numberOfTournaments == 1){
+                    extraText = "(1 tävling)"
+                }
+                
+                cell.detailTextLabel?.text = "\(ranking.entrypoint) \(extraText)"
                 cell.textLabel?.text = "TP \(ranking.period)"
             }
             return cell
