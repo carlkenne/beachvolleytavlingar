@@ -46,6 +46,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         loading.startAnimating()
         TournamentDetailDownloader().downloadHTML(tournament!){
             (res) -> Void in
+            
             let link:String = res.link
             let registrationLink:String = res.registrationLink
             var hideKlassDiv = ""
@@ -56,9 +57,32 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
             var table = res.table.stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Segerpremie</td><td/></tr>", withString: "")
             table = table.stringByReplacingOccurrencesOfString("<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td><td/><td/></tr>", withString: "")
             
-            var html = "<html><head><meta name=\"viewport\" content=\"width=450\"/></head><body><style> body>table>tbody>tr:first-child{display:none;} body>table>tbody>tr:nth-child(6){\(hideKlassDiv)} .uh{font-weight:bold;padding-right:6px; } body>table>tbody>tr>td{padding-bottom:7px;} .startkont {text-align: right;} td{padding-right:15px;max-width:450px;overflow: hidden; text-overflow: ellipsis;} .section{background-color:#F8F8F8; padding-top:15px; padding-bottom:15px; padding-left:15px; } *{font-size:13pt !important; font-family:helvetica}</style>\(table)<br/><a href=\"\(registrationLink)\" style=\"padding-bottom:10px; display:inline-block;  text-decoration: none; font-size:22px !important;\">Till anmälan &gt;</a><br/><br/><a href=\"\(link)\" style=\"padding-bottom:10px; display:inline-block; text-decoration: none; font-size:22px !important;\">Till sidan &gt;</a></body></html>"
+            var html = "<html>" +
+                "<head> <meta name=\"viewport\" content=\"width=450\"/> </head>" +
+                "<body><style> " +
+                    "body>table>tbody>tr:first-child { display: none; } " +
+                    "body>table>tbody>tr:nth-child(6) { \(hideKlassDiv) } " +
+                    ".uh { font-weight: bold; padding-right: 6px; } " +
+                    "body>table>tbody>tr>td { padding-bottom: 7px; } " +
+                    ".startkont { text-align: right; } " +
+                    "td { padding-right: 15px; max-width: 450px; overflow: hidden; text-overflow: ellipsis; } " +
+                    ".section { background-color: #F8F8F8; padding-top: 15px; padding-bottom: 15px; padding-left: 15px; } " +
+                    "* { font-size: 13pt !important; font-family: helvetica; } " +
+                    ".app-link { padding-bottom:10px; display:inline-block; text-decoration: none; font-size:22px !important; }" +
+                "</style> " +
+                "\(table)" +
+                "<br/>" +
+                "<a href=\"\(registrationLink)\" class\"app-link\">Till anmälan &gt;</a>" +
+                "<br/><br/>" +
+                "<a href=\"\(link)\" class\"app-link\">Till sidan &gt;</a>" +
+                "</body></html>";
+            
+            print(html)
+            print("-----------------------------------------------------------")
             
             html = html
+                .stringByReplacingOccurrencesOfString("+ D (född -",withString:"+&nbsp;D&nbsp;(född&nbsp;-")
+                .stringByReplacingOccurrencesOfString("<tr><td class=\"uh\">Klasser och kategorier</td>",withString:"<tr style=\"display: none;\"><td class=\"uh\">Klasser och kategorier</td>")
                 .stringByReplacingOccurrencesOfString("<td class=\"uh\">Arrangör</td><td>",withString:"<td colspan=2 style=\"font-weight:bold\">")
                 .stringByReplacingOccurrencesOfString("<td class=\"uh\">Spelplats/hall</td><td>",withString:"<td colspan=2>")
                 .stringByReplacingOccurrencesOfString("<td class=\"uh\">Nivå</td><td>",withString:"<td colspan=2>")

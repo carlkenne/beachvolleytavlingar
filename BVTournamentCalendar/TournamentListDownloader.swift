@@ -75,22 +75,22 @@ class TournamentsDownloader : DownloaderBase {
     
     func getLevelCategory(level:String, name:String) -> String{
         let name = name.lowercaseString
-        if(level == "mixed" || name.rangeOfString("mixed") != nil){
+        let level = level.lowercaseString
+        if(level == "veteran-sm" || level == "ungdoms-sm" || level == "mixed-sm" || level == "sm-slutspel" || name.rangeOfString("senior-sm") != nil) {
+            return "sm"
+        } else if(level == "mixed" || name.rangeOfString("mixed") != nil) {
             return "mixed"
         }
-        else if(level == "open grön" || name.rangeOfString("grön") != nil){
+        else if(level == "open grön" || name.rangeOfString("grön") != nil) {
             return "open grön"
         }
-        else if(level == "open svart" || name.rangeOfString("svart") != nil || name.rangeOfString("open") != nil){
+        else if(level == "open svart" || name.rangeOfString("svart") != nil || name.rangeOfString("open") != nil) {
             return "open svart"
         }
-        else if(level == "swedish beach Ttur" || level == "swedish beach tour final" || name.rangeOfString("swedish beach tour") != nil){
+        else if(level == "swedish beach tour" || level == "swedish beach tour final" || name.rangeOfString("swedish beach tour") != nil) {
             return "swedish beach tour"
         }
-        else if(level == "Veteran-SM" || level == "Ungdoms-SM" || level == "Mixed-SM" || level == "SM-slutspel" || name.rangeOfString("senior-sm") != nil){
-            return "sm"
-        }
-        else if(level == "challenger" || name.rangeOfString("challenger") != nil || name.rangeOfString("ch1") != nil || name.rangeOfString("ch2") != nil){
+        else if(level == "challenger" || name.rangeOfString("challenger") != nil || name.rangeOfString("ch1") != nil || name.rangeOfString("ch2") != nil) {
             return "challenger"
         }
         return "övrigt"
