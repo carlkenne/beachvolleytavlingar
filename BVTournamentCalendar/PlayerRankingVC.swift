@@ -104,13 +104,6 @@ class PlayerRankingVC : UITableViewController
                 )
                 if(remainingList.count > 0){
                     if(remainingList[remainingList.count-1].entrypoint != upcoming.entrypoint) {
-                        print("TP: \(index)")
-                        topRankings[0..<n]
-                            .map({
-                                print($0)
-                            })
-
-                        
                         remainingList.append(upcoming)
                     }
                 } else {

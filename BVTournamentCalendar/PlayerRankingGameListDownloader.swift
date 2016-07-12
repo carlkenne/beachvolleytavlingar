@@ -90,7 +90,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
             bornDateFormatter.dateFormat = "YYYY-MM-DD"
             let bornDate = bornDateFormatter.dateFromString(ageCode)
             return getYearsBetween(bornDate!, to: NSDate())
-        } else if(ageCode.hasPrefix("M") || ageCode.hasPrefix("W")) {
+        } else if(ageCode.hasPrefix("M") || ageCode.hasPrefix("K")) {
             let myNSString = ageCode as NSString
             let ageString = myNSString.substringWithRange(NSRange(location: 1, length: 6))
             let bornDateFormatter = NSDateFormatter()
