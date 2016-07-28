@@ -48,15 +48,24 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
         var cell : UITableViewCell
-        if(applicants.type.rangeOfString("D") != nil && applicants.status){
+        if(applicants.type.rangeOfString("D") != nil && applicants.status) {
             cell = table.dequeueReusableCellWithIdentifier("ApplicantDam") as UITableViewCell!
-        } else if (applicants.type.rangeOfString("H") != nil && applicants.status){
+        } else if (applicants.type.rangeOfString("H") != nil && applicants.status) {
             cell = table.dequeueReusableCellWithIdentifier("ApplicantHerr") as UITableViewCell!
         } else {
             cell = table.dequeueReusableCellWithIdentifier("Applicant") as UITableViewCell!
         }
-        cell.textLabel?.text = applicants.players
-        cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row+1) (\(applicants.points())p) \(applicants.club)"
+        let text = applicants.players
+        cell.textLabel?.text = "\(text)"
+        
+        if(applicants.player1Ranking == "" || applicants.player2Ranking == "" || applicants.points() == 0) {
+            cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row + 1) (\(applicants.points())p) \(applicants.club)"
+        } else {
+            let club =  applicants.club
+            
+            cell.detailTextLabel?.text = "\(cellForRowAtIndexPath.row + 1) (\(applicants.points())p = \(applicants.player1Ranking)p + \(applicants.player2Ranking)p ) \(club)"
+        }
+        
         return cell
     }
     

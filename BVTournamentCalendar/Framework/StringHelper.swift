@@ -26,7 +26,34 @@ extension String {
     func removeAll(str: String) -> String{
        return self.stringByReplacingOccurrencesOfString(str, withString: "")
     }
+    
+    func getStringBetween(start: String, end: String, startAt: String?="") -> String{
+        //print("getStringBetween: '\(start)' '\(end)' ")
+        let theStartIndex = self.rangeOfString(startAt!)
+        var theString = self;
+        if(theStartIndex != nil) {
+            theString = self.substringFromIndex((theStartIndex?.endIndex)!)
+        }
         
+        let startIndex = theString.rangeOfString(start)
+        if(startIndex == nil) {
+            return ""
+        }
+        //print("start: \(startIndex)")
+        let theRest = theString.substringFromIndex((startIndex?.endIndex)!)
+        //print("theRest: \(theRest)")
+        let stopIndex = theRest.rangeOfString(end)
+        if(stopIndex == nil) {
+            return ""
+        }
+        //print("stop: \((stop?.startIndex)!)")
+        let result = theRest.substringToIndex((stopIndex?.startIndex)!).stringByTrimmingCharactersInSet(
+            NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        );
+        
+        return result
+    }
+    
     init(htmlEncodedString: String) {
             let encodedData = htmlEncodedString.dataUsingEncoding(NSUnicodeStringEncoding)!
             let attributedOptions = [String: AnyObject]()

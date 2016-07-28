@@ -59,7 +59,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
     
     func parseHTML(HTMLData:NSData) -> PlayerRankingDetails {
         
-        print(String(data: HTMLData, encoding: NSUTF8StringEncoding))
+        //print(String(data: HTMLData, encoding: NSUTF8StringEncoding))
         let entryPoints = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//tr[contains(@id,\"ep_20\")]//td")
         
         let others = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//tr[not(contains(@id,\"ep_20\"))]//td")

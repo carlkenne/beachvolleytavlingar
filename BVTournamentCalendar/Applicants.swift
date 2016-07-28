@@ -16,6 +16,8 @@ struct Applicants {
     let rankingPoints: NSString
     let entryPoints: NSString
     let status: Bool
+    let player1Ranking: String
+    let player2Ranking: String
     
     func points() -> Int {
         if(rankingPoints.length>0) {
@@ -92,7 +94,7 @@ struct Applicants {
     }
     
     func getTypeName() -> String {
-        var name = getBase();
+        let name = getBase();
         if(type.rangeOfString("DV") != nil || type.rangeOfString("HV") != nil || type.rangeOfString("MV") != nil || type.rangeOfString("PV") != nil || type.rangeOfString("FV") != nil) {
             return name + " Väntelista"
         }

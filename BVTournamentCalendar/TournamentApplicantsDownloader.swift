@@ -49,9 +49,20 @@ class TournamentApplicantsDownloader {
     func parseHTML(HTMLData:NSData) -> [Applicants] {
         var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("/html/body/table[1]//td")
         var results = [Applicants]()
+        let HTMLDataAsString = String(data: HTMLData, encoding: NSASCIIStringEncoding)
         
         for row in 0 ..< (allCells.count-7)/8  {
             let td = (row * 8)+7
+            let teamid = getTeamId(allCells[td])
+            var player1Ranking = "";
+            var player2Ranking = "";
+            
+            if(HTMLDataAsString != nil){
+                let ranking = getPlayers(HTMLDataAsString!, teamid: teamid)
+                player1Ranking = ranking.rank1
+                player2Ranking = ranking.rank2
+            }
+            
             let applicants = Applicants(
                 players: cleanValue(allCells[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
                 club: cleanValue(allCells[td+1]),
@@ -59,8 +70,11 @@ class TournamentApplicantsDownloader {
                 time: cleanValue(allCells[td+3]),
                 rankingPoints: cleanValue(allCells[td+4]).removeAll("*"),
                 entryPoints: cleanValue(allCells[td+5]).removeAll("*"),
-                status: cleanValue(allCells[td+6]) == "OK"
+                status: cleanValue(allCells[td+6]) == "OK",
+                player1Ranking: player1Ranking,
+                player2Ranking: player2Ranking
             )
+            
             results.append(applicants)
         }
         return results
@@ -76,9 +90,60 @@ class TournamentApplicantsDownloader {
         return ""
     }
     
+    func getTeamId(value:AnyObject) -> String {
+        let raw = (value as! TFHppleElement).raw
+        let id = raw.getStringBetween("vis_spillerkontaktinfo(", end: ", event)")
+        //print(id)
+        return id
+    }
+    
+    func getPlayers(raw: String, teamid: String) -> (rank1:String, rank2:String) {
+        
+        let teamData = raw.getStringBetween("[lag_id] => \(teamid)", end: "[entrysort] =>")
+        let player1id = teamData.getStringBetween("[sp_id] => ", end: "[sp_navn]")
+        //print("player 1 : \(player1id)")
+        let lastPartOfTeamData = teamData.getStringBetween("[sp_navn]",end: "[ranksort]")
+        let player2id = lastPartOfTeamData.getStringBetween("[sp_id] => ", end: "[sp_navn]")
+        //print("player 2 : \(player2)")
+        
+        var rank1 = findRanking(raw, id: player1id);
+        var rank2 = findRanking(raw, id: player2id);
+    
+        if((raw.rangeOfString("\(player1id) : 0")) != nil) {
+            rank1 = "0"
+        }
+        if((raw.rangeOfString("\(player2id) : 0")) != nil) {
+            rank2 = "0"
+        }
+        
+        return (rank1: rank1,
+                rank2: rank2)
+    }
+    
+    func findRanking(str: String, id: String) -> String {
+        if(id == "-1") {
+            return ""
+        }
+        var iteratingString = str;
+        
+        while(true) {
+            let section = iteratingString.getStringBetween("[rankingpoints]", end:"[rankingpoints_max]")
+            if(section == "") {
+                return "";
+            }
+            
+            let rank = section.getStringBetween("[\(id)] => ", end: "\n")
+            if(rank != "") {
+                return rank.stringByReplacingOccurrencesOfString(".00", withString: "");
+            }
+            
+            iteratingString = iteratingString.substringFromIndex(iteratingString.rangeOfString("[rankingpoints_max]")!.endIndex)
+        }
+    }
+    
     func cleanValue(value:AnyObject) -> String {
         var content = (value as! TFHppleElement).content
-
+        //print(content)
         content = content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                 .stringByReplacingOccurrencesOfString("Ã¶", withString: "ö")
                 .stringByReplacingOccurrencesOfString("Ã¥", withString: "å")
