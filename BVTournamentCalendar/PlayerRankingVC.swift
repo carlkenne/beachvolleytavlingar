@@ -65,20 +65,23 @@ class PlayerRankingVC : UITableViewController
                 let rating =  SnittresultatCell(title: sectionName, rating: self.getRating(sectionName))
                 return rating
             }.filter( {(rating: SnittresultatCell) -> Bool in
-                rating.rating > 0
+                rating.rating > -1
             })
             
             let now = min(TournamentListHelper().getCurrentPeriod()+1, 16)
             var remainingList = [UpcomingCell]()
             
-            for index in now...16 {
+            for tp in now...(now + 10) {
                 
-                var start = index-10
+                var start = tp - 10
                 var year = 2016
+                
+                //kommer inte händ i år
                 if(start <= 0){
                     start = 16 + start
                     year = 2015
                 }
+                
                 var topRankings = self.results.games.filter( {(ranking: PlayerRankingGame) -> Bool in
                     if(Int(ranking.year)! < year) {
                         return false
@@ -98,7 +101,7 @@ class PlayerRankingVC : UITableViewController
                     .reduce(0){ $0 + $1 }
             
                 let upcoming = UpcomingCell(
-                    period: index,
+                    period: ((tp-1) % 16)+1,
                     entrypoint: total,
                     numberOfTournaments: n
                 )
@@ -134,6 +137,7 @@ class PlayerRankingVC : UITableViewController
         greens = self.results.games.filter( {(tournament: PlayerRankingGame) -> Bool in
             tournament.levelCategory == level
         }).map {
+            print(level)
             var tre = $0.result.characters.split {$0 == " "}.map { String($0) }
             
             if(tre.count == 3) {
@@ -143,9 +147,10 @@ class PlayerRankingVC : UITableViewController
                 plats = min(plats, total)
                 return round((total - plats) / (total - 1) * 100)
             }
-            return 0
+            print("nothing")
+            return -1
         }
-        return Int(greens.reduce(0,combine: +) / Float(greens.count))
+        return Int(greens.reduce(0, combine: +) / Float(greens.count))
     }
     
     override func prefersStatusBarHidden() -> Bool {
