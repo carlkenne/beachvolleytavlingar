@@ -253,10 +253,10 @@ class PlayerRankingVC : UITableViewController
                 let ranking = viewModel.remainingRankings[indexPath.row-1]
                 
                 var extraText = "(\(ranking.numberOfTournaments) tävlingar)"
-                if(ranking.numberOfTournaments == 0){
+                if(ranking.numberOfTournaments == 0) {
                     extraText = ""
                 }
-                if(ranking.numberOfTournaments == 1){
+                if(ranking.numberOfTournaments == 1) {
                     extraText = "(1 tävling)"
                 }
                 

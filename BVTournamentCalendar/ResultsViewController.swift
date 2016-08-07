@@ -43,10 +43,17 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
         parentViewController?.title = tournament?.name
         
         loading.startAnimating()
+        classPicker.hidden = false
         var klasse = "Damer"
         if(classPicker.selectedSegmentIndex == 1){
             klasse = "Herrar"
         }
+        
+        if(tournament?.levelCategory == "mixed") {
+            klasse = "Mixed"
+            classPicker.hidden = true
+        }
+        
         ResultsDownloader().downloadHTML(appDelegate.selectedTournamentDetail, klass:klasse){
             (res) -> Void in
             
@@ -64,6 +71,7 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("text-decoration:none", withString:"white-space:nowrap; width:0%; display:none;")
                 .stringByReplacingOccurrencesOfString("<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass D&nbsp;-&nbsp;Damer </span> <br/></td></tr>", withString:"")
                  .stringByReplacingOccurrencesOfString("<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass H&nbsp;-&nbsp;Herrar </span> <br/></td></tr>", withString:"")
+                .stringByReplacingOccurrencesOfString("<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass M&nbsp;-&nbsp;Mixed </span> <br/></td></tr>", withString:"")
                 .stringByReplacingOccurrencesOfString("&#13;", withString:"")
                 .stringByReplacingOccurrencesOfString("colspan=\"9\"", withString:"colspan=\"4\"")
                 .stringByReplacingOccurrencesOfString("<tr><td colspan=\"4\"> </td></tr>", withString:"")
