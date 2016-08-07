@@ -56,19 +56,48 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
         
         ResultsDownloader().downloadHTML(appDelegate.selectedTournamentDetail, klass:klasse){
             (res) -> Void in
-            
+            print("zzzzzzzzzzzzz")
+            print(res.HTML)
+            print("zzzzzzzzzzzzz")
             let link:String = appDelegate.selectedTournamentDetail!.resultatLink
             let table = res.HTML
                 .stringByReplacingOccurrencesOfString(" / ", withString:"<br/>")
-                .stringByReplacingOccurrencesOfString("&nbsp;", withString:" ")
+                //.stringByReplacingOccurrencesOfString("&nbsp;&nbsp;", withString:"")
+                //.stringByReplacingOccurrencesOfString("&nbsp; &nbsp;", withString:"")
+                .stringByReplacingOccurrencesOfString("        </td>", withString:" </td>")
                 .stringByReplacingOccurrencesOfString("<td/>", withString:"")
                 .stringByReplacingOccurrencesOfString("<td> - </td>", withString:"")
                 .stringByReplacingOccurrencesOfString(">=\"3\"", withString:">=\"3\"")
+                .stringByReplacingOccurrencesOfString("td>1", withString:"td style=\"display:none\">")
+                .stringByReplacingOccurrencesOfString("td>2", withString:"td style=\"display:none\">")
+                .stringByReplacingOccurrencesOfString("td>0", withString:"td style=\"display:none\">")
                 .stringByReplacingOccurrencesOfString(" - ", withString:"&nbsp;-&nbsp;")
+                .stringByReplacingOccurrencesOfString("(", withString:"")
+                .stringByReplacingOccurrencesOfString(")", withString:"")
+                .stringByReplacingOccurrencesOfString("1, ", withString:"1<br/>")
+                .stringByReplacingOccurrencesOfString("2, ", withString:"2<br/>")
+                .stringByReplacingOccurrencesOfString("3, ", withString:"3<br/>")
+                .stringByReplacingOccurrencesOfString("4, ", withString:"4<br/>")
+                .stringByReplacingOccurrencesOfString("5, ", withString:"5<br/>")
+                .stringByReplacingOccurrencesOfString("6, ", withString:"6<br/>")
+                .stringByReplacingOccurrencesOfString("7, ", withString:"7<br/>")
+                .stringByReplacingOccurrencesOfString("8, ", withString:"8<br/>")
+                .stringByReplacingOccurrencesOfString("9, ", withString:"9<br/>")
+                .stringByReplacingOccurrencesOfString("0, ", withString:"0<br/>")
+                .stringByReplacingOccurrencesOfString("1-", withString:"1&#8209;")
+                .stringByReplacingOccurrencesOfString("2-", withString:"2&#8209;")
+                .stringByReplacingOccurrencesOfString("3-", withString:"3&#8209;")
+                .stringByReplacingOccurrencesOfString("4-", withString:"4&#8209;")
+                .stringByReplacingOccurrencesOfString("5-", withString:"5&#8209;")
+                .stringByReplacingOccurrencesOfString("6-", withString:"6&#8209;")
+                .stringByReplacingOccurrencesOfString("7-", withString:"7&#8209;")
+                .stringByReplacingOccurrencesOfString("8-", withString:"8&#8209;")
+                .stringByReplacingOccurrencesOfString("9-", withString:"9&#8209;")
+                .stringByReplacingOccurrencesOfString("0-", withString:"0&#8209;")
+                .stringByReplacingOccurrencesOfString("e-", withString:"e&#8209;")
                 .stringByReplacingOccurrencesOfString(", ", withString:",&nbsp;")
                 .stringByReplacingOccurrencesOfString("colspan=\"3\"", withString:"")
-                .stringByReplacingOccurrencesOfString("    ", withString:"")
-                .stringByReplacingOccurrencesOfString("text-decoration:none", withString:"white-space:nowrap; width:0%; display:none;")
+               // .stringByReplacingOccurrencesOfString("text-decoration:none", withString:"white-space:nowrap; width:0%; display:none;")
                 .stringByReplacingOccurrencesOfString("<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass D&nbsp;-&nbsp;Damer </span> <br/></td></tr>", withString:"")
                  .stringByReplacingOccurrencesOfString("<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass H&nbsp;-&nbsp;Herrar </span> <br/></td></tr>", withString:"")
                 .stringByReplacingOccurrencesOfString("<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass M&nbsp;-&nbsp;Mixed </span> <br/></td></tr>", withString:"")
@@ -93,7 +122,9 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
                 .stringByReplacingOccurrencesOfString("#EEEEEE", withString:"#FFFBF0")
                 .stringByReplacingOccurrencesOfString("<td>Bana", withString:"<td style=\"display:none\">Bana")
                 .stringByReplacingOccurrencesOfString("<td> </td>", withString:"")
-            print(table)
+                .stringByReplacingOccurrencesOfString("Åttondel", withString:"8-del")
+                .stringByReplacingOccurrencesOfString("Sextondel", withString:"16-del")
+            //print(table)
             
             var aLink = "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 20px; text-decoration: none;\">Till resultatsidan (Safari) &gt;</a>"
             if(!res.hasResults){
@@ -102,12 +133,13 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
             
             let html = "<html><head><meta name=\"viewport\" content=\"width=450\"/>" +
                 "<style>.kampnr{display:none;}" +
-                "table td {font-size:16px; padding:3px; font-family:helvetica;}" +
+                "table td {font-size:16px; padding:5px; font-family:helvetica;vertical-align:middle;}" +
                 "table {width:100%;}" +
                 "</style></head><body>\(table)<br/>\(aLink)</body></html>"
             
             self.text.loadHTMLString(html, baseURL: NSURL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()
+            print(html)
         }
     }
 }
