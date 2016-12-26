@@ -10,22 +10,22 @@ import Foundation
 
 class Date {
     
-    class func from(year year:Int, month:Int, day:Int) -> NSDate {
-        let c = NSDateComponents()
+    class func from(year:Int, month:Int, day:Int) -> Foundation.Date {
+        var c = DateComponents()
         c.year = year
         c.month = month
         c.day = day
         
-        let gregorian = NSCalendar(identifier:NSCalendarIdentifierGregorian)
-        let date = gregorian?.dateFromComponents(c)
+        let gregorian = Calendar(identifier:Calendar.Identifier.gregorian)
+        let date = gregorian.date(from: c)
         return date!
     }
     
-    class func parse(dateStr:String, format:String="yyyy.MM.dd") -> NSDate {
+    class func parse(_ dateStr:String, format:String="yyyy.MM.dd") -> Foundation.Date {
         
-        let dateFmt = NSDateFormatter()
-        dateFmt.timeZone = NSTimeZone.defaultTimeZone()
+        let dateFmt = DateFormatter()
+        dateFmt.timeZone = TimeZone.current
         dateFmt.dateFormat = format
-        return dateFmt.dateFromString(dateStr)!
+        return dateFmt.date(from: dateStr)!
     }
 }

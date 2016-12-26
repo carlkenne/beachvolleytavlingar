@@ -9,9 +9,9 @@
 import Foundation
 
 struct Tournament {
-    let from: NSDate
+    let from: Foundation.Date
     let formattedFrom: String
-    let to: NSDate
+    let to: Foundation.Date
     let period: String
     let organiser: String
     let name: String

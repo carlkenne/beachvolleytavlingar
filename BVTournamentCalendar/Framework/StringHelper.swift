@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[self.startIndex.advancedBy(i)]
+        return self[self.characters.index(self.startIndex, offsetBy: i)]
     }
     
     subscript (i: Int) -> String {
@@ -19,50 +19,50 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substringWithRange(Range(startIndex.advancedBy(r.startIndex) ..< startIndex.advancedBy(r.endIndex)))
+        return substring(with: Range(characters.index(startIndex, offsetBy: r.lowerBound) ..< characters.index(startIndex, offsetBy: r.upperBound)))
     }
     
 
-    func removeAll(str: String) -> String{
-       return self.stringByReplacingOccurrencesOfString(str, withString: "")
+    func removeAll(_ str: String) -> String{
+       return self.replacingOccurrences(of: str, with: "")
     }
     
-    func getStringBetween(start: String, end: String, startAt: String?="") -> String{
+    func getStringBetween(_ start: String, end: String, startAt: String?="") -> String{
         //print("getStringBetween: '\(start)' '\(end)' ")
-        let theStartIndex = self.rangeOfString(startAt!)
+        let theStartIndex = self.range(of: startAt!)
         var theString = self;
         if(theStartIndex != nil) {
-            theString = self.substringFromIndex((theStartIndex?.endIndex)!)
+            theString = self.substring(from: (theStartIndex?.upperBound)!)
         }
         
-        let startIndex = theString.rangeOfString(start)
+        let startIndex = theString.range(of: start)
         if(startIndex == nil) {
             return ""
         }
         //print("start: \(startIndex)")
-        let theRest = theString.substringFromIndex((startIndex?.endIndex)!)
+        let theRest = theString.substring(from: (startIndex?.upperBound)!)
         //print("theRest: \(theRest)")
-        let stopIndex = theRest.rangeOfString(end)
+        let stopIndex = theRest.range(of: end)
         if(stopIndex == nil) {
             return ""
         }
         //print("stop: \((stop?.startIndex)!)")
-        let result = theRest.substringToIndex((stopIndex?.startIndex)!).stringByTrimmingCharactersInSet(
-            NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        let result = theRest.substring(to: (stopIndex?.lowerBound)!).trimmingCharacters(
+            in: CharacterSet.whitespacesAndNewlines
         );
         
         return result
     }
     
     init(htmlEncodedString: String) {
-            let encodedData = htmlEncodedString.dataUsingEncoding(NSUnicodeStringEncoding)!
+            let encodedData = htmlEncodedString.data(using: String.Encoding.unicode)!
             let attributedOptions = [String: AnyObject]()
             let attributedString = try! NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
-            self.init(attributedString.string)
+            self.init(attributedString.string)!
     }
   
 
-    func replaceOccurancesUTF16(utf16Nbr: Int, with: Character) -> String {
+    func replaceOccurancesUTF16(_ utf16Nbr: Int, with: Character) -> String {
         var chars = Array(self.characters)
         var utf16arr = Array(self.utf16)
         for row in 0 ..< utf16arr.count  {
@@ -74,13 +74,13 @@ extension String {
         return String(chars)
     }
     
-    func removeOccurancesUTF16(utf16Nbr: Int) -> String {
+    func removeOccurancesUTF16(_ utf16Nbr: Int) -> String {
         var chars = Array(self.characters)
         var utf16arr = Array(self.utf16)
         for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {
                 print(Int(utf16arr[row]))
-                chars.removeAtIndex(row)
+                chars.remove(at: row)
             }
         }
         return String(chars)

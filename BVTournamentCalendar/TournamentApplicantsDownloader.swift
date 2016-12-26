@@ -7,7 +7,7 @@
 //
 
 class TournamentApplicantsDownloader {
-    func downloadHTML(tournament:Tournament, detail: TournamentDetail?, callback:([Applicants]) -> Void) {
+    func downloadHTML(_ tournament:Tournament, detail: TournamentDetail?, callback:@escaping ([Applicants]) -> Void) {
         //renew the session
         
         if(detail != nil){
@@ -25,7 +25,7 @@ class TournamentApplicantsDownloader {
         }
     }
     
-    func setServerCookieRequest(url: NSString, callback:([Applicants]) -> Void) {
+    func setServerCookieRequest(_ url: NSString, callback:@escaping ([Applicants]) -> Void) {
         HttpDownloader().httpGetOld("https://www.profixio.com" + (url as String)) {
              (data, error) -> Void in
             sleep(1)
@@ -33,7 +33,7 @@ class TournamentApplicantsDownloader {
         }
     }
     
-    func participantsDownload(callback:([Applicants]) -> Void) {
+    func participantsDownload(_ callback:@escaping ([Applicants]) -> Void) {
         HttpDownloader().httpGetOld("https://www.profixio.com/pamelding/vis_paamelding.php") {
             (data, error) -> Void in
             if error != nil {
@@ -46,14 +46,14 @@ class TournamentApplicantsDownloader {
         }
     }
     
-    func parseHTML(HTMLData:NSData) -> [Applicants] {
-        var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("/html/body/table[1]//td")
+    func parseHTML(_ HTMLData:Data) -> [Applicants] {
+        var allCells = TFHpple(htmlData: HTMLData).search(withXPathQuery: "/html/body/table[1]//td")
         var results = [Applicants]()
-        let HTMLDataAsString = String(data: HTMLData, encoding: NSASCIIStringEncoding)
+        let HTMLDataAsString = String(data: HTMLData, encoding: String.Encoding.ascii)
         
-        for row in 0 ..< (allCells.count-7)/8  {
+        for row in 0 ..< ((allCells?.count)!-7)/8  {
             let td = (row * 8)+7
-            let teamid = getTeamId(allCells[td])
+            let teamid = getTeamId(allCells?[td])
             var player1Ranking = "";
             var player2Ranking = "";
             
@@ -64,13 +64,13 @@ class TournamentApplicantsDownloader {
             }
             
             let applicants = Applicants(
-                players: cleanValue(allCells[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
-                club: cleanValue(allCells[td+1]),
-                type: (cleanValue(allCells[td+2]) as String) + (getReserveCode(allCells[td]) as String),
-                time: cleanValue(allCells[td+3]),
-                rankingPoints: cleanValue(allCells[td+4]).removeAll("*"),
-                entryPoints: cleanValue(allCells[td+5]).removeAll("*"),
-                status: cleanValue(allCells[td+6]) == "OK",
+                players: cleanValue(allCells?[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
+                club: cleanValue(allCells?[td+1]),
+                type: cleanValue(allCells?[td+2]) + getReserveCode(allCells?[td]),
+                time: cleanValue(allCells?[td+3]),
+                rankingPoints: cleanValue(allCells?[td+4]).removeAll("*"),
+                entryPoints: cleanValue(allCells?[td+5]).removeAll("*"),
+                status: cleanValue(allCells?[td+6]) == "OK",
                 player1Ranking: player1Ranking,
                 player2Ranking: player2Ranking
             )
@@ -80,24 +80,24 @@ class TournamentApplicantsDownloader {
         return results
     }
     
-    func getReserveCode(value:AnyObject) -> String {
-        if( cleanValue(value).rangeOfString("Väntelista") != nil){
+    func getReserveCode(_ value:Any) -> String {
+        if( cleanValue(value).range(of: "Väntelista") != nil){
             return "V"
         }
-        if( cleanValue(value).rangeOfString("önskas") != nil){
+        if( cleanValue(value).range(of: "önskas") != nil){
             return "Ö"
         }
         return ""
     }
     
-    func getTeamId(value:AnyObject) -> String {
+    func getTeamId(_ value:Any) -> String {
         let raw = (value as! TFHppleElement).raw
-        let id = raw.getStringBetween("vis_spillerkontaktinfo(", end: ", event)")
+        let id = raw?.getStringBetween("vis_spillerkontaktinfo(", end: ", event)")
         //print(id)
-        return id
+        return id!
     }
     
-    func getPlayers(raw: String, teamid: String) -> (rank1:String, rank2:String) {
+    func getPlayers(_ raw: String, teamid: String) -> (rank1:String, rank2:String) {
         
         let teamData = raw.getStringBetween("[lag_id] => \(teamid)", end: "[entrysort] =>")
         let player1id = teamData.getStringBetween("[sp_id] => ", end: "[sp_navn]")
@@ -109,10 +109,10 @@ class TournamentApplicantsDownloader {
         var rank1 = findRanking(raw, id: player1id);
         var rank2 = findRanking(raw, id: player2id);
     
-        if((raw.rangeOfString("\(player1id) : 0")) != nil) {
+        if((raw.range(of: "\(player1id) : 0")) != nil) {
             rank1 = "0"
         }
-        if((raw.rangeOfString("\(player2id) : 0")) != nil) {
+        if((raw.range(of: "\(player2id) : 0")) != nil) {
             rank2 = "0"
         }
         
@@ -120,7 +120,7 @@ class TournamentApplicantsDownloader {
                 rank2: rank2)
     }
     
-    func findRanking(str: String, id: String) -> String {
+    func findRanking(_ str: String, id: String) -> String {
         if(id == "-1") {
             return ""
         }
@@ -134,26 +134,26 @@ class TournamentApplicantsDownloader {
             
             let rank = section.getStringBetween("[\(id)] => ", end: "\n")
             if(rank != "") {
-                return rank.stringByReplacingOccurrencesOfString(".00", withString: "");
+                return rank.replacingOccurrences(of: ".00", with: "");
             }
             
-            iteratingString = iteratingString.substringFromIndex(iteratingString.rangeOfString("[rankingpoints_max]")!.endIndex)
+            iteratingString = iteratingString.substring(from: iteratingString.range(of: "[rankingpoints_max]")!.upperBound)
         }
     }
     
-    func cleanValue(value:AnyObject) -> String {
+    func cleanValue(_ value:Any) -> String {
         var content = (value as! TFHppleElement).content
         //print(content)
-        content = content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-                .stringByReplacingOccurrencesOfString("Ã¶", withString: "ö")
-                .stringByReplacingOccurrencesOfString("Ã¥", withString: "å")
-                .stringByReplacingOccurrencesOfString("Ã©", withString: "é")
-                .stringByReplacingOccurrencesOfString("Ã", withString: "Ö")
-                .stringByReplacingOccurrencesOfString("Ã", withString: "É")
-                .stringByReplacingOccurrencesOfString("Ã¤", withString: "ä")
+        content = content?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                .replacingOccurrences(of: "Ã¶", with: "ö")
+                .replacingOccurrences(of: "Ã¥", with: "å")
+                .replacingOccurrences(of: "Ã©", with: "é")
+                .replacingOccurrences(of: "Ã", with: "Ö")
+                .replacingOccurrences(of: "Ã", with: "É")
+                .replacingOccurrences(of: "Ã¤", with: "ä")
 
-        content = content.removeOccurancesUTF16( 133)
-        content = content.replaceOccurancesUTF16( 195, with: "Å")
-        return content
+        content = content?.removeOccurancesUTF16( 133)
+        content = content?.replaceOccurancesUTF16( 195, with: "Å")
+        return content!
     }
 }

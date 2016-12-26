@@ -17,7 +17,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     @IBOutlet weak var table: UITableView!
     
     var refreshControl:UIRefreshControl!
-    func refresh(sender:AnyObject)
+    func refresh(_ sender:AnyObject)
     {
         showTournament()
     }
@@ -28,7 +28,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         self.table.dataSource = self
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(TournamentApplicantsViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(TournamentApplicantsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
         self.table.addSubview(refreshControl)
         
         showTournament()
@@ -45,15 +45,15 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         return dataSource[numberOfRowsInSection].applicants.count
     }
     
-    func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(_: UITableView, cellForRowAt cellForRowAtIndexPath: IndexPath) -> UITableViewCell{
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
         var cell : UITableViewCell
-        if(applicants.type.rangeOfString("D") != nil && applicants.status) {
-            cell = table.dequeueReusableCellWithIdentifier("ApplicantDam") as UITableViewCell!
-        } else if (applicants.type.rangeOfString("H") != nil && applicants.status) {
-            cell = table.dequeueReusableCellWithIdentifier("ApplicantHerr") as UITableViewCell!
+        if(applicants.type.range(of: "D") != nil && applicants.status) {
+            cell = table.dequeueReusableCell(withIdentifier: "ApplicantDam") as UITableViewCell!
+        } else if (applicants.type.range(of: "H") != nil && applicants.status) {
+            cell = table.dequeueReusableCell(withIdentifier: "ApplicantHerr") as UITableViewCell!
         } else {
-            cell = table.dequeueReusableCellWithIdentifier("Applicant") as UITableViewCell!
+            cell = table.dequeueReusableCell(withIdentifier: "Applicant") as UITableViewCell!
         }
         let text = applicants.players
         cell.textLabel?.text = "\(text)"
@@ -69,27 +69,27 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return dataSource[section].title + " (\(dataSource[section].applicants.count))"
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.count;
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.tabBarController!.navigationItem.rightBarButtonItem = nil;
     }
     
     func showTournament(){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tournament = appDelegate.selectedTournament
-        parentViewController?.title = tournament?.name
+        parent?.title = tournament?.name
         
         TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail){
             (data) -> Void in
             var listOfApplicants = data
-            listOfApplicants.sortInPlace({ $0.points() > $1.points() })
+            listOfApplicants.sort(by: { $0.points() > $1.points() })
             
             let sectionNames = NSSet(array: listOfApplicants.map {
                 return $0.type
@@ -109,7 +109,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
                 ]
             }
             
-            self.dataSource.sortInPlace({ $0.title < $1.title })
+            self.dataSource.sort(by: { $0.title < $1.title })
             
             self.table.reloadData()
             self.refreshControl.endRefreshing()
@@ -123,7 +123,7 @@ class GroupSize : UITableViewCell
     @IBOutlet weak var groupsSlider: UISlider!
     @IBOutlet weak var groupsText: UITextField!
     
-    func sliderMoved(sender: UISlider) {
+    func sliderMoved(_ sender: UISlider) {
         print(sender, terminator: "")
         let round = roundf(sender.value)
         sender.value = round

@@ -9,7 +9,7 @@
 import Foundation
 
 class PlayerRankingGameListDownloader : DownloaderBase {
-    func downloadHTML(detailsUrl:String, callback:(PlayerRankingDetails) -> Void) {
+    func downloadHTML(_ detailsUrl:String, callback:@escaping (PlayerRankingDetails) -> Void) {
         //renew the session
         
         HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/index.php"){
@@ -28,7 +28,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
         }
     }
     
-    func createRanking(index: Int, allCells: [AnyObject], isEntryPoint : Bool) -> PlayerRankingGame {
+    func createRanking(_ index: Int, allCells: [AnyObject], isEntryPoint : Bool) -> PlayerRankingGame {
         let name = cleanValue(allCells[index+2])
         let levelCategory = TournamentsDownloader().getLevelCategory("", name: name)
         print("\(name) \(isEntryPoint)")
@@ -40,8 +40,8 @@ class PlayerRankingGameListDownloader : DownloaderBase {
             name: name,
             points: Int(cleanValue(allCells[index+3]).removeAll(".00"))!,
             result: cleanValue(allCells[index+4])
-                .stringByReplacingOccurrencesOfString("(H)", withString: "?")
-                .stringByReplacingOccurrencesOfString("(D)", withString: "?")
+                .replacingOccurrences(of: "(H)", with: "?")
+                .replacingOccurrences(of: "(D)", with: "?")
                 .removeAll("(H - ")
                 .removeAll("(D - ")
                 .removeAll("(M - ")
@@ -52,25 +52,25 @@ class PlayerRankingGameListDownloader : DownloaderBase {
         )
     }
     
-    func periodToInt(period:String) -> Int {
-        let p = period.stringByReplacingOccurrencesOfString("TP", withString: "")
+    func periodToInt(_ period:String) -> Int {
+        let p = period.replacingOccurrences(of: "TP", with: "")
         return Int(p)!;
     }
     
-    func parseHTML(HTMLData:NSData) -> PlayerRankingDetails {
+    func parseHTML(_ HTMLData:Data) -> PlayerRankingDetails {
         
         //print(String(data: HTMLData, encoding: NSUTF8StringEncoding))
-        let entryPoints = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//tr[contains(@id,\"ep_20\")]//td")
+        let entryPoints = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//tr[contains(@id,\"ep_20\")]//td")
         
-        let others = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//tr[not(contains(@id,\"ep_20\"))]//td")
+        let others = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//tr[not(contains(@id,\"ep_20\"))]//td")
         var results = [PlayerRankingGame]()
         
-        for row in 0 ..< (entryPoints.count)/5  {
-            results.append(self.createRanking((row * 5), allCells: entryPoints, isEntryPoint: true))
+        for row in 0 ..< (entryPoints?.count)!/5  {
+            results.append(self.createRanking((row * 5), allCells: entryPoints as! [AnyObject], isEntryPoint: true))
         }
         
-        for row in 0 ..< (others.count)/5  {
-            results.append(self.createRanking((row * 5), allCells: others, isEntryPoint: false))
+        for row in 0 ..< (others?.count)!/5  {
+            results.append(self.createRanking((row * 5), allCells: others as! [AnyObject], isEntryPoint: false))
         }
         let age = getAge(HTMLData);
         print(age)
@@ -78,34 +78,34 @@ class PlayerRankingGameListDownloader : DownloaderBase {
                                     age: age)
     }
     
-    func getAge(HTMLData:NSData) -> Int {
+    func getAge(_ HTMLData:Data) -> Int {
         
-        let nameRow = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//b")[0])
-        let ageCode = nameRow.componentsSeparatedByString("(")[1]
-            .componentsSeparatedByString(")")[0]
+        let nameRow = cleanValue(TFHpple(htmlData: HTMLData).search(withXPathQuery: "//b")![0] as AnyObject)
+        let ageCode = nameRow.components(separatedBy: "(")[1]
+            .components(separatedBy: ")")[0]
         print(ageCode)
-        if(ageCode.containsString("-") ){
+        if(ageCode.contains("-") ){
             
-            let bornDateFormatter = NSDateFormatter()
+            let bornDateFormatter = DateFormatter()
             bornDateFormatter.dateFormat = "YYYY-MM-DD"
-            let bornDate = bornDateFormatter.dateFromString(ageCode)
-            return getYearsBetween(bornDate!, to: NSDate())
+            let bornDate = bornDateFormatter.date(from: ageCode)
+            return getYearsBetween(bornDate!, to: Foundation.Date())
         } else if(ageCode.hasPrefix("M") || ageCode.hasPrefix("K")) {
             let myNSString = ageCode as NSString
-            let ageString = myNSString.substringWithRange(NSRange(location: 1, length: 6))
-            let bornDateFormatter = NSDateFormatter()
+            let ageString = myNSString.substring(with: NSRange(location: 1, length: 6))
+            let bornDateFormatter = DateFormatter()
             bornDateFormatter.dateFormat = "DDMMYY"
-            let bornDate = bornDateFormatter.dateFromString(ageString)
-            return getYearsBetween(bornDate!, to: NSDate())
+            let bornDate = bornDateFormatter.date(from: ageString)
+            return getYearsBetween(bornDate!, to: Foundation.Date())
         }
         return 0
     }
     
-    func getYearsBetween(from: NSDate, to: NSDate) -> Int {
-        let diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: from, toDate: to, options: NSCalendarOptions.init(rawValue: 0))
+    func getYearsBetween(_ from: Foundation.Date, to: Foundation.Date) -> Int {
+        let diffDateComponents = (Calendar.current as NSCalendar).components([NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day, NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second], from: from, to: to, options: NSCalendar.Options.init(rawValue: 0))
         print(diffDateComponents.month)
         print(diffDateComponents.day)
-        return diffDateComponents.year
+        return diffDateComponents.year!
         
     }
 }

@@ -7,6 +7,30 @@
 //
 
 import Foundation
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class PointsTableViewController: UIViewController, UITableViewDataSource {
     
@@ -37,19 +61,19 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         table.dataSource = self
         showTournament()
-        navigationController?.navigationBar.opaque = true
+        navigationController?.navigationBar.isOpaque = true
         hideEmptyRows(table)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource[section].pointsTable.count
     }
     
     func showTournament() {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let tournament = appDelegate.selectedTournament
-        parentViewController?.title = tournament?.name
+        parent?.title = tournament?.name
         loading.startAnimating()
         
         TournamentApplicantsDownloader().downloadHTML(tournament!, detail: appDelegate.selectedTournamentDetail) {
@@ -77,24 +101,24 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.count
     }
     
-    func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_: UITableView, cellForRowAt cellForRowAtIndexPath: IndexPath) -> UITableViewCell {
         let cell =  UITableViewCell()
         cell.textLabel?.text = dataSource[cellForRowAtIndexPath.section].pointsTable[cellForRowAtIndexPath.row]
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return dataSource[section].title
     }
     
-    func addPointsFor(listOfApplicants: [Applicants], tournament: Tournament) {
+    func addPointsFor(_ listOfApplicants: [Applicants], tournament: Tournament) {
         if(listOfApplicants.count == 0) { return }
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let count = listOfApplicants.count > appDelegate.selectedTournamentDetail?.maxNoOfParticipants ? appDelegate.selectedTournamentDetail?.maxNoOfParticipants : listOfApplicants.count
         
         let pointTable = getPointsForLevel(count!, tournament: tournament)
@@ -102,13 +126,13 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         dataSource.append(
             PointsTableSection(
                 title: "\(listOfApplicants[0].getTypeName()) (\(pointTable.title))",
-                pointsTable: pointTable.table.enumerate().map(){ (index: Int, element:PointsRank) in
+                pointsTable: pointTable.table.enumerated().map(){ (index: Int, element:PointsRank) in
                     return " \(element.rank) - \(element.points) poäng"
                 }
             ))
     }
     
-    func getValueOrHighest(list:[[Int]], index:Int) -> [Int]{
+    func getValueOrHighest(_ list:[[Int]], index:Int) -> [Int]{
         if(list.count > index){
             return list[index]
         }
@@ -116,7 +140,7 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
     }
     
     
-    func getPointsForLevel(noOfApplicants: Int, tournament: Tournament) -> PointTable {
+    func getPointsForLevel(_ noOfApplicants: Int, tournament: Tournament) -> PointTable {
         
         if(tournament.levelCategory == "sm") {
             let points = [

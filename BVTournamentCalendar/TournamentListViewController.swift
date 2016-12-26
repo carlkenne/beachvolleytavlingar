@@ -12,37 +12,37 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
     var rawDownloadedData = [Tournament]()
     var filterSaveKey = "TournamentFilter"
     
-    @IBAction func saveFilterSettings(segue:UIStoryboardSegue) {
-        if let filterSettings = segue.sourceViewController as? FilterSettingsViewController {
+    @IBAction func saveFilterSettings(_ segue:UIStoryboardSegue) {
+        if let filterSettings = segue.source as? FilterSettingsViewController {
             
             var excludes = [String]()
-            if(!filterSettings.black.on){
+            if(!filterSettings.black.isOn){
                 excludes.append("open svart")
             }
-            if(!filterSettings.green.on){
+            if(!filterSettings.green.isOn){
                 excludes.append("open grön")
             }
-            if(!filterSettings.challenger.on){
+            if(!filterSettings.challenger.isOn){
                 excludes.append("challenger")
             }
-            if(!filterSettings.Mixed.on){
+            if(!filterSettings.Mixed.isOn){
                 excludes.append("mixed")
             }
-            if(!filterSettings.misc.on){
+            if(!filterSettings.misc.isOn){
                 excludes.append("övrigt")
             }
-            if(!filterSettings.swedishBeachTour.on){
+            if(!filterSettings.swedishBeachTour.isOn){
                 excludes.append("swedish beach tour")
             }
-            if(!filterSettings.sm.on){
+            if(!filterSettings.sm.isOn){
                 excludes.append("sm")
             }
-            if(!filterSettings.hideOld.on){
+            if(!filterSettings.hideOld.isOn){
                 excludes.append("hideOld")
             }
 
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(excludes, forKey: filterSaveKey)
+            let defaults = UserDefaults.standard
+            defaults.set(excludes, forKey: filterSaveKey)
             defaults.synchronize()
             
             typesToExclude = NSSet(array: excludes)
@@ -52,7 +52,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
     
     var refreshControl:UIRefreshControl!
     
-    func refresh(sender:AnyObject) {
+    func refresh(_ sender:AnyObject) {
         loadData()
     }
     
@@ -65,22 +65,22 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
         
         setBackgroundImage("sand", ofType: "png")
         
-        table.hidden = true
+        table.isHidden = true
         loading.startAnimating()
         table.dataSource = self
         table.delegate = self
         loadData()
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(TournamentListViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(TournamentListViewController.refresh(_:)), for: UIControlEvents.valueChanged)
         self.table.addSubview(refreshControl)
         
     }
     
     func loadData() {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        if let excludes = defaults.objectForKey(filterSaveKey) {
+        if let excludes = defaults.object(forKey: filterSaveKey) {
             typesToExclude = NSSet(array: excludes as! [AnyObject])
         }
         
@@ -92,14 +92,14 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
     
     func filterData(){
         var data = self.rawDownloadedData.filter( {(tournament: Tournament) -> Bool in
-            !self.typesToExclude.containsObject(tournament.levelCategory)
+            !self.typesToExclude.contains(tournament.levelCategory)
         })
         
-        if(!self.typesToExclude.containsObject("hideOld")){
-            let now = NSDate()
+        if(!self.typesToExclude.contains("hideOld")){
+            let now = Foundation.Date()
             let currentPeriodName = TournamentListHelper().getPeriodForDate(now).name
             data = data.filter( {(tournament: Tournament) -> Bool in
-                ((tournament.from.earlierDate(now) == now || tournament.period.rangeOfString(currentPeriodName) != nil))
+                (((tournament.from as NSDate).earlierDate(now) == now || tournament.period.range(of: currentPeriodName) != nil))
             })
         }
         
@@ -113,9 +113,9 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
                 tournament.period == sectionName
             }))
         }
-        self.results.sortInPlace({ $0.title < $1.title })
+        self.results.sort(by: { $0.title < $1.title })
         self.table.reloadData()
-        self.table.hidden = false
+        self.table.isHidden = false
         self.loading.stopAnimating()
         self.refreshControl.endRefreshing()
         
@@ -123,7 +123,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
         if(typesToExclude.count > 0) {
             label = "filter(\(typesToExclude.count))"
         }
-        filterLabel.setTitle(label, forState: UIControlState.Normal)
+        filterLabel.setTitle(label, for: UIControlState())
     }
     
     override func didReceiveMemoryWarning() {
@@ -134,66 +134,85 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
         return results[numberOfRowsInSection].tournaments.count
     }
     
-    func tableView(_: UITableView, cellForRowAtIndexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(_: UITableView, cellForRowAt cellForRowAtIndexPath: IndexPath) -> UITableViewCell{
         let tournament = self.results[cellForRowAtIndexPath.section].tournaments[cellForRowAtIndexPath.row]
         var cellName = "NoInfo"
         if(tournament.moreInfo){
             cellName = "MoreInfo"
         }
-        let cell = table.dequeueReusableCellWithIdentifier(cellName) as UITableViewCell!
-        cell.textLabel?.text = tournament.name
-        cell.detailTextLabel?.text = tournament.formattedFrom + " - " + tournament.organiser
-        addImage(cell, levelCategory: tournament.levelCategory)
+        let cell = table.dequeueReusableCell(withIdentifier: cellName) as UITableViewCell!
+        cell?.textLabel?.text = tournament.name
+            .replacingOccurrences(of: "Svart ", with:"")
+            .replacingOccurrences(of: "Sv ", with:"")
+            .replacingOccurrences(of: "svart ", with:"")
+            .replacingOccurrences(of: "Grön ", with:"")
+            .replacingOccurrences(of: "grön ", with:"")
+            .replacingOccurrences(of: "lö ", with:"")
+            .replacingOccurrences(of: "Lö ", with:"")
+            .replacingOccurrences(of: "Må ", with:"")
+            .replacingOccurrences(of: "Sö ", with:"")
+            .replacingOccurrences(of: "sö ", with:"")
+            .replacingOccurrences(of: "Svart", with:"")
+            .replacingOccurrences(of: "svart", with:"")
+            .replacingOccurrences(of: "Grön", with:"")
+            .replacingOccurrences(of: "grön", with:"")
+            .replacingOccurrences(of: "Open Mix ", with:"Mixed")
+            .replacingOccurrences(of: "Open Mix", with:"Mixed")
+            .replacingOccurrences(of: " Dam/Herr ", with:" ")
+
+            
+        cell?.detailTextLabel?.text = tournament.formattedFrom + " - " + tournament.organiser
+        addImage(cell!, levelCategory: tournament.levelCategory)
      
-        return cell
+        return cell!
     }
     
-    func addImage(cell: UITableViewCell, levelCategory: String) {
+    func addImage(_ cell: UITableViewCell, levelCategory: String) {
         if(levelCategory == "mixed"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("blue", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "blue", ofType: "png")!)
         }
         else if(levelCategory == "open grön"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("green", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "green", ofType: "png")!)
         }
         else if(levelCategory == "open svart"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("black", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "black", ofType: "png")!)
         }
         else if(levelCategory == "challenger"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("red", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "red", ofType: "png")!)
         }
         else {
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("normal", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "normal", ofType: "png")!)
         }
     }
     
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let view = view as? UITableViewHeaderFooterView {
-            view.textLabel!.backgroundColor = UIColor.clearColor()
-            view.textLabel!.textColor = UIColor.blackColor()
+            view.textLabel!.backgroundColor = UIColor.clear
+            view.textLabel!.textColor = UIColor.black
         }
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return results[section].title
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return results.count;
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexPath = table.indexPathForSelectedRow!
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.selectedTournament = self.results[indexPath.section].tournaments[indexPath.row]
-        self.performSegueWithIdentifier("ShowTournament", sender: self)
+        self.performSegue(withIdentifier: "ShowTournament", sender: self)
         table.beginUpdates()
         table.endUpdates()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
 
         if segue.identifier == "ShowSettings" {
-            let nav = segue.destinationViewController as! UINavigationController
+            let nav = segue.destination as! UINavigationController
             let filterViewController = nav.visibleViewController as! FilterSettingsViewController
             filterViewController.addSettings(typesToExclude)
             filterViewController.prepopulateSettings()

@@ -11,8 +11,8 @@ import Foundation
 class TournamentDetailDownloader: DownloaderBase {
     var retries = 1
     
-    func downloadHTML(tournament:Tournament, callback:(TournamentDetail) -> Void) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    func downloadHTML(_ tournament:Tournament, callback:@escaping (TournamentDetail) -> Void) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.selectedTournamentDetail = nil
         HttpDownloader().httpGetOld(tournament.link as String){
             (data, error) -> Void in
@@ -42,7 +42,7 @@ class TournamentDetailDownloader: DownloaderBase {
         }
     }
     
-    func createFailedResponse(tournament: Tournament) -> TournamentDetail{
+    func createFailedResponse(_ tournament: Tournament) -> TournamentDetail{
         return TournamentDetail(
             resultatLink: "",
             registrationLink: "",
@@ -55,52 +55,54 @@ class TournamentDetailDownloader: DownloaderBase {
         )
     }
     
-    func areWeStillLoggedIn(HTMLData:NSData) -> Bool {
-        return TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//h4[contains(.,'Gjestetilgang')]").count == 0
+    func areWeStillLoggedIn(_ HTMLData:Data) -> Bool {
+        return TFHpple(htmlData: HTMLData).search(withXPathQuery: "//h4[contains(.,'Gjestetilgang')]").count == 0
     }
     
-    func getTextFromTD(HTMLData:NSData, query:String) -> String {
-        let array = TFHpple(HTMLData: HTMLData).searchWithXPathQuery(query)
+    func getTextFromTD(_ HTMLData:Data, query:String) -> String {
+        let array : [Any] = TFHpple(htmlData: HTMLData).search(withXPathQuery: query)
         
         if(array.count > 0){
-            return cleanValue(array[0])
+            return cleanValue(array[0] as AnyObject)
         }
         return ""
     }
     
-    func parseHTML(tournament:Tournament, HTMLData:NSData) -> TournamentDetail {
-        var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table")
-        let anmalan = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//input[@value='Anmälan']")
+    func parseHTML(_ tournament:Tournament, HTMLData:Data) -> TournamentDetail {
+        var allCells: [Any] = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//table")
+        let anmalan = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//input[@value='Anmälan']")
         let resultatLink = getTextFromTD(HTMLData, query:"//td[contains(.,'resultater/vis.php')]")
         let registrationLink = getTextFromTD(HTMLData, query:"//td[contains(.,'pamelding/redirect.php')]")
         
-        let maxNoOfParticipants:String = cleanValue(TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//td[@class='startkont']")[0])
+        let maxNoOfParticipants:String = cleanValue(TFHpple(htmlData: HTMLData).search(withXPathQuery: "//td[@class='startkont']")[0])
         var maxNo = 100
         if(maxNoOfParticipants.characters.count > 0){
             maxNo = Int(maxNoOfParticipants)!
         }
         
+        let table: TFHppleElement = (allCells[1] as! TFHppleElement)
+        
         return TournamentDetail(
-            resultatLink: resultatLink.stringByReplacingOccurrencesOfString("http:", withString: "https:"),
-            registrationLink: registrationLink.stringByReplacingOccurrencesOfString("http:", withString: "https:"),
+            resultatLink: resultatLink.replacingOccurrences(of: "http:", with: "https:"),
+            registrationLink: registrationLink.replacingOccurrences(of: "http:", with: "https:"),
             link: tournament.link,
-            table: (allCells[1] as! TFHppleElement).raw.stringByReplacingOccurrencesOfString("Kontaktinformation", withString: "Kontakt information"),
-            setServerSessionCookieUrl: self.extractOnClickLink(anmalan),
+            table: table.raw.replacingOccurrences(of: "Kontaktinformation", with: "Kontakt information") as NSString,
+            setServerSessionCookieUrl: self.extractOnClickLink(anmalan as! [AnyObject]),
             fromHour: "",
             toHour: "",
             maxNoOfParticipants: maxNo
         )
     }
     
-    func extractOnClickLink(anmalan: [AnyObject]) -> NSString {
+    func extractOnClickLink(_ anmalan: [AnyObject]) -> NSString {
         if(anmalan.count == 0) {
             return ""
         }
         
         let onclickString = (anmalan[0] as! TFHppleElement).attributes["onclick"] as! NSString
         
-        var str = onclickString.stringByReplacingOccurrencesOfString("window.open(\"..", withString: "")
-        str = str.stringByReplacingOccurrencesOfString("\", \"_blank\")", withString: "")
-        return str
+        var str = onclickString.replacingOccurrences(of: "window.open(\"..", with: "")
+        str = str.replacingOccurrences(of: "\", \"_blank\")", with: "")
+        return str as NSString
     }
 }

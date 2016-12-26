@@ -34,7 +34,7 @@ class FilterSettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func addSettings(_settingsToExclude: NSSet){
+    func addSettings(_ _settingsToExclude: NSSet){
         settingsToExclude = _settingsToExclude
     }
     
@@ -42,29 +42,29 @@ class FilterSettingsViewController: UITableViewController {
         if(loaded == false){
             return
         }
-        if(settingsToExclude.containsObject("mixed")){
-            Mixed.on = false
+        if(settingsToExclude.contains("mixed")){
+            Mixed.isOn = false
         }
-        if(settingsToExclude.containsObject("open grön")){
-            green.on = false
+        if(settingsToExclude.contains("open grön")){
+            green.isOn = false
         }
-        if(settingsToExclude.containsObject("open svart")){
-            black.on = false
+        if(settingsToExclude.contains("open svart")){
+            black.isOn = false
         }
-        if(settingsToExclude.containsObject("challenger")){
-            challenger.on = false
+        if(settingsToExclude.contains("challenger")){
+            challenger.isOn = false
         }
-        if(settingsToExclude.containsObject("övrigt")){
-            misc.on = false
+        if(settingsToExclude.contains("övrigt")){
+            misc.isOn = false
         }
-        if(settingsToExclude.containsObject("swedish beach tour")){
-            swedishBeachTour.on = false
+        if(settingsToExclude.contains("swedish beach tour")){
+            swedishBeachTour.isOn = false
         }
-        if(settingsToExclude.containsObject("sm")){
-            sm.on = false
+        if(settingsToExclude.contains("sm")){
+            sm.isOn = false
         }
-        if(settingsToExclude.containsObject("hideOld")){
-            hideOld.on = false
+        if(settingsToExclude.contains("hideOld")){
+            hideOld.isOn = false
         }
     }
 }

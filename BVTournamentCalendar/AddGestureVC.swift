@@ -19,12 +19,12 @@ class AddGestureVC : UIViewController
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let target = segue.destinationViewController as! RankingVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let target = segue.destination as! RankingVC
         target.type = (self.tabBarItem.title!)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }

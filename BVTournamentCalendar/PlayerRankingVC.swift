@@ -40,7 +40,7 @@ class PlayerRankingVC : UITableViewController
     
     var player : PlayerRanking?
     
-    func addPlayer(ranking:PlayerRanking) {
+    func addPlayer(_ ranking:PlayerRanking) {
         player = ranking
         PlayerRankingGameListDownloader().downloadHTML(ranking.detailsUrl){(_data) -> Void in
             
@@ -91,7 +91,7 @@ class PlayerRankingVC : UITableViewController
                     }
                     return Int(ranking.year)! > year
                 })
-                topRankings.sortInPlace ({ $0.points > $1.points })
+                topRankings.sort (by: { $0.points > $1.points })
                 
                 let n = min(5, topRankings.count)
                 let total = topRankings[0..<n]
@@ -131,7 +131,7 @@ class PlayerRankingVC : UITableViewController
         }
     }
     
-    func getRating(level: String) -> Int {
+    func getRating(_ level: String) -> Int {
         var greens: [Float]
         
         greens = self.results.games.filter( {(tournament: PlayerRankingGame) -> Bool in
@@ -150,26 +150,26 @@ class PlayerRankingVC : UITableViewController
             print("nothing")
             return -1
         }
-        return Int(greens.reduce(0, combine: +) / Float(greens.count))
+        return Int(greens.reduce(0, +) / Float(greens.count))
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return navigationController?.navigationBarHidden == true
+    override var prefersStatusBarHidden : Bool {
+        return navigationController?.isNavigationBarHidden == true
     }
     
-    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
-        return UIStatusBarAnimation.Fade
+    override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
+        return UIStatusBarAnimation.fade
     }
     
     override func viewDidLoad() {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == viewModel.snittresultatStartIndex){
             return viewModel.snittresultatList.count
         } else if(section == viewModel.entrypointsStartIndex ||
@@ -181,14 +181,14 @@ class PlayerRankingVC : UITableViewController
         return 1
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         if(self.results.games.count > 0) {
             return self.results.games.count + 4;
         }
         return 0
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if(section != viewModel.entrypointsStartIndex &&
             section != viewModel.rankingpointsStartIndex &&
             section != viewModel.snittresultatStartIndex &&
@@ -197,14 +197,14 @@ class PlayerRankingVC : UITableViewController
         }
         return 40
     }
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(indexPath.section == viewModel.remainingRankingsStartIndex && indexPath.row == 0) {
             return 20
         }
         return 40
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == viewModel.snittresultatStartIndex){
             return "Snittresultat"
         } else if(section == viewModel.entrypointsStartIndex){
@@ -221,7 +221,7 @@ class PlayerRankingVC : UITableViewController
         
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header:UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
 
         if(section == viewModel.entrypointsStartIndex ||
@@ -229,26 +229,26 @@ class PlayerRankingVC : UITableViewController
             section == viewModel.snittresultatStartIndex ||
             section == viewModel.remainingRankingsStartIndex) {
             
-            header.textLabel!.textColor = UIColor.blackColor()
+            header.textLabel!.textColor = UIColor.black
         } else {
             header.textLabel!.textColor = UIColor(red:0.427451, green:0.427451, blue:0.447059, alpha: 1.0)
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(indexPath.section == viewModel.snittresultatStartIndex) {
-            let cell = tableView.dequeueReusableCellWithIdentifier("GameRankedSimple") as UITableViewCell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GameRankedSimple") as UITableViewCell!
             let rating = viewModel.snittresultatList[indexPath.row]
-            cell.detailTextLabel?.text = rating.title
-            cell.textLabel?.text = "\(rating.rating)%"
-            return cell
+            cell?.detailTextLabel?.text = rating.title
+            cell?.textLabel?.text = "\(rating.rating)%"
+            return cell!
         }
         if(indexPath.section == viewModel.remainingRankingsStartIndex) {
-            let cell = tableView.dequeueReusableCellWithIdentifier("Upcoming") as UITableViewCell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Upcoming") as UITableViewCell!
             if(indexPath.row == 0) {
-                cell.detailTextLabel?.text = "entrypoints"
-                cell.textLabel?.text = "tävlingsperiod"
+                cell?.detailTextLabel?.text = "entrypoints"
+                cell?.textLabel?.text = "tävlingsperiod"
             } else {
                 let ranking = viewModel.remainingRankings[indexPath.row-1]
                 
@@ -260,36 +260,36 @@ class PlayerRankingVC : UITableViewController
                     extraText = "(1 tävling)"
                 }
                 
-                cell.detailTextLabel?.text = "\(ranking.entrypoint) \(extraText)"
-                cell.textLabel?.text = "TP \(ranking.period)"
+                cell?.detailTextLabel?.text = "\(ranking.entrypoint) \(extraText)"
+                cell?.textLabel?.text = "TP \(ranking.period)"
             }
-            return cell
+            return cell!
         }
         let index = indexPath.section > viewModel.rankingpointsStartIndex ? indexPath.section - 3 : indexPath.section - 2
         let tourney = self.results.games[index]
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("GameRanked") as UITableViewCell!
-        cell.textLabel?.text = "plats: \(tourney.result) - (\(tourney.points) poäng)"
-        cell.detailTextLabel?.text = "\(tourney.name)"
-        addImage(cell, levelCategory: tourney.levelCategory)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameRanked") as UITableViewCell!
+        cell?.textLabel?.text = "plats: \(tourney.result) - (\(tourney.points) poäng)"
+        cell?.detailTextLabel?.text = "\(tourney.name)"
+        addImage(cell!, levelCategory: tourney.levelCategory)
+        return cell!
     }
     
-    func addImage(cell: UITableViewCell, levelCategory: String) {
+    func addImage(_ cell: UITableViewCell, levelCategory: String) {
         if(levelCategory == "mixed"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("blue", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "blue", ofType: "png")!)
         }
         else if(levelCategory == "open grön"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("green", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "green", ofType: "png")!)
         }
         else if(levelCategory == "open svart"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("black", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "black", ofType: "png")!)
         }
         else if(levelCategory == "challenger"){
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("red", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "red", ofType: "png")!)
         }
         else {
-            cell.imageView?.image = UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("normal", ofType: "png")!)
+            cell.imageView?.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "normal", ofType: "png")!)
         }
     }
 }

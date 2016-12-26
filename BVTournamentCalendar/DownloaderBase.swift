@@ -10,14 +10,25 @@ import Foundation
 
 class DownloaderBase {
     
-    func cleanValue(value:AnyObject) -> String {
+    func cleanValue(_ value:AnyObject) -> String {
         
-        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-            .stringByReplacingOccurrencesOfString("ZoumlZ", withString: "ö")
-            .stringByReplacingOccurrencesOfString("ZOumlZ", withString: "Ö")
-            .stringByReplacingOccurrencesOfString("ZaumlZ", withString: "ä")
-            .stringByReplacingOccurrencesOfString("ZAumlZ", withString: "ä")
-            .stringByReplacingOccurrencesOfString("ZaringZ", withString: "å")
-            .stringByReplacingOccurrencesOfString("ZAringZ", withString: "Å")
+        return (value as! TFHppleElement).content.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            .replacingOccurrences(of: "ZoumlZ", with: "ö")
+            .replacingOccurrences(of: "ZOumlZ", with: "Ö")
+            .replacingOccurrences(of: "ZaumlZ", with: "ä")
+            .replacingOccurrences(of: "ZAumlZ", with: "ä")
+            .replacingOccurrences(of: "ZaringZ", with: "å")
+            .replacingOccurrences(of: "ZAringZ", with: "Å")
+    }
+    
+    func cleanValue(_ value:Any) -> String {
+        
+        return (value as! TFHppleElement).content.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            .replacingOccurrences(of: "ZoumlZ", with: "ö")
+            .replacingOccurrences(of: "ZOumlZ", with: "Ö")
+            .replacingOccurrences(of: "ZaumlZ", with: "ä")
+            .replacingOccurrences(of: "ZAumlZ", with: "ä")
+            .replacingOccurrences(of: "ZaringZ", with: "å")
+            .replacingOccurrences(of: "ZAringZ", with: "Å")
     }
 }

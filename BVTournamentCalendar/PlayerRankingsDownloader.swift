@@ -9,7 +9,7 @@
 import Foundation
 
 class PlayerRankingsDownloader {
-    func downloadHTML(type:String, callback:([PlayerRanking]) -> Void) {
+    func downloadHTML(_ type:String, callback:@escaping ([PlayerRanking]) -> Void) {
         //renew the session
         
         HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/index.php") {
@@ -28,16 +28,16 @@ class PlayerRankingsDownloader {
         }
     }
     
-    func parseHTML(HTMLData:NSData) -> [PlayerRanking] {
+    func parseHTML(_ HTMLData:Data) -> [PlayerRanking] {
         
-        var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table[2]//tr/td")
+        var allCells: [Any] = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//table[2]//tr/td") as [Any]
         var results = [PlayerRanking]()
         
         for row in 1 ..< (allCells.count)/5  {
             let td = (row * 5)
-            if(cleanValue(allCells[td]) == "Spelare utan licens"){ //after this point the table is completly different
+            if(cleanValue(allCells[td] as AnyObject) == "Spelare utan licens"){ //after this point the table is completly different
                 
-                results.sortInPlace({ $0.entryPoints > $1.entryPoints })
+                results.sort(by: { $0.entryPoints > $1.entryPoints })
                 results[0].rankByEntryPoints = 1
                 for res in 1 ..< (results.count) {
                     if(results[res].entryPoints == results[res-1].entryPoints){
@@ -50,7 +50,7 @@ class PlayerRankingsDownloader {
                 return results
             }
             let ranking = PlayerRanking(
-                rankByPoints: Int(cleanValue(allCells[td]))!,
+                rankByPoints: Int(cleanValue(allCells[td] as AnyObject))!,
                 rankByEntryPoints: 0,
                 name: cleanValue(allCells[td+1]),
                 club: cleanValue(allCells[td+2]),
@@ -66,21 +66,21 @@ class PlayerRankingsDownloader {
         return results
     }
     
-    func cleanValue(value:AnyObject) -> String {
-        return (value as! TFHppleElement).content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    func cleanValue(_ value:Any) -> String {
+        return (value as! TFHppleElement).content.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
-    func getAttribute(value:AnyObject, name: String) -> String {
+    func getAttribute(_ value:Any, name: String) -> String {
         let child = (value as! TFHppleElement).children[0] as! TFHppleElement
         return child.attributes[name]! as! String
     }
     
-    func getRankingDetailUrl(value:AnyObject) -> String {
+    func getRankingDetailUrl(_ value:Any) -> String {
         var str = getAttribute(value, name: "onclick")
-        str = str.stringByReplacingOccurrencesOfString("vis_rankdetaljer(", withString: "")
-        str = str.stringByReplacingOccurrencesOfString(", '', event)", withString: "")
-        str = str.stringByReplacingOccurrencesOfString("'", withString: "")
-        str = str.stringByReplacingOccurrencesOfString(" ", withString: "")
+        str = str.replacingOccurrences(of: "vis_rankdetaljer(", with: "")
+        str = str.replacingOccurrences(of: ", '', event)", with: "")
+        str = str.replacingOccurrences(of: "'", with: "")
+        str = str.replacingOccurrences(of: " ", with: "")
         var both = str.characters.split {$0 == ","}.map { String($0) }
         return "rand=0.7901839658152312&spid=\(both[0])&klasse=\(both[1])&tp="
     }

@@ -10,84 +10,84 @@ import Foundation
 
 struct Applicants {
     let players: String
-    let club: NSString
+    let club: String
     let type: String
-    let time: NSString
-    let rankingPoints: NSString
-    let entryPoints: NSString
+    let time: String
+    let rankingPoints: String
+    let entryPoints: String
     let status: Bool
     let player1Ranking: String
     let player2Ranking: String
     
     func points() -> Int {
-        if(rankingPoints.length>0) {
+        if(rankingPoints.characters.count > 0) {
             return Int((rankingPoints as String))!
         }
         return Int((entryPoints as String))!
     }
     
     func getBase() -> String {
-        if(type.rangeOfString("V55+ D") != nil ) {
+        if(type.range(of: "V55+ D") != nil ) {
             return "Dam 55+"
         }
-        if(type.rangeOfString("V50+ D") != nil ) {
+        if(type.range(of: "V50+ D") != nil ) {
             return "Dam 50+"
         }
-        if(type.rangeOfString("V45+ D") != nil ) {
+        if(type.range(of: "V45+ D") != nil ) {
             return "Dam 45+"
         }
-        if(type.rangeOfString("V40+ D") != nil ) {
+        if(type.range(of: "V40+ D") != nil ) {
             return "Dam 40+"
         }
-        if(type.rangeOfString("V35+ D") != nil ) {
+        if(type.range(of: "V35+ D") != nil ) {
             return "Dam 35+"
         }
-        if(type.rangeOfString("V55+ H") != nil ) {
+        if(type.range(of: "V55+ H") != nil ) {
             return "Herr 55+"
         }
-        if(type.rangeOfString("V50+ H") != nil ) {
+        if(type.range(of: "V50+ H") != nil ) {
             return "Herr 50+"
         }
-        if(type.rangeOfString("V45+ H") != nil ) {
+        if(type.range(of: "V45+ H") != nil ) {
             return "Herr 45+"
         }
-        if(type.rangeOfString("V40+ H") != nil ) {
+        if(type.range(of: "V40+ H") != nil ) {
             return "Herr 40+"
         }
-        if(type.rangeOfString("V35+ H") != nil ) {
+        if(type.range(of: "V35+ H") != nil ) {
             return "Herr 35+"
         }
-        if(type.rangeOfString("U18 P") != nil ) {
+        if(type.range(of: "U18 P") != nil ) {
             return "pojkar ungdom 18"
         }
-        if(type.rangeOfString("U16 P") != nil ) {
+        if(type.range(of: "U16 P") != nil ) {
             return "pojkar ungdom 16"
         }
-        if(type.rangeOfString("U18 F") != nil ) {
+        if(type.range(of: "U18 F") != nil ) {
             return "flickor ungdom 18"
         }
-        if(type.rangeOfString("U16 F") != nil ) {
+        if(type.range(of: "U16 F") != nil ) {
             return "flickor ungdom 16"
         }
-        if(type.rangeOfString("Junior D") != nil ) {
+        if(type.range(of: "Junior D") != nil ) {
             return "Junior Dam"
         }
-        if(type.rangeOfString("Junior H") != nil ) {
+        if(type.range(of: "Junior H") != nil ) {
             return "Junior Herr"
         }
-        if(type.rangeOfString("BlåGrön") != nil ) {
+        if(type.range(of: "BlåGrön") != nil ) {
             return type
         }
-        if(type.rangeOfString("RödSvart") != nil ) {
+        if(type.range(of: "RödSvart") != nil ) {
             return type
         }
-        if(type.rangeOfString("H") != nil ) {
+        if(type.range(of: "H") != nil ) {
             return "Herr"
         }
-        if(type.rangeOfString("D") != nil ) {
+        if(type.range(of: "D") != nil ) {
             return "Dam"
         }
-        if(type.rangeOfString("M") != nil ) {
+        if(type.range(of: "M") != nil ) {
             return "Mixed"
         }
         return ""
@@ -95,10 +95,10 @@ struct Applicants {
     
     func getTypeName() -> String {
         let name = getBase();
-        if(type.rangeOfString("DV") != nil || type.rangeOfString("HV") != nil || type.rangeOfString("MV") != nil || type.rangeOfString("PV") != nil || type.rangeOfString("FV") != nil) {
+        if(type.range(of: "DV") != nil || type.range(of: "HV") != nil || type.range(of: "MV") != nil || type.range(of: "PV") != nil || type.range(of: "FV") != nil) {
             return name + " Väntelista"
         }
-        if(type.rangeOfString("DÖ") != nil || type.rangeOfString("HÖ") != nil || type.rangeOfString("MÖ") != nil || type.rangeOfString("PÖ") != nil || type.rangeOfString("FÖ") != nil) {
+        if(type.range(of: "DÖ") != nil || type.range(of: "HÖ") != nil || type.range(of: "MÖ") != nil || type.range(of: "PÖ") != nil || type.range(of: "FÖ") != nil) {
             return name + " partner önskas"
         }
         

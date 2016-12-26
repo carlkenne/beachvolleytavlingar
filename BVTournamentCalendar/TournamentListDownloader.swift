@@ -10,7 +10,7 @@ import Foundation
 
 class TournamentsDownloader : DownloaderBase {
     let baseURL = "https://www.profixio.com/fx/"
-    func downloadHTML(callback:([Tournament]) -> Void) {
+    func downloadHTML(_ callback:@escaping ([Tournament]) -> Void) {
         HttpDownloader().httpGetOld(baseURL + "terminliste.php?org=SVBF.SE.SVB&p=40"){
             (data, error) -> Void in
             if error != nil {
@@ -23,38 +23,38 @@ class TournamentsDownloader : DownloaderBase {
         }
     }
     
-    func parseHTML(HTMLData:NSData) -> [Tournament] {
+    func parseHTML(_ HTMLData:Data) -> [Tournament] {
         let error: NSError? = nil
-        var allCells = TFHpple(HTMLData: HTMLData).searchWithXPathQuery("//table//td")
+        var allCells = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//table//td")
 
         var tournaments = [Tournament]()
         if let error2 = error {
             print("Error : \(error2)")
         } else {
-            let dayTimePeriodFormatter = NSDateFormatter()
+            let dayTimePeriodFormatter = DateFormatter()
             dayTimePeriodFormatter.dateFormat = "EEE, d MMM"
-            dayTimePeriodFormatter.locale = NSLocale(localeIdentifier: "sv_SE")
+            dayTimePeriodFormatter.locale = Locale(identifier: "sv_SE")
 
-            for t in 1 ..< allCells.count/7 
+            for t in 1 ..< (allCells?.count)!/7 
             {
                 let startAt = t * 7
-                let from = Date.parse(cleanValue(allCells[startAt]))
-                let level = cleanValue(allCells[startAt+5])
-                let name = cleanValue(allCells[startAt+4])
-                let link = getHref(allCells[startAt+4])
+                let from = Date.parse(cleanValue(allCells?[startAt]))
+                let level = cleanValue(allCells?[startAt+5])
+                let name = cleanValue(allCells?[startAt+4])
+                let link = getHref(allCells?[startAt+4])
                 
                 print("")
                 
                 let tournament = Tournament(
                     from: from,
-                    formattedFrom: dayTimePeriodFormatter.stringFromDate(from),
-                    to: getDate(allCells[startAt+1]),
-                    period: getPeriodName(cleanValue(allCells[startAt+2])),
-                    organiser: cleanValue(allCells[startAt+3]),
+                    formattedFrom: dayTimePeriodFormatter.string(from: from),
+                    to: getDate(allCells?[startAt+1]),
+                    period: getPeriodName(cleanValue(allCells?[startAt+2])),
+                    organiser: cleanValue(allCells?[startAt+3]),
                     name: name,
                     level: level,
-                    levelCategory: getLevelCategory(level.lowercaseString, name: name),
-                    type: cleanValue(allCells[startAt+6]),
+                    levelCategory: getLevelCategory(level.lowercased(), name: name),
+                    type: cleanValue(allCells?[startAt+6]),
                     link: self.baseURL + (link as String),
                     moreInfo: link.characters.count > 0
                 )
@@ -64,55 +64,55 @@ class TournamentsDownloader : DownloaderBase {
         return tournaments
     }
     
-    func getDate(value: AnyObject) -> NSDate{
+    func getDate(_ value: Any) -> Foundation.Date{
         let date = cleanValue(value)
         if(date.isEmpty){
-            return NSDate()
+            return Foundation.Date()
         }
         
         return Date.parse("2016." + date)
     }
     
-    func getLevelCategory(level:String, name:String) -> String{
-        let name = name.lowercaseString
-        let level = level.lowercaseString
-        if(level == "veteran-sm" || level == "ungdoms-sm" || level == "mixed-sm" || level == "sm-slutspel" || name.rangeOfString("senior-sm") != nil) {
+    func getLevelCategory(_ level:String, name:String) -> String{
+        let name = name.lowercased()
+        let level = level.lowercased()
+        if(level == "veteran-sm" || level == "ungdoms-sm" || level == "mixed-sm" || level == "sm-slutspel" || name.range(of: "senior-sm") != nil) {
             return "sm"
-        } else if(level == "mixed" || name.rangeOfString("mixed") != nil) {
+        } else if(level == "mixed" || name.range(of: "mixed") != nil) {
             return "mixed"
         }
-        else if(level == "open grön" || name.rangeOfString("grön") != nil) {
+        else if(level == "open grön" || name.range(of: "grön") != nil) {
             return "open grön"
         }
-        else if(level == "open svart" || name.rangeOfString("svart") != nil || name.rangeOfString("open") != nil) {
+        else if(level == "open svart" || name.range(of: "svart") != nil || name.range(of: "open") != nil) {
             return "open svart"
         }
-        else if(level == "swedish beach tour" || level == "swedish beach tour final" || name.rangeOfString("swedish beach tour") != nil) {
+        else if(level == "swedish beach tour" || level == "swedish beach tour final" || name.range(of: "swedish beach tour") != nil) {
             return "swedish beach tour"
         }
-        else if(level == "challenger" || name.rangeOfString("challenger") != nil || name.rangeOfString("ch1") != nil || name.rangeOfString("ch2") != nil) {
+        else if(level == "challenger" || name.range(of: "challenger") != nil || name.range(of: "ch1") != nil || name.range(of: "ch2") != nil) {
             return "challenger"
         }
         return "övrigt"
     }
     
-    func getPeriodName(shortSectionName:String) -> String {
-        let range = TournamentListHelper().getDateRangeForPeriod(shortSectionName)
+    func getPeriodName(_ shortSectionName:String) -> String {
+        let range = TournamentListHelper().getDateRangeForPeriod(shortSectionName as NSString)
         
-        if(shortSectionName == TournamentListHelper().getPeriodForDate(NSDate()).name)
+        if(shortSectionName == TournamentListHelper().getPeriodForDate(Foundation.Date()).name)
         {
             return shortSectionName + " (nuvarande, " + range + ")"
         }
         return shortSectionName + " (" + range + ")"
     }
     
-    func getHref(element:AnyObject) -> String{
+    func getHref(_ element:Any) -> String{
         let tfElement = element as! TFHppleElement
         if(tfElement.attributes["href"] != nil) {
             return tfElement.attributes["href"] as! String
         }
         return tfElement.children
-            .map({ self.getHref($0) })
+            .map({ self.getHref($0 as Any) })
             .filter({ $0.characters.count > 0 })
             .reduce(""){ $0 + $1}
     }

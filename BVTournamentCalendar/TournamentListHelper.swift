@@ -37,77 +37,80 @@ class TournamentListHelper {
     ]
 
     func getCurrentPeriod() -> Int {
-        return self.getPeriodForDate(NSDate()).number
+        return self.getPeriodForDate(Foundation.Date()).number
     }
     
-    func getPeriodForDate(date: NSDate) -> Period {
+    func getPeriodForDate(_ date: Foundation.Date) -> Period {
         
-        if(date.earlierDate(Date.from(year: 2016, month: 4, day: 3)).isEqualToDate(date))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        
+        if(date < formatter.date(from: "20160403")!)
         {
             return periods2016[0]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 5, day: 23)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160523")!)
         {
             return periods2016[1]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 7)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160607")!)
         {
             return periods2016[2]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 13)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160613")!)
         {
             return periods2016[3]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 6, day: 27)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160627")!)
         {
             return periods2016[4]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 4)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160704")!)
         {
             return periods2016[5]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 11)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160711")!)
         {
             return periods2016[6]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 18)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160718")!)
         {
             return periods2016[7]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 7, day: 25)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160725")!)
         {
             return periods2016[8]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 1)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160801")!)
         {
             return periods2016[9]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 8)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160808")!)
         {
             return periods2016[10]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 15)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160815")!)
         {
             return periods2016[11]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 8, day: 22)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160822")!)
         {
             return periods2016[12]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 9, day: 5)).isEqualToDate(date))
+        if(date < formatter.date(from: "20160905")!)
         {
             return periods2016[13]
         }
-        if(date.earlierDate(Date.from(year: 2016, month: 10, day: 17)).isEqualToDate(date))
+        if(date < formatter.date(from: "20161017")!)
         {
             return periods2016[14]
         }
         return periods2016[15]
     }
 
-    func getDateRangeForPeriod(periodName: NSString) -> String {
+    func getDateRangeForPeriod(_ periodName: NSString) -> String {
         return periods2016.filter( {(period: Period) -> Bool in
-            period.name == periodName
+            period.name == periodName as String
         })[0].date
     }
 }

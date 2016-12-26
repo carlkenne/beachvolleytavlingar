@@ -10,18 +10,16 @@ import Foundation
 
 class HttpDownloader{
     
-    func httpPost(request1: String, bodyData: String, callback: (NSData?, String?) -> Void){
-        print("POST")
-        print(request1)
-        print(bodyData)
-        let request = NSMutableURLRequest(URL: NSURL(string: request1)!)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+    func httpPost(_ request1: String, bodyData: String, callback: @escaping (Data?, String?) -> Void){
+
+        var request = URLRequest(url: URL(string: request1)!)
+        request.httpMethod = "POST"
+        request.httpBody = bodyData.data(using: String.Encoding.utf8)
         
-        let queue:NSOperationQueue = NSOperationQueue()
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+        URLSession.shared.dataTask(with: request) {
+            data, response, error in
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 if error != nil {
                     callback(nil, error!.localizedDescription)
                 } else {
@@ -29,21 +27,21 @@ class HttpDownloader{
                     callback(data, nil)
                 }
             }
-        })
+        }.resume()
     }
     
-    func httpGetOld(request1: String, callback: (NSData?, String?) -> Void) {
-        let request = NSMutableURLRequest(URL: NSURL(string: request1)!)
-        let queue:NSOperationQueue = NSOperationQueue()
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                if error != nil {
-                    callback(nil, error!.localizedDescription)
+    func httpGetOld(_ request1: String, callback: @escaping (Data?, String?) -> Void) {
+        var request = URLRequest(url: URL(string: request1)!)
+        request.httpMethod = "GET"
+        URLSession.shared.dataTask(with: request) {data, response, err in
+            print("Entered the completionHandler")
+            DispatchQueue.main.async {
+                if err != nil {
+                    callback(nil, err!.localizedDescription)
                 } else {
                     callback(data, nil)
                 }
             }
-        })
+        }.resume()
     }
 }
