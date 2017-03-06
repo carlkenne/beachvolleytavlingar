@@ -161,12 +161,12 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                     PointsRank(points:1000, rank: _1),
                     PointsRank(points:650, rank: _2),
                     PointsRank(points:450, rank: _3),
-                    PointsRank(points:270, rank: _5),
-                    PointsRank(points:200, rank: _7),
-                    PointsRank(points:150, rank: _9),
-                    PointsRank(points:120, rank: _13),
-                    PointsRank(points:80, rank: _17),
-                    PointsRank(points:40, rank: _25),
+                    PointsRank(points:280, rank: _5),
+                    PointsRank(points:220, rank: _7),
+                    PointsRank(points:170, rank: _9),
+                    PointsRank(points:130, rank: _13),
+                    PointsRank(points:100, rank: _17),
+                    PointsRank(points:80, rank: _25),
                 ]
                 
                 return PointTable(table: points, title: "17 - 32")
@@ -178,8 +178,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                     PointsRank(points:400, rank: _3),
                     PointsRank(points:240, rank: _5),
                     PointsRank(points:150, rank: _7),
-                    PointsRank(points:100, rank: _9),
-                    PointsRank(points:50, rank: _13)
+                    PointsRank(points:110, rank: _9),
+                    PointsRank(points:80, rank: _13)
                     ]
                 
                  return PointTable(table: points, title: "13 - 16")
@@ -187,17 +187,17 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
             if(noOfApplicants >= 9) {
                 let points = [
                     PointsRank(points:1000, rank: _1),
-                    PointsRank(points:650, rank: _2),
+                    PointsRank(points:600, rank: _2),
                     PointsRank(points:360, rank: _3),
                     PointsRank(points:200, rank: _5),
-                    PointsRank(points:110, rank: _7),
-                    PointsRank(points:70, rank: _9)
+                    PointsRank(points:120, rank: _7),
+                    PointsRank(points:80, rank: _9)
                 ]
                 return PointTable(table: points, title: "9 - 12")
             }
             let points = [
                 PointsRank(points:1000, rank: _1),
-                PointsRank(points:650, rank: _2),
+                PointsRank(points:600, rank: _2),
                 PointsRank(points:360, rank: _3),
                 PointsRank(points:180, rank: _5),
                 PointsRank(points:80, rank: _7)
@@ -212,21 +212,17 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                     PointsRank(points:105, rank: _2),
                     PointsRank(points:70, rank: _3),
                     PointsRank(points:45, rank: _5),
-                    PointsRank(points:32, rank: _9),
-                    PointsRank(points:24, rank: _11),
-                    PointsRank(points:16, rank: _13),
-                    PointsRank(points:10, rank: _15),
+                    PointsRank(points:20, rank: _9),
+                    PointsRank(points:10, rank: _13),
                 ]
                 return PointTable(table: points, title: "13 - 16")
             }
             let points = [
                 PointsRank(points:150, rank: _1),
-                PointsRank(points:90, rank: _2),
-                PointsRank(points:55, rank: _3),
-                PointsRank(points:30, rank: _5),
-                PointsRank(points:25, rank: _7),
-                PointsRank(points:20, rank: _9),
-                PointsRank(points:10, rank: _10)
+                PointsRank(points:100, rank: _2),
+                PointsRank(points:65, rank: _3),
+                PointsRank(points:40, rank: _5),
+                PointsRank(points:10, rank: _9)
             ]
             return PointTable(table: points, title: "9 - 12")
         }
@@ -298,14 +294,14 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         
         let greenPointsTemplate = [
             [10, 6, 4, 2, 1],
-            [15, 9, 6, 3, 2, 2, 1, 1 ,1],
+            [15, 9, 6, 3, 2, 2, 1],
             [20,12, 8, 4, 3, 2, 1, 1],
             [23,14, 9, 5, 3, 2, 1, 1],
             [28,17,11, 7, 4, 3, 2, 1, 1],
             [38,23,15,10, 7, 5, 3, 2, 1, 1]]
         let blackPointsTemplate = [
             [20,12, 7, 3, 1],
-            [30,18,11, 6, 5, 4, 3, 2, 1],
+            [30,18,11, 6, 5, 4, 1],
             [40,24,15, 8, 5, 3, 2, 1],
             [45,27,17,10, 6, 4, 2, 1],
             [55,33,21,13, 8, 5, 3, 2, 1],
@@ -381,9 +377,7 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                 PointsRank(points:open[1][3], rank: _5),
                 PointsRank(points:open[1][4], rank: _7),
                 PointsRank(points:open[1][5], rank: _9),
-                PointsRank(points:open[1][6], rank: _10),
-                PointsRank(points:open[1][7], rank: _11),
-                PointsRank(points:open[1][8], rank: _13),
+                PointsRank(points:open[1][6], rank: _13),
             ]
             return PointTable(table: points, title: "9 - 16")
         }

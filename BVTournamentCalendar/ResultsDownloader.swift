@@ -3,7 +3,7 @@
 //  BVTournamentCalendar
 //
 //  Created by Carl Kenne on 06/05/16.
-//  Copyright © 2016 Carl Kenne. All rights reserved.
+//  Copyright © 2017 Carl Kenne. All rights reserved.
 //
 
 import Foundation
@@ -24,7 +24,7 @@ class ResultsDownloader {
             (data, error) -> Void in
             if error != nil {
                 print(error)
-                callback(Results(HTML: "<br/>RESULTAT EJ TILLGÄNGLIGT", hasResults: false))
+                callback(Results(HTML: "<br/>Resultat ej tillgängligt", hasResults: false))
             } else {
                 HttpDownloader().httpGetOld("https://www.profixio.com/resultater/viskamper_soek.php") {
                     (data, error) -> Void in

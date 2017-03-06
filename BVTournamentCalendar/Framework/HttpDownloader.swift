@@ -31,6 +31,10 @@ class HttpDownloader{
     }
     
     func httpGetOld(_ request1: String, callback: @escaping (Data?, String?) -> Void) {
+        if(request1 == "") {
+            callback(nil, "empty request")
+            return
+        }
         var request = URLRequest(url: URL(string: request1)!)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request) {data, response, err in
