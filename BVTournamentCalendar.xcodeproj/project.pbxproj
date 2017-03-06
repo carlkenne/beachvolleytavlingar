@@ -59,6 +59,7 @@
 		44EDE1781B7E24C300BB9C0D /* PlayerRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */; };
 		44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A501CDC571A0072B359 /* ResultsViewController.swift */; };
 		44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A531CDC576F0072B359 /* ResultsDownloader.swift */; };
+		A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
 		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
+		A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 				44CC44FC1B15CB0400E2F545 /* Main.storyboard */,
 				44CC44FF1B15CB0400E2F545 /* Images.xcassets */,
 				44CC45011B15CB0500E2F545 /* LaunchScreen.xib */,
+				A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */,
 			);
 			path = BVTournamentCalendar;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
 				446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */,
 				448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */,
+				A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */,
 				444792BC1D06146A00F22024 /* EMBadgedBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

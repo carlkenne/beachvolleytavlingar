@@ -19,6 +19,8 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         super.viewDidLoad()
         text.delegate = self
         showTournament()
+        let weatherhelper = WeatherHelper()
+        weatherhelper.getWeather()
     }
  
     func webView(_ webView: UIWebView,
@@ -77,8 +79,8 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 "<a href=\"\(link)\" class\"app-link\">Till sidan &gt;</a>" +
                 "</body></html>";
             
-            print(html)
-            print("-----------------------------------------------------------")
+            //print(html)
+            //print("-----------------------------------------------------------")
             
             html = html
                 .replacingOccurrences(of: "+ D (född -",with:"+&nbsp;D&nbsp;(född&nbsp;-")
@@ -119,7 +121,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .replacingOccurrences(of: "0.00",with:"0 kr")
             
  
-            print(html)
+            //print(html)
             
             self.text.loadHTMLString(html, baseURL: URL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()
