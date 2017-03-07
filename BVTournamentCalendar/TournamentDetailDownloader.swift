@@ -44,6 +44,7 @@ class TournamentDetailDownloader: DownloaderBase {
     
     func createFailedResponse(_ tournament: Tournament) -> TournamentDetail{
         return TournamentDetail(
+            arena: "",
             resultatLink: "",
             registrationLink: "",
             link: tournament.link,
@@ -82,11 +83,15 @@ class TournamentDetailDownloader: DownloaderBase {
         
         let table: TFHppleElement = (allCells[1] as! TFHppleElement)
         
+        let html = table.raw.replacingOccurrences(of: "Kontaktinformation", with: "Kontakt information")
+            .replacingOccurrences(of: "<td class=\"uh\">Spelplats/hall</td><td>",with:"<td id='spelplats' colspan=2>")
+        
         return TournamentDetail(
+            arena: html.getStringBetween("<td id='spelplats' colspan=2>", end: "</td>"),
             resultatLink: resultatLink.replacingOccurrences(of: "http:", with: "https:"),
             registrationLink: registrationLink.replacingOccurrences(of: "http:", with: "https:"),
             link: tournament.link,
-            table: table.raw.replacingOccurrences(of: "Kontaktinformation", with: "Kontakt information") as NSString,
+            table: html,
             setServerSessionCookieUrl: self.extractOnClickLink(anmalan as! [AnyObject]),
             fromHour: "",
             toHour: "",

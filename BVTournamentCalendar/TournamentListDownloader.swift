@@ -34,7 +34,7 @@ class TournamentsDownloader : DownloaderBase {
             let dayTimePeriodFormatter = DateFormatter()
             dayTimePeriodFormatter.dateFormat = "EEE, d MMM"
             dayTimePeriodFormatter.locale = Locale(identifier: "sv_SE")
-
+            
             for t in 1 ..< (allCells?.count)!/7 
             {
                 let startAt = t * 7
@@ -42,8 +42,6 @@ class TournamentsDownloader : DownloaderBase {
                 let level = cleanValue(allCells?[startAt+5])
                 let name = cleanValue(allCells?[startAt+4])
                 let link = getHref(allCells?[startAt+4])
-                
-                print("")
                 
                 let tournament = Tournament(
                     from: from,

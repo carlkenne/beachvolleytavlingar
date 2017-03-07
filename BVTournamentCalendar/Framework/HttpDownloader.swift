@@ -38,7 +38,6 @@ class HttpDownloader{
         var request = URLRequest(url: URL(string: request1)!)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request) {data, response, err in
-            print("Entered the completionHandler")
             DispatchQueue.main.async {
                 if err != nil {
                     callback(nil, err!.localizedDescription)
