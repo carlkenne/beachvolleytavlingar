@@ -19,8 +19,6 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         super.viewDidLoad()
         text.delegate = self
         showTournament()
-        let weatherhelper = WeatherHelper()
-        weatherhelper.getWeather()
     }
  
     func webView(_ webView: UIWebView,
@@ -42,6 +40,9 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
     func showTournament(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tournament = appDelegate.selectedTournament
+        
+        let weatherHelper = WeatherHelper()
+        weatherHelper.getWeather(tournament: tournament!)
         
         parent?.title = tournament?.name
         

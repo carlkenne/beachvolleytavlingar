@@ -10,7 +10,7 @@ import Foundation
 
 class WeatherHelper {
     
-    let gbg = Pos(lat: 57.70, long: 11.97)
+    let arenas = Arenas()
     var time = "2017-03-10T12:00:00Z"
     var temp : Float = 0.0
     var wind : Float = 0.0
@@ -20,9 +20,14 @@ class WeatherHelper {
     
     }
     
-    func getWeather() {
-        print("Entered getWeather")
-        let url = URL(string: "http://opendata-download-metfcst.smhi.se/api/category/pmp2g/version/2/geotype/point/lon/11.97/lat/57.7/data.json")
+    func getWeather(tournament: Tournament) {
+        
+        let lat = arenas.IKSUSport.lat
+        let long = arenas.IKSUSport.long
+        
+        let dateString = getFormattedDateString(date: tournament.from)
+        
+        let url = URL(string: "http://opendata-download-metfcst.smhi.se/api/category/pmp2g/version/2/geotype/point/lon/\(long)/lat/\(lat)/data.json")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             
@@ -31,7 +36,7 @@ class WeatherHelper {
                 if let posts = json["timeSeries"] as? [[String: Any]] {
                     for post in posts {
                         let postTime = post["validTime"] as! String
-                        if postTime == self.time {
+                        if postTime == dateString {
                             if let parameters = post["parameters"] as? [[String : Any]] {
                                 let tempDict = parameters[1] as [String : Any]
                                 let tempValue = tempDict["values"] as! [Float]
@@ -46,11 +51,12 @@ class WeatherHelper {
                                 let symbValue = symbDict["values"] as! [Float]
                                 self.symbol = Int(symbValue[0])
                                 
-                                print("10 mars 2017 kl. 08: \(self.getWeatherEmoji(symbolID: self.symbol))\(tempValue[0]) C")
+                                print("\(tournament.formattedFrom) kl. 12: \(self.getWeatherEmoji(symbolID: self.symbol))\(tempValue[0]) C")
                                 print("Vind: \(windValue[0]) m/s")
                             } else {
                                 print("Parameters not found")
                             }
+                        } else {
                         }
                     }
                 } else {
@@ -62,6 +68,7 @@ class WeatherHelper {
                 print(error)
             }
         }).resume()
+        
     }
     
     func getWeatherEmoji(symbolID : Int) -> String {
@@ -87,6 +94,19 @@ class WeatherHelper {
         default:
             return ""
         }
+    }
+    
+    func getFormattedDateString(date: Foundation.Date) -> String {
+        print("Entered DateFormatter")
+        print("Unformatted date: \(date)")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: date)+"T12:00:00Z"
+        
+        print("Formatted date: \(dateString)")
+        
+        return dateString
     }
     
 }

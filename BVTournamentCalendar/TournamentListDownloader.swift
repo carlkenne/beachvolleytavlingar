@@ -69,7 +69,7 @@ class TournamentsDownloader : DownloaderBase {
         if(date.isEmpty){
             return Foundation.Date()
         }
-        
+        //print("\(Date.parse("2017." + date))")
         return Date.parse("2017." + date)
     }
     
