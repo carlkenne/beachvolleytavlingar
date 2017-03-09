@@ -9,10 +9,11 @@
 import Foundation
 
 struct TournamentDetail{
+    let arena: String
     let resultatLink: String
     let registrationLink: String
     let link: String //link to the tournament detail page should always be the same as tournament.link
-    let table: NSString
+    let table: String
     let setServerSessionCookieUrl: NSString //this must be requested first to set the server session cookie
     let fromHour: String
     let toHour: String

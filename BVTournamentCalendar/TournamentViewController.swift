@@ -57,6 +57,8 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 hideKlassDiv = "display:none"
             }
             
+            print(res.arena)
+            
             var table = res.table.replacingOccurrences(of: "<tr><td class=\"uh\">Segerpremie</td><td/></tr>", with: "")
             table = table.replacingOccurrences(of: "<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td><td/><td/></tr>", with: "")
             
@@ -80,12 +82,10 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 "<a href=\"\(link)\" class\"app-link\">Till sidan &gt;</a>" +
                 "</body></html>";
             
-            
             html = html
                 .replacingOccurrences(of: "+ D (född -",with:"+&nbsp;D&nbsp;(född&nbsp;-")
                 .replacingOccurrences(of: "<tr><td class=\"uh\">Klasser och kategorier</td>",with:"<tr style=\"display: none;\"><td class=\"uh\">Klasser och kategorier</td>")
                 .replacingOccurrences(of: "<td class=\"uh\">Arrangör</td><td>",with:"<td colspan=2 style=\"font-weight:bold\">")
-                .replacingOccurrences(of: "<td class=\"uh\">Spelplats/hall</td><td>",with:"<td colspan=2>")
                 .replacingOccurrences(of: "<td class=\"uh\">Nivå</td><td>",with:"<td colspan=2>")
                 .removeAll("<td class=\"uh\">Datum</td>")
                 .replacingOccurrences(of: "<td>&#13;",with:"<td class=\"section\" colspan=2>")
@@ -119,7 +119,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .replacingOccurrences(of: ">Startavgift",with:">STARTAVGIFT")
                 .replacingOccurrences(of: "0.00",with:"0 kr")
             
-            
+
             self.text.loadHTMLString(html, baseURL: URL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()
         }

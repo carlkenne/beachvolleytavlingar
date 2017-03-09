@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BVTournamentCalendar/TournamentViewController.swift"
-            timestampString = "489527135.883017"
+            timestampString = "510614224.582706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195">
+            startingLineNumber = "193"
+            endingLineNumber = "193">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BVTournamentCalendar/TournamentViewController.swift"
-            timestampString = "489527135.883017"
+            timestampString = "510614224.582706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175">
+            startingLineNumber = "173"
+            endingLineNumber = "173">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -252,7 +252,7 @@
             startingLineNumber = "21"
             endingLineNumber = "21"
             landmarkName = "viewDidLoad()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -566,11 +566,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BVTournamentCalendar/TournamentViewController.swift"
-            timestampString = "489527135.883017"
+            timestampString = "510614224.582706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150">
+            startingLineNumber = "148"
+            endingLineNumber = "148">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1616,7 +1616,7 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "didReceiveMemoryWarning()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2282,11 +2282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BVTournamentCalendar/TournamentListDownloader.swift"
-            timestampString = "489528319.978867"
+            timestampString = "510612940.712258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "getLevelCategory(_:name:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2720,7 +2720,7 @@
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "showTournament()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
