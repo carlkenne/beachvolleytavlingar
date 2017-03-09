@@ -11,7 +11,6 @@ import Foundation
 class WeatherHelper {
     
     let arenas = Arenas()
-    var time = "2017-03-10T12:00:00Z"
     var temp : Float = 0.0
     var wind : Float = 0.0
     var symbol = 0
@@ -111,11 +110,3 @@ class WeatherHelper {
     
 }
 
-struct Pos {
-    var lat : Float
-    var long: Float
-    init(lat: Float, long : Float) {
-        self.lat = lat
-        self.long = long
-    }
-}
