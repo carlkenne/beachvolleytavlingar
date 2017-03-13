@@ -45,7 +45,7 @@ class TournamentDetailDownloader: DownloaderBase {
     
     func createFailedResponse(_ tournament: Tournament) -> TournamentDetail{
         return TournamentDetail(
-            arena: Arena(lat: 0, long: 0, name: ""),
+            arena: Arena(lat: 0, long: 0, name: "", organiser: ""),
             resultatLink: "",
             registrationLink: "",
             link: tournament.link,
@@ -88,7 +88,7 @@ class TournamentDetailDownloader: DownloaderBase {
             .replacingOccurrences(of: "<td class=\"uh\">Spelplats/hall</td><td>",with:"<td id='spelplats' colspan=2>")
         
         return TournamentDetail(
-            arena: tournamentLocationFinder.getArena(name: html.getStringBetween("<td id='spelplats' colspan=2>", end: "</td>")),
+            arena: tournamentLocationFinder.getArena(name: html.getStringBetween("<td id='spelplats' colspan=2>", end: "</td>"), organiser: tournament.organiser),
             resultatLink: resultatLink.replacingOccurrences(of: "http:", with: "https:"),
             registrationLink: registrationLink.replacingOccurrences(of: "http:", with: "https:"),
             link: tournament.link,
