@@ -9,7 +9,7 @@
 import Foundation
 
 struct TournamentDetail{
-    let arena: String
+    let arena: Arena
     let resultatLink: String
     let registrationLink: String
     let link: String //link to the tournament detail page should always be the same as tournament.link

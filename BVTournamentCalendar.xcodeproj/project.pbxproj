@@ -60,6 +60,7 @@
 		44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A501CDC571A0072B359 /* ResultsViewController.swift */; };
 		44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A531CDC576F0072B359 /* ResultsDownloader.swift */; };
 		A120CA7A1E76AC0800B25B4B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A120CA791E76AC0800B25B4B /* MapViewController.swift */; };
+		A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A120CA7C1E76C4F700B25B4B /* MapKit.framework */; };
 		A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */; };
 		A1F6FCD51E71997700FB945A /* TournamentLocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */; };
 /* End PBXBuildFile section */
@@ -135,7 +136,8 @@
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
 		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
-		A120CA791E76AC0800B25B4B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		A120CA791E76AC0800B25B4B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A120CA7C1E76C4F700B25B4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
 		A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentLocationFinder.swift; path = ../TournamentLocationFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */,
 				44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +292,7 @@
 				44CC45181B15CB9400E2F545 /* libxml2.dylib */,
 				44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */,
 				44CC44F21B15CB0400E2F545 /* Products */,
+				A120CA7B1E76C4F700B25B4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				44F39A521CDC572A0072B359 /* Results Controller */,
+				A120CA7E1E76DFA600B25B4B /* Map Controller */,
 				448B30571B81E3BD00DBB7E7 /* Tournament Details Controller */,
 				448B30561B81E2F400DBB7E7 /* Tournament Applicants Controller */,
 				448B30551B81C1BE00DBB7E7 /* Ranking Controller */,
@@ -318,7 +323,6 @@
 				44CC44FC1B15CB0400E2F545 /* Main.storyboard */,
 				44CC44FF1B15CB0400E2F545 /* Images.xcassets */,
 				44CC45011B15CB0500E2F545 /* LaunchScreen.xib */,
-				A120CA791E76AC0800B25B4B /* MapViewController.swift */,
 			);
 			path = BVTournamentCalendar;
 			sourceTree = "<group>";
@@ -338,6 +342,23 @@
 				44F39A531CDC576F0072B359 /* ResultsDownloader.swift */,
 			);
 			name = "Results Controller";
+			sourceTree = "<group>";
+		};
+		A120CA7B1E76C4F700B25B4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A120CA7C1E76C4F700B25B4B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A120CA7E1E76DFA600B25B4B /* Map Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A120CA791E76AC0800B25B4B /* MapViewController.swift */,
+			);
+			name = "Map Controller";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +414,11 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = N3CRVQ437W;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					44CC45071B15CB0500E2F545 = {
 						CreatedOnToolsVersion = 6.1.1;

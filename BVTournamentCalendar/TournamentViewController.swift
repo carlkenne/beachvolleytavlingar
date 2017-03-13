@@ -33,8 +33,8 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         return true
     }
     
-    func onWeatherReceived(string: String) {
-        weatherLabel.text = string
+    func onWeatherReceived(weatherString: String) {
+            self.weatherLabel.text = weatherString
     }
 
     func showTournament(){
