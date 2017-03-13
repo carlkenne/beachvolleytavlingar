@@ -50,7 +50,7 @@ class WeatherHelper {
                                 let symbValue = symbDict["values"] as! [Float]
                                 self.symbol = Int(symbValue[0])
                                 
-                                let resultString = "\(arena.name) \(tournament.formattedFrom) kl. 12: \(self.getWeatherEmoji(symbolID: self.symbol))\(tempValue[0]) ºC, vind: \(windValue[0]) m/s"
+                                let resultString = "Väder kl. 12: \(self.getWeatherEmoji(symbolID: self.symbol))\(tempValue[0]) ºC, vind: \(windValue[0]) m/s"
                                 onCompletion(resultString)
                                 
                             } else {

@@ -12,6 +12,7 @@ import EventKit
 
 class TournamentViewController: UIViewController, UIWebViewDelegate
 {
+    @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet var loading : UIActivityIndicatorView!
     @IBOutlet var text : UIWebView!
     
@@ -33,7 +34,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
     }
     
     func onWeatherReceived(string: String) {
-        print("Klar, \(string)")
+        weatherLabel.text = string
     }
 
     func showTournament(){

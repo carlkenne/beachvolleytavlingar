@@ -1290,54 +1290,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lIs-sk-5TG">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lIs-sk-5TG">
                                 <rect key="frame" x="150" y="230" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDI-DU-mQY">
-                                <rect key="frame" x="16" y="64" width="288" height="367"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDI-DU-mQY">
+                                <rect key="frame" x="16" y="95" width="343" height="523"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="Uqn-fP-PiL"/>
-                                </constraints>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Uqn-fP-PiL"/>
-                                    </mask>
-                                </variation>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Laddar väder..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CC-ba-7Oe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="top" secondItem="7P5-1V-ewj" secondAttribute="bottom" id="3uR-HZ-44i"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="leading" secondItem="jQt-vn-jPo" secondAttribute="leadingMargin" id="Rpz-Yg-jKA"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="bottom" secondItem="m6d-y8-iuS" secondAttribute="top" id="TWM-xw-gFN"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="top" secondItem="jQt-vn-jPo" secondAttribute="topMargin" constant="64" id="Tf3-Cx-gAr"/>
-                            <constraint firstAttribute="centerX" secondItem="lIs-sk-5TG" secondAttribute="centerX" id="XIY-cP-VZm"/>
-                            <constraint firstAttribute="centerY" secondItem="lIs-sk-5TG" secondAttribute="centerY" id="cil-WJ-fKU"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="trailing" secondItem="jQt-vn-jPo" secondAttribute="trailingMargin" id="d5f-GY-JMf"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="leading" secondItem="jQt-vn-jPo" secondAttribute="leadingMargin" id="fcw-it-it4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zDI-DU-mQY" secondAttribute="trailing" id="s0Z-e8-Icb"/>
-                            <constraint firstItem="zDI-DU-mQY" firstAttribute="top" secondItem="7P5-1V-ewj" secondAttribute="bottom" id="u9r-Vt-Dk1"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="3uR-HZ-44i"/>
-                                <exclude reference="d5f-GY-JMf"/>
-                                <exclude reference="fcw-it-it4"/>
-                                <exclude reference="u9r-Vt-Dk1"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="info" image="info" id="Zev-O8-MHB"/>
                     <connections>
                         <outlet property="loading" destination="lIs-sk-5TG" id="cwn-XR-KZX"/>
                         <outlet property="text" destination="zDI-DU-mQY" id="5No-46-IKI"/>
+                        <outlet property="weatherLabel" destination="9CC-ba-7Oe" id="7SN-UR-FwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2X-Ef-AQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-1521"/>
+            <point key="canvasLocation" x="1408.8" y="-1521.5892053973014"/>
         </scene>
         <!--Ranking Dam-->
         <scene sceneID="FXr-Vl-CO0">

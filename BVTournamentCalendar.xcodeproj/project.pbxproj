@@ -268,6 +268,8 @@
 				448B30481B81BFD700DBB7E7 /* PointsTableSection.swift */,
 				448B30581B81E3F000DBB7E7 /* TournamentDetail.swift */,
 				4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */,
+				A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */,
+				A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */,
 			);
 			name = "Tournament Details Controller";
 			sourceTree = "<group>";
@@ -316,8 +318,6 @@
 				44CC44FC1B15CB0400E2F545 /* Main.storyboard */,
 				44CC44FF1B15CB0400E2F545 /* Images.xcassets */,
 				44CC45011B15CB0500E2F545 /* LaunchScreen.xib */,
-				A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */,
-				A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */,
 				A120CA791E76AC0800B25B4B /* MapViewController.swift */,
 			);
 			path = BVTournamentCalendar;
