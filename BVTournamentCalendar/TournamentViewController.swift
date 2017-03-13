@@ -32,17 +32,15 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
         return true
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func onWeatherReceived(string: String) {
+        print("Klar, \(string)")
     }
-    
+
     func showTournament(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tournament = appDelegate.selectedTournament
         
-        let weatherHelper = WeatherHelper()
-        weatherHelper.getWeather(tournament: tournament!)
+        
         
         parent?.title = tournament?.name
         
@@ -57,7 +55,10 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 hideKlassDiv = "display:none"
             }
             
-            print(res.arena)
+            
+            let weatherHelper = WeatherHelper()
+            weatherHelper.getWeather(tournament: tournament!, details: res, onCompletion: self.onWeatherReceived)
+            
             
             var table = res.table.replacingOccurrences(of: "<tr><td class=\"uh\">Segerpremie</td><td/></tr>", with: "")
             table = table.replacingOccurrences(of: "<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td><td/><td/></tr>", with: "")

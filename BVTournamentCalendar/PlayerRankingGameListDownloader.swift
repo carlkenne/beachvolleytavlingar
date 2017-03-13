@@ -19,7 +19,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
             HttpDownloader().httpPost("https://www.profixio.com/fx/ranking_beach/visrank_detaljer.php", bodyData: detailsUrl) {
                 (data, error) -> Void in
                 if error != nil {
-                    print(error)
+                    //print(error)
                 } else {
                     let results = self.parseHTML(data!)
                     callback( results )
@@ -31,7 +31,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
     func createRanking(_ index: Int, allCells: [AnyObject], isEntryPoint : Bool) -> PlayerRankingGame {
         let name = cleanValue(allCells[index+2])
         let levelCategory = TournamentsDownloader().getLevelCategory("", name: name)
-        print("\(name) \(isEntryPoint)")
+        //print("\(name) \(isEntryPoint)")
         
         return PlayerRankingGame(
             period: cleanValue(allCells[index]),
@@ -103,8 +103,8 @@ class PlayerRankingGameListDownloader : DownloaderBase {
     
     func getYearsBetween(_ from: Foundation.Date, to: Foundation.Date) -> Int {
         let diffDateComponents = (Calendar.current as NSCalendar).components([NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day, NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second], from: from, to: to, options: NSCalendar.Options.init(rawValue: 0))
-        print(diffDateComponents.month)
-        print(diffDateComponents.day)
+        //print(diffDateComponents.month)
+        //print(diffDateComponents.day)
         return diffDateComponents.year!
         
     }
