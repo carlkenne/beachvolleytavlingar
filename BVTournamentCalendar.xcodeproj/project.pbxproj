@@ -59,6 +59,10 @@
 		44EDE1781B7E24C300BB9C0D /* PlayerRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */; };
 		44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A501CDC571A0072B359 /* ResultsViewController.swift */; };
 		44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A531CDC576F0072B359 /* ResultsDownloader.swift */; };
+		A120CA7A1E76AC0800B25B4B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A120CA791E76AC0800B25B4B /* MapViewController.swift */; };
+		A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A120CA7C1E76C4F700B25B4B /* MapKit.framework */; };
+		A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */; };
+		A1F6FCD51E71997700FB945A /* TournamentLocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +136,10 @@
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
 		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
+		A120CA791E76AC0800B25B4B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A120CA7C1E76C4F700B25B4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
+		A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentLocationFinder.swift; path = ../TournamentLocationFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */,
 				44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +271,8 @@
 				448B30481B81BFD700DBB7E7 /* PointsTableSection.swift */,
 				448B30581B81E3F000DBB7E7 /* TournamentDetail.swift */,
 				4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */,
+				A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */,
+				A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */,
 			);
 			name = "Tournament Details Controller";
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 				44CC45181B15CB9400E2F545 /* libxml2.dylib */,
 				44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */,
 				44CC44F21B15CB0400E2F545 /* Products */,
+				A120CA7B1E76C4F700B25B4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				44F39A521CDC572A0072B359 /* Results Controller */,
+				A120CA7E1E76DFA600B25B4B /* Map Controller */,
 				448B30571B81E3BD00DBB7E7 /* Tournament Details Controller */,
 				448B30561B81E2F400DBB7E7 /* Tournament Applicants Controller */,
 				448B30551B81C1BE00DBB7E7 /* Ranking Controller */,
@@ -329,6 +342,23 @@
 				44F39A531CDC576F0072B359 /* ResultsDownloader.swift */,
 			);
 			name = "Results Controller";
+			sourceTree = "<group>";
+		};
+		A120CA7B1E76C4F700B25B4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A120CA7C1E76C4F700B25B4B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A120CA7E1E76DFA600B25B4B /* Map Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A120CA791E76AC0800B25B4B /* MapViewController.swift */,
+			);
+			name = "Map Controller";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,8 +412,13 @@
 				TargetAttributes = {
 					44CC44F01B15CB0400E2F545 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = J5HZ3L48U8;
+						DevelopmentTeam = N3CRVQ437W;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					44CC45071B15CB0500E2F545 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -455,6 +490,7 @@
 				44686A251B165096004307E7 /* XPathQuery.m in Sources */,
 				4492BE911B419DB400F24441 /* RankingVC.swift in Sources */,
 				44B00B211B543A42009CAF43 /* PlayerRankingsDownloader.swift in Sources */,
+				A120CA7A1E76AC0800B25B4B /* MapViewController.swift in Sources */,
 				44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */,
 				44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */,
 				448B30541B81C16E00DBB7E7 /* PlayerRankingGameListDownloader.swift in Sources */,
@@ -474,6 +510,7 @@
 				44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */,
 				4492BE8F1B417AB800F24441 /* SWRevealViewController.m in Sources */,
 				44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */,
+				A1F6FCD51E71997700FB945A /* TournamentLocationFinder.swift in Sources */,
 				44B00B1F1B541BC2009CAF43 /* PointsTableVC.swift in Sources */,
 				44AEE2831BAEE86000F0825B /* DownloaderBase.swift in Sources */,
 				44B00B1D1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift in Sources */,
@@ -482,6 +519,7 @@
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
 				446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */,
 				448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */,
+				A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */,
 				444792BC1D06146A00F22024 /* EMBadgedBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +653,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = N3CRVQ437W;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -636,6 +675,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = N3CRVQ437W;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

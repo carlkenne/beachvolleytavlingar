@@ -26,6 +26,7 @@ class TournamentsDownloader : DownloaderBase {
     func parseHTML(_ HTMLData:Data) -> [Tournament] {
         let error: NSError? = nil
         var allCells = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//table//td")
+    
 
         var tournaments = [Tournament]()
         if let error2 = error {
@@ -67,7 +68,7 @@ class TournamentsDownloader : DownloaderBase {
         if(date.isEmpty){
             return Foundation.Date()
         }
-        
+        //print("\(Date.parse("2017." + date))")
         return Date.parse("2017." + date)
     }
     
