@@ -11,6 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    
     @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
@@ -21,18 +22,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let details = appDelegate.selectedTournamentDetail
         let arena = details!.arena
         
-        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.2, 0.2)
-        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(CLLocationDegrees(arena.lat), CLLocationDegrees(arena.long))
-        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        self.map.setRegion(region, animated: true)
+        if arena.name != "" {
+            let span: MKCoordinateSpan = MKCoordinateSpanMake(0.2, 0.2)
+            let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(CLLocationDegrees(arena.lat), CLLocationDegrees(arena.long))
+            let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            self.map.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = arena.name
+            annotation.subtitle = "\((tournament?.name)!), \((tournament?.organiser)!)"
+            self.map.addAnnotation(annotation)
+        }
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = arena.name
-        annotation.subtitle = "\((tournament?.name)!), \((tournament?.organiser)!)"
-        self.map.addAnnotation(annotation)
+        
         
         self.map.showsUserLocation = true
     }
-
+    
 }

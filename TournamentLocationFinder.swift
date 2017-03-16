@@ -14,7 +14,7 @@ class TournamentLocationFinder {
     
     func getArena(name: String, organiser: String) -> Arena{
         
-        if name == "" {
+        if name == "" && organiser == ""{
             return Arena(lat: 0, long: 0, name: "", organiser: "")
         }
         

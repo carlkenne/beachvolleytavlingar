@@ -82,7 +82,7 @@ class WeatherHelper {
                         let symbValue = symbDict["values"] as! [Float]
                         let symbol = Int(symbValue[0])
                         
-                        let resultString = "  Väder kl. 12: \(self.getWeatherEmoji(symbolID: symbol))\(temp) ºC, vind: \(wind) m/s"
+                        let resultString = "Väder kl. 12: \(self.getWeatherEmoji(symbolID: symbol))\(temp) ºC, vind: \(wind) m/s"
                         
                         return resultString
                         
@@ -95,7 +95,7 @@ class WeatherHelper {
         } else {
             print("No timeSeries available")
         }
-        return "  Inget väder tillgängligt"
+        return "Inget väder tillgängligt"
     }
     
 }
