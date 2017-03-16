@@ -13,6 +13,10 @@ class WeatherHelper {
     func getWeather(tournament: Tournament, details: TournamentDetail, onCompletion: @escaping (String) -> Void) {
         let dateString = getFormattedDateString(date: tournament.from)
         
+        if details.arena.name == "" {
+            onCompletion("Inget väder tillgängligt")
+        }
+        
         let url = URL(string: "http://opendata-download-metfcst.smhi.se/api/category/pmp2g/version/2/geotype/point/lon/\(details.arena.long)/lat/\(details.arena.lat)/data.json")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
