@@ -19,21 +19,21 @@ class TournamentListHelper {
     
     let periods2016 = [
         Period(name: "TP 01", number: 1, date: "1 jan - 2 april"),
-        Period(name: "TP 02", number: 2, date: "3 april - 21 maj"),
-        Period(name: "TP 03", number: 3, date: "22 maj - 4 juni"),
-        Period(name: "TP 04", number: 4, date: "5 juni - 11 juni"),
-        Period(name: "TP 05", number: 5, date: "12 jun - 25 jun"),
-        Period(name: "TP 06", number: 6, date: "26 jun - 2 jul"),
-        Period(name: "TP 07", number: 7, date: "3 jul - 9 jul"),
-        Period(name: "TP 08", number: 8, date: "10 jul - 16 jul"),
-        Period(name: "TP 09", number: 9, date: "17 jul - 23 jul"),
-        Period(name: "TP 10", number: 10, date: "24 jul - 30 jul"),
-        Period(name: "TP 11", number: 11, date: "31 jul - 6 aug"),
-        Period(name: "TP 12", number: 12, date: "7 aug - 13 aug"),
-        Period(name: "TP 13", number: 13, date: "14 aug - 20 aug"),
-        Period(name: "TP 14", number: 14, date: "21 aug - 3 sep"),
-        Period(name: "TP 15", number: 15, date: "4 sep - 15 okt"),
-        Period(name: "TP 16", number: 16, date: "16 okt - 31 dec")
+        Period(name: "TP 02", number: 2, date: "3 april - 20 maj"),
+        Period(name: "TP 03", number: 3, date: "21 maj - 3 juni"),
+        Period(name: "TP 04", number: 4, date: "4 juni - 10 juni"),
+        Period(name: "TP 05", number: 5, date: "11 jun - 24 jun"),
+        Period(name: "TP 06", number: 6, date: "25 jun - 1 jul"),
+        Period(name: "TP 07", number: 7, date: "2 jul - 8 jul"),
+        Period(name: "TP 08", number: 8, date: "9 jul - 15 jul"),
+        Period(name: "TP 09", number: 9, date: "16 jul - 22 jul"),
+        Period(name: "TP 10", number: 10, date: "23 jul - 29 jul"),
+        Period(name: "TP 11", number: 11, date: "30 jul - 5 aug"),
+        Period(name: "TP 12", number: 12, date: "6 aug - 12 aug"),
+        Period(name: "TP 13", number: 13, date: "13 aug - 19 aug"),
+        Period(name: "TP 14", number: 14, date: "20 aug - 2 sep"),
+        Period(name: "TP 15", number: 15, date: "3 sep - 14 okt"),
+        Period(name: "TP 16", number: 16, date: "15 okt - 31 dec")
     ]
 
     func getCurrentPeriod() -> Int {
@@ -41,67 +41,67 @@ class TournamentListHelper {
     }
     
     func getPeriodForDate(_ date: Foundation.Date) -> Period {
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
         
-        if(date <= formatter.date(from: "20170402")!)
+
+        if(date < formatter.date(from: "20180403")!)
         {
             return periods2016[0]
         }
-        if(date <= formatter.date(from: "20170521")!)
+        if(date < formatter.date(from: "20180521")!)
         {
             return periods2016[1]
         }
-        if(date <= formatter.date(from: "20170604")!)
+        if(date < formatter.date(from: "20180604")!)
         {
             return periods2016[2]
         }
-        if(date <= formatter.date(from: "20170611")!)
+        if(date < formatter.date(from: "20180611")!)
         {
             return periods2016[3]
         }
-        if(date <= formatter.date(from: "20170625")!)
+        if(date < formatter.date(from: "20180625")!)
         {
             return periods2016[4]
         }
-        if(date <= formatter.date(from: "20170702")!)
+        if(date < formatter.date(from: "20180702")!)
         {
             return periods2016[5]
         }
-        if(date <= formatter.date(from: "20170709")!)
+        if(date < formatter.date(from: "20180709")!)
         {
             return periods2016[6]
         }
-        if(date <= formatter.date(from: "20170716")!)
+        if(date < formatter.date(from: "20180716")!)
         {
             return periods2016[7]
         }
-        if(date <= formatter.date(from: "20170723")!)
+        if(date < formatter.date(from: "20180723")!)
         {
             return periods2016[8]
         }
-        if(date <= formatter.date(from: "20170730")!)
+        if(date < formatter.date(from: "20180730")!)
         {
             return periods2016[9]
         }
-        if(date < formatter.date(from: "20170806")!)
+        if(date < formatter.date(from: "20180806")!)
         {
             return periods2016[10]
         }
-        if(date < formatter.date(from: "20170813")!)
+        if(date < formatter.date(from: "20180813")!)
         {
             return periods2016[11]
         }
-        if(date < formatter.date(from: "20170820")!)
+        if(date < formatter.date(from: "20180820")!)
         {
             return periods2016[12]
         }
-        if(date < formatter.date(from: "20170903")!)
+        if(date < formatter.date(from: "20180903")!)
         {
             return periods2016[13]
         }
-        if(date < formatter.date(from: "20171015")!)
+        if(date < formatter.date(from: "20181015")!)
         {
             return periods2016[14]
         }

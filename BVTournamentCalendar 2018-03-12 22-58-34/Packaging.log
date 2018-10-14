@@ -1,0 +1,1951 @@
+2018-03-12 14:58:13 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7ff9065a9900; archive(resolved)='<IDEArchive: 0x7ff91784f5e0>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team(resolved)='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7ff9065a9900; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionProcessingPipelineContext: 0x7ff9065bc720; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff906647eb0; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff916ab0cc0; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff8feadd950; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff90256b0c0; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff906545150; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff90296a5c0; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff9160d9fa0; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='<IDEProvisioningBasicTeam 0x7ff9020267e0: teamID: J5HZ3L48U8, teamName: Carl Kenne>'>
+	<IDEDistributionContext: 0x7ff9061f5040; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='<IDEDistributionMethodiOSAppStoreExport: 0x7ff915f45360>', team='(null)'>
+	<IDEDistributionContext: 0x7ff916a06b70; archive = '<IDEArchive: 0x7ff91784f5e0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7ff9065a9900>
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionCreateDestRootStep
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionCopyItemStep
+2018-03-12 14:58:13 +0000  Running /usr/bin/ditto '-V' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app'
+2018-03-12 14:58:13 +0000  >>> Copying /Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app 
+2018-03-12 14:58:13 +0000  copying file ./10363442_2876931804806_5184986262509690354_o.jpg ... 
+2018-03-12 14:58:13 +0000  565480 bytes for ./10363442_2876931804806_5184986262509690354_o.jpg
+2018-03-12 14:58:13 +0000  copying file ./_CodeSignature/CodeResources ... 
+2018-03-12 14:58:13 +0000  22555 bytes for ./_CodeSignature/CodeResources
+2018-03-12 14:58:13 +0000  copying file ./normal-back.png ... 
+2018-03-12 14:58:13 +0000  55414 bytes for ./normal-back.png
+copying file ./AppIcon60x60@2x.png ... 
+2018-03-12 14:58:13 +0000  42726 bytes for ./AppIcon60x60@2x.png
+copying file ./Beachvolleytävlingar ... 
+2018-03-12 14:58:13 +0000  6484288 bytes for ./Beachvolleytävlingar
+2018-03-12 14:58:13 +0000  copying file ./AppIcon29x29@2x.png ... 
+10643 bytes for ./AppIcon29x29@2x.png
+copying file ./blue.png ... 
+113272 bytes for ./blue.png
+copying file ./AppIcon40x40@3x.png ... 
+42726 bytes for ./AppIcon40x40@3x.png
+copying file ./AppIcon40x40@2x.png ... 
+2018-03-12 14:58:13 +0000  19170 bytes for ./AppIcon40x40@2x.png
+copying file ./black.png ... 
+56000 bytes for ./black.png
+copying file ./AppIcon29x29@3x.png ... 
+22397 bytes for ./AppIcon29x29@3x.png
+copying file ./AppIcon60x60@3x.png ... 
+91862 bytes for ./AppIcon60x60@3x.png
+copying file ./sand_menu.png ... 
+669921 bytes for ./sand_menu.png
+copying file ./Base.lproj/LaunchScreen.nib ... 
+2018-03-12 14:58:13 +0000  4446 bytes for ./Base.lproj/LaunchScreen.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-AmP-o0-pXB.nib ... 
+2018-03-12 14:58:13 +0000  4062 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-AmP-o0-pXB.nib
+copying file ./Base.lproj/Main.storyboardc/Afi-Z8-fae-view-nD5-px-qu7.nib ... 
+2018-03-12 14:58:13 +0000  2175 bytes for ./Base.lproj/Main.storyboardc/Afi-Z8-fae-view-nD5-px-qu7.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/UuX-UD-1mL-view-xv0-yv-fQg.nib ... 
+2018-03-12 14:58:13 +0000  3060 bytes for ./Base.lproj/Main.storyboardc/UuX-UD-1mL-view-xv0-yv-fQg.nib
+copying file ./Base.lproj/Main.storyboardc/BgB-D6-12h-view-6dH-z9-hKw.nib ... 
+2018-03-12 14:58:13 +0000  5706 bytes for ./Base.lproj/Main.storyboardc/BgB-D6-12h-view-6dH-z9-hKw.nib
+copying file ./Base.lproj/Main.storyboardc/UIViewController-Yfb-sY-nxn.nib ... 
+2018-03-12 14:58:13 +0000  2017 bytes for ./Base.lproj/Main.storyboardc/UIViewController-Yfb-sY-nxn.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-mOF-fv-Ddc.nib ... 
+2018-03-12 14:58:13 +0000  3655 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-mOF-fv-Ddc.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/EZx-Ur-N7A-view-uZ4-Kx-oPu.nib ... 
+2018-03-12 14:58:13 +0000  6431 bytes for ./Base.lproj/Main.storyboardc/EZx-Ur-N7A-view-uZ4-Kx-oPu.nib
+copying file ./Base.lproj/Main.storyboardc/UIViewController-9DU-v2-Chf.nib ... 
+2018-03-12 14:58:13 +0000  1348 bytes for ./Base.lproj/Main.storyboardc/UIViewController-9DU-v2-Chf.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/oQp-3O-Qli-view-jQt-vn-jPo.nib ... 
+2018-03-12 14:58:13 +0000  3974 bytes for ./Base.lproj/Main.storyboardc/oQp-3O-Qli-view-jQt-vn-jPo.nib
+copying file ./Base.lproj/Main.storyboardc/UITabBarController-IoU-4k-bbK.nib ... 
+2018-03-12 14:58:13 +0000  3888 bytes for ./Base.lproj/Main.storyboardc/UITabBarController-IoU-4k-bbK.nib
+copying file ./Base.lproj/Main.storyboardc/UITableViewController-Puu-hs-LcN.nib ... 
+2018-03-12 14:58:13 +0000  1000 bytes for ./Base.lproj/Main.storyboardc/UITableViewController-Puu-hs-LcN.nib
+copying file ./Base.lproj/Main.storyboardc/Poäng.nib ... 
+2018-03-12 14:58:13 +0000  1390 bytes for ./Base.lproj/Main.storyboardc/Poäng.nib
+copying file ./Base.lproj/Main.storyboardc/Yfb-sY-nxn-view-kCS-Wy-Q15.nib ... 
+2018-03-12 14:58:13 +0000  13066 bytes for ./Base.lproj/Main.storyboardc/Yfb-sY-nxn-view-kCS-Wy-Q15.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/Oho-FV-Uuv-view-JVA-Fw-Ql9.nib ... 
+2018-03-12 14:58:13 +0000  2180 bytes for ./Base.lproj/Main.storyboardc/Oho-FV-Uuv-view-JVA-Fw-Ql9.nib
+copying file ./Base.lproj/Main.storyboardc/UINavigationController-tSr-NN-ho4.nib ... 
+2018-03-12 14:58:13 +0000  3236 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-tSr-NN-ho4.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/wwz-wl-rLp-view-HAs-Oa-vsW.nib ... 
+2018-03-12 14:58:13 +0000  9825 bytes for ./Base.lproj/Main.storyboardc/wwz-wl-rLp-view-HAs-Oa-vsW.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/HOh-SD-uTL-view-hj4-2T-VqB.nib ... 
+2018-03-12 14:58:13 +0000  15151 bytes for ./Base.lproj/Main.storyboardc/HOh-SD-uTL-view-hj4-2T-VqB.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/oiV-mz-52v-view-0gw-UG-i4x.nib ... 
+2018-03-12 14:58:13 +0000  2181 bytes for ./Base.lproj/Main.storyboardc/oiV-mz-52v-view-0gw-UG-i4x.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/oYa-uL-u72-view-jSW-ri-7Rr.nib ... 
+2018-03-12 14:58:13 +0000  15168 bytes for ./Base.lproj/Main.storyboardc/oYa-uL-u72-view-jSW-ri-7Rr.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/9DU-v2-Chf-view-qxl-Ia-DdT.nib ... 
+2018-03-12 14:58:13 +0000  1883 bytes for ./Base.lproj/Main.storyboardc/9DU-v2-Chf-view-qxl-Ia-DdT.nib
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/Puu-hs-LcN-view-QeW-JT-X8o.nib ... 
+2018-03-12 14:58:13 +0000  9813 bytes for ./Base.lproj/Main.storyboardc/Puu-hs-LcN-view-QeW-JT-X8o.nib
+copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2018-03-12 14:58:13 +0000  817 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2018-03-12 14:58:13 +0000  copying file ./Base.lproj/Main.storyboardc/xvW-Pb-lMn-view-UNv-17-fRx.nib ... 
+2018-03-12 14:58:13 +0000  2488 bytes for ./Base.lproj/Main.storyboardc/xvW-Pb-lMn-view-UNv-17-fRx.nib
+copying file ./Base.lproj/Main.storyboardc/UITableViewController-EZx-Ur-N7A.nib ... 
+2018-03-12 14:58:13 +0000  1355 bytes for ./Base.lproj/Main.storyboardc/UITableViewController-EZx-Ur-N7A.nib
+2018-03-12 14:58:13 +0000  copying file ./archived-expanded-entitlements.xcent ... 
+2018-03-12 14:58:13 +0000  390 bytes for ./archived-expanded-entitlements.xcent
+2018-03-12 14:58:13 +0000  copying file ./skyleft_menu_highlight.PNG ... 
+2018-03-12 14:58:13 +0000  364366 bytes for ./skyleft_menu_highlight.PNG
+2018-03-12 14:58:13 +0000  copying file ./Assets.car ... 
+2018-03-12 14:58:13 +0000  2336408 bytes for ./Assets.car
+2018-03-12 14:58:13 +0000  copying file ./green.png ... 
+102243 bytes for ./green.png
+copying file ./skyleft_menu.PNG ... 
+2018-03-12 14:58:13 +0000  486199 bytes for ./skyleft_menu.PNG
+copying file ./skyleft.PNG ... 
+2018-03-12 14:58:13 +0000  1239008 bytes for ./skyleft.PNG
+2018-03-12 14:58:13 +0000  copying file ./normal.png ... 
+2018-03-12 14:58:13 +0000  92411 bytes for ./normal.png
+copying file ./sand_menu_highlight.png ... 
+2018-03-12 14:58:13 +0000  437820 bytes for ./sand_menu_highlight.png
+2018-03-12 14:58:13 +0000  copying file ./Frameworks/libswiftMapKit.dylib ... 
+2018-03-12 14:58:13 +0000  310944 bytes for ./Frameworks/libswiftMapKit.dylib
+copying file ./Frameworks/libswiftCoreImage.dylib ... 
+2018-03-12 14:58:13 +0000  258272 bytes for ./Frameworks/libswiftCoreImage.dylib
+2018-03-12 14:58:13 +0000  copying file ./Frameworks/libswiftObjectiveC.dylib ... 
+2018-03-12 14:58:13 +0000  505792 bytes for ./Frameworks/libswiftObjectiveC.dylib
+copying file ./Frameworks/libswiftCore.dylib ... 
+2018-03-12 14:58:13 +0000  68838944 bytes for ./Frameworks/libswiftCore.dylib
+2018-03-12 14:58:13 +0000  copying file ./Frameworks/libswiftCoreGraphics.dylib ... 
+1268848 bytes for ./Frameworks/libswiftCoreGraphics.dylib
+copying file ./Frameworks/libswiftUIKit.dylib ... 
+789184 bytes for ./Frameworks/libswiftUIKit.dylib
+copying file ./Frameworks/libswiftMetal.dylib ... 
+399376 bytes for ./Frameworks/libswiftMetal.dylib
+copying file ./Frameworks/libswiftDispatch.dylib ... 
+2018-03-12 14:58:13 +0000  2440736 bytes for ./Frameworks/libswiftDispatch.dylib
+copying file ./Frameworks/libswiftos.dylib ... 
+446400 bytes for ./Frameworks/libswiftos.dylib
+copying file ./Frameworks/libswiftCoreFoundation.dylib ... 
+257696 bytes for ./Frameworks/libswiftCoreFoundation.dylib
+copying file ./Frameworks/libswiftDarwin.dylib ... 
+599280 bytes for ./Frameworks/libswiftDarwin.dylib
+copying file ./Frameworks/libswiftQuartzCore.dylib ... 
+310976 bytes for ./Frameworks/libswiftQuartzCore.dylib
+copying file ./Frameworks/libswiftFoundation.dylib ... 
+2018-03-12 14:58:13 +0000  27762864 bytes for ./Frameworks/libswiftFoundation.dylib
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  /usr/bin/ditto exited with 0
+
+2018-03-12 14:58:13 +0000  copying file ./Frameworks/libswiftCoreLocation.dylib ... 
+401424 bytes for ./Frameworks/libswiftCoreLocation.dylib
+copying file ./sand.png ... 
+2390407 bytes for ./sand.png
+copying file ./embedded.mobileprovision ... 
+9635 bytes for ./embedded.mobileprovision
+copying file ./Info.plist ... 
+1612 bytes for ./Info.plist
+copying file ./red.png ... 
+112553 bytes for ./red.png
+copying file ./PkgInfo ... 
+8 bytes for ./PkgInfo
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionEmbedProfileStep
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff917e81d40 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7ff91773bd20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff917747ee0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7ff9160d9910:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff917247a00 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7ff917729620:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff9022b18a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7ff906164450:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff91656b460 'com.apple.dt.runtime.swiftCoreLocation' '<DVTFilePath:0x7ff915aa8d60:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff9168c45c0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7ff915a333c0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff915a3c2d0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7ff9160d8500:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff906606f10 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7ff915a4da30:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff9064ea810 'com.apple.dt.runtime.swiftMapKit' '<DVTFilePath:0x7ff9061e18d0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff9160c7730 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7ff917727420:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff906495850 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7ff8fddb7360:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff90658fe30 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7ff915a34340:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff9174f4190 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7ff9141e1330:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib'>'>
+2018-03-12 14:58:13 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ff914663450 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7ff9160d9210:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib'>'>
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionItemRemovalStep
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2018-03-12 14:58:13 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2018-03-12 14:58:13 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-03-12 14:58:13 +0000  Running /usr/bin/ditto '-V' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/BCSymbolMaps/535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/BCSymbolMaps/535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap'
+2018-03-12 14:58:13 +0000  >>> Copying /Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/BCSymbolMaps/535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap 
+2018-03-12 14:58:13 +0000  copying file ./535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap ... 
+2018-03-12 14:58:13 +0000  366778 bytes for ./535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  
+
+2018-03-12 14:58:13 +0000  /usr/bin/ditto exited with 02018-03-12 14:58:13 +0000  
+
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  
+
+2018-03-12 14:58:13 +0000  Running /usr/bin/ditto '-V' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/BCSymbolMaps/1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/BCSymbolMaps/1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap'
+2018-03-12 14:58:13 +0000  >>> Copying /Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/BCSymbolMaps/1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap 
+2018-03-12 14:58:13 +0000  copying file ./1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap ... 
+2018-03-12 14:58:13 +0000  361033 bytes for ./1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  /usr/bin/ditto exited with 0
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  
+
+2018-03-12 14:58:13 +0000  Processing step: IDEDistributionSymbolsStep
+2018-03-12 14:58:13 +0000  Processing symbols for libswiftCore.dylib
+2018-03-12 14:58:13 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:13 +0000  building file list ... 
+2018-03-12 14:58:13 +0000   0 files...2018-03-12 14:58:13 +0000  1 file to consider
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  sent 94 bytes  received 20 bytes  228.00 bytes/sec
+total size is 65.65M  speedup is 603850.39
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  
+
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:13 +0000  
+
+
+2018-03-12 14:58:13 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:13 +0000  building file list ... 
+2018-03-12 14:58:13 +0000   0 files...2018-03-12 14:58:13 +0000  7 files to consider
+2018-03-12 14:58:13 +0000  ./
+2018-03-12 14:58:13 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+2018-03-12 14:58:13 +0000  Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:13 +0000  
+sent 268 bytes  received 50 bytes  636.00 bytes/sec
+total size is 5.41M  speedup is 17827.40
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  
+2018-03-12 14:58:13 +0000  2018-03-12 14:58:13 +0000  /usr/bin/rsync exited with 0
+
+2018-03-12 14:58:13 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCore.dylib'
+2018-03-12 14:58:14 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCore.dylib [armv7, 0.488782 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCore.dylib [armv7s, 0.488782 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCore.dylib [arm64, 0.488782 seconds]:
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Processing symbols for libswiftCoreFoundation.dylib
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  1 file to consider
+2018-03-12 14:58:14 +0000  
+sent 104 bytes  received 20 bytes  248.00 bytes/sec
+total size is 251.66K  speedup is 2078.19
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  7 files to consider
+2018-03-12 14:58:14 +0000  ./
+2018-03-12 14:58:14 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:14 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+2018-03-12 14:58:14 +0000  total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreFoundation.dylib'
+2018-03-12 14:58:14 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreFoundation.dylib [armv7, 0.001618 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreFoundation.dylib [armv7s, 0.001618 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreFoundation.dylib [arm64, 0.001618 seconds]:
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Processing symbols for libswiftCoreGraphics.dylib
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  1 file to consider
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  sent 102 bytes  received 20 bytes  244.00 bytes/sec
+total size is 1.21M  speedup is 10400.39
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 0
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  7 files to consider
+2018-03-12 14:58:14 +0000  ./
+2018-03-12 14:58:14 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:14 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:14 +0000  
+
+
+2018-03-12 14:58:14 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreGraphics.dylib'
+2018-03-12 14:58:14 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreGraphics.dylib [armv7, 0.008625 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreGraphics.dylib [armv7s, 0.008625 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreGraphics.dylib [arm64, 0.008625 seconds]:
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Processing symbols for libswiftCoreImage.dylib
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  1 file to consider
+2018-03-12 14:58:14 +0000  
+sent 99 bytes  received 20 bytes  238.00 bytes/sec
+2018-03-12 14:58:14 +0000  total size is 252.22K  speedup is 2170.35
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  7 files to consider
+2018-03-12 14:58:14 +0000  ./
+2018-03-12 14:58:14 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:14 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreImage.dylib'
+2018-03-12 14:58:14 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreImage.dylib [armv7, 0.001480 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreImage.dylib [armv7s, 0.001480 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreImage.dylib [arm64, 0.001480 seconds]:
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  Processing symbols for libswiftCoreLocation.dylib
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  1 file to consider
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  sent 102 bytes  received 20 bytes  244.00 bytes/sec
+total size is 392.02K  speedup is 3290.36
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  7 files to consider
+2018-03-12 14:58:14 +0000  ./
+2018-03-12 14:58:14 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:14 +0000  
+
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreLocation.dylib'
+2018-03-12 14:58:14 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreLocation.dylib [armv7, 0.002855 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreLocation.dylib [armv7s, 0.002855 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftCoreLocation.dylib [arm64, 0.002855 seconds]:
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  
+
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  Processing symbols for libswiftDarwin.dylib
+2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  1 file to consider
+2018-03-12 14:58:14 +0000  
+sent 96 bytes  received 20 bytes  232.00 bytes/sec
+total size is 585.23K  speedup is 5166.21
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+
+2018-03-12 14:58:14 +0000  building file list ... 
+2018-03-12 14:58:14 +0000   0 files...2018-03-12 14:58:14 +0000  7 files to consider
+2018-03-12 14:58:14 +0000  ./
+2018-03-12 14:58:14 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:14 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  
+2018-03-12 14:58:14 +0000  2018-03-12 14:58:14 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:14 +0000  
+
+
+2018-03-12 14:58:14 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDarwin.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDarwin.dylib [armv7, 0.006016 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDarwin.dylib [armv7s, 0.006016 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDarwin.dylib [arm64, 0.006016 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftDispatch.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 98 bytes  received 20 bytes  236.00 bytes/sec
+total size is 2.33M  speedup is 20684.20
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDispatch.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDispatch.dylib [armv7, 0.021129 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDispatch.dylib [armv7s, 0.021129 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftDispatch.dylib [arm64, 0.021129 seconds]:
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftFoundation.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 100 bytes  received 20 bytes  240.00 bytes/sec
+total size is 26.48M  speedup is 231357.20
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftFoundation.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftFoundation.dylib [armv7, 0.138903 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftFoundation.dylib [armv7s, 0.138903 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftFoundation.dylib [arm64, 0.138903 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftMapKit.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 96 bytes  received 20 bytes  232.00 bytes/sec
+total size is 303.66K  speedup is 2680.55
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+2018-03-12 14:58:15 +0000  total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMapKit.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMapKit.dylib [armv7, 0.002214 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMapKit.dylib [armv7s, 0.002214 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMapKit.dylib [arm64, 0.002214 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftMetal.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 95 bytes  received 20 bytes  230.00 bytes/sec
+total size is 390.02K  speedup is 3472.83
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+2018-03-12 14:58:15 +0000  total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMetal.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMetal.dylib [armv7, 0.002345 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMetal.dylib [armv7s, 0.002345 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftMetal.dylib [arm64, 0.002345 seconds]:
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftObjectiveC.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 100 bytes  received 20 bytes  240.00 bytes/sec
+total size is 493.94K  speedup is 4214.93
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+2018-03-12 14:58:15 +0000  total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 02018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftObjectiveC.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftObjectiveC.dylib [armv7, 0.003290 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftObjectiveC.dylib [armv7s, 0.003290 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftObjectiveC.dylib [arm64, 0.003290 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftQuartzCore.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 100 bytes  received 20 bytes  240.00 bytes/sec
+total size is 303.69K  speedup is 2591.47
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftQuartzCore.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftQuartzCore.dylib [armv7, 0.002241 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftQuartzCore.dylib [armv7s, 0.002241 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftQuartzCore.dylib [arm64, 0.002241 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftUIKit.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 95 bytes  received 20 bytes  230.00 bytes/sec
+2018-03-12 14:58:15 +0000  total size is 770.69K  speedup is 6862.47
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftUIKit.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftUIKit.dylib [armv7, 0.006445 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftUIKit.dylib [armv7s, 0.006445 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftUIKit.dylib [arm64, 0.006445 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 02018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Processing symbols for libswiftos.dylib
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  1 file to consider
+2018-03-12 14:58:15 +0000  
+sent 92 bytes  received 20 bytes  224.00 bytes/sec
+total size is 435.94K  speedup is 3985.71
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  Running /usr/bin/rsync '-8aPhhE' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '--link-dest' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/dSYMs/' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ'
+2018-03-12 14:58:15 +0000  building file list ... 
+2018-03-12 14:58:15 +0000   0 files...2018-03-12 14:58:15 +0000  7 files to consider
+2018-03-12 14:58:15 +0000  ./
+2018-03-12 14:58:15 +0000  Beachvolleytävlingar.app.dSYM/
+Beachvolleytävlingar.app.dSYM/Contents/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/
+Beachvolleytävlingar.app.dSYM/Contents/Resources/DWARF/
+2018-03-12 14:58:15 +0000  
+sent 280 bytes  received 62 bytes  684.00 bytes/sec
+total size is 5.41M  speedup is 16576.35
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  /usr/bin/rsync exited with 0
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Running /Applications/Xcode.app/Contents/Developer/usr/bin/symbols '-noTextInSOD' '-noDaemon' '-arch' 'all' '-symbolsPackageDir' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftos.dylib'
+2018-03-12 14:58:15 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftos.dylib [armv7, 0.002396 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftos.dylib [armv7s, 0.002396 seconds]:
+/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/libswiftos.dylib [arm64, 0.002396 seconds]:
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  2018-03-12 14:58:15 +0000  /Applications/Xcode.app/Contents/Developer/usr/bin/symbols exited with 0
+
+2018-03-12 14:58:15 +0000  
+2018-03-12 14:58:15 +0000  Excluding symbols for Beachvolleytävlingar.app
+2018-03-12 14:58:15 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2018-03-12 14:58:15 +0000  Running /usr/bin/ditto '-V' '/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/SwiftSupport' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/SwiftSupport'
+2018-03-12 14:58:15 +0000  >>> Copying /Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/SwiftSupport 
+2018-03-12 14:58:15 +0000  copying file ./iphoneos/libswiftMapKit.dylib ... 
+2018-03-12 14:58:15 +0000  365568 bytes for ./iphoneos/libswiftMapKit.dylib
+copying file ./iphoneos/libswiftCoreImage.dylib ... 
+2018-03-12 14:58:15 +0000  300318 bytes for ./iphoneos/libswiftCoreImage.dylib
+copying file ./iphoneos/libswiftObjectiveC.dylib ... 
+2018-03-12 14:58:15 +0000  681314 bytes for ./iphoneos/libswiftObjectiveC.dylib
+copying file ./iphoneos/libswiftCore.dylib ... 
+2018-03-12 14:58:16 +0000  100085655 bytes for ./iphoneos/libswiftCore.dylib
+2018-03-12 14:58:16 +0000  copying file ./iphoneos/libswiftCoreGraphics.dylib ... 
+2018-03-12 14:58:16 +0000  1736845 bytes for ./iphoneos/libswiftCoreGraphics.dylib
+copying file ./iphoneos/libswiftUIKit.dylib ... 
+2018-03-12 14:58:16 +0000  1118295 bytes for ./iphoneos/libswiftUIKit.dylib
+copying file ./iphoneos/libswiftMetal.dylib ... 
+2018-03-12 14:58:16 +0000  504212 bytes for ./iphoneos/libswiftMetal.dylib
+copying file ./iphoneos/libswiftDispatch.dylib ... 
+2018-03-12 14:58:16 +0000  3399641 bytes for ./iphoneos/libswiftDispatch.dylib
+copying file ./iphoneos/libswiftos.dylib ... 
+2018-03-12 14:58:16 +0000  590007 bytes for ./iphoneos/libswiftos.dylib
+copying file ./iphoneos/libswiftCoreFoundation.dylib ... 
+2018-03-12 14:58:16 +0000  287519 bytes for ./iphoneos/libswiftCoreFoundation.dylib
+2018-03-12 14:58:16 +0000  copying file ./iphoneos/libswiftDarwin.dylib ... 
+2018-03-12 14:58:16 +0000  790336 bytes for ./iphoneos/libswiftDarwin.dylib
+copying file ./iphoneos/libswiftQuartzCore.dylib ... 
+2018-03-12 14:58:16 +0000  370129 bytes for ./iphoneos/libswiftQuartzCore.dylib
+copying file ./iphoneos/libswiftFoundation.dylib ... 
+2018-03-12 14:58:16 +0000  40621914 bytes for ./iphoneos/libswiftFoundation.dylib
+copying file ./iphoneos/libswiftCoreLocation.dylib ... 
+2018-03-12 14:58:16 +0000  499211 bytes for ./iphoneos/libswiftCoreLocation.dylib
+2018-03-12 14:58:16 +0000  2018-03-12 14:58:16 +0000  
+
+2018-03-12 14:58:16 +0000  /usr/bin/ditto exited with 0
+2018-03-12 14:58:16 +0000  
+2018-03-12 14:58:16 +0000  2018-03-12 14:58:16 +0000  Processing step: IDEDistributionAppThinningStep
+
+2018-03-12 14:58:16 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2018-03-12 14:58:16 +0000  Processing step: IDEDistributionODRStep
+2018-03-12 14:58:16 +0000  Processing step: IDEDistributionStripXattrsStep
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff917e81d40 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7ff91773bd20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff917747ee0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7ff9160d9910:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff917247a00 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7ff917729620:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff9022b18a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7ff906164450:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff91656b460 'com.apple.dt.runtime.swiftCoreLocation' '<DVTFilePath:0x7ff915aa8d60:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff9168c45c0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7ff915a333c0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff915a3c2d0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7ff9160d8500:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff906606f10 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7ff915a4da30:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff9064ea810 'com.apple.dt.runtime.swiftMapKit' '<DVTFilePath:0x7ff9061e18d0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff9160c7730 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7ff917727420:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff906495850 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7ff8fddb7360:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff90658fe30 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7ff915a34340:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff9174f4190 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7ff9141e1330:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib'>'>
+2018-03-12 14:58:16 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ff914663450 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7ff9160d9210:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib'>'>
+2018-03-12 14:58:16 +0000  Running /usr/bin/xattr '-crs' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app'
+2018-03-12 14:58:16 +0000  2018-03-12 14:58:16 +0000  
+
+2018-03-12 14:58:16 +0000  /usr/bin/xattr exited with 0
+2018-03-12 14:58:16 +0000  
+2018-03-12 14:58:16 +0000  Processing step: IDEDistributionCodesignStep
+2018-03-12 14:58:16 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff917e81d40 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7ff91773bd20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff9025c40b0>: {
+}
+2018-03-12 14:58:16 +0000  Entitlements for <IDEDistributionItem: 0x7ff917e81d40 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7ff91773bd20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib'>'>: {
+}
+2018-03-12 14:58:16 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff917e81d40 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7ff91773bd20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsuyYw3D
+2018-03-12 14:58:16 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsuyYw3D' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib'
+2018-03-12 14:58:16 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib: replacing existing signature
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCore]
+2018-03-12 14:58:17 +0000  2018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff917747ee0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7ff9160d9910:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff902bcafd0>: {
+}
+2018-03-12 14:58:17 +0000  Entitlements for <IDEDistributionItem: 0x7ff917747ee0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7ff9160d9910:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib'>'>: {
+}
+2018-03-12 14:58:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff917747ee0 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7ff9160d9910:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsvVvGab
+2018-03-12 14:58:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsvVvGab' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib'
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib: replacing existing signature
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreFoundation]
+2018-03-12 14:58:17 +0000  2018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  /usr/bin/codesign exited with 0
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff917247a00 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7ff917729620:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff917cb2a60>: {
+}
+2018-03-12 14:58:17 +0000  Entitlements for <IDEDistributionItem: 0x7ff917247a00 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7ff917729620:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib'>'>: {
+}
+2018-03-12 14:58:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff917247a00 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7ff917729620:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsT8HqoY
+2018-03-12 14:58:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsT8HqoY' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib'
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib: replacing existing signature
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreGraphics]
+2018-03-12 14:58:17 +0000  2018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  2018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff9022b18a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7ff906164450:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff915758100>: {
+}
+2018-03-12 14:58:17 +0000  Entitlements for <IDEDistributionItem: 0x7ff9022b18a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7ff906164450:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib'>'>: {
+}
+2018-03-12 14:58:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff9022b18a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7ff906164450:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsoP8Pyy
+2018-03-12 14:58:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsoP8Pyy' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib'
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib: replacing existing signature
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreImage]
+2018-03-12 14:58:17 +0000  2018-03-12 14:58:17 +0000  
+
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  
+2018-03-12 14:58:17 +0000  2018-03-12 14:58:17 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:17 +0000  
+
+
+2018-03-12 14:58:17 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff91656b460 'com.apple.dt.runtime.swiftCoreLocation' '<DVTFilePath:0x7ff915aa8d60:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff902c97750>: {
+}
+2018-03-12 14:58:17 +0000  Entitlements for <IDEDistributionItem: 0x7ff91656b460 'com.apple.dt.runtime.swiftCoreLocation' '<DVTFilePath:0x7ff915aa8d60:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib'>'>: {
+}
+2018-03-12 14:58:17 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff91656b460 'com.apple.dt.runtime.swiftCoreLocation' '<DVTFilePath:0x7ff915aa8d60:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsoZ8jIV
+2018-03-12 14:58:17 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsoZ8jIV' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib'
+2018-03-12 14:58:17 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib: replacing existing signature
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreLocation]
+2018-03-12 14:58:18 +0000  2018-03-12 14:58:18 +0000  
+
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:18 +0000  
+
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff9168c45c0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7ff915a333c0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff8fe80a0b0>: {
+}
+2018-03-12 14:58:18 +0000  Entitlements for <IDEDistributionItem: 0x7ff9168c45c0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7ff915a333c0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib'>'>: {
+}
+2018-03-12 14:58:18 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff9168c45c0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7ff915a333c0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsnieMlP
+2018-03-12 14:58:18 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsnieMlP' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib'
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib: replacing existing signature
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDarwin]
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  /usr/bin/codesign exited with 0
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff915a3c2d0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7ff9160d8500:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff902bbbba0>: {
+}
+2018-03-12 14:58:18 +0000  Entitlements for <IDEDistributionItem: 0x7ff915a3c2d0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7ff9160d8500:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib'>'>: {
+}
+2018-03-12 14:58:18 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff915a3c2d0 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7ff9160d8500:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements9QXlyF
+2018-03-12 14:58:18 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements9QXlyF' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib'
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib: replacing existing signature
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDispatch]
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:18 +0000  
+
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff906606f10 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7ff915a4da30:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff915ded3d0>: {
+}
+2018-03-12 14:58:18 +0000  Entitlements for <IDEDistributionItem: 0x7ff906606f10 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7ff915a4da30:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib'>'>: {
+}
+2018-03-12 14:58:18 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff906606f10 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7ff915a4da30:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsX5Boki
+2018-03-12 14:58:18 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsX5Boki' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib'
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib: replacing existing signature
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftFoundation]
+2018-03-12 14:58:18 +0000  2018-03-12 14:58:18 +0000  
+
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  2018-03-12 14:58:18 +0000  
+
+2018-03-12 14:58:18 +0000  2018-03-12 14:58:18 +0000  /usr/bin/codesign exited with 0
+
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  
+2018-03-12 14:58:18 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff9064ea810 'com.apple.dt.runtime.swiftMapKit' '<DVTFilePath:0x7ff9061e18d0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff917cb19c0>: {
+}
+2018-03-12 14:58:18 +0000  Entitlements for <IDEDistributionItem: 0x7ff9064ea810 'com.apple.dt.runtime.swiftMapKit' '<DVTFilePath:0x7ff9061e18d0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib'>'>: {
+}
+2018-03-12 14:58:18 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff9064ea810 'com.apple.dt.runtime.swiftMapKit' '<DVTFilePath:0x7ff9061e18d0:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsSbZeUQ
+2018-03-12 14:58:18 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsSbZeUQ' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib'
+2018-03-12 14:58:18 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib: replacing existing signature
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMapKit]
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:19 +0000  
+
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff9160c7730 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7ff917727420:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff915df98d0>: {
+}
+2018-03-12 14:58:19 +0000  Entitlements for <IDEDistributionItem: 0x7ff9160c7730 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7ff917727420:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib'>'>: {
+}
+2018-03-12 14:58:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff9160c7730 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7ff917727420:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements6PoVOo
+2018-03-12 14:58:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements6PoVOo' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib'
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib: replacing existing signature
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMetal]
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  /usr/bin/codesign exited with 0
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  
+
+2018-03-12 14:58:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff906495850 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7ff8fddb7360:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff917b023e0>: {
+}
+2018-03-12 14:58:19 +0000  Entitlements for <IDEDistributionItem: 0x7ff906495850 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7ff8fddb7360:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib'>'>: {
+}
+2018-03-12 14:58:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff906495850 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7ff8fddb7360:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements0pYrqz
+2018-03-12 14:58:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements0pYrqz' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib'
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib: replacing existing signature
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftObjectiveC]
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  
+
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  
+
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  /usr/bin/codesign exited with 0
+
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff90658fe30 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7ff915a34340:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff917b06670>: {
+}
+2018-03-12 14:58:19 +0000  Entitlements for <IDEDistributionItem: 0x7ff90658fe30 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7ff915a34340:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib'>'>: {
+}
+2018-03-12 14:58:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff90658fe30 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7ff915a34340:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsiILe6e
+2018-03-12 14:58:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsiILe6e' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib'
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib: replacing existing signature
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftQuartzCore]
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  
+
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  /usr/bin/codesign exited with 0
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff9174f4190 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7ff9141e1330:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff902cfbb70>: {
+}
+2018-03-12 14:58:19 +0000  Entitlements for <IDEDistributionItem: 0x7ff9174f4190 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7ff9141e1330:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib'>'>: {
+}
+2018-03-12 14:58:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff9174f4190 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7ff9141e1330:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementswo8kfk
+2018-03-12 14:58:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementswo8kfk' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib'
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib: replacing existing signature
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftUIKit]
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  /usr/bin/codesign exited with 0
+
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff914663450 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7ff9160d9210:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff90dc050b0>: {
+}
+2018-03-12 14:58:19 +0000  Entitlements for <IDEDistributionItem: 0x7ff914663450 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7ff9160d9210:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib'>'>: {
+}
+2018-03-12 14:58:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff914663450 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7ff9160d9210:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements4XENtj
+2018-03-12 14:58:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlements4XENtj' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib'
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib: replacing existing signature
+2018-03-12 14:58:19 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftos]
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  /usr/bin/codesign exited with 0
+
+2018-03-12 14:58:19 +0000  2018-03-12 14:58:19 +0000  
+
+2018-03-12 14:58:19 +0000  Applying entitlements delta for <IDEDistributionItem: 0x7ff8feb76610 'Cake.Beachvolleyta-vlingar' '<DVTFilePath:0x7ff917883c20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app'>'> from <IDEiCloudEntitlementsProcessor: 0x7ff90661ff40>: {
+}
+2018-03-12 14:58:19 +0000  Entitlements for <IDEDistributionItem: 0x7ff8feb76610 'Cake.Beachvolleyta-vlingar' '<DVTFilePath:0x7ff917883c20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app'>'>: {
+    "application-identifier" = "J5HZ3L48U8.Cake.Beachvolleyta-vlingar";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = J5HZ3L48U8;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "J5HZ3L48U8.Cake.Beachvolleyta-vlingar"
+    );
+}
+2018-03-12 14:58:19 +0000  Writing entitlements for <IDEDistributionItem: 0x7ff8feb76610 'Cake.Beachvolleyta-vlingar' '<DVTFilePath:0x7ff917883c20:'/Users/carlkenne/Library/Developer/Xcode/Archives/2018-03-12/BVTournamentCalendar 2018-03-12, 22.48.xcarchive/Products/Applications/Beachvolleytävlingar.app'>'> to: /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsqhErnJ
+2018-03-12 14:58:19 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'FA183282ABBD11D0F604EF834490295EFDD14354' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/entitlementsqhErnJ' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app'
+2018-03-12 14:58:20 +0000  /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root/Payload/Beachvolleytävlingar.app: signed app bundle with Mach-O universal (armv7 arm64) [Cake.Beachvolleyta-vlingar]
+2018-03-12 14:58:20 +0000  2018-03-12 14:58:20 +0000  
+
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  /usr/bin/codesign exited with 02018-03-12 14:58:20 +0000  
+
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-03-12 14:58:20 +0000  Processing step: IDEDistributionCreateIPAStep
+2018-03-12 14:58:20 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Symbols' '--link-dest' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root'
+2018-03-12 14:58:20 +0000  building file list ... 
+2018-03-12 14:58:20 +0000   0 files...2018-03-12 14:58:20 +0000  43 files to consider
+2018-03-12 14:58:20 +0000  Symbols/
+2018-03-12 14:58:20 +0000  
+sent 2.30K bytes  received 26 bytes  4.65K bytes/sec
+2018-03-12 14:58:20 +0000  total size is 18.72M  speedup is 8238.67
+2018-03-12 14:58:20 +0000  2018-03-12 14:58:20 +0000  
+
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  2018-03-12 14:58:20 +0000  /usr/bin/rsync exited with 0
+
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  
+2018-03-12 14:58:20 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root' '/var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Packages/BVTournamentCalendar.ipa'
+2018-03-12 14:58:20 +0000  >>> Copying /var/folders/_8/st8hv6tx78d3l_zl74sjqgt40000gn/T/XcodeDistPipeline.ROZ/Root 
+2018-03-12 14:58:20 +0000  copying file ./BCSymbolMaps/1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap ... 
+2018-03-12 14:58:20 +0000  361033 bytes for ./BCSymbolMaps/1422E211-2B23-324A-A9B2-47A6D0198C1C.bcsymbolmap
+copying file ./BCSymbolMaps/535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap ... 
+2018-03-12 14:58:20 +0000  366778 bytes for ./BCSymbolMaps/535E940C-4018-3BAB-8C46-362BBF1C8810.bcsymbolmap
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/10363442_2876931804806_5184986262509690354_o.jpg ... 
+2018-03-12 14:58:20 +0000  565480 bytes for ./Payload/Beachvolleytävlingar.app/10363442_2876931804806_5184986262509690354_o.jpg
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/_CodeSignature/CodeResources ... 
+2018-03-12 14:58:20 +0000  22555 bytes for ./Payload/Beachvolleytävlingar.app/_CodeSignature/CodeResources
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/normal-back.png ... 
+2018-03-12 14:58:20 +0000  55414 bytes for ./Payload/Beachvolleytävlingar.app/normal-back.png
+copying file ./Payload/Beachvolleytävlingar.app/AppIcon60x60@2x.png ... 
+2018-03-12 14:58:20 +0000  42726 bytes for ./Payload/Beachvolleytävlingar.app/AppIcon60x60@2x.png
+copying file ./Payload/Beachvolleytävlingar.app/Beachvolleytävlingar ... 
+2018-03-12 14:58:20 +0000  5126656 bytes for ./Payload/Beachvolleytävlingar.app/Beachvolleytävlingar
+copying file ./Payload/Beachvolleytävlingar.app/AppIcon29x29@2x.png ... 
+2018-03-12 14:58:20 +0000  10643 bytes for ./Payload/Beachvolleytävlingar.app/AppIcon29x29@2x.png
+copying file ./Payload/Beachvolleytävlingar.app/blue.png ... 
+2018-03-12 14:58:20 +0000  113272 bytes for ./Payload/Beachvolleytävlingar.app/blue.png
+copying file ./Payload/Beachvolleytävlingar.app/AppIcon40x40@3x.png ... 
+2018-03-12 14:58:20 +0000  42726 bytes for ./Payload/Beachvolleytävlingar.app/AppIcon40x40@3x.png
+copying file ./Payload/Beachvolleytävlingar.app/AppIcon40x40@2x.png ... 
+2018-03-12 14:58:20 +0000  19170 bytes for ./Payload/Beachvolleytävlingar.app/AppIcon40x40@2x.png
+copying file ./Payload/Beachvolleytävlingar.app/black.png ... 
+2018-03-12 14:58:20 +0000  56000 bytes for ./Payload/Beachvolleytävlingar.app/black.png
+copying file ./Payload/Beachvolleytävlingar.app/AppIcon29x29@3x.png ... 
+2018-03-12 14:58:20 +0000  22397 bytes for ./Payload/Beachvolleytävlingar.app/AppIcon29x29@3x.png
+copying file ./Payload/Beachvolleytävlingar.app/AppIcon60x60@3x.png ... 
+2018-03-12 14:58:20 +0000  91862 bytes for ./Payload/Beachvolleytävlingar.app/AppIcon60x60@3x.png
+copying file ./Payload/Beachvolleytävlingar.app/sand_menu.png ... 
+2018-03-12 14:58:20 +0000  669921 bytes for ./Payload/Beachvolleytävlingar.app/sand_menu.png
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/LaunchScreen.nib ... 
+2018-03-12 14:58:20 +0000  4446 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/LaunchScreen.nib
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UINavigationController-AmP-o0-pXB.nib ... 
+2018-03-12 14:58:20 +0000  4062 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UINavigationController-AmP-o0-pXB.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Afi-Z8-fae-view-nD5-px-qu7.nib ... 
+2018-03-12 14:58:20 +0000  2175 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Afi-Z8-fae-view-nD5-px-qu7.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UuX-UD-1mL-view-xv0-yv-fQg.nib ... 
+2018-03-12 14:58:20 +0000  3060 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UuX-UD-1mL-view-xv0-yv-fQg.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/BgB-D6-12h-view-6dH-z9-hKw.nib ... 
+2018-03-12 14:58:20 +0000  5706 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/BgB-D6-12h-view-6dH-z9-hKw.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UIViewController-Yfb-sY-nxn.nib ... 
+2018-03-12 14:58:20 +0000  2017 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UIViewController-Yfb-sY-nxn.nib
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UINavigationController-mOF-fv-Ddc.nib ... 
+2018-03-12 14:58:20 +0000  3655 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UINavigationController-mOF-fv-Ddc.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/EZx-Ur-N7A-view-uZ4-Kx-oPu.nib ... 
+2018-03-12 14:58:20 +0000  6431 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/EZx-Ur-N7A-view-uZ4-Kx-oPu.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UIViewController-9DU-v2-Chf.nib ... 
+2018-03-12 14:58:20 +0000  1348 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UIViewController-9DU-v2-Chf.nib
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/oQp-3O-Qli-view-jQt-vn-jPo.nib ... 
+2018-03-12 14:58:20 +0000  3974 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/oQp-3O-Qli-view-jQt-vn-jPo.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UITabBarController-IoU-4k-bbK.nib ... 
+2018-03-12 14:58:20 +0000  3888 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UITabBarController-IoU-4k-bbK.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UITableViewController-Puu-hs-LcN.nib ... 
+2018-03-12 14:58:20 +0000  1000 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UITableViewController-Puu-hs-LcN.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Poäng.nib ... 
+2018-03-12 14:58:20 +0000  1390 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Poäng.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Yfb-sY-nxn-view-kCS-Wy-Q15.nib ... 
+2018-03-12 14:58:20 +0000  13066 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Yfb-sY-nxn-view-kCS-Wy-Q15.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Oho-FV-Uuv-view-JVA-Fw-Ql9.nib ... 
+2018-03-12 14:58:20 +0000  2180 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Oho-FV-Uuv-view-JVA-Fw-Ql9.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UINavigationController-tSr-NN-ho4.nib ... 
+2018-03-12 14:58:20 +0000  3236 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UINavigationController-tSr-NN-ho4.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/wwz-wl-rLp-view-HAs-Oa-vsW.nib ... 
+2018-03-12 14:58:20 +0000  9825 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/wwz-wl-rLp-view-HAs-Oa-vsW.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/HOh-SD-uTL-view-hj4-2T-VqB.nib ... 
+2018-03-12 14:58:20 +0000  15151 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/HOh-SD-uTL-view-hj4-2T-VqB.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/oiV-mz-52v-view-0gw-UG-i4x.nib ... 
+2018-03-12 14:58:20 +0000  2181 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/oiV-mz-52v-view-0gw-UG-i4x.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/oYa-uL-u72-view-jSW-ri-7Rr.nib ... 
+2018-03-12 14:58:20 +0000  15168 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/oYa-uL-u72-view-jSW-ri-7Rr.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/9DU-v2-Chf-view-qxl-Ia-DdT.nib ... 
+2018-03-12 14:58:20 +0000  1883 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/9DU-v2-Chf-view-qxl-Ia-DdT.nib
+2018-03-12 14:58:20 +0000  copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Puu-hs-LcN-view-QeW-JT-X8o.nib ... 
+2018-03-12 14:58:20 +0000  9813 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Puu-hs-LcN-view-QeW-JT-X8o.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2018-03-12 14:58:20 +0000  817 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/Info.plist
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/xvW-Pb-lMn-view-UNv-17-fRx.nib ... 
+2018-03-12 14:58:20 +0000  2488 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/xvW-Pb-lMn-view-UNv-17-fRx.nib
+copying file ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UITableViewController-EZx-Ur-N7A.nib ... 
+2018-03-12 14:58:20 +0000  1355 bytes for ./Payload/Beachvolleytävlingar.app/Base.lproj/Main.storyboardc/UITableViewController-EZx-Ur-N7A.nib
+copying file ./Payload/Beachvolleytävlingar.app/archived-expanded-entitlements.xcent ... 
+2018-03-12 14:58:20 +0000  390 bytes for ./Payload/Beachvolleytävlingar.app/archived-expanded-entitlements.xcent
+copying file ./Payload/Beachvolleytävlingar.app/skyleft_menu_highlight.PNG ... 
+2018-03-12 14:58:20 +0000  364366 bytes for ./Payload/Beachvolleytävlingar.app/skyleft_menu_highlight.PNG
+copying file ./Payload/Beachvolleytävlingar.app/Assets.car ... 
+2018-03-12 14:58:20 +0000  2336408 bytes for ./Payload/Beachvolleytävlingar.app/Assets.car
+copying file ./Payload/Beachvolleytävlingar.app/green.png ... 
+2018-03-12 14:58:20 +0000  102243 bytes for ./Payload/Beachvolleytävlingar.app/green.png
+copying file ./Payload/Beachvolleytävlingar.app/skyleft_menu.PNG ... 
+2018-03-12 14:58:21 +0000  486199 bytes for ./Payload/Beachvolleytävlingar.app/skyleft_menu.PNG
+copying file ./Payload/Beachvolleytävlingar.app/skyleft.PNG ... 
+2018-03-12 14:58:21 +0000  1239008 bytes for ./Payload/Beachvolleytävlingar.app/skyleft.PNG
+copying file ./Payload/Beachvolleytävlingar.app/normal.png ... 
+2018-03-12 14:58:21 +0000  92411 bytes for ./Payload/Beachvolleytävlingar.app/normal.png
+copying file ./Payload/Beachvolleytävlingar.app/sand_menu_highlight.png ... 
+2018-03-12 14:58:21 +0000  437820 bytes for ./Payload/Beachvolleytävlingar.app/sand_menu_highlight.png
+2018-03-12 14:58:21 +0000  copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib ... 
+2018-03-12 14:58:21 +0000  344064 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftMapKit.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib ... 
+2018-03-12 14:58:21 +0000  258624 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreImage.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib ... 
+2018-03-12 14:58:21 +0000  506144 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftObjectiveC.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib ... 
+2018-03-12 14:58:24 +0000  68839312 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCore.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib ... 
+2018-03-12 14:58:24 +0000  1269200 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreGraphics.dylib
+2018-03-12 14:58:24 +0000  copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib ... 
+2018-03-12 14:58:24 +0000  789536 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftUIKit.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib ... 
+2018-03-12 14:58:24 +0000  399728 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftMetal.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib ... 
+2018-03-12 14:58:24 +0000  2441088 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftDispatch.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib ... 
+2018-03-12 14:58:24 +0000  446752 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftos.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib ... 
+2018-03-12 14:58:24 +0000  258064 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib ... 
+2018-03-12 14:58:24 +0000  599632 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftDarwin.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib ... 
+2018-03-12 14:58:24 +0000  311328 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftQuartzCore.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib ... 
+2018-03-12 14:58:25 +0000  27763232 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftFoundation.dylib
+copying file ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib ... 
+2018-03-12 14:58:25 +0000  401776 bytes for ./Payload/Beachvolleytävlingar.app/Frameworks/libswiftCoreLocation.dylib
+2018-03-12 14:58:25 +0000  copying file ./Payload/Beachvolleytävlingar.app/sand.png ... 
+2018-03-12 14:58:25 +0000  2390407 bytes for ./Payload/Beachvolleytävlingar.app/sand.png
+copying file ./Payload/Beachvolleytävlingar.app/embedded.mobileprovision ... 
+2018-03-12 14:58:25 +0000  7442 bytes for ./Payload/Beachvolleytävlingar.app/embedded.mobileprovision
+copying file ./Payload/Beachvolleytävlingar.app/Info.plist ... 
+2018-03-12 14:58:25 +0000  1612 bytes for ./Payload/Beachvolleytävlingar.app/Info.plist
+copying file ./Payload/Beachvolleytävlingar.app/red.png ... 
+2018-03-12 14:58:25 +0000  112553 bytes for ./Payload/Beachvolleytävlingar.app/red.png
+copying file ./Payload/Beachvolleytävlingar.app/PkgInfo ... 
+2018-03-12 14:58:25 +0000  8 bytes for ./Payload/Beachvolleytävlingar.app/PkgInfo
+2018-03-12 14:58:25 +0000  copying file ./SwiftSupport/iphoneos/libswiftMapKit.dylib ... 
+2018-03-12 14:58:25 +0000  310832 bytes for ./SwiftSupport/iphoneos/libswiftMapKit.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreImage.dylib ... 
+2018-03-12 14:58:25 +0000  258160 bytes for ./SwiftSupport/iphoneos/libswiftCoreImage.dylib
+copying file ./SwiftSupport/iphoneos/libswiftObjectiveC.dylib ... 
+2018-03-12 14:58:25 +0000  505680 bytes for ./SwiftSupport/iphoneos/libswiftObjectiveC.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCore.dylib ... 
+2018-03-12 14:58:28 +0000  68838832 bytes for ./SwiftSupport/iphoneos/libswiftCore.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreGraphics.dylib ... 
+2018-03-12 14:58:28 +0000  1268736 bytes for ./SwiftSupport/iphoneos/libswiftCoreGraphics.dylib
+2018-03-12 14:58:28 +0000  copying file ./SwiftSupport/iphoneos/libswiftUIKit.dylib ... 
+2018-03-12 14:58:29 +0000  789072 bytes for ./SwiftSupport/iphoneos/libswiftUIKit.dylib
+copying file ./SwiftSupport/iphoneos/libswiftMetal.dylib ... 
+2018-03-12 14:58:29 +0000  399264 bytes for ./SwiftSupport/iphoneos/libswiftMetal.dylib
+copying file ./SwiftSupport/iphoneos/libswiftDispatch.dylib ... 
+2018-03-12 14:58:29 +0000  2440624 bytes for ./SwiftSupport/iphoneos/libswiftDispatch.dylib
+copying file ./SwiftSupport/iphoneos/libswiftos.dylib ... 
+2018-03-12 14:58:29 +0000  446288 bytes for ./SwiftSupport/iphoneos/libswiftos.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreFoundation.dylib ... 
+2018-03-12 14:58:29 +0000  257584 bytes for ./SwiftSupport/iphoneos/libswiftCoreFoundation.dylib
+2018-03-12 14:58:29 +0000  copying file ./SwiftSupport/iphoneos/libswiftDarwin.dylib ... 
+2018-03-12 14:58:29 +0000  599168 bytes for ./SwiftSupport/iphoneos/libswiftDarwin.dylib
+copying file ./SwiftSupport/iphoneos/libswiftQuartzCore.dylib ... 
+2018-03-12 14:58:29 +0000  310864 bytes for ./SwiftSupport/iphoneos/libswiftQuartzCore.dylib
+copying file ./SwiftSupport/iphoneos/libswiftFoundation.dylib ... 
+2018-03-12 14:58:30 +0000  27746368 bytes for ./SwiftSupport/iphoneos/libswiftFoundation.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreLocation.dylib ... 
+2018-03-12 14:58:30 +0000  401312 bytes for ./SwiftSupport/iphoneos/libswiftCoreLocation.dylib
+2018-03-12 14:58:30 +0000  copying file ./Symbols/8F1FC4A9-61E2-3E8E-90EE-A15FAF3514B6.symbols ... 
+2018-03-12 14:58:30 +0000  18704 bytes for ./Symbols/8F1FC4A9-61E2-3E8E-90EE-A15FAF3514B6.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/8F05AF83-ACCB-3468-96B3-5D9FBCCB678B.symbols ... 
+2018-03-12 14:58:30 +0000  23952 bytes for ./Symbols/8F05AF83-ACCB-3468-96B3-5D9FBCCB678B.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/BEAE879C-0989-377F-A240-C66C1ECB5CA6.symbols ... 
+2018-03-12 14:58:30 +0000  96544 bytes for ./Symbols/BEAE879C-0989-377F-A240-C66C1ECB5CA6.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/C642D694-42C3-3F92-AE93-21CB863D89F0.symbols ... 
+2018-03-12 14:58:30 +0000  55664 bytes for ./Symbols/C642D694-42C3-3F92-AE93-21CB863D89F0.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/669D67CE-A50D-33F2-A136-5CC770BE155D.symbols ... 
+2018-03-12 14:58:30 +0000  7384 bytes for ./Symbols/669D67CE-A50D-33F2-A136-5CC770BE155D.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/B077EDDE-C3A8-319D-8AD2-E70E3D7E8369.symbols ... 
+2018-03-12 14:58:30 +0000  2736 bytes for ./Symbols/B077EDDE-C3A8-319D-8AD2-E70E3D7E8369.symbols
+copying file ./Symbols/20EC95E3-B8F4-3324-BACB-478BC6D7C2BD.symbols ... 
+2018-03-12 14:58:30 +0000  13232 bytes for ./Symbols/20EC95E3-B8F4-3324-BACB-478BC6D7C2BD.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/E23DA477-3010-39FE-BCD2-D28CD9CF0F54.symbols ... 
+2018-03-12 14:58:30 +0000  1595992 bytes for ./Symbols/E23DA477-3010-39FE-BCD2-D28CD9CF0F54.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/BFE40B3D-FE18-37BB-B500-9F381025E07F.symbols ... 
+2456 bytes for ./Symbols/BFE40B3D-FE18-37BB-B500-9F381025E07F.symbols
+copying file ./Symbols/BD876457-63BB-3D4A-91EA-01DDB74D22BD.symbols ... 
+2824 bytes for ./Symbols/BD876457-63BB-3D4A-91EA-01DDB74D22BD.symbols
+copying file ./Symbols/DC3BBFE6-5D4F-3329-B275-4894140BA397.symbols ... 
+2018-03-12 14:58:30 +0000  96392 bytes for ./Symbols/DC3BBFE6-5D4F-3329-B275-4894140BA397.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/0A2B3149-C0C8-34FB-8E0D-ADE27625A6A2.symbols ... 
+2018-03-12 14:58:30 +0000  37952 bytes for ./Symbols/0A2B3149-C0C8-34FB-8E0D-ADE27625A6A2.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/A439B438-2F6B-3891-B039-AD9CE4A91738.symbols ... 
+2018-03-12 14:58:30 +0000  7736 bytes for ./Symbols/A439B438-2F6B-3891-B039-AD9CE4A91738.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/9AF40A87-C38A-3111-AFD1-C247EA11F6A0.symbols ... 
+2018-03-12 14:58:30 +0000  232040 bytes for ./Symbols/9AF40A87-C38A-3111-AFD1-C247EA11F6A0.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/47F791B0-50C7-3E18-B842-7C2E86DEC6C0.symbols ... 
+2018-03-12 14:58:30 +0000  38552 bytes for ./Symbols/47F791B0-50C7-3E18-B842-7C2E86DEC6C0.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/0688048C-C8B0-38DF-9C3B-7974A1EBD9E4.symbols ... 
+2018-03-12 14:58:30 +0000  55696 bytes for ./Symbols/0688048C-C8B0-38DF-9C3B-7974A1EBD9E4.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/0EC3AB9A-D4CE-3B63-A2AF-8872C7268DD2.symbols ... 
+2018-03-12 14:58:30 +0000  12128 bytes for ./Symbols/0EC3AB9A-D4CE-3B63-A2AF-8872C7268DD2.symbols
+copying file ./Symbols/A86469E0-988B-3731-8C5A-93FFFFF4D558.symbols ... 
+2018-03-12 14:58:30 +0000  23952 bytes for ./Symbols/A86469E0-988B-3731-8C5A-93FFFFF4D558.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/4455217F-C1A0-30E6-A394-7CA00C8008B9.symbols ... 
+2018-03-12 14:58:30 +0000  24384 bytes for ./Symbols/4455217F-C1A0-30E6-A394-7CA00C8008B9.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/97CC8CE2-958C-3A15-8B2E-C20D8736A5C5.symbols ... 
+2018-03-12 14:58:30 +0000  234272 bytes for ./Symbols/97CC8CE2-958C-3A15-8B2E-C20D8736A5C5.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/0B8AA04B-74BC-38BF-BD6F-895D9F96850E.symbols ... 
+2018-03-12 14:58:30 +0000  38552 bytes for ./Symbols/0B8AA04B-74BC-38BF-BD6F-895D9F96850E.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/D039510A-07EC-3727-9170-381BFC114B5C.symbols ... 
+2018-03-12 14:58:30 +0000  18704 bytes for ./Symbols/D039510A-07EC-3727-9170-381BFC114B5C.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/4AD01A7C-D52A-3FEF-B87B-8ADB5E65BFA0.symbols ... 
+2018-03-12 14:58:30 +0000  13056 bytes for ./Symbols/4AD01A7C-D52A-3FEF-B87B-8ADB5E65BFA0.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/7A6C628E-C037-3BAA-99A4-7B65BF23F9EA.symbols ... 
+2018-03-12 14:58:30 +0000  1592304 bytes for ./Symbols/7A6C628E-C037-3BAA-99A4-7B65BF23F9EA.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/6296CF8D-A0E4-3A0D-9F67-0FACC01AC40C.symbols ... 
+2352 bytes for ./Symbols/6296CF8D-A0E4-3A0D-9F67-0FACC01AC40C.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/2EF7D5E4-1BAC-3D5A-9522-3EB738662406.symbols ... 
+2018-03-12 14:58:30 +0000  12304 bytes for ./Symbols/2EF7D5E4-1BAC-3D5A-9522-3EB738662406.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/71EB68D6-724C-3CED-A52F-6260DF1BFC0E.symbols ... 
+2018-03-12 14:58:30 +0000  234128 bytes for ./Symbols/71EB68D6-724C-3CED-A52F-6260DF1BFC0E.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/964D2D36-EE64-3922-AD7F-5E03804DA319.symbols ... 
+2018-03-12 14:58:30 +0000  4443976 bytes for ./Symbols/964D2D36-EE64-3922-AD7F-5E03804DA319.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/9399792D-76DE-3474-8B44-96D5D3015EB7.symbols ... 
+2018-03-12 14:58:30 +0000  4425016 bytes for ./Symbols/9399792D-76DE-3474-8B44-96D5D3015EB7.symbols
+2018-03-12 14:58:30 +0000  copying file ./Symbols/1BD1C309-A736-3946-864D-E1061B2DCB1E.symbols ... 
+55696 bytes for ./Symbols/1BD1C309-A736-3946-864D-E1061B2DCB1E.symbols
+copying file ./Symbols/6B675DA0-5BE8-3835-AFE7-31BCB0AB0A93.symbols ... 
+2018-03-12 14:58:31 +0000  4443392 bytes for ./Symbols/6B675DA0-5BE8-3835-AFE7-31BCB0AB0A93.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/0DFA15B3-1478-32E7-A419-78CE8B719784.symbols ... 
+7736 bytes for ./Symbols/0DFA15B3-1478-32E7-A419-78CE8B719784.symbols
+copying file ./Symbols/19839AB0-4E91-3B65-98FE-BFC72D158F74.symbols ... 
+2018-03-12 14:58:31 +0000  96608 bytes for ./Symbols/19839AB0-4E91-3B65-98FE-BFC72D158F74.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/5BCB6005-A832-3842-887E-311F8FFF7F3F.symbols ... 
+2018-03-12 14:58:31 +0000  13056 bytes for ./Symbols/5BCB6005-A832-3842-887E-311F8FFF7F3F.symbols
+copying file ./Symbols/C260F959-AC44-39B0-A834-D5DE99D6C799.symbols ... 
+2018-03-12 14:58:31 +0000  12304 bytes for ./Symbols/C260F959-AC44-39B0-A834-D5DE99D6C799.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/BBDABE60-3B44-3238-AFFC-82B59BCB0D17.symbols ... 
+2018-03-12 14:58:31 +0000  2736 bytes for ./Symbols/BBDABE60-3B44-3238-AFFC-82B59BCB0D17.symbols
+copying file ./Symbols/A314D724-42C6-3C86-8CE9-502D4CCB8B95.symbols ... 
+2018-03-12 14:58:31 +0000  17944 bytes for ./Symbols/A314D724-42C6-3C86-8CE9-502D4CCB8B95.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/EEFCBBC7-BA36-3752-A08C-A401C4A9DD06.symbols ... 
+2018-03-12 14:58:31 +0000  7384 bytes for ./Symbols/EEFCBBC7-BA36-3752-A08C-A401C4A9DD06.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/A4CA2C4A-E953-3A43-A2CE-BC7E6D9D59E6.symbols ... 
+2018-03-12 14:58:31 +0000  7656 bytes for ./Symbols/A4CA2C4A-E953-3A43-A2CE-BC7E6D9D59E6.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/1E9F6A32-17FB-314B-865C-CA4D3D7DCFA7.symbols ... 
+2018-03-12 14:58:31 +0000  7056 bytes for ./Symbols/1E9F6A32-17FB-314B-865C-CA4D3D7DCFA7.symbols
+copying file ./Symbols/3A708B33-F4DE-362F-B769-CFBDFF462A35.symbols ... 
+2018-03-12 14:58:31 +0000  1595848 bytes for ./Symbols/3A708B33-F4DE-362F-B769-CFBDFF462A35.symbols
+2018-03-12 14:58:31 +0000  copying file ./Symbols/29D0F78B-257B-32F7-BB43-41B2C9751162.symbols ... 
+2352 bytes for ./Symbols/29D0F78B-257B-32F7-BB43-41B2C9751162.symbols
+2018-03-12 14:58:31 +0000  
+2018-03-12 14:58:31 +0000  /usr/bin/ditto exited with 0
+2018-03-12 14:58:31 +0000  2018-03-12 14:58:31 +0000  
+
+2018-03-12 14:58:31 +0000  Processing step: IDEDistributionCreateManifestStep
+2018-03-12 14:58:31 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

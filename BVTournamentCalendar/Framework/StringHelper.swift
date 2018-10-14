@@ -54,6 +54,22 @@ extension String {
         return result
     }
     
+    func getStringAfter(_ start: String, startAt: String?="") -> String{
+        //print("getStringBetween: '\(start)' '\(end)' ")
+        let theStartIndex = self.range(of: startAt!)
+        var theString = self;
+        if(theStartIndex != nil) {
+            theString = self.substring(from: (theStartIndex?.upperBound)!)
+        }
+        
+        let startIndex = theString.range(of: start)
+        if(startIndex == nil) {
+            return ""
+        }
+        //print("start: \(startIndex)")
+        return theString.substring(from: (startIndex?.upperBound)!)
+    }
+    
     init(htmlEncodedString: String) {
             let encodedData = htmlEncodedString.data(using: String.Encoding.unicode)!
             let attributedOptions = [String: AnyObject]()

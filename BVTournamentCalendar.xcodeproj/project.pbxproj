@@ -50,12 +50,23 @@
 		44B00B1D1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B1C1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift */; };
 		44B00B1F1B541BC2009CAF43 /* PointsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */; };
 		44B00B211B543A42009CAF43 /* PlayerRankingsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B00B201B543A42009CAF43 /* PlayerRankingsDownloader.swift */; };
+		44C400F91FFED6C6000A7495 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F51FFED6C5000A7495 /* red.png */; };
+		44C400FA1FFED6C6000A7495 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F61FFED6C6000A7495 /* green.png */; };
+		44C400FB1FFED6C6000A7495 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F71FFED6C6000A7495 /* normal.png */; };
+		44C400FC1FFED6C6000A7495 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F81FFED6C6000A7495 /* blue.png */; };
+		44C400FE1FFED6D4000A7495 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400FD1FFED6D4000A7495 /* black.png */; };
 		44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F61B15CB0400E2F545 /* AppDelegate.swift */; };
 		44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F81B15CB0400E2F545 /* FirstViewController.swift */; };
 		44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CC44FC1B15CB0400E2F545 /* Main.storyboard */; };
 		44CC45001B15CB0400E2F545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CC44FF1B15CB0400E2F545 /* Images.xcassets */; };
 		44CC45031B15CB0500E2F545 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CC45011B15CB0500E2F545 /* LaunchScreen.xib */; };
 		44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CC45181B15CB9400E2F545 /* libxml2.dylib */; };
+		44CE91B22165327F007AB46B /* planer.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CE91B12165327F007AB46B /* planer.png */; };
+		44CE91B521653BF7007AB46B /* CourtMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CE91B421653BF7007AB46B /* CourtMapViewController.swift */; };
+		44CE91C121654E6C007AB46B /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CE91B921654E6C007AB46B /* GoogleUtilities.framework */; };
+		44CE91C221654E6C007AB46B /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CE91BA21654E6C007AB46B /* nanopb.framework */; };
+		44CE91C521654E6C007AB46B /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CE91BD21654E6C007AB46B /* GoogleAppMeasurement.framework */; };
+		44CE91C821654FF0007AB46B /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CE91C621654FEF007AB46B /* leveldb-library.framework */; };
 		44EDE1781B7E24C300BB9C0D /* PlayerRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */; };
 		44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A501CDC571A0072B359 /* ResultsViewController.swift */; };
 		44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A531CDC576F0072B359 /* ResultsDownloader.swift */; };
@@ -64,16 +75,6 @@
 		A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */; };
 		A1F6FCD51E71997700FB945A /* TournamentLocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		44CC45091B15CB0500E2F545 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 44CC44E91B15CB0400E2F545 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 44CC44F01B15CB0400E2F545;
-			remoteInfo = BVTournamentCalendar;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDetailDownloader.swift; sourceTree = "<group>"; };
@@ -124,6 +125,11 @@
 		44B00B1C1B4D1BA6009CAF43 /* UIVewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVewControllerExtensions.swift; sourceTree = "<group>"; };
 		44B00B1E1B541BC2009CAF43 /* PointsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTableVC.swift; sourceTree = "<group>"; };
 		44B00B201B543A42009CAF43 /* PlayerRankingsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingsDownloader.swift; sourceTree = "<group>"; };
+		44C400F51FFED6C5000A7495 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		44C400F61FFED6C6000A7495 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		44C400F71FFED6C6000A7495 /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
+		44C400F81FFED6C6000A7495 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		44C400FD1FFED6D4000A7495 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beachvolleytävlingar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CC44F51B15CB0400E2F545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44CC44F61B15CB0400E2F545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,8 +137,13 @@
 		44CC44FD1B15CB0400E2F545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44CC44FF1B15CB0400E2F545 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44CC45021B15CB0500E2F545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		44CC45081B15CB0500E2F545 /* BeachvolleytavlingarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeachvolleytavlingarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CC45181B15CB9400E2F545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		44CE91B12165327F007AB46B /* planer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planer.png; sourceTree = "<group>"; };
+		44CE91B421653BF7007AB46B /* CourtMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtMapViewController.swift; sourceTree = "<group>"; };
+		44CE91B921654E6C007AB46B /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		44CE91BA21654E6C007AB46B /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		44CE91BD21654E6C007AB46B /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		44CE91C621654FEF007AB46B /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
 		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
@@ -147,15 +158,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44CE91C121654E6C007AB46B /* GoogleUtilities.framework in Frameworks */,
+				44CE91C521654E6C007AB46B /* GoogleAppMeasurement.framework in Frameworks */,
 				A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */,
+				44CE91C221654E6C007AB46B /* nanopb.framework in Frameworks */,
 				44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44CC45051B15CB0500E2F545 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				44CE91C821654FF0007AB46B /* leveldb-library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +215,12 @@
 		44686A2A1B1734C0004307E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				44CE91B12165327F007AB46B /* planer.png */,
+				44C400FD1FFED6D4000A7495 /* black.png */,
+				44C400F81FFED6C6000A7495 /* blue.png */,
+				44C400F61FFED6C6000A7495 /* green.png */,
+				44C400F71FFED6C6000A7495 /* normal.png */,
+				44C400F51FFED6C5000A7495 /* red.png */,
 				444E4E0F1C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg */,
 				4492BE981B42C79000F24441 /* sand_menu_highlight.png */,
 				4492BE991B42C79000F24441 /* sand_menu.png */,
@@ -280,6 +294,7 @@
 		4492BE861B4178B000F24441 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
+				44CC45181B15CB9400E2F545 /* libxml2.dylib */,
 			);
 			name = SWRevealViewController;
 			sourceTree = "<group>";
@@ -289,7 +304,6 @@
 			children = (
 				4492BE861B4178B000F24441 /* SWRevealViewController */,
 				44686A1B1B165096004307E7 /* TFHpple */,
-				44CC45181B15CB9400E2F545 /* libxml2.dylib */,
 				44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */,
 				44CC44F21B15CB0400E2F545 /* Products */,
 				A120CA7B1E76C4F700B25B4B /* Frameworks */,
@@ -300,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */,
-				44CC45081B15CB0500E2F545 /* BeachvolleytavlingarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,6 +321,7 @@
 		44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				44CE91B3216539F7007AB46B /* Court Controller */,
 				44F39A521CDC572A0072B359 /* Results Controller */,
 				A120CA7E1E76DFA600B25B4B /* Map Controller */,
 				448B30571B81E3BD00DBB7E7 /* Tournament Details Controller */,
@@ -335,6 +349,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		44CE91B3216539F7007AB46B /* Court Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44CE91B421653BF7007AB46B /* CourtMapViewController.swift */,
+			);
+			path = "Court Controller";
+			sourceTree = "<group>";
+		};
 		44F39A521CDC572A0072B359 /* Results Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +369,10 @@
 		A120CA7B1E76C4F700B25B4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44CE91C621654FEF007AB46B /* leveldb-library.framework */,
+				44CE91BD21654E6C007AB46B /* GoogleAppMeasurement.framework */,
+				44CE91B921654E6C007AB46B /* GoogleUtilities.framework */,
+				44CE91BA21654E6C007AB46B /* nanopb.framework */,
 				A120CA7C1E76C4F700B25B4B /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -381,24 +407,6 @@
 			productReference = 44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		44CC45071B15CB0500E2F545 /* BeachvolleytavlingarTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44CC45151B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "BeachvolleytavlingarTests" */;
-			buildPhases = (
-				44CC45041B15CB0500E2F545 /* Sources */,
-				44CC45051B15CB0500E2F545 /* Frameworks */,
-				44CC45061B15CB0500E2F545 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				44CC450A1B15CB0500E2F545 /* PBXTargetDependency */,
-			);
-			name = BeachvolleytavlingarTests;
-			productName = BVTournamentCalendarTests;
-			productReference = 44CC45081B15CB0500E2F545 /* BeachvolleytavlingarTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -412,17 +420,14 @@
 				TargetAttributes = {
 					44CC44F01B15CB0400E2F545 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = N3CRVQ437W;
+						DevelopmentTeam = J5HZ3L48U8;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 						};
-					};
-					44CC45071B15CB0500E2F545 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 44CC44F01B15CB0400E2F545;
 					};
 				};
 			};
@@ -440,7 +445,6 @@
 			projectRoot = "";
 			targets = (
 				44CC44F01B15CB0400E2F545 /* Beachvolleytävlingar */,
-				44CC45071B15CB0500E2F545 /* BeachvolleytavlingarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -451,13 +455,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */,
+				44CE91B22165327F007AB46B /* planer.png in Resources */,
 				444E4E101C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg in Resources */,
 				442A74231B2F004700875705 /* normal-back.png in Resources */,
+				44C400FA1FFED6C6000A7495 /* green.png in Resources */,
 				44686A371B185161004307E7 /* black.png in Resources */,
+				44C400F91FFED6C6000A7495 /* red.png in Resources */,
 				44CC45031B15CB0500E2F545 /* LaunchScreen.xib in Resources */,
 				44686A391B185161004307E7 /* green.png in Resources */,
+				44C400FE1FFED6D4000A7495 /* black.png in Resources */,
 				4492BE9A1B42C79000F24441 /* sand_menu_highlight.png in Resources */,
 				4492BE951B42C51B00F24441 /* skyleft_menu.PNG in Resources */,
+				44C400FB1FFED6C6000A7495 /* normal.png in Resources */,
+				44C400FC1FFED6C6000A7495 /* blue.png in Resources */,
 				44686A381B185161004307E7 /* blue.png in Resources */,
 				44686A3A1B185161004307E7 /* normal.png in Resources */,
 				4492BE9B1B42C79000F24441 /* sand_menu.png in Resources */,
@@ -466,13 +476,6 @@
 				44CC45001B15CB0400E2F545 /* Images.xcassets in Resources */,
 				4492BE971B42C68D00F24441 /* skyleft_menu_highlight.PNG in Resources */,
 				44686A301B174188004307E7 /* sand.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44CC45061B15CB0500E2F545 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,28 +521,14 @@
 				44686A271B17049D004307E7 /* TournamentListDownloader.swift in Sources */,
 				44686A231B165096004307E7 /* TFHpple.m in Sources */,
 				446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */,
+				44CE91B521653BF7007AB46B /* CourtMapViewController.swift in Sources */,
 				448D22FA1B3972C700D1D2CB /* HttpDownloader.swift in Sources */,
 				A13C7E0B1E6D980300C33FE3 /* WeatherHelper.swift in Sources */,
 				444792BC1D06146A00F22024 /* EMBadgedBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44CC45041B15CB0500E2F545 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		44CC450A1B15CB0500E2F545 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 44CC44F01B15CB0400E2F545 /* Beachvolleytävlingar */;
-			targetProxy = 44CC45091B15CB0500E2F545 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		44CC44FC1B15CB0400E2F545 /* Main.storyboard */ = {
@@ -653,7 +642,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = N3CRVQ437W;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -662,11 +656,15 @@
 				INFOPLIST_FILE = BVTournamentCalendar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TFHpple/SandSports-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 			};
 			name = Debug;
 		};
@@ -675,7 +673,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = N3CRVQ437W;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -684,47 +687,14 @@
 				INFOPLIST_FILE = BVTournamentCalendar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TFHpple/SandSports-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		44CC45161B15CB0500E2F545 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BVTournamentCalendarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "";
-			};
-			name = Debug;
-		};
-		44CC45171B15CB0500E2F545 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BVTournamentCalendarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -745,15 +715,6 @@
 			buildConfigurations = (
 				44CC45131B15CB0500E2F545 /* Debug */,
 				44CC45141B15CB0500E2F545 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		44CC45151B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "BeachvolleytavlingarTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				44CC45161B15CB0500E2F545 /* Debug */,
-				44CC45171B15CB0500E2F545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

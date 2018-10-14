@@ -19,14 +19,15 @@ class ResultsDownloader {
     }
     
     func resultsDownload(_ tournament:TournamentDetail, klass:String, callback:@escaping (Results) -> Void) {
+        print("link")
         print(tournament.resultatLink)
-        HttpDownloader().httpGetOld(tournament.resultatLink) {
+        HttpDownloader().httpGet(tournament.resultatLink) {
             (data, error) -> Void in
             if error != nil {
-                print(error)
-                callback(Results(HTML: "<br/>Resultat ej tillgängligt", hasResults: false))
+                print(error!)
+                callback(Results(HTML: "", hasResults: false))
             } else {
-                HttpDownloader().httpGetOld("https://www.profixio.com/resultater/viskamper_soek.php") {
+                HttpDownloader().httpGet("https://www.profixio.com/resultater/viskamper_soek.php") {
                     (data, error) -> Void in
                     let klassCodeArray = TFHpple(htmlData: data).search(withXPathQuery: "//option[contains(.,\"\(klass)\")]")
                     
@@ -36,12 +37,8 @@ class ResultsDownloader {
                     }
                     
                     let klassCode = (klassCodeArray?[0] as! TFHppleElement).attributes["value"]! as! String
-                    
-                    print(klassCode)
-                    print(klass)
+
                     HttpDownloader().httpPost("https://www.profixio.com/resultater/vis_oppsett.php",
-                                              //bodyData: "kamper=on&puljeinndeling=on&klasse=alle&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
-                        //bodyData: "resultatliste=on&tabeller=on&klasse=alle&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
                     bodyData: "klasse=\(klassCode)&klubb=alle&pulje=Alle&lag=alle&vis=klasser") {
                         (postResponse, String) -> Void in
                         let results = self.parseHTML(tournament, HTMLData: postResponse!)

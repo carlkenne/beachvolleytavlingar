@@ -74,12 +74,12 @@ class PlayerRankingVC : UITableViewController
             for tp in now...(now + 10) {
                 
                 var start = tp - 10
-                var year = 2017
+                var year = 2018
                 
                 //kommer inte händ i år
                 if(start <= 0){
                     start = 16 + start
-                    year = 2016
+                    year = 2017
                 }
                 
                 var topRankings = self.results.games.filter( {(ranking: PlayerRankingGame) -> Bool in
@@ -144,11 +144,14 @@ class PlayerRankingVC : UITableViewController
                 var plats = Float(Int(tre[0])!)
                 var total = Float(Int(tre[2])!)
                 total = total - floor(total / 4) // cut off the bottom percentile since it's never really counted
-                plats = min(plats, total)
-                return round((total - plats) / (total - 1) * 100)
+                plats = min(plats - 1, total)
+                print(total)
+                print(plats)
+                print((total - plats) / (total) * 100)
+                return round((total - plats) / (total) * 100)
             }
             print("nothing")
-            return -1
+            return 0
         }
         return Int(greens.reduce(0, +) / Float(greens.count))
     }

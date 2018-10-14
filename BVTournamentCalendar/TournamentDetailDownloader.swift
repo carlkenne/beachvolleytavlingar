@@ -15,10 +15,10 @@ class TournamentDetailDownloader: DownloaderBase {
     func downloadHTML(_ tournament:Tournament, callback:@escaping (TournamentDetail) -> Void) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.selectedTournamentDetail = nil
-        HttpDownloader().httpGetOld(tournament.link as String){
+        HttpDownloader().httpGet(tournament.link as String){
             (data, error) -> Void in
             if (error != nil) {
-                print(error)
+                print(error as Any)
                 callback(self.createFailedResponse(tournament))
             } else {
                 if(self.areWeStillLoggedIn(data!) == true) {
@@ -47,13 +47,16 @@ class TournamentDetailDownloader: DownloaderBase {
         return TournamentDetail(
             arena: Arena(lat: 0, long: 0, name: "", organiser: ""),
             resultatLink: "",
+            resultatLinkNew: "",
+            liveResultatLink: "",
             registrationLink: "",
             link: tournament.link,
             table: "Could not get any information, please try again later.",
             setServerSessionCookieUrl: "",
             fromHour: "",
             toHour: "",
-            maxNoOfParticipants: 0
+            maxNoOfParticipants: 0,
+            id: ""
         )
     }
     
@@ -71,11 +74,14 @@ class TournamentDetailDownloader: DownloaderBase {
     }
     
     func parseHTML(_ tournament:Tournament, HTMLData:Data) -> TournamentDetail {
+        
         var allCells: [Any] = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//table")
         let anmalan = TFHpple(htmlData: HTMLData).search(withXPathQuery: "//input[@value='Anmälan']")
-        let resultatLink = getTextFromTD(HTMLData, query:"//td[contains(.,'resultater/vis.php')]")
+        let resultatLink = getTextFromTD(HTMLData, query:"//td[contains(.,'matches/vis.php')]")
         let registrationLink = getTextFromTD(HTMLData, query:"//td[contains(.,'pamelding/redirect.php')]")
-        
+        let id = registrationLink.getStringAfter("tknavn=")
+        let resultatLinkNew = getTextFromTD(HTMLData, query:"//td[contains(.,'matches/\(id)')]")
+
         let maxNoOfParticipants:String = cleanValue(TFHpple(htmlData: HTMLData).search(withXPathQuery: "//td[@class='startkont']")[0])
         var maxNo = 100
         if(maxNoOfParticipants.characters.count > 0){
@@ -90,13 +96,16 @@ class TournamentDetailDownloader: DownloaderBase {
         return TournamentDetail(
             arena:  tournamentLocationFinder.getArena(name: html.getStringBetween("<td id='spelplats' colspan=2>", end: "</td>"), organiser: tournament.organiser),
             resultatLink: resultatLink.replacingOccurrences(of: "http:", with: "https:"),
+            resultatLinkNew: resultatLinkNew,
+            liveResultatLink: "https://www.profixio.com/res/\(id)",
             registrationLink: registrationLink.replacingOccurrences(of: "http:", with: "https:"),
             link: tournament.link,
             table: html,
-            setServerSessionCookieUrl: self.extractOnClickLink(anmalan as! [AnyObject]),
+            setServerSessionCookieUrl: self.extractOnClickLink(anmalan! as [AnyObject]),
             fromHour: "",
             toHour: "",
-            maxNoOfParticipants: maxNo
+            maxNoOfParticipants: maxNo,
+            id: id
         )
     }
     

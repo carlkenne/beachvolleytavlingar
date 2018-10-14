@@ -12,14 +12,14 @@ class PlayerRankingsDownloader {
     func downloadHTML(_ type:String, callback:@escaping ([PlayerRanking]) -> Void) {
         //renew the session
         
-        HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/index.php") {
+        HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/index.php") {
             (data) -> Void in
             sleep(1)
             
-            HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/visrank.php?k="+type) {
+            HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/visrank.php?k="+type) {
                 (data, error) -> Void in
                 if error != nil {
-                    print(error)
+                    print(error!)
                 } else {
                     let results = self.parseHTML(data!)
                     callback( results )

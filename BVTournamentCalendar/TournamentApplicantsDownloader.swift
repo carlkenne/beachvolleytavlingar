@@ -26,7 +26,7 @@ class TournamentApplicantsDownloader {
     }
     
     func setServerCookieRequest(_ url: NSString, callback:@escaping ([Applicants]) -> Void) {
-        HttpDownloader().httpGetOld("https://www.profixio.com" + (url as String)) {
+        HttpDownloader().httpGet("https://www.profixio.com" + (url as String)) {
              (data, error) -> Void in
             sleep(1)
             self.participantsDownload(callback)
@@ -34,10 +34,10 @@ class TournamentApplicantsDownloader {
     }
     
     func participantsDownload(_ callback:@escaping ([Applicants]) -> Void) {
-        HttpDownloader().httpGetOld("https://www.profixio.com/pamelding/vis_paamelding.php") {
+        HttpDownloader().httpGet("https://www.profixio.com/pamelding/vis_paamelding.php") {
             (data, error) -> Void in
             if error != nil {
-                print(error)
+                print(error!)
                 callback([])
             } else {
                 let results = self.parseHTML(data!)
@@ -47,13 +47,13 @@ class TournamentApplicantsDownloader {
     }
     
     func parseHTML(_ HTMLData:Data) -> [Applicants] {
-        var allCells = TFHpple(htmlData: HTMLData).search(withXPathQuery: "/html/body/table[1]//td")
+        var allCells = TFHpple(htmlData: HTMLData).search(withXPathQuery: "/html/body/table[1]//td") as [Any]
         var results = [Applicants]()
         let HTMLDataAsString = String(data: HTMLData, encoding: String.Encoding.ascii)
         
-        for row in 0 ..< ((allCells?.count)!-7)/8  {
+        for row in 0 ..< ((allCells.count)-7)/8  {
             let td = (row * 8)+7
-            let teamid = getTeamId(allCells?[td])
+            let teamid = getTeamId(allCells[td])
             var player1Ranking = "";
             var player2Ranking = "";
             
@@ -64,13 +64,13 @@ class TournamentApplicantsDownloader {
             }
             
             let applicants = Applicants(
-                players: cleanValue(allCells?[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
-                club: cleanValue(allCells?[td+1]),
-                type: cleanValue(allCells?[td+2]) + getReserveCode(allCells?[td]),
-                time: cleanValue(allCells?[td+3]),
-                rankingPoints: cleanValue(allCells?[td+4]).removeAll("*"),
-                entryPoints: cleanValue(allCells?[td+5]).removeAll("*"),
-                status: cleanValue(allCells?[td+6]) == "OK",
+                players: cleanValue(allCells[td]).removeAll("(Väntelista)").removeAll(" / Partner önskas"),
+                club: cleanValue(allCells[td+1]),
+                type: cleanValue(allCells[td+2]) + getReserveCode(allCells[td]),
+                time: cleanValue(allCells[td+3]),
+                rankingPoints: cleanValue(allCells[td+4]).removeAll("*"),
+                entryPoints: cleanValue(allCells[td+5]).removeAll("*"),
+                status: cleanValue(allCells[td+6]) == "OK",
                 player1Ranking: player1Ranking,
                 player2Ranking: player2Ranking
             )
@@ -93,7 +93,6 @@ class TournamentApplicantsDownloader {
     func getTeamId(_ value:Any) -> String {
         let raw = (value as! TFHppleElement).raw
         let id = raw?.getStringBetween("vis_spillerkontaktinfo(", end: ", event)")
-        //print(id)
         return id!
     }
     

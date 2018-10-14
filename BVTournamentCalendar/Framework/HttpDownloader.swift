@@ -30,7 +30,7 @@ class HttpDownloader{
         }.resume()
     }
     
-    func httpGetOld(_ request1: String, callback: @escaping (Data?, String?) -> Void) {
+    func httpGet(_ request1: String, callback: @escaping (Data?, String?) -> Void) {
         if(request1 == "") {
             callback(nil, "empty request")
             return

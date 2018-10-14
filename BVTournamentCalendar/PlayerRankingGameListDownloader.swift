@@ -12,7 +12,7 @@ class PlayerRankingGameListDownloader : DownloaderBase {
     func downloadHTML(_ detailsUrl:String, callback:@escaping (PlayerRankingDetails) -> Void) {
         //renew the session
         
-        HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/index.php"){
+        HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/index.php"){
             (data) -> Void in
             sleep(1)
             
@@ -66,11 +66,11 @@ class PlayerRankingGameListDownloader : DownloaderBase {
         var results = [PlayerRankingGame]()
         
         for row in 0 ..< (entryPoints?.count)!/5  {
-            results.append(self.createRanking((row * 5), allCells: entryPoints as! [AnyObject], isEntryPoint: true))
+            results.append(self.createRanking((row * 5), allCells: entryPoints! as [AnyObject], isEntryPoint: true))
         }
         
         for row in 0 ..< (others?.count)!/5  {
-            results.append(self.createRanking((row * 5), allCells: others as! [AnyObject], isEntryPoint: false))
+            results.append(self.createRanking((row * 5), allCells: others! as [AnyObject], isEntryPoint: false))
         }
         let age = getAge(HTMLData);
         print(age)
