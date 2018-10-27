@@ -241,14 +241,14 @@ class PlayerRankingVC : UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(indexPath.section == viewModel.snittresultatStartIndex) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "GameRankedSimple") as UITableViewCell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GameRankedSimple")
             let rating = viewModel.snittresultatList[indexPath.row]
             cell?.detailTextLabel?.text = rating.title
             cell?.textLabel?.text = "\(rating.rating)%"
             return cell!
         }
         if(indexPath.section == viewModel.remainingRankingsStartIndex) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Upcoming") as UITableViewCell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Upcoming")
             if(indexPath.row == 0) {
                 cell?.detailTextLabel?.text = "entrypoints"
                 cell?.textLabel?.text = "tävlingsperiod"
@@ -271,7 +271,7 @@ class PlayerRankingVC : UITableViewController
         let index = indexPath.section > viewModel.rankingpointsStartIndex ? indexPath.section - 3 : indexPath.section - 2
         let tourney = self.results.games[index]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GameRanked") as UITableViewCell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameRanked")
         cell?.textLabel?.text = "plats: \(tourney.result) - (\(tourney.points) poäng)"
         cell?.detailTextLabel?.text = "\(tourney.name)"
         addImage(cell!, levelCategory: tourney.levelCategory)

@@ -2,11 +2,10 @@
 platform :ios, '8.0'
 
 target 'Beachvolleytävlingar' do
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Firebase/Core', '~> 4.5'
+  pod 'Firebase/Database', '~> 4.5'
   # Pods for Beachvolleytävlingar
+
 end

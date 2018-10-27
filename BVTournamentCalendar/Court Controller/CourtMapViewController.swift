@@ -68,18 +68,34 @@ class CourtMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         map.setRegion(region, animated: true)
         
         // get data
-        var ref: FIRDatabaseReference!
-        ref = FIRDatabase.database().reference()
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         ref.child("courts").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let courtList = snapshot.value as? NSDictionary
             
-            for (_, value) in courtList! {
+            for (key, value) in courtList! {
                 let loc = Location(with: value as! [String: Any])
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(loc.lat), CLLocationDegrees(loc.lng))
                 annotation.title = loc.title
-                annotation.subtitle = loc.description
+                
+                if(loc.title == "Mölnlycke Stensjön") {
+                    print(key)
+                }
+                var subtitle = ""
+                if(loc.description.trimmingCharacters(
+                    in: CharacterSet.whitespacesAndNewlines
+                    ) != "") {
+                    subtitle += "Info/Bokning: " + loc.description + "\n"
+                }
+                subtitle += "Planer: " + String(loc.numCourts)
+                subtitle += "\nAntenner: " + self.toString(bool:loc.hasAntennas)
+                subtitle += "\nLinjer: " + self.toString(bool:loc.hasLines)
+                subtitle += "\nNät: " + self.toString(bool:loc.hasNet)
+                annotation.subtitle = subtitle
+                
                 self.map.addAnnotation(annotation)
             }
         }) { (error) in
@@ -88,7 +104,70 @@ class CourtMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         self.map.showsUserLocation = true
     }
+    
+    func toString(bool: Bool) -> String {
+        if(bool){ return "Ja"}
+        return "Nej"
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil }
+
+        let identifier = annotation.title! as! String
+
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.glyphImage = UIImage(named: "net")
+           // var btn = UIButton(type: .detailDisclosure)
+           // btn.setImage(UIImage(named:"net"), for: .normal)
+           // annotationView?.rightCalloutAccessoryView = btn
+            
+        } else {
+        //    annotationView?.annotation = annotation
+        }
+        annotationView?.annotation = annotation
+        
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = annotation.subtitle!
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
+        subtitleLabel.adjustsFontForContentSizeCategory = true
+        annotationView?.detailCalloutAccessoryView = subtitleLabel
+        
+        annotationView?.clusteringIdentifier = "court"
+        // annotationView?.rightCalloutAccessoryView = nil
+      
+        return annotationView
+    }
 }
+/*
+class CourtAnnotationView: MKMarkerAnnotationView {
+    
+    static let ReuseID = "courtAnnotation"
+    
+    /// - Tag: ClusterIdentifier
+    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        clusteringIdentifier = "court"
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForDisplay() {
+        super.prepareForDisplay()
+        displayPriority = .defaultLow
+        markerTintColor = UIColor.unicycleColor
+        glyphImage = #imageLiteral(resourceName: "unicycle")
+    }
+}
+ */
+
+
 
 struct Location {
     let description: String;

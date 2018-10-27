@@ -141,7 +141,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
         if(tournament.moreInfo){
             cellName = "MoreInfo"
         }
-        let cell = table.dequeueReusableCell(withIdentifier: cellName) as UITableViewCell!
+        let cell = table.dequeueReusableCell(withIdentifier: cellName)
         cell?.textLabel?.text = tournament.name
             .replacingOccurrences(of: "Svart ", with:"")
             .replacingOccurrences(of: "Sv ", with:"")

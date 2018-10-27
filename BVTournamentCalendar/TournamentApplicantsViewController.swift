@@ -47,13 +47,13 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     
     func tableView(_: UITableView, cellForRowAt cellForRowAtIndexPath: IndexPath) -> UITableViewCell{
         let applicants = self.dataSource[cellForRowAtIndexPath.section].applicants[cellForRowAtIndexPath.row]
-        var cell : UITableViewCell
+        var cell : UITableViewCell!
         if(applicants.type.range(of: "D") != nil && applicants.status) {
-            cell = table.dequeueReusableCell(withIdentifier: "ApplicantDam") as UITableViewCell!
+            cell = table.dequeueReusableCell(withIdentifier: "ApplicantDam")
         } else if (applicants.type.range(of: "H") != nil && applicants.status) {
-            cell = table.dequeueReusableCell(withIdentifier: "ApplicantHerr") as UITableViewCell!
+            cell = table.dequeueReusableCell(withIdentifier: "ApplicantHerr")
         } else {
-            cell = table.dequeueReusableCell(withIdentifier: "Applicant") as UITableViewCell!
+            cell = table.dequeueReusableCell(withIdentifier: "Applicant")
         }
         let text = applicants.players
         cell.textLabel?.text = "\(text)"

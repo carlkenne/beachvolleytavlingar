@@ -66,7 +66,6 @@
 		44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CC45181B15CB9400E2F545 /* libxml2.dylib */; };
 		44CE91B22165327F007AB46B /* planer.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CE91B12165327F007AB46B /* planer.png */; };
 		44CE91B521653BF7007AB46B /* CourtMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CE91B421653BF7007AB46B /* CourtMapViewController.swift */; };
-		44CE91C821654FF0007AB46B /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CE91C621654FEF007AB46B /* leveldb-library.framework */; };
 		44EDE1781B7E24C300BB9C0D /* PlayerRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */; };
 		44F39A511CDC571A0072B359 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A501CDC571A0072B359 /* ResultsViewController.swift */; };
 		44F39A541CDC576F0072B359 /* ResultsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F39A531CDC576F0072B359 /* ResultsDownloader.swift */; };
@@ -76,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		361E777DBDE4293F9C412515 /* Pods-Beachvolleytävlingar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytävlingar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar.debug.xcconfig"; sourceTree = "<group>"; };
 		4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDetailDownloader.swift; sourceTree = "<group>"; };
 		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
 		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		448D22F91B3972C700D1D2CB /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		4491D165217379D70073A060 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4491D16721737B6F0073A060 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = BVTournamentCalendar/MapViewController.swift; sourceTree = "<group>"; };
-		4491D16921737C0F0073A060 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		4491D16921737C0F0073A060 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4492BE8D1B417AB800F24441 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
 		4492BE8E1B417AB800F24441 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
 		4492BE901B419DB400F24441 /* RankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingVC.swift; sourceTree = "<group>"; };
@@ -142,15 +142,13 @@
 		44CC45181B15CB9400E2F545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		44CE91B12165327F007AB46B /* planer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planer.png; sourceTree = "<group>"; };
 		44CE91B421653BF7007AB46B /* CourtMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtMapViewController.swift; sourceTree = "<group>"; };
-		44CE91C621654FEF007AB46B /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
 		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
-		7C5E8437BB4D70A924CA958E /* Pods-Beachvolleytävlingar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytävlingar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar.release.xcconfig"; sourceTree = "<group>"; };
+		93EF480E1A051D9B218FADCF /* Pods-Beachvolleytävlingar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytävlingar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar.release.xcconfig"; sourceTree = "<group>"; };
 		A120CA7C1E76C4F700B25B4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
 		A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentLocationFinder.swift; path = ../TournamentLocationFinder.swift; sourceTree = "<group>"; };
-		B54343055FDB63028F865F1C /* Pods-Beachvolleytävlingar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytävlingar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +158,6 @@
 			files = (
 				A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */,
 				44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */,
-				44CE91C821654FF0007AB46B /* leveldb-library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +302,7 @@
 				44CC44F31B15CB0400E2F545 /* BVTournamentCalendar */,
 				44CC44F21B15CB0400E2F545 /* Products */,
 				A120CA7B1E76C4F700B25B4B /* Frameworks */,
-				878CE606DD4B0F3F18986AE3 /* Pods */,
+				E37FDAC1AD6FCAA879F1F461 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -366,19 +363,9 @@
 			name = "Results Controller";
 			sourceTree = "<group>";
 		};
-		878CE606DD4B0F3F18986AE3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B54343055FDB63028F865F1C /* Pods-Beachvolleytävlingar.debug.xcconfig */,
-				7C5E8437BB4D70A924CA958E /* Pods-Beachvolleytävlingar.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A120CA7B1E76C4F700B25B4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				44CE91C621654FEF007AB46B /* leveldb-library.framework */,
 				A120CA7C1E76C4F700B25B4B /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -393,6 +380,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		E37FDAC1AD6FCAA879F1F461 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				361E777DBDE4293F9C412515 /* Pods-Beachvolleytävlingar.debug.xcconfig */,
+				93EF480E1A051D9B218FADCF /* Pods-Beachvolleytävlingar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,11 +396,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44CC45121B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "Beachvolleytävlingar" */;
 			buildPhases = (
-				288327D466EC3DA086608387 /* [CP] Check Pods Manifest.lock */,
+				A923F0C2BC1540C7A5B06D19 /* [CP] Check Pods Manifest.lock */,
 				44CC44ED1B15CB0400E2F545 /* Sources */,
 				44CC44EE1B15CB0400E2F545 /* Frameworks */,
 				44CC44EF1B15CB0400E2F545 /* Resources */,
-				45CD5A3F34967C8F20AF9172 /* [CP] Embed Pods Frameworks */,
+				C3DCDF63DBC44D56064352EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -492,16 +488,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		288327D466EC3DA086608387 /* [CP] Check Pods Manifest.lock */ = {
+		A923F0C2BC1540C7A5B06D19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Beachvolleytävlingar-checkManifestLockResult.txt",
 			);
@@ -510,18 +510,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		45CD5A3F34967C8F20AF9172 /* [CP] Embed Pods Frameworks */ = {
+		C3DCDF63DBC44D56064352EA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -637,9 +645,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cake.Beachvolleyta-vlingar";
 				PRODUCT_NAME = "Säsongskalendern";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -677,8 +686,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cake.Beachvolleyta-vlingar";
 				PRODUCT_NAME = "Säsongskalendern";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -688,7 +698,7 @@
 		};
 		44CC45131B15CB0500E2F545 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B54343055FDB63028F865F1C /* Pods-Beachvolleytävlingar.debug.xcconfig */;
+			baseConfigurationReference = 361E777DBDE4293F9C412515 /* Pods-Beachvolleytävlingar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -704,7 +714,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = BVTournamentCalendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
@@ -720,7 +730,7 @@
 		};
 		44CC45141B15CB0500E2F545 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C5E8437BB4D70A924CA958E /* Pods-Beachvolleytävlingar.release.xcconfig */;
+			baseConfigurationReference = 93EF480E1A051D9B218FADCF /* Pods-Beachvolleytävlingar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -736,7 +746,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = BVTournamentCalendar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
