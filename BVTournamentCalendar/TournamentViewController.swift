@@ -52,7 +52,7 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
             let link:String = res.link
             let registrationLink:String = res.registrationLink
             let liveResultatLink:String = res.liveResultatLink
-            let resultatLinkNew:String = res.resultatLinkNew
+            
             var hideKlassDiv = ""
             if(tournament?.levelCategory == "open grön" || tournament?.levelCategory == "open svart" || tournament?.levelCategory == "mixed" || tournament?.levelCategory == "challenger"){
                 hideKlassDiv = "display:none"

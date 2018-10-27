@@ -55,7 +55,7 @@ class TournamentsDownloader : DownloaderBase {
                         levelCategory: getLevelCategory(level.lowercased(), name: name),
                         type: cleanValue(allCells[startAt+6]),
                         link: self.baseURL + (link as String),
-                        moreInfo: link.characters.count > 0
+                        moreInfo: link.count > 0
                     )
                     tournaments.append(tournament)
                 }
@@ -118,7 +118,7 @@ class TournamentsDownloader : DownloaderBase {
         }
         return tfElement.children
             .map({ self.getHref($0 as Any) })
-            .filter({ $0.characters.count > 0 })
+            .filter({ $0.count > 0 })
             .reduce(""){ $0 + $1}
     }
 }

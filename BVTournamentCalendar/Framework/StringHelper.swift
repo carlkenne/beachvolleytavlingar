@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: i)]
+        return self[self.index(self.startIndex, offsetBy: i)]
     }
     
     subscript (i: Int) -> String {
@@ -19,7 +19,7 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substring(with: Range(characters.index(startIndex, offsetBy: r.lowerBound) ..< characters.index(startIndex, offsetBy: r.upperBound)))
+        return substring(with: characters.index(startIndex, offsetBy: r.lowerBound) ..< characters.index(startIndex, offsetBy: r.upperBound))
     }
     
 
@@ -79,7 +79,7 @@ extension String {
   
 
     func replaceOccurancesUTF16(_ utf16Nbr: Int, with: Character) -> String {
-        var chars = Array(self.characters)
+        var chars = Array(self)
         var utf16arr = Array(self.utf16)
         for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {
@@ -91,7 +91,7 @@ extension String {
     }
     
     func removeOccurancesUTF16(_ utf16Nbr: Int) -> String {
-        var chars = Array(self.characters)
+        var chars = Array(self)
         var utf16arr = Array(self.utf16)
         for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {

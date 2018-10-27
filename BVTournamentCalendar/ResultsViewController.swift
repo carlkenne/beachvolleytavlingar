@@ -41,7 +41,6 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
         let tournament = appDelegate.selectedTournament
         self.text.loadHTMLString("", baseURL:URL(string:"https://www.profixio.com"))
         parent?.title = tournament?.name
-        print(tournament)
         
         loading.startAnimating()
         classPicker.isHidden = false

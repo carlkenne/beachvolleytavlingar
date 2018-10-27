@@ -138,7 +138,7 @@ class PlayerRankingVC : UITableViewController
             tournament.levelCategory == level
         }).map {
             print(level)
-            var tre = $0.result.characters.split {$0 == " "}.map { String($0) }
+            var tre = $0.result.split {$0 == " "}.map { String($0) }
             
             if(tre.count == 3) {
                 var plats = Float(Int(tre[0])!)

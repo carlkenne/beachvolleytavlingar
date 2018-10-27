@@ -84,7 +84,7 @@ class TournamentDetailDownloader: DownloaderBase {
 
         let maxNoOfParticipants:String = cleanValue(TFHpple(htmlData: HTMLData).search(withXPathQuery: "//td[@class='startkont']")[0])
         var maxNo = 100
-        if(maxNoOfParticipants.characters.count > 0){
+        if(maxNoOfParticipants.count > 0){
             maxNo = Int(maxNoOfParticipants)!
         }
         

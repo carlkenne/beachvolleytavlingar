@@ -81,7 +81,7 @@ class PlayerRankingsDownloader {
         str = str.replacingOccurrences(of: ", '', event)", with: "")
         str = str.replacingOccurrences(of: "'", with: "")
         str = str.replacingOccurrences(of: " ", with: "")
-        var both = str.characters.split {$0 == ","}.map { String($0) }
+        var both = str.split {$0 == ","}.map { String($0) }
         return "rand=0.7901839658152312&spid=\(both[0])&klasse=\(both[1])&tp="
     }
 }

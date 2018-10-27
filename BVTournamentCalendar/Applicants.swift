@@ -20,7 +20,7 @@ struct Applicants {
     let player2Ranking: String
     
     func points() -> Int {
-        if(rankingPoints.characters.count > 0) {
+        if(rankingPoints.count > 0) {
             return Int((rankingPoints as String))!
         }
         return Int((entryPoints as String))!
