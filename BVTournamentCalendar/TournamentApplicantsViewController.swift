@@ -17,7 +17,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
     @IBOutlet weak var table: UITableView!
     
     var refreshControl:UIRefreshControl!
-    func refresh(_ sender:AnyObject)
+    @objc func refresh(_ sender:AnyObject)
     {
         showTournament()
     }
@@ -28,7 +28,7 @@ class TournamentApplicantsViewController: UIViewController, UITableViewDataSourc
         self.table.dataSource = self
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(TournamentApplicantsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
+        self.refreshControl.addTarget(self, action: #selector(TournamentApplicantsViewController.refresh(_:)), for: UIControl.Event.valueChanged)
         self.table.addSubview(refreshControl)
         
         showTournament()

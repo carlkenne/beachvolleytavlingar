@@ -34,7 +34,7 @@ class WeatherHelper {
        
     }
     
-    func getWeatherEmoji(symbolID : Int) -> String {
+    func getWeatherEmoji(symbolID : Int?) -> String {
         switch symbolID {
         case 1:
             return "☀️"
@@ -86,7 +86,7 @@ class WeatherHelper {
                         
                         let symbDict = parameters[18] as [String : Any]
                         let symbValue = symbDict["values"] as! [NSNumber]
-                        let symbol = Int(symbValue[0])
+                        let symbol = Int(exactly: symbValue[0])
                         
                         let resultString = "Väder kl. 12: \(self.getWeatherEmoji(symbolID: symbol))\(temp) ºC, vind: \(wind) m/s"
                         

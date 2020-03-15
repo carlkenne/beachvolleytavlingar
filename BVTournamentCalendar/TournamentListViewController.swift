@@ -52,7 +52,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
     
     var refreshControl:UIRefreshControl!
     
-    func refresh(_ sender:AnyObject) {
+    @objc func refresh(_ sender:AnyObject) {
         loadData()
     }
     
@@ -72,7 +72,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
         loadData()
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(TournamentListViewController.refresh(_:)), for: UIControlEvents.valueChanged)
+        self.refreshControl.addTarget(self, action: #selector(TournamentListViewController.refresh(_:)), for: UIControl.Event.valueChanged)
         self.table.addSubview(refreshControl)
         
     }
@@ -124,7 +124,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
         if(typesToExclude.count > 0) {
             label = "filter(\(typesToExclude.count))"
         }
-        filterLabel.setTitle(label, for: UIControlState())
+        filterLabel.setTitle(label, for: UIControl.State())
     }
     
     override func didReceiveMemoryWarning() {
@@ -168,7 +168,7 @@ class TournamentListViewController: UIViewController, UITableViewDataSource, UIT
             .replacingOccurrences(of: " MIX", with:" Mixed")
             .replacingOccurrences(of: "Open Mix ", with:"Mixed ")
             .replacingOccurrences(of: "Mixed Open", with:"Mixed")
-            .replacingOccurrences(of: "2018", with:"")
+            .replacingOccurrences(of: "2020", with:"")
             .replacingOccurrences(of: "Open Mix", with:"Mixed")
             .replacingOccurrences(of: " Dam/Herr ", with:" ")
             .replacingOccurrences(of: "(open sv)", with:"Open")

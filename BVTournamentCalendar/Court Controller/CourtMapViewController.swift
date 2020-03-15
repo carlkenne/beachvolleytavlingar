@@ -21,8 +21,8 @@ class CourtMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if(!userLocationSet) {
-            let span: MKCoordinateSpan = MKCoordinateSpanMake(2, 2)
-            let region: MKCoordinateRegion = MKCoordinateRegionMake(locations[0].coordinate, span)
+            let span: MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 2, longitudeDelta: 2)
+            let region: MKCoordinateRegion = MKCoordinateRegion.init(center: locations[0].coordinate, span: span)
             map.setRegion(region, animated: true)
             userLocationSet = true
         }
@@ -57,11 +57,11 @@ class CourtMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         if let location = map.userLocation.location?.coordinate {
             print("nolocation")
-            region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(10, 10))
+            region = MKCoordinateRegion.init(center: location, span: MKCoordinateSpan.init(latitudeDelta: 10, longitudeDelta: 10))
             userLocationSet = true
         } else {
             let sweCenter = CLLocationCoordinate2DMake(CLLocationDegrees(60.492579), CLLocationDegrees(15.286471))
-            region = MKCoordinateRegionMake(sweCenter, MKCoordinateSpanMake(10, 10))
+            region = MKCoordinateRegion.init(center: sweCenter, span: MKCoordinateSpan.init(latitudeDelta: 10, longitudeDelta: 10))
             userLocationSet = false
         }
         

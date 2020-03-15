@@ -1,0 +1,604 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TournamentDetailDownloader"
+provides-nominal:
+- "20Beachvolleytavlingar26TournamentDetailDownloaderC"
+provides-member:
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "-"
+- !private "<"
+- !private "=="
+- !private ">"
+- "AnyObject"
+- !private "AppDelegate"
+- !private "Arena"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Data"
+- "DownloaderBase"
+- "FloatLiteralType"
+- !private "HttpDownloader"
+- !private "Int"
+- "IntegerLiteralType"
+- "NSString"
+- "String"
+- !private "StringLiteralType"
+- !private "TFHpple"
+- !private "TFHppleElement"
+- "Tournament"
+- "TournamentDetail"
+- "TournamentDetailDownloader"
+- "TournamentLocationFinder"
+- !private "TournamentsDownloader"
+- !private "UIApplication"
+- "Void"
+- !private "print"
+- !private "sleep"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["20Beachvolleytavlingar11AppDelegateC", "selectedTournamentDetail"]
+- !private ["20Beachvolleytavlingar5ArenaV", "init"]
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "count"]
+- !private ["SK", "getStringAfter"]
+- !private ["SK", "getStringBetween"]
+- !private ["SK", "replacingOccurrences"]
+- !private ["SK", "subscript"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "attributes"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "getStringAfter"]
+- !private ["s7CVarArgP", "getStringBetween"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "raw"]
+- !private ["s7CVarArgP", "replacingOccurrences"]
+- !private ["s7CVarArgP", "search"]
+- !private ["s7CVarArgP", "selectedTournamentDetail"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", "count"]
+- !private ["Sl", "getStringAfter"]
+- !private ["Sl", "getStringBetween"]
+- !private ["Sl", "replacingOccurrences"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "count"]
+- !private ["SL", "getStringAfter"]
+- !private ["SL", "getStringBetween"]
+- !private ["SL", "init"]
+- !private ["SL", "replacingOccurrences"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "attributes"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "getStringAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "getStringBetween"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "raw"]
+- !private ["s28CustomDebugStringConvertibleP", "replacingOccurrences"]
+- !private ["s28CustomDebugStringConvertibleP", "search"]
+- !private ["s28CustomDebugStringConvertibleP", "selectedTournamentDetail"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "getStringAfter"]
+- !private ["s17CustomReflectableP", "getStringBetween"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "replacingOccurrences"]
+- !private ["s17CustomReflectableP", "search"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "attributes"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "getStringAfter"]
+- !private ["s23CustomStringConvertibleP", "getStringBetween"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "raw"]
+- !private ["s23CustomStringConvertibleP", "replacingOccurrences"]
+- !private ["s23CustomStringConvertibleP", "search"]
+- !private ["s23CustomStringConvertibleP", "selectedTournamentDetail"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
+- !private ["Se", "getStringAfter"]
+- !private ["Se", "getStringBetween"]
+- !private ["Se", "init"]
+- !private ["Se", "replacingOccurrences"]
+- !private ["Se", "search"]
+- !private ["Se", "subscript"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "subscript"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "AnyObject"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "AppDelegate"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "Arena"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "Bool"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "Data"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "HttpDownloader"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "Int"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "NSString"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "String"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "TFHpple"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "TFHppleElement"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "Tournament"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "TournamentDetail"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "TournamentLocationFinder"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "TournamentsDownloader"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "UIApplication"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "Void"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", ""]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "areWeStillLoggedIn"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "cleanValue"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "createFailedResponse"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "downloadHTML"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "extractOnClickLink"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "getTextFromTD"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "init"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "init"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "parseHTML"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "print"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "retries"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "sleep"]
+- ["20Beachvolleytavlingar14DownloaderBaseC", "tournamentLocationFinder"]
+- !private ["SE", "count"]
+- !private ["SE", "getStringAfter"]
+- !private ["SE", "getStringBetween"]
+- !private ["SE", "init"]
+- !private ["SE", "replacingOccurrences"]
+- !private ["SE", "search"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "attributes"]
+- !private ["SQ", "count"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "getStringAfter"]
+- !private ["SQ", "getStringBetween"]
+- !private ["SQ", "init"]
+- !private ["SQ", "raw"]
+- !private ["SQ", "replacingOccurrences"]
+- !private ["SQ", "search"]
+- !private ["SQ", "selectedTournamentDetail"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "getStringAfter"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "getStringBetween"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "count"]
+- !private ["s23ExpressibleByNilLiteralP", "replacingOccurrences"]
+- !private ["s23ExpressibleByNilLiteralP", "search"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s32ExpressibleByStringInterpolationP", "getStringAfter"]
+- !private ["s32ExpressibleByStringInterpolationP", "getStringBetween"]
+- !private ["s32ExpressibleByStringInterpolationP", "replacingOccurrences"]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", "getStringAfter"]
+- !private ["s26ExpressibleByStringLiteralP", "getStringBetween"]
+- !private ["s26ExpressibleByStringLiteralP", "replacingOccurrences"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "getStringAfter"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "getStringBetween"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "attributes"]
+- !private ["SH", "count"]
+- !private ["SH", "delegate"]
+- !private ["SH", "getStringAfter"]
+- !private ["SH", "getStringBetween"]
+- !private ["SH", "init"]
+- !private ["SH", "raw"]
+- !private ["SH", "replacingOccurrences"]
+- !private ["SH", "search"]
+- !private ["SH", "selectedTournamentDetail"]
+- !private ["SH", "shared"]
+- !private ["SH", "subscript"]
+- !private ["20Beachvolleytavlingar14HttpDownloaderC", "httpGet"]
+- !private ["20Beachvolleytavlingar14HttpDownloaderC", "init"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s25LosslessStringConvertibleP", "getStringAfter"]
+- !private ["s25LosslessStringConvertibleP", "getStringBetween"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "replacingOccurrences"]
+- !private ["s10MirrorPathP", "count"]
+- !private ["s10MirrorPathP", "getStringAfter"]
+- !private ["s10MirrorPathP", "getStringBetween"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "replacingOccurrences"]
+- !private ["SM", "count"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSCodingP", "count"]
+- !private ["So8NSCodingP", "getStringAfter"]
+- !private ["So8NSCodingP", "getStringBetween"]
+- !private ["So8NSCodingP", "replacingOccurrences"]
+- !private ["So9NSCopyingP", "count"]
+- !private ["So9NSCopyingP", "getStringAfter"]
+- !private ["So9NSCopyingP", "getStringBetween"]
+- !private ["So9NSCopyingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderReadingP", "count"]
+- !private ["So21NSItemProviderReadingP", "getStringAfter"]
+- !private ["So21NSItemProviderReadingP", "getStringBetween"]
+- !private ["So21NSItemProviderReadingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderWritingP", "count"]
+- !private ["So21NSItemProviderWritingP", "getStringAfter"]
+- !private ["So21NSItemProviderWritingP", "getStringBetween"]
+- !private ["So21NSItemProviderWritingP", "replacingOccurrences"]
+- !private ["So16NSMutableCopyingP", "count"]
+- !private ["So16NSMutableCopyingP", "getStringAfter"]
+- !private ["So16NSMutableCopyingP", "getStringBetween"]
+- !private ["So16NSMutableCopyingP", "replacingOccurrences"]
+- !private ["So8NSObjectC", "attributes"]
+- !private ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "getStringAfter"]
+- !private ["So8NSObjectC", "getStringBetween"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "raw"]
+- !private ["So8NSObjectC", "replacingOccurrences"]
+- !private ["So8NSObjectC", "search"]
+- !private ["So8NSObjectC", "selectedTournamentDetail"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectP", "attributes"]
+- !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "getStringAfter"]
+- !private ["So8NSObjectP", "getStringBetween"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "raw"]
+- !private ["So8NSObjectP", "replacingOccurrences"]
+- !private ["So8NSObjectP", "search"]
+- !private ["So8NSObjectP", "selectedTournamentDetail"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So14NSSecureCodingP", "count"]
+- !private ["So14NSSecureCodingP", "getStringAfter"]
+- !private ["So14NSSecureCodingP", "getStringBetween"]
+- !private ["So14NSSecureCodingP", "replacingOccurrences"]
+- !private ["So8NSStringC", "count"]
+- !private ["So8NSStringC", "getStringAfter"]
+- !private ["So8NSStringC", "getStringBetween"]
+- !private ["So8NSStringC", "replacingOccurrences"]
+- !private ["Sj", "init"]
+- !private ["Sq", "count"]
+- !private ["Sq", "replacingOccurrences"]
+- !private ["Sq", "search"]
+- !private ["Sq", "subscript"]
+- !private ["Sk", "count"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "count"]
+- !private ["Sm", "getStringAfter"]
+- !private ["Sm", "getStringBetween"]
+- !private ["Sm", "replacingOccurrences"]
+- !private ["Sm", "subscript"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "count"]
+- !private ["ST", "getStringAfter"]
+- !private ["ST", "getStringBetween"]
+- !private ["ST", "replacingOccurrences"]
+- !private ["ST", "subscript"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["SS", "count"]
+- !private ["SS", "getStringAfter"]
+- !private ["SS", "getStringBetween"]
+- !private ["SS", "replacingOccurrences"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["Sy", "count"]
+- !private ["Sy", "getStringAfter"]
+- !private ["Sy", "getStringBetween"]
+- !private ["Sy", "replacingOccurrences"]
+- !private ["So7TFHppleC", "init"]
+- !private ["So7TFHppleC", "search"]
+- !private ["So14TFHppleElementC", "attributes"]
+- !private ["So14TFHppleElementC", "raw"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "count"]
+- !private ["s16TextOutputStreamP", "getStringAfter"]
+- !private ["s16TextOutputStreamP", "getStringBetween"]
+- !private ["s16TextOutputStreamP", "replacingOccurrences"]
+- !private ["s20TextOutputStreamableP", "count"]
+- !private ["s20TextOutputStreamableP", "getStringAfter"]
+- !private ["s20TextOutputStreamableP", "getStringBetween"]
+- !private ["s20TextOutputStreamableP", "replacingOccurrences"]
+- !private ["20Beachvolleytavlingar10TournamentV", "link"]
+- !private ["20Beachvolleytavlingar10TournamentV", "organiser"]
+- !private ["20Beachvolleytavlingar16TournamentDetailV", "init"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "AnyObject"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "AppDelegate"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "Arena"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "Bool"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "Data"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "HttpDownloader"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "Int"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "NSString"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "String"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "TFHpple"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "TFHppleElement"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "Tournament"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "TournamentDetail"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "TournamentLocationFinder"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "TournamentsDownloader"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "UIApplication"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "Void"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "areWeStillLoggedIn"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "cleanValue"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "createFailedResponse"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "downloadHTML"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "extractOnClickLink"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "getTextFromTD"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "init"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "parseHTML"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "print"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "retries"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "sleep"]
+- ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "tournamentLocationFinder"]
+- !private ["20Beachvolleytavlingar24TournamentLocationFinderC", "getArena"]
+- ["20Beachvolleytavlingar24TournamentLocationFinderC", "init"]
+- !private ["20Beachvolleytavlingar21TournamentsDownloaderC", "downloadHTML"]
+- !private ["20Beachvolleytavlingar21TournamentsDownloaderC", "init"]
+- !private ["So13UIApplicationC", "delegate"]
+- !private ["So13UIApplicationC", "shared"]
+- !private ["So21UIApplicationDelegateP", "selectedTournamentDetail"]
+- !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "selectedTournamentDetail"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So11UIResponderC", "delegate"]
+- !private ["So11UIResponderC", "selectedTournamentDetail"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "delegate"]
+- !private ["So30UIResponderStandardEditActionsP", "selectedTournamentDetail"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "selectedTournamentDetail"]
+- !private ["So23UIUserActivityRestoringP", "shared"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "getStringAfter"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "getStringBetween"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "replacingOccurrences"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "getStringAfter"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "getStringBetween"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "getStringAfter"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "getStringBetween"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "replacingOccurrences"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "getStringAfter"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "getStringBetween"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "getStringAfter"]
+- !private ["s19_HasContiguousBytesP", "getStringBetween"]
+- !private ["s19_HasContiguousBytesP", "replacingOccurrences"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "getStringAfter"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "getStringBetween"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "replacingOccurrences"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "attributes"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getStringAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getStringBetween"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raw"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "replacingOccurrences"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "search"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectedTournamentDetail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "attributes"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getStringAfter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getStringBetween"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "raw"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "replacingOccurrences"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "search"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "selectedTournamentDetail"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "getStringAfter"]
+- !private ["s21_ObjectiveCBridgeableP", "getStringBetween"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "replacingOccurrences"]
+- !private ["s21_ObjectiveCBridgeableP", "search"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "20Beachvolleytavlingar11AppDelegateC"
+- !private "20Beachvolleytavlingar5ArenaV"
+- !private "Sa"
+- !private "SK"
+- !private "Sz"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SD"
+- "20Beachvolleytavlingar14DownloaderBaseC"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "SH"
+- !private "20Beachvolleytavlingar14HttpDownloaderC"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "So7TFHppleC"
+- !private "So14TFHppleElementC"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "20Beachvolleytavlingar10TournamentV"
+- !private "20Beachvolleytavlingar16TournamentDetailV"
+- "20Beachvolleytavlingar26TournamentDetailDownloaderC"
+- "20Beachvolleytavlingar24TournamentLocationFinderC"
+- !private "20Beachvolleytavlingar21TournamentsDownloaderC"
+- !private "So13UIApplicationC"
+- !private "So21UIApplicationDelegateP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So23UIUserActivityRestoringP"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/ObjectiveC.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreImage.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/QuartzCore.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Dispatch.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Metal.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Darwin.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreLocation.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Foundation.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Swift.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/UIKit.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/MapKit.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64-apple-ios.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/MapKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/TFHpple.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/SandSports-Bridging-Header.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/SWRevealViewController/SWRevealViewController.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/TFHppleElement.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/XPathQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/libxml2/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "0c67d6dd8abc4323a7ddeab0b8c2dbca"

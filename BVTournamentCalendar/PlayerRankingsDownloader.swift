@@ -13,7 +13,7 @@ class PlayerRankingsDownloader {
         //renew the session
         
         HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/index.php") {
-            (data) -> Void in
+            (data, args)  -> Void in
             sleep(1)
             
             HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/visrank.php?k="+type) {

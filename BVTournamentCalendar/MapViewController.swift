@@ -23,9 +23,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let arena = details!.arena
         
         if arena.name != "" {
-            let span: MKCoordinateSpan = MKCoordinateSpanMake(0.2, 0.2)
+            let span: MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.2, longitudeDelta: 0.2)
             let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(CLLocationDegrees(arena.lat), CLLocationDegrees(arena.long))
-            let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            let region: MKCoordinateRegion = MKCoordinateRegion.init(center: location, span: span)
             self.map.setRegion(region, animated: true)
             
             let annotation = MKPointAnnotation()

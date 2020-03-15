@@ -53,6 +53,7 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
     let _15 = "15:e"
     let _16 = "16:e"
     let _17 = "17:e"
+    let _19 = "19:e"
     let _25 = "25:e"
     let _33 = "33:e"
     let _49 = "49:e"
@@ -294,15 +295,17 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         
         let greenPointsTemplate = [
             [10, 6, 4, 2, 1],
-            [15, 9, 6, 3, 2, 2, 1],
-            [20,12, 8, 4, 3, 2, 1, 1],
+            [15, 9, 6, 3, 2, 1],
+            [18,11, 7, 4, 3, 2, 1],
+            [20,12, 8, 4, 3, 2, 1],
             [23,14, 9, 5, 3, 2, 1, 1],
             [28,17,11, 7, 4, 3, 2, 1, 1],
             [38,23,15,10, 7, 5, 3, 2, 1, 1]]
         let blackPointsTemplate = [
             [20,12, 7, 3, 1],
-            [30,18,11, 6, 5, 4, 1],
-            [40,24,15, 8, 5, 3, 2, 1],
+            [30,18,11, 6, 3, 1],
+            [35,21,13, 7, 4, 3, 1],
+            [40,24,15, 8, 5, 3, 1],
             [45,27,17,10, 6, 4, 2, 1],
             [55,33,21,13, 8, 5, 3, 2, 1],
             [75,45,29,19,13, 9, 6, 4, 2, 1]]
@@ -316,6 +319,21 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
         
         if(noOfApplicants >= 49) {
             let points = [
+                PointsRank(points:open[6][0], rank: _1),
+                PointsRank(points:open[6][1], rank: _2),
+                PointsRank(points:open[6][2], rank: _3),
+                PointsRank(points:open[6][3], rank: _5),
+                PointsRank(points:open[6][4], rank: _9),
+                PointsRank(points:open[6][5], rank: _13),
+                PointsRank(points:open[6][6], rank: _17),
+                PointsRank(points:open[6][7], rank: _25),
+                PointsRank(points:open[6][8], rank: _33),
+                PointsRank(points:open[6][9], rank: _49)
+            ]
+            return PointTable(table: points, title: "49 -")
+        }
+        if(noOfApplicants >= 33) {
+            let points = [
                 PointsRank(points:open[5][0], rank: _1),
                 PointsRank(points:open[5][1], rank: _2),
                 PointsRank(points:open[5][2], rank: _3),
@@ -324,12 +342,11 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                 PointsRank(points:open[5][5], rank: _13),
                 PointsRank(points:open[5][6], rank: _17),
                 PointsRank(points:open[5][7], rank: _25),
-                PointsRank(points:open[5][8], rank: _33),
-                PointsRank(points:open[5][9], rank: _49)
+                PointsRank(points:open[5][8], rank: _33)
             ]
-            return PointTable(table: points, title: "49 -")
+            return PointTable(table: points, title: "33 - 48")
         }
-        if(noOfApplicants >= 33) {
+        if(noOfApplicants >= 25) {
             let points = [
                 PointsRank(points:open[4][0], rank: _1),
                 PointsRank(points:open[4][1], rank: _2),
@@ -338,12 +355,11 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                 PointsRank(points:open[4][4], rank: _9),
                 PointsRank(points:open[4][5], rank: _13),
                 PointsRank(points:open[4][6], rank: _17),
-                PointsRank(points:open[4][7], rank: _25),
-                PointsRank(points:open[4][8], rank: _33)
+                PointsRank(points:open[4][7], rank: _25)
             ]
-            return PointTable(table: points, title: "33 - 48")
+            return PointTable(table: points, title: "25 - 32")
         }
-        if(noOfApplicants >= 25) {
+        if(noOfApplicants >= 21) {
             let points = [
                 PointsRank(points:open[3][0], rank: _1),
                 PointsRank(points:open[3][1], rank: _2),
@@ -351,10 +367,9 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                 PointsRank(points:open[3][3], rank: _5),
                 PointsRank(points:open[3][4], rank: _9),
                 PointsRank(points:open[3][5], rank: _13),
-                PointsRank(points:open[3][6], rank: _17),
-                PointsRank(points:open[3][7], rank: _25)
+                PointsRank(points:open[3][6], rank: _19)
             ]
-            return PointTable(table: points, title: "25 - 32")
+            return PointTable(table: points, title: "21 - 24")
         }
         if(noOfApplicants >= 17) {
             let points = [
@@ -363,11 +378,10 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                 PointsRank(points:open[2][2], rank: _3),
                 PointsRank(points:open[2][3], rank: _5),
                 PointsRank(points:open[2][4], rank: _9),
-                PointsRank(points:open[2][5], rank: _13),
-                PointsRank(points:open[2][6], rank: _14),
-                PointsRank(points:open[2][7], rank: _16)
+                PointsRank(points:open[2][5], rank: _11),
+                PointsRank(points:open[2][6], rank: _16)
             ]
-            return PointTable(table: points, title: "17 - 24")
+            return PointTable(table: points, title: "17 - 20")
         }
         if(noOfApplicants >= 9) {
             let points = [
@@ -375,9 +389,8 @@ class PointsTableViewController: UIViewController, UITableViewDataSource {
                 PointsRank(points:open[1][1], rank: _2),
                 PointsRank(points:open[1][2], rank: _3),
                 PointsRank(points:open[1][3], rank: _5),
-                PointsRank(points:open[1][4], rank: _7),
-                PointsRank(points:open[1][5], rank: _9),
-                PointsRank(points:open[1][6], rank: _13),
+                PointsRank(points:open[1][4], rank: _9),
+                PointsRank(points:open[1][5], rank: _13),
             ]
             return PointTable(table: points, title: "9 - 16")
         }

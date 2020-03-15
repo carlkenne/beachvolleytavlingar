@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3141BD6098A1DD4953CA8C16 /* Pods_Beachvolleytavlingar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDE9C69899A27A6E0ACE626 /* Pods_Beachvolleytavlingar.framework */; };
+		441CF47F241EA5C4006FD3C0 /* attachment-15647817490359978679crashlog-E06374D3-8263-4371-8BB2-4ED0ADAE57B5.crash in Resources */ = {isa = PBXBuildFile; fileRef = 441CF47E241EA5C4006FD3C0 /* attachment-15647817490359978679crashlog-E06374D3-8263-4371-8BB2-4ED0ADAE57B5.crash */; };
 		4425305D1B1CDFE4006CD74B /* TournamentDetailDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */; };
 		442A74051B2B541F00875705 /* TournamentApplicantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */; };
 		442A74071B2B54C200875705 /* TournamentApplicantsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */; };
@@ -22,10 +24,6 @@
 		44686A291B170D3E004307E7 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A281B170D3E004307E7 /* TournamentViewController.swift */; };
 		44686A301B174188004307E7 /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A2F1B174188004307E7 /* sand.png */; };
 		44686A371B185161004307E7 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A311B185161004307E7 /* black.png */; };
-		44686A381B185161004307E7 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A321B185161004307E7 /* blue.png */; };
-		44686A391B185161004307E7 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A331B185161004307E7 /* green.png */; };
-		44686A3A1B185161004307E7 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A341B185161004307E7 /* normal.png */; };
-		44686A3B1B185161004307E7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 44686A351B185161004307E7 /* red.png */; };
 		44686A541B1C50F5004307E7 /* TournamentListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A531B1C50F4004307E7 /* TournamentListHelper.swift */; };
 		44686A561B1CBC66004307E7 /* FilterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44686A551B1CBC66004307E7 /* FilterSettingsViewController.swift */; };
 		446D30551B42E3A3002955BD /* AddGestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D30541B42E3A3002955BD /* AddGestureVC.swift */; };
@@ -57,7 +55,6 @@
 		44C400FA1FFED6C6000A7495 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F61FFED6C6000A7495 /* green.png */; };
 		44C400FB1FFED6C6000A7495 /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F71FFED6C6000A7495 /* normal.png */; };
 		44C400FC1FFED6C6000A7495 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400F81FFED6C6000A7495 /* blue.png */; };
-		44C400FE1FFED6D4000A7495 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C400FD1FFED6D4000A7495 /* black.png */; };
 		44CC44F71B15CB0400E2F545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F61B15CB0400E2F545 /* AppDelegate.swift */; };
 		44CC44F91B15CB0400E2F545 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC44F81B15CB0400E2F545 /* FirstViewController.swift */; };
 		44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CC44FC1B15CB0400E2F545 /* Main.storyboard */; };
@@ -76,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		361E777DBDE4293F9C412515 /* Pods-Beachvolleytävlingar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytävlingar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar.debug.xcconfig"; sourceTree = "<group>"; };
+		441CF47E241EA5C4006FD3C0 /* attachment-15647817490359978679crashlog-E06374D3-8263-4371-8BB2-4ED0ADAE57B5.crash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "attachment-15647817490359978679crashlog-E06374D3-8263-4371-8BB2-4ED0ADAE57B5.crash"; sourceTree = "<group>"; };
 		4425305C1B1CDFE4006CD74B /* TournamentDetailDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDetailDownloader.swift; sourceTree = "<group>"; };
 		442A74041B2B541F00875705 /* TournamentApplicantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsViewController.swift; sourceTree = "<group>"; };
 		442A74061B2B54C200875705 /* TournamentApplicantsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentApplicantsDownloader.swift; sourceTree = "<group>"; };
@@ -132,7 +130,7 @@
 		44C400F71FFED6C6000A7495 /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
 		44C400F81FFED6C6000A7495 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		44C400FD1FFED6D4000A7495 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
-		44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beachvolleytävlingar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44CC44F11B15CB0400E2F545 /* Beachvolleytavlingar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beachvolleytavlingar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CC44F51B15CB0400E2F545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44CC44F61B15CB0400E2F545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44CC44F81B15CB0400E2F545 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../FirstViewController.swift; sourceTree = "<group>"; };
@@ -145,10 +143,13 @@
 		44EDE1771B7E24C300BB9C0D /* PlayerRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerRankingVC.swift; sourceTree = "<group>"; };
 		44F39A501CDC571A0072B359 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		44F39A531CDC576F0072B359 /* ResultsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDownloader.swift; sourceTree = "<group>"; };
+		7BDE9C69899A27A6E0ACE626 /* Pods_Beachvolleytavlingar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beachvolleytavlingar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EF480E1A051D9B218FADCF /* Pods-Beachvolleytävlingar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytävlingar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar.release.xcconfig"; sourceTree = "<group>"; };
+		96F68DC3495B8834D1EAB711 /* Pods-Beachvolleytavlingar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytavlingar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytavlingar/Pods-Beachvolleytavlingar.release.xcconfig"; sourceTree = "<group>"; };
 		A120CA7C1E76C4F700B25B4B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A13C7E0A1E6D980300C33FE3 /* WeatherHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
 		A1F6FCD41E71997700FB945A /* TournamentLocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentLocationFinder.swift; path = ../TournamentLocationFinder.swift; sourceTree = "<group>"; };
+		AB5D0539D40CCEC0509BA39F /* Pods-Beachvolleytavlingar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beachvolleytavlingar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beachvolleytavlingar/Pods-Beachvolleytavlingar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,12 +159,21 @@
 			files = (
 				A120CA7D1E76C4F700B25B4B /* MapKit.framework in Frameworks */,
 				44CC45191B15CB9400E2F545 /* libxml2.dylib in Frameworks */,
+				3141BD6098A1DD4953CA8C16 /* Pods_Beachvolleytavlingar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		441CF47B241E7171006FD3C0 /* Crashlog */ = {
+			isa = PBXGroup;
+			children = (
+				441CF47E241EA5C4006FD3C0 /* attachment-15647817490359978679crashlog-E06374D3-8263-4371-8BB2-4ED0ADAE57B5.crash */,
+			);
+			path = Crashlog;
+			sourceTree = "<group>";
+		};
 		44686A111B15EE9B004307E7 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +306,7 @@
 		44CC44E81B15CB0400E2F545 = {
 			isa = PBXGroup;
 			children = (
+				441CF47B241E7171006FD3C0 /* Crashlog */,
 				4491D16921737C0F0073A060 /* Podfile */,
 				4492BE861B4178B000F24441 /* SWRevealViewController */,
 				44686A1B1B165096004307E7 /* TFHpple */,
@@ -309,7 +320,7 @@
 		44CC44F21B15CB0400E2F545 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */,
+				44CC44F11B15CB0400E2F545 /* Beachvolleytavlingar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				A120CA7C1E76C4F700B25B4B /* MapKit.framework */,
+				7BDE9C69899A27A6E0ACE626 /* Pods_Beachvolleytavlingar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,6 +397,8 @@
 			children = (
 				361E777DBDE4293F9C412515 /* Pods-Beachvolleytävlingar.debug.xcconfig */,
 				93EF480E1A051D9B218FADCF /* Pods-Beachvolleytävlingar.release.xcconfig */,
+				AB5D0539D40CCEC0509BA39F /* Pods-Beachvolleytavlingar.debug.xcconfig */,
+				96F68DC3495B8834D1EAB711 /* Pods-Beachvolleytavlingar.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -392,9 +406,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		44CC44F01B15CB0400E2F545 /* Beachvolleytävlingar */ = {
+		44CC44F01B15CB0400E2F545 /* Beachvolleytavlingar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44CC45121B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "Beachvolleytävlingar" */;
+			buildConfigurationList = 44CC45121B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "Beachvolleytavlingar" */;
 			buildPhases = (
 				A923F0C2BC1540C7A5B06D19 /* [CP] Check Pods Manifest.lock */,
 				44CC44ED1B15CB0400E2F545 /* Sources */,
@@ -406,9 +420,9 @@
 			);
 			dependencies = (
 			);
-			name = "Beachvolleytävlingar";
+			name = Beachvolleytavlingar;
 			productName = BVTournamentCalendar;
-			productReference = 44CC44F11B15CB0400E2F545 /* Beachvolleytävlingar.app */;
+			productReference = 44CC44F11B15CB0400E2F545 /* Beachvolleytavlingar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -419,13 +433,13 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Carl Kenne";
 				TargetAttributes = {
 					44CC44F01B15CB0400E2F545 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = J5HZ3L48U8;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -440,6 +454,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -448,7 +463,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				44CC44F01B15CB0400E2F545 /* Beachvolleytävlingar */,
+				44CC44F01B15CB0400E2F545 /* Beachvolleytavlingar */,
 			);
 		};
 /* End PBXProject section */
@@ -459,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44CC44FE1B15CB0400E2F545 /* Main.storyboard in Resources */,
+				441CF47F241EA5C4006FD3C0 /* attachment-15647817490359978679crashlog-E06374D3-8263-4371-8BB2-4ED0ADAE57B5.crash in Resources */,
 				44CE91B22165327F007AB46B /* planer.png in Resources */,
 				444E4E101C49855F00E6287D /* 10363442_2876931804806_5184986262509690354_o.jpg in Resources */,
 				442A74231B2F004700875705 /* normal-back.png in Resources */,
@@ -466,18 +482,13 @@
 				44686A371B185161004307E7 /* black.png in Resources */,
 				44C400F91FFED6C6000A7495 /* red.png in Resources */,
 				44CC45031B15CB0500E2F545 /* LaunchScreen.xib in Resources */,
-				44686A391B185161004307E7 /* green.png in Resources */,
-				44C400FE1FFED6D4000A7495 /* black.png in Resources */,
 				4492BE9A1B42C79000F24441 /* sand_menu_highlight.png in Resources */,
 				4492BE951B42C51B00F24441 /* skyleft_menu.PNG in Resources */,
 				44C400FB1FFED6C6000A7495 /* normal.png in Resources */,
 				44C400FC1FFED6C6000A7495 /* blue.png in Resources */,
-				44686A381B185161004307E7 /* blue.png in Resources */,
-				44686A3A1B185161004307E7 /* normal.png in Resources */,
 				4492BE9B1B42C79000F24441 /* sand_menu.png in Resources */,
 				4492BE931B42B45F00F24441 /* skyleft.PNG in Resources */,
 				4491D16A21737C0F0073A060 /* Podfile in Resources */,
-				44686A3B1B185161004307E7 /* red.png in Resources */,
 				4491D166217379D80073A060 /* GoogleService-Info.plist in Resources */,
 				44CC45001B15CB0400E2F545 /* Images.xcassets in Resources */,
 				4492BE971B42C68D00F24441 /* skyleft_menu_highlight.PNG in Resources */,
@@ -503,7 +514,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Beachvolleytävlingar-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Beachvolleytavlingar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -518,8 +529,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beachvolleytavlingar/Pods-Beachvolleytavlingar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -527,13 +538,13 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beachvolleytävlingar/Pods-Beachvolleytävlingar-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beachvolleytavlingar/Pods-Beachvolleytavlingar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -615,14 +626,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -648,9 +667,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Cake.Beachvolleyta-vlingar";
+				PRODUCT_BUNDLE_IDENTIFIER = Cake.Beachvolleytavlingar;
 				PRODUCT_NAME = "Säsongskalendern";
 				SDKROOT = iphoneos;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -663,14 +683,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -688,9 +716,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "Cake.Beachvolleyta-vlingar";
+				PRODUCT_BUNDLE_IDENTIFIER = Cake.Beachvolleytavlingar;
 				PRODUCT_NAME = "Säsongskalendern";
 				SDKROOT = iphoneos;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -698,12 +727,14 @@
 		};
 		44CC45131B15CB0500E2F545 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361E777DBDE4293F9C412515 /* Pods-Beachvolleytävlingar.debug.xcconfig */;
+			baseConfigurationReference = AB5D0539D40CCEC0509BA39F /* Pods-Beachvolleytavlingar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5HZ3L48U8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -712,17 +743,22 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SDKROOT)/usr/include/libxml2",
+					"$(PROJECTDIR)",
+					/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseCore,
 				);
 				INFOPLIST_FILE = BVTournamentCalendar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.34;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cake.Beachvolleyta-vlingar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TFHpple/SandSports-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 			};
@@ -730,12 +766,14 @@
 		};
 		44CC45141B15CB0500E2F545 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93EF480E1A051D9B218FADCF /* Pods-Beachvolleytävlingar.release.xcconfig */;
+			baseConfigurationReference = 96F68DC3495B8834D1EAB711 /* Pods-Beachvolleytavlingar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5HZ3L48U8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -744,17 +782,21 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SDKROOT)/usr/include/libxml2",
+					"$(PROJECTDIR)",
+					/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseCore,
 				);
 				INFOPLIST_FILE = BVTournamentCalendar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.34;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "Cake.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cake.Beachvolleyta-vlingar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TFHpple/SandSports-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -771,7 +813,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44CC45121B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "Beachvolleytävlingar" */ = {
+		44CC45121B15CB0500E2F545 /* Build configuration list for PBXNativeTarget "Beachvolleytavlingar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44CC45131B15CB0500E2F545 /* Debug */,

@@ -69,14 +69,6 @@ extension String {
         //print("start: \(startIndex)")
         return theString.substring(from: (startIndex?.upperBound)!)
     }
-    
-    init(htmlEncodedString: String) {
-            let encodedData = htmlEncodedString.data(using: String.Encoding.unicode)!
-            let attributedOptions = [String: AnyObject]()
-            let attributedString = try! NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
-            self.init(attributedString.string)!
-    }
-  
 
     func replaceOccurancesUTF16(_ utf16Nbr: Int, with: Character) -> String {
         var chars = Array(self)
@@ -101,4 +93,9 @@ extension String {
         }
         return String(chars)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToNSAttributedStringDocumentReadingOptionKeyDictionary(_ input: [String: Any]) -> [NSAttributedString.DocumentReadingOptionKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.DocumentReadingOptionKey(rawValue: key), value)})
 }

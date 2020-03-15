@@ -1,0 +1,6 @@
+framework module Pods_Beachvolleytavlingar {
+  umbrella header "Pods-Beachvolleytavlingar-umbrella.h"
+
+  export *
+  module * { export * }
+}

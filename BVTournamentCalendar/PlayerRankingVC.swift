@@ -74,12 +74,12 @@ class PlayerRankingVC : UITableViewController
             for tp in now...(now + 10) {
                 
                 var start = tp - 10
-                var year = 2018
+                var year = 2020
                 
                 //kommer inte händ i år
                 if(start <= 0){
                     start = 16 + start
-                    year = 2017
+                    year = 2018
                 }
                 
                 var topRankings = self.results.games.filter( {(ranking: PlayerRankingGame) -> Bool in
