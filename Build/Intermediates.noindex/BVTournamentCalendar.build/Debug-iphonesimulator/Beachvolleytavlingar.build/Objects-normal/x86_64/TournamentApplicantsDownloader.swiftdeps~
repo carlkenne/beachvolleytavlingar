@@ -1,0 +1,799 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TournamentApplicantsDownloader"
+provides-nominal:
+- "20Beachvolleytavlingar30TournamentApplicantsDownloaderC"
+provides-member:
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "..<"
+- !private "/"
+- !private "=="
+- "Applicants"
+- "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- !private "CharacterSet"
+- "Data"
+- !private "ExtendedGraphemeClusterType"
+- "FloatLiteralType"
+- !private "HttpDownloader"
+- "IntegerLiteralType"
+- "NSString"
+- "String"
+- !private "StringLiteralType"
+- !private "TFHpple"
+- !private "TFHppleElement"
+- "Tournament"
+- "TournamentApplicantsDownloader"
+- "TournamentDetail"
+- !private "TournamentDetailDownloader"
+- !private "UnicodeScalarType"
+- "Void"
+- !private "print"
+- !private "sleep"
+depends-member:
+- !private ["20Beachvolleytavlingar10ApplicantsV", "init"]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "count"]
+- !private ["s13ArrayProtocolP", "init"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- !private ["SK", "Encoding"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "getStringBetween"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "range"]
+- !private ["SK", "removeAll"]
+- !private ["SK", "removeOccurancesUTF16"]
+- !private ["SK", "replaceOccurancesUTF16"]
+- !private ["SK", "replacingOccurrences"]
+- !private ["SK", "subscript"]
+- !private ["SK", "substring"]
+- !private ["SK", "trimmingCharacters"]
+- !private ["SK", "upperBound"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Encoding"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "content"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "getStringBetween"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "range"]
+- !private ["s7CVarArgP", "raw"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "removeOccurancesUTF16"]
+- !private ["s7CVarArgP", "replaceOccurancesUTF16"]
+- !private ["s7CVarArgP", "replacingOccurrences"]
+- !private ["s7CVarArgP", "search"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "substring"]
+- !private ["s7CVarArgP", "trimmingCharacters"]
+- !private ["SJ", "init"]
+- !private ["SJ", "init"]
+- !private ["10Foundation12CharacterSetV", "whitespacesAndNewlines"]
+- !private ["Sl", "Encoding"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "getStringBetween"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "range"]
+- !private ["Sl", "removeAll"]
+- !private ["Sl", "removeOccurancesUTF16"]
+- !private ["Sl", "replaceOccurancesUTF16"]
+- !private ["Sl", "replacingOccurrences"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "substring"]
+- !private ["Sl", "trimmingCharacters"]
+- !private ["Sl", "upperBound"]
+- !private ["SL", "Encoding"]
+- !private ["SL", "getStringBetween"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "range"]
+- !private ["SL", "removeAll"]
+- !private ["SL", "removeOccurancesUTF16"]
+- !private ["SL", "replaceOccurancesUTF16"]
+- !private ["SL", "replacingOccurrences"]
+- !private ["SL", "substring"]
+- !private ["SL", "trimmingCharacters"]
+- !private ["s28CustomDebugStringConvertibleP", "Encoding"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "content"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "getStringBetween"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "range"]
+- !private ["s28CustomDebugStringConvertibleP", "raw"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "removeOccurancesUTF16"]
+- !private ["s28CustomDebugStringConvertibleP", "replaceOccurancesUTF16"]
+- !private ["s28CustomDebugStringConvertibleP", "replacingOccurrences"]
+- !private ["s28CustomDebugStringConvertibleP", "search"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "substring"]
+- !private ["s28CustomDebugStringConvertibleP", "trimmingCharacters"]
+- !private ["s28CustomDebugStringConvertibleP", "upperBound"]
+- !private ["s28CustomDebugStringConvertibleP", "whitespacesAndNewlines"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Encoding"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "getStringBetween"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "range"]
+- !private ["s29CustomPlaygroundQuickLookableP", "removeAll"]
+- !private ["s29CustomPlaygroundQuickLookableP", "removeOccurancesUTF16"]
+- !private ["s29CustomPlaygroundQuickLookableP", "replaceOccurancesUTF16"]
+- !private ["s29CustomPlaygroundQuickLookableP", "replacingOccurrences"]
+- !private ["s29CustomPlaygroundQuickLookableP", "substring"]
+- !private ["s29CustomPlaygroundQuickLookableP", "trimmingCharacters"]
+- !private ["s17CustomReflectableP", "Encoding"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "getStringBetween"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "range"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s17CustomReflectableP", "removeOccurancesUTF16"]
+- !private ["s17CustomReflectableP", "replaceOccurancesUTF16"]
+- !private ["s17CustomReflectableP", "replacingOccurrences"]
+- !private ["s17CustomReflectableP", "search"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "substring"]
+- !private ["s17CustomReflectableP", "trimmingCharacters"]
+- !private ["s17CustomReflectableP", "upperBound"]
+- !private ["s23CustomStringConvertibleP", "Encoding"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "ascii"]
+- !private ["s23CustomStringConvertibleP", "content"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "getStringBetween"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "range"]
+- !private ["s23CustomStringConvertibleP", "raw"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "removeOccurancesUTF16"]
+- !private ["s23CustomStringConvertibleP", "replaceOccurancesUTF16"]
+- !private ["s23CustomStringConvertibleP", "replacingOccurrences"]
+- !private ["s23CustomStringConvertibleP", "search"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "substring"]
+- !private ["s23CustomStringConvertibleP", "trimmingCharacters"]
+- !private ["s23CustomStringConvertibleP", "upperBound"]
+- !private ["s23CustomStringConvertibleP", "whitespacesAndNewlines"]
+- !private ["Se", "Encoding"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "getStringBetween"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "range"]
+- !private ["Se", "removeAll"]
+- !private ["Se", "removeOccurancesUTF16"]
+- !private ["Se", "replaceOccurancesUTF16"]
+- !private ["Se", "replacingOccurrences"]
+- !private ["Se", "search"]
+- !private ["Se", "subscript"]
+- !private ["Se", "substring"]
+- !private ["Se", "trimmingCharacters"]
+- !private ["Se", "whitespacesAndNewlines"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "downloadHTML"]
+- !private ["20Beachvolleytavlingar14DownloaderBaseC", "init"]
+- !private ["SE", "Encoding"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "getStringBetween"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "range"]
+- !private ["SE", "removeAll"]
+- !private ["SE", "removeOccurancesUTF16"]
+- !private ["SE", "replaceOccurancesUTF16"]
+- !private ["SE", "replacingOccurrences"]
+- !private ["SE", "search"]
+- !private ["SE", "subscript"]
+- !private ["SE", "substring"]
+- !private ["SE", "trimmingCharacters"]
+- !private ["SE", "whitespacesAndNewlines"]
+- !private ["SS10FoundationE8EncodingV", "ascii"]
+- !private ["SQ", "Encoding"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "append"]
+- !private ["SQ", "ascii"]
+- !private ["SQ", "content"]
+- !private ["SQ", "count"]
+- !private ["SQ", "getStringBetween"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "range"]
+- !private ["SQ", "raw"]
+- !private ["SQ", "removeAll"]
+- !private ["SQ", "removeOccurancesUTF16"]
+- !private ["SQ", "replaceOccurancesUTF16"]
+- !private ["SQ", "replacingOccurrences"]
+- !private ["SQ", "search"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "substring"]
+- !private ["SQ", "trimmingCharacters"]
+- !private ["SQ", "upperBound"]
+- !private ["SQ", "whitespacesAndNewlines"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "whitespacesAndNewlines"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "getStringBetween"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "range"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "removeAll"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "removeOccurancesUTF16"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replaceOccurancesUTF16"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "substring"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "trimmingCharacters"]
+- !private ["s23ExpressibleByNilLiteralP", "search"]
+- !private ["s26ExpressibleByStringLiteralP", "Encoding"]
+- !private ["s26ExpressibleByStringLiteralP", "getStringBetween"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "range"]
+- !private ["s26ExpressibleByStringLiteralP", "removeAll"]
+- !private ["s26ExpressibleByStringLiteralP", "removeOccurancesUTF16"]
+- !private ["s26ExpressibleByStringLiteralP", "replaceOccurancesUTF16"]
+- !private ["s26ExpressibleByStringLiteralP", "replacingOccurrences"]
+- !private ["s26ExpressibleByStringLiteralP", "substring"]
+- !private ["s26ExpressibleByStringLiteralP", "trimmingCharacters"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Encoding"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "getStringBetween"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "range"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "removeAll"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "removeOccurancesUTF16"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "replaceOccurancesUTF16"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "substring"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "trimmingCharacters"]
+- !private ["SH", "Encoding"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "append"]
+- !private ["SH", "ascii"]
+- !private ["SH", "content"]
+- !private ["SH", "count"]
+- !private ["SH", "getStringBetween"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "range"]
+- !private ["SH", "raw"]
+- !private ["SH", "removeAll"]
+- !private ["SH", "removeOccurancesUTF16"]
+- !private ["SH", "replaceOccurancesUTF16"]
+- !private ["SH", "replacingOccurrences"]
+- !private ["SH", "search"]
+- !private ["SH", "subscript"]
+- !private ["SH", "substring"]
+- !private ["SH", "trimmingCharacters"]
+- !private ["SH", "upperBound"]
+- !private ["SH", "whitespacesAndNewlines"]
+- !private ["20Beachvolleytavlingar14HttpDownloaderC", "httpGet"]
+- !private ["20Beachvolleytavlingar14HttpDownloaderC", "init"]
+- !private ["s25LosslessStringConvertibleP", "Encoding"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "getStringBetween"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "range"]
+- !private ["s25LosslessStringConvertibleP", "removeAll"]
+- !private ["s25LosslessStringConvertibleP", "removeOccurancesUTF16"]
+- !private ["s25LosslessStringConvertibleP", "replaceOccurancesUTF16"]
+- !private ["s25LosslessStringConvertibleP", "replacingOccurrences"]
+- !private ["s25LosslessStringConvertibleP", "substring"]
+- !private ["s25LosslessStringConvertibleP", "trimmingCharacters"]
+- !private ["s10MirrorPathP", "Encoding"]
+- !private ["s10MirrorPathP", "getStringBetween"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "range"]
+- !private ["s10MirrorPathP", "removeAll"]
+- !private ["s10MirrorPathP", "removeOccurancesUTF16"]
+- !private ["s10MirrorPathP", "replaceOccurancesUTF16"]
+- !private ["s10MirrorPathP", "replacingOccurrences"]
+- !private ["s10MirrorPathP", "substring"]
+- !private ["s10MirrorPathP", "trimmingCharacters"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["SM", "subscript"]
+- !private ["So8NSCodingP", "getStringBetween"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "range"]
+- !private ["So8NSCodingP", "removeAll"]
+- !private ["So8NSCodingP", "removeOccurancesUTF16"]
+- !private ["So8NSCodingP", "replaceOccurancesUTF16"]
+- !private ["So8NSCodingP", "replacingOccurrences"]
+- !private ["So8NSCodingP", "substring"]
+- !private ["So8NSCodingP", "trimmingCharacters"]
+- !private ["So9NSCopyingP", "getStringBetween"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "range"]
+- !private ["So9NSCopyingP", "removeAll"]
+- !private ["So9NSCopyingP", "removeOccurancesUTF16"]
+- !private ["So9NSCopyingP", "replaceOccurancesUTF16"]
+- !private ["So9NSCopyingP", "replacingOccurrences"]
+- !private ["So9NSCopyingP", "substring"]
+- !private ["So9NSCopyingP", "trimmingCharacters"]
+- !private ["So21NSItemProviderReadingP", "getStringBetween"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "range"]
+- !private ["So21NSItemProviderReadingP", "removeAll"]
+- !private ["So21NSItemProviderReadingP", "removeOccurancesUTF16"]
+- !private ["So21NSItemProviderReadingP", "replaceOccurancesUTF16"]
+- !private ["So21NSItemProviderReadingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderReadingP", "substring"]
+- !private ["So21NSItemProviderReadingP", "trimmingCharacters"]
+- !private ["So21NSItemProviderWritingP", "getStringBetween"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "range"]
+- !private ["So21NSItemProviderWritingP", "removeAll"]
+- !private ["So21NSItemProviderWritingP", "removeOccurancesUTF16"]
+- !private ["So21NSItemProviderWritingP", "replaceOccurancesUTF16"]
+- !private ["So21NSItemProviderWritingP", "replacingOccurrences"]
+- !private ["So21NSItemProviderWritingP", "substring"]
+- !private ["So21NSItemProviderWritingP", "trimmingCharacters"]
+- !private ["So16NSMutableCopyingP", "getStringBetween"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "range"]
+- !private ["So16NSMutableCopyingP", "removeAll"]
+- !private ["So16NSMutableCopyingP", "removeOccurancesUTF16"]
+- !private ["So16NSMutableCopyingP", "replaceOccurancesUTF16"]
+- !private ["So16NSMutableCopyingP", "replacingOccurrences"]
+- !private ["So16NSMutableCopyingP", "substring"]
+- !private ["So16NSMutableCopyingP", "trimmingCharacters"]
+- !private ["So8NSObjectC", "content"]
+- !private ["So8NSObjectC", "getStringBetween"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "range"]
+- !private ["So8NSObjectC", "raw"]
+- !private ["So8NSObjectC", "removeAll"]
+- !private ["So8NSObjectC", "removeOccurancesUTF16"]
+- !private ["So8NSObjectC", "replaceOccurancesUTF16"]
+- !private ["So8NSObjectC", "replacingOccurrences"]
+- !private ["So8NSObjectC", "search"]
+- !private ["So8NSObjectC", "substring"]
+- !private ["So8NSObjectC", "trimmingCharacters"]
+- !private ["So8NSObjectP", "content"]
+- !private ["So8NSObjectP", "getStringBetween"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "range"]
+- !private ["So8NSObjectP", "raw"]
+- !private ["So8NSObjectP", "removeAll"]
+- !private ["So8NSObjectP", "removeOccurancesUTF16"]
+- !private ["So8NSObjectP", "replaceOccurancesUTF16"]
+- !private ["So8NSObjectP", "replacingOccurrences"]
+- !private ["So8NSObjectP", "search"]
+- !private ["So8NSObjectP", "substring"]
+- !private ["So8NSObjectP", "trimmingCharacters"]
+- !private ["So14NSSecureCodingP", "getStringBetween"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "range"]
+- !private ["So14NSSecureCodingP", "removeAll"]
+- !private ["So14NSSecureCodingP", "removeOccurancesUTF16"]
+- !private ["So14NSSecureCodingP", "replaceOccurancesUTF16"]
+- !private ["So14NSSecureCodingP", "replacingOccurrences"]
+- !private ["So14NSSecureCodingP", "substring"]
+- !private ["So14NSSecureCodingP", "trimmingCharacters"]
+- !private ["So8NSStringC", "getStringBetween"]
+- !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "range"]
+- !private ["So8NSStringC", "removeAll"]
+- !private ["So8NSStringC", "removeOccurancesUTF16"]
+- !private ["So8NSStringC", "replaceOccurancesUTF16"]
+- !private ["So8NSStringC", "replacingOccurrences"]
+- !private ["So8NSStringC", "substring"]
+- !private ["So8NSStringC", "trimmingCharacters"]
+- !private ["Sq", "search"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "init"]
+- !private ["Sk", "subscript"]
+- !private ["Sk", "upperBound"]
+- !private ["Sn", "upperBound"]
+- !private ["SX", "upperBound"]
+- !private ["Sm", "Encoding"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "getStringBetween"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "range"]
+- !private ["Sm", "removeAll"]
+- !private ["Sm", "removeOccurancesUTF16"]
+- !private ["Sm", "replaceOccurancesUTF16"]
+- !private ["Sm", "replacingOccurrences"]
+- !private ["Sm", "subscript"]
+- !private ["Sm", "substring"]
+- !private ["Sm", "trimmingCharacters"]
+- !private ["SY", "ascii"]
+- !private ["10Foundation20ReferenceConvertibleP", "whitespacesAndNewlines"]
+- !private ["ST", "Encoding"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "getStringBetween"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "range"]
+- !private ["ST", "removeAll"]
+- !private ["ST", "removeOccurancesUTF16"]
+- !private ["ST", "replaceOccurancesUTF16"]
+- !private ["ST", "replacingOccurrences"]
+- !private ["ST", "subscript"]
+- !private ["ST", "substring"]
+- !private ["ST", "trimmingCharacters"]
+- !private ["ST", "upperBound"]
+- !private ["s10SetAlgebraP", "whitespacesAndNewlines"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "Encoding"]
+- !private ["SS", "getStringBetween"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "range"]
+- !private ["SS", "removeAll"]
+- !private ["SS", "removeOccurancesUTF16"]
+- !private ["SS", "replaceOccurancesUTF16"]
+- !private ["SS", "replacingOccurrences"]
+- !private ["SS", "substring"]
+- !private ["SS", "trimmingCharacters"]
+- !private ["Sy", "Encoding"]
+- !private ["Sy", "getStringBetween"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "range"]
+- !private ["Sy", "removeAll"]
+- !private ["Sy", "removeOccurancesUTF16"]
+- !private ["Sy", "replaceOccurancesUTF16"]
+- !private ["Sy", "replacingOccurrences"]
+- !private ["Sy", "substring"]
+- !private ["Sy", "trimmingCharacters"]
+- !private ["So7TFHppleC", "init"]
+- !private ["So7TFHppleC", "search"]
+- !private ["So14TFHppleElementC", "content"]
+- !private ["So14TFHppleElementC", "raw"]
+- !private ["s16TextOutputStreamP", "Encoding"]
+- !private ["s16TextOutputStreamP", "getStringBetween"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "range"]
+- !private ["s16TextOutputStreamP", "removeAll"]
+- !private ["s16TextOutputStreamP", "removeOccurancesUTF16"]
+- !private ["s16TextOutputStreamP", "replaceOccurancesUTF16"]
+- !private ["s16TextOutputStreamP", "replacingOccurrences"]
+- !private ["s16TextOutputStreamP", "substring"]
+- !private ["s16TextOutputStreamP", "trimmingCharacters"]
+- !private ["s20TextOutputStreamableP", "Encoding"]
+- !private ["s20TextOutputStreamableP", "getStringBetween"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "range"]
+- !private ["s20TextOutputStreamableP", "removeAll"]
+- !private ["s20TextOutputStreamableP", "removeOccurancesUTF16"]
+- !private ["s20TextOutputStreamableP", "replaceOccurancesUTF16"]
+- !private ["s20TextOutputStreamableP", "replacingOccurrences"]
+- !private ["s20TextOutputStreamableP", "substring"]
+- !private ["s20TextOutputStreamableP", "trimmingCharacters"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "Applicants"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "CharacterSet"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "Data"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "HttpDownloader"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "NSString"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "String"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "TFHpple"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "TFHppleElement"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "Tournament"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "TournamentDetail"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "TournamentDetailDownloader"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "Void"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "cleanValue"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "downloadHTML"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "findRanking"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "getPlayers"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "getReserveCode"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "getTeamId"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "init"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "parseHTML"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "participantsDownload"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "print"]
+- ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "setServerCookieRequest"]
+- !private ["20Beachvolleytavlingar30TournamentApplicantsDownloaderC", "sleep"]
+- !private ["20Beachvolleytavlingar16TournamentDetailV", "setServerSessionCookieUrl"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "downloadHTML"]
+- !private ["20Beachvolleytavlingar26TournamentDetailDownloaderC", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "getStringBetween"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "range"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "removeAll"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "removeOccurancesUTF16"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replaceOccurancesUTF16"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "replacingOccurrences"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "substring"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "trimmingCharacters"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Encoding"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "getStringBetween"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "range"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "removeAll"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "removeOccurancesUTF16"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "replaceOccurancesUTF16"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "replacingOccurrences"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "substring"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "trimmingCharacters"]
+- !private ["s56_ExpressibleByBuiltinUTF16ExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s56_ExpressibleByBuiltinUTF16ExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "Encoding"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "getStringBetween"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "range"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "removeAll"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "removeOccurancesUTF16"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "replaceOccurancesUTF16"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "replacingOccurrences"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "substring"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "trimmingCharacters"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Encoding"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "getStringBetween"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "range"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "removeAll"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "removeOccurancesUTF16"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replaceOccurancesUTF16"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "replacingOccurrences"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "substring"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "trimmingCharacters"]
+- !private ["s33_ExpressibleByStringInterpolationP", "Encoding"]
+- !private ["s33_ExpressibleByStringInterpolationP", "getStringBetween"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "range"]
+- !private ["s33_ExpressibleByStringInterpolationP", "removeAll"]
+- !private ["s33_ExpressibleByStringInterpolationP", "removeOccurancesUTF16"]
+- !private ["s33_ExpressibleByStringInterpolationP", "replaceOccurancesUTF16"]
+- !private ["s33_ExpressibleByStringInterpolationP", "replacingOccurrences"]
+- !private ["s33_ExpressibleByStringInterpolationP", "substring"]
+- !private ["s33_ExpressibleByStringInterpolationP", "trimmingCharacters"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "getStringBetween"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "range"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeOccurancesUTF16"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "replaceOccurancesUTF16"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "replacingOccurrences"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "substring"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "trimmingCharacters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "content"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getStringBetween"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "range"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raw"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeAll"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeOccurancesUTF16"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "replaceOccurancesUTF16"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "replacingOccurrences"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "search"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "substring"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "trimmingCharacters"]
+- !private ["s21_ObjectiveCBridgeableP", "Encoding"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "getStringBetween"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "range"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "removeOccurancesUTF16"]
+- !private ["s21_ObjectiveCBridgeableP", "replaceOccurancesUTF16"]
+- !private ["s21_ObjectiveCBridgeableP", "replacingOccurrences"]
+- !private ["s21_ObjectiveCBridgeableP", "search"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "substring"]
+- !private ["s21_ObjectiveCBridgeableP", "trimmingCharacters"]
+- !private ["s21_ObjectiveCBridgeableP", "whitespacesAndNewlines"]
+- !private ["s16_SwiftStringViewP", "Encoding"]
+- !private ["s16_SwiftStringViewP", "getStringBetween"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "range"]
+- !private ["s16_SwiftStringViewP", "removeAll"]
+- !private ["s16_SwiftStringViewP", "removeOccurancesUTF16"]
+- !private ["s16_SwiftStringViewP", "replaceOccurancesUTF16"]
+- !private ["s16_SwiftStringViewP", "replacingOccurrences"]
+- !private ["s16_SwiftStringViewP", "substring"]
+- !private ["s16_SwiftStringViewP", "trimmingCharacters"]
+depends-nominal:
+- !private "20Beachvolleytavlingar10ApplicantsV"
+- !private "Sa"
+- !private "s13ArrayProtocolP"
+- !private "SK"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "SJ"
+- !private "10Foundation12CharacterSetV"
+- !private "Sl"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "20Beachvolleytavlingar14DownloaderBaseC"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SH"
+- !private "20Beachvolleytavlingar14HttpDownloaderC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sq"
+- !private "Sk"
+- !private "Sn"
+- !private "SX"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "Sy"
+- !private "So7TFHppleC"
+- !private "So14TFHppleElementC"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "20Beachvolleytavlingar30TournamentApplicantsDownloaderC"
+- !private "20Beachvolleytavlingar16TournamentDetailV"
+- !private "20Beachvolleytavlingar26TournamentDetailDownloaderC"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s56_ExpressibleByBuiltinUTF16ExtendedGraphemeClusterLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/TFHpple.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/SandSports-Bridging-Header.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/SWRevealViewController/SWRevealViewController.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/TFHppleElement.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/XPathQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/libxml2/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8d14767c873f5fcd61f0ac4761cce68f"

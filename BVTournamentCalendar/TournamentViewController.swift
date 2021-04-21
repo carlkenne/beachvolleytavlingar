@@ -24,10 +24,10 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
  
     func webView(_ webView: UIWebView,
         shouldStartLoadWith request: URLRequest,
-        navigationType: UIWebViewNavigationType) -> Bool {
+        navigationType: UIWebView.NavigationType) -> Bool {
             
-        if (navigationType == UIWebViewNavigationType.linkClicked){
-            UIApplication.shared.openURL(request.url!)
+        if (navigationType == UIWebView.NavigationType.linkClicked){
+            UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
             return false
         }
         return true
@@ -51,15 +51,15 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
             
             let link:String = res.link
             let registrationLink:String = res.registrationLink
+            let liveResultatLink:String = res.liveResultatLink
+            
             var hideKlassDiv = ""
             if(tournament?.levelCategory == "open grön" || tournament?.levelCategory == "open svart" || tournament?.levelCategory == "mixed" || tournament?.levelCategory == "challenger"){
                 hideKlassDiv = "display:none"
             }
             
-            
             let weatherHelper = WeatherHelper()
             weatherHelper.getWeather(tournament: tournament!, details: res, onCompletion: self.onWeatherReceived)
-            
             
             var table = res.table.replacingOccurrences(of: "<tr><td class=\"uh\">Segerpremie</td><td/></tr>", with: "")
             table = table.replacingOccurrences(of: "<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td><td/><td/></tr>", with: "")
@@ -79,13 +79,17 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 "</style> " +
                 "\(table)" +
                 "<br/>" +
+                "<a href=\"\(liveResultatLink)\" class\"app-link\">Till liverapportering av resultat &gt;</a>" +
+                "<br/><br/>" +
                 "<a href=\"\(registrationLink)\" class\"app-link\">Till anmälan &gt;</a>" +
                 "<br/><br/>" +
                 "<a href=\"\(link)\" class\"app-link\">Till sidan &gt;</a>" +
                 "</body></html>";
-            
+       //     print(html)
             html = html
                 .replacingOccurrences(of: "+ D (född -",with:"+&nbsp;D&nbsp;(född&nbsp;-")
+                .replacingOccurrences(of: "<td class=\"uh\">Kategori</td>",with:"")
+                .replacingOccurrences(of: "Sista anmälningsdag</td><td>",with:"ANMÄL DIG SENAST</td></tr><tr><td style=\"padding-left:20px;\">")
                 .replacingOccurrences(of: "<tr><td class=\"uh\">Klasser och kategorier</td>",with:"<tr style=\"display: none;\"><td class=\"uh\">Klasser och kategorier</td>")
                 .replacingOccurrences(of: "<td class=\"uh\">Arrangör</td><td>",with:"<td colspan=2 style=\"font-weight:bold\">")
                 .replacingOccurrences(of: "<td class=\"uh\">Nivå</td><td>",with:"<td colspan=2>")
@@ -94,7 +98,6 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .removeAll("<td class=\"uh\">Kontakt information</td>")
                 .replacingOccurrences(of: "Inbetalningsinfo",with:"Betalning")
                 .replacingOccurrences(of: "Klassdetaljer",with:"Klasser")
-                .replacingOccurrences(of: "Sista anmäliningsdag",with:"Anmäl dig senast")
                 .removeAll("<tr><td style=\"padding-bottom:4px;\" class=\"uh\">Namn</td><td/><td/></tr>&#13;")
                 .replacingOccurrences(of: "<td style=\"padding-bottom:4px;\" class=\"uh\">Namn</td>", with:"<td/>")
                 .replacingOccurrences(of: "<td style=\"padding-bottom:4px;\" class=\"uh\">Telefon</td>",with:"<td/>")
@@ -107,7 +110,6 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .replacingOccurrences(of: "<tr><td class=\"uh\">Klasser</td><td>",with:"<tr class=\"section\"><td class=\"uh section\">Klasser</td><td class=\"section\">")
                 .replacingOccurrences(of: "<tr><td class=\"uh\">Anmälan",with:"<tr style=\"display:none\"><td class=\"uh\">Anmälan")
                 .replacingOccurrences(of: "<tr><td class=\"uh\">Spelschema",with:"<tr style=\"display:none\"><td class=\"uh\">Spelschema")
-                .replacingOccurrences(of: "<td class=\"uh\">Anmäl dig senast</td><td",with:"<td class=\"uh\" colspan=\"2\" style=\"padding-bottom:4px;padding-top:20px;font-size:8pt !important;\">ANMÄL DIG SENAST</td></tr><tr><td colspan=\"2\" style=\"padding-left:20px\"")
                 .replacingOccurrences(of: "<td class=\"uh\">Övrig info</td><td",with:"<td class=\"uh\" colspan=\"2\" style=\"padding-bottom:4px;padding-top:20px;font-size:8pt !important;\">ÖVRIG INFO</td></tr><tr><td colspan=\"2\" style=\"padding-left:20px\"")
                 .replacingOccurrences(of: "<td class=\"uh\">Betalning</td><td",with:"<td class=\"uh\" colspan=\"2\" style=\"padding-bottom:4px;padding-top:20px;font-size:8pt !important;\">BETALNING</td></tr><tr><td colspan=\"2\" style=\"padding-left:20px\"")
                 .replacingOccurrences(of: "<td class=\"uh section\">Klasser</td>",with:"")
@@ -119,8 +121,10 @@ class TournamentViewController: UIViewController, UIWebViewDelegate
                 .replacingOccurrences(of: "<td style=\"padding-bottom:4px;\" class=\"uh\">kl:",with:"<td class=\"uh\">KL")
                 .replacingOccurrences(of: ">Antal",with:">ANTAL")
                 .replacingOccurrences(of: ">Startavgift",with:">STARTAVGIFT")
-                .replacingOccurrences(of: "0.00",with:"0 kr")
-            
+                .replacingOccurrences(of: "00.00",with:"00 kr")
+                .replacingOccurrences(of: "50.00",with:"50 kr")
+            //print("-----------------")
+            //print(html)
 
             self.text.loadHTMLString(html, baseURL: URL(string:"https://www.profixio.com"))
             self.loading.stopAnimating()

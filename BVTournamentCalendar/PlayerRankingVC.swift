@@ -74,12 +74,12 @@ class PlayerRankingVC : UITableViewController
             for tp in now...(now + 10) {
                 
                 var start = tp - 10
-                var year = 2017
+                var year = 2020
                 
                 //kommer inte händ i år
                 if(start <= 0){
                     start = 16 + start
-                    year = 2016
+                    year = 2018
                 }
                 
                 var topRankings = self.results.games.filter( {(ranking: PlayerRankingGame) -> Bool in
@@ -138,17 +138,20 @@ class PlayerRankingVC : UITableViewController
             tournament.levelCategory == level
         }).map {
             print(level)
-            var tre = $0.result.characters.split {$0 == " "}.map { String($0) }
+            var tre = $0.result.split {$0 == " "}.map { String($0) }
             
             if(tre.count == 3) {
                 var plats = Float(Int(tre[0])!)
                 var total = Float(Int(tre[2])!)
                 total = total - floor(total / 4) // cut off the bottom percentile since it's never really counted
-                plats = min(plats, total)
-                return round((total - plats) / (total - 1) * 100)
+                plats = min(plats - 1, total)
+                print(total)
+                print(plats)
+                print((total - plats) / (total) * 100)
+                return round((total - plats) / (total) * 100)
             }
             print("nothing")
-            return -1
+            return 0
         }
         return Int(greens.reduce(0, +) / Float(greens.count))
     }
@@ -238,14 +241,14 @@ class PlayerRankingVC : UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(indexPath.section == viewModel.snittresultatStartIndex) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "GameRankedSimple") as UITableViewCell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GameRankedSimple")
             let rating = viewModel.snittresultatList[indexPath.row]
             cell?.detailTextLabel?.text = rating.title
             cell?.textLabel?.text = "\(rating.rating)%"
             return cell!
         }
         if(indexPath.section == viewModel.remainingRankingsStartIndex) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Upcoming") as UITableViewCell!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Upcoming")
             if(indexPath.row == 0) {
                 cell?.detailTextLabel?.text = "entrypoints"
                 cell?.textLabel?.text = "tävlingsperiod"
@@ -268,7 +271,7 @@ class PlayerRankingVC : UITableViewController
         let index = indexPath.section > viewModel.rankingpointsStartIndex ? indexPath.section - 3 : indexPath.section - 2
         let tourney = self.results.games[index]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GameRanked") as UITableViewCell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameRanked")
         cell?.textLabel?.text = "plats: \(tourney.result) - (\(tourney.points) poäng)"
         cell?.detailTextLabel?.text = "\(tourney.name)"
         addImage(cell!, levelCategory: tourney.levelCategory)

@@ -22,7 +22,7 @@ class Date {
     }
     
     class func parse(_ dateStr:String, format:String="yyyy.MM.dd") -> Foundation.Date {
-        
+
         let dateFmt = DateFormatter()
         dateFmt.timeZone = TimeZone.current
         dateFmt.dateFormat = format

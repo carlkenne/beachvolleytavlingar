@@ -1,0 +1,732 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FilterSettingsViewController"
+provides-nominal:
+- "20Beachvolleytavlingar28FilterSettingsViewControllerC"
+provides-member:
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", ""]
+provides-dynamic-lookup:
+- "Mixed"
+- "addSettings"
+- "black"
+- "challenger"
+- "didReceiveMemoryWarning"
+- "green"
+- "hideOld"
+- "loaded"
+- "misc"
+- "prepopulateSettings"
+- "settingsToExclude"
+- "sm"
+- "swedishBeachTour"
+- "viewDidLoad"
+depends-top-level:
+- !private "=="
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "FilterSettingsViewController"
+- "NSSet"
+- !private "StringLiteralType"
+- "UISwitch"
+- "UITableViewController"
+depends-member:
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "isOn"]
+- !private ["s7CVarArgP", "Mixed"]
+- ["s7CVarArgP", "NSSet"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "challenger"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "green"]
+- !private ["s7CVarArgP", "hideOld"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isOn"]
+- !private ["s7CVarArgP", "loaded"]
+- !private ["s7CVarArgP", "misc"]
+- !private ["s7CVarArgP", "prepopulateSettings"]
+- !private ["s7CVarArgP", "settingsToExclude"]
+- !private ["s7CVarArgP", "sm"]
+- !private ["s7CVarArgP", "swedishBeachTour"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Mixed"]
+- ["s28CustomDebugStringConvertibleP", "NSSet"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "challenger"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "green"]
+- !private ["s28CustomDebugStringConvertibleP", "hideOld"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isOn"]
+- !private ["s28CustomDebugStringConvertibleP", "loaded"]
+- !private ["s28CustomDebugStringConvertibleP", "misc"]
+- !private ["s28CustomDebugStringConvertibleP", "prepopulateSettings"]
+- !private ["s28CustomDebugStringConvertibleP", "settingsToExclude"]
+- !private ["s28CustomDebugStringConvertibleP", "sm"]
+- !private ["s28CustomDebugStringConvertibleP", "swedishBeachTour"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "contains"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isOn"]
+- !private ["s23CustomStringConvertibleP", "Mixed"]
+- ["s23CustomStringConvertibleP", "NSSet"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "challenger"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "green"]
+- !private ["s23CustomStringConvertibleP", "hideOld"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isOn"]
+- !private ["s23CustomStringConvertibleP", "loaded"]
+- !private ["s23CustomStringConvertibleP", "misc"]
+- !private ["s23CustomStringConvertibleP", "prepopulateSettings"]
+- !private ["s23CustomStringConvertibleP", "settingsToExclude"]
+- !private ["s23CustomStringConvertibleP", "sm"]
+- !private ["s23CustomStringConvertibleP", "swedishBeachTour"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "isOn"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "isOn"]
+- !private ["SQ", "Mixed"]
+- ["SQ", "NSSet"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "black"]
+- !private ["SQ", "challenger"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "didReceiveMemoryWarning"]
+- !private ["SQ", "green"]
+- !private ["SQ", "hideOld"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isOn"]
+- !private ["SQ", "loaded"]
+- !private ["SQ", "misc"]
+- !private ["SQ", "prepopulateSettings"]
+- !private ["SQ", "settingsToExclude"]
+- !private ["SQ", "sm"]
+- !private ["SQ", "swedishBeachTour"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "isOn"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "Bool"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "Mixed"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "NSSet"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "UISwitch"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "addSettings"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "black"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "challenger"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "didReceiveMemoryWarning"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "green"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "hideOld"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "init"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "loaded"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "misc"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "prepopulateSettings"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "settingsToExclude"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "sm"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "swedishBeachTour"]
+- ["20Beachvolleytavlingar28FilterSettingsViewControllerC", "viewDidLoad"]
+- !private ["SH", "Mixed"]
+- ["SH", "NSSet"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "black"]
+- !private ["SH", "challenger"]
+- !private ["SH", "contains"]
+- !private ["SH", "didReceiveMemoryWarning"]
+- !private ["SH", "green"]
+- !private ["SH", "hideOld"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isOn"]
+- !private ["SH", "loaded"]
+- !private ["SH", "misc"]
+- !private ["SH", "prepopulateSettings"]
+- !private ["SH", "settingsToExclude"]
+- !private ["SH", "sm"]
+- !private ["SH", "swedishBeachTour"]
+- !private ["SH", "viewDidLoad"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "Mixed"]
+- ["So8NSCodingP", "NSSet"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "black"]
+- !private ["So8NSCodingP", "challenger"]
+- !private ["So8NSCodingP", "contains"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "green"]
+- !private ["So8NSCodingP", "hideOld"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isOn"]
+- !private ["So8NSCodingP", "loaded"]
+- !private ["So8NSCodingP", "misc"]
+- !private ["So8NSCodingP", "prepopulateSettings"]
+- !private ["So8NSCodingP", "settingsToExclude"]
+- !private ["So8NSCodingP", "sm"]
+- !private ["So8NSCodingP", "swedishBeachTour"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So9NSCopyingP", "contains"]
+- ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "Mixed"]
+- ["So26NSExtensionRequestHandlingP", "NSSet"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "black"]
+- !private ["So26NSExtensionRequestHandlingP", "challenger"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "green"]
+- !private ["So26NSExtensionRequestHandlingP", "hideOld"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "loaded"]
+- !private ["So26NSExtensionRequestHandlingP", "misc"]
+- !private ["So26NSExtensionRequestHandlingP", "prepopulateSettings"]
+- !private ["So26NSExtensionRequestHandlingP", "settingsToExclude"]
+- !private ["So26NSExtensionRequestHandlingP", "sm"]
+- !private ["So26NSExtensionRequestHandlingP", "swedishBeachTour"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So17NSFastEnumerationP", "contains"]
+- ["So17NSFastEnumerationP", "init"]
+- !private ["So16NSMutableCopyingP", "contains"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Mixed"]
+- ["So8NSObjectC", "NSSet"]
+- ["So8NSObjectC", "UISwitch"]
+- ["So8NSObjectC", "addSettings"]
+- ["So8NSObjectC", "black"]
+- ["So8NSObjectC", "challenger"]
+- !private ["So8NSObjectC", "contains"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "green"]
+- ["So8NSObjectC", "hideOld"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isOn"]
+- ["So8NSObjectC", "loaded"]
+- ["So8NSObjectC", "misc"]
+- ["So8NSObjectC", "prepopulateSettings"]
+- ["So8NSObjectC", "settingsToExclude"]
+- ["So8NSObjectC", "sm"]
+- ["So8NSObjectC", "swedishBeachTour"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectP", "Mixed"]
+- ["So8NSObjectP", "NSSet"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "challenger"]
+- !private ["So8NSObjectP", "contains"]
+- !private ["So8NSObjectP", "didReceiveMemoryWarning"]
+- !private ["So8NSObjectP", "green"]
+- !private ["So8NSObjectP", "hideOld"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isOn"]
+- !private ["So8NSObjectP", "loaded"]
+- !private ["So8NSObjectP", "misc"]
+- !private ["So8NSObjectP", "prepopulateSettings"]
+- !private ["So8NSObjectP", "settingsToExclude"]
+- !private ["So8NSObjectP", "sm"]
+- !private ["So8NSObjectP", "swedishBeachTour"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "contains"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So5NSSetC", "contains"]
+- ["So5NSSetC", "init"]
+- !private ["Sq", "isOn"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["ST", "contains"]
+- ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "isOn"]
+- !private ["So12UIAppearanceP", "isOn"]
+- !private ["So21UIAppearanceContainerP", "Mixed"]
+- ["So21UIAppearanceContainerP", "NSSet"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "black"]
+- !private ["So21UIAppearanceContainerP", "challenger"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "green"]
+- !private ["So21UIAppearanceContainerP", "hideOld"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "isOn"]
+- !private ["So21UIAppearanceContainerP", "loaded"]
+- !private ["So21UIAppearanceContainerP", "misc"]
+- !private ["So21UIAppearanceContainerP", "prepopulateSettings"]
+- !private ["So21UIAppearanceContainerP", "settingsToExclude"]
+- !private ["So21UIAppearanceContainerP", "sm"]
+- !private ["So21UIAppearanceContainerP", "swedishBeachTour"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "Mixed"]
+- ["So18UIContentContainerP", "NSSet"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "black"]
+- !private ["So18UIContentContainerP", "challenger"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "green"]
+- !private ["So18UIContentContainerP", "hideOld"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "loaded"]
+- !private ["So18UIContentContainerP", "misc"]
+- !private ["So18UIContentContainerP", "prepopulateSettings"]
+- !private ["So18UIContentContainerP", "settingsToExclude"]
+- !private ["So18UIContentContainerP", "sm"]
+- !private ["So18UIContentContainerP", "swedishBeachTour"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So9UIControlC", "isOn"]
+- !private ["So17UICoordinateSpaceP", "isOn"]
+- !private ["So13UIDynamicItemP", "isOn"]
+- !private ["So18UIFocusEnvironmentP", "Mixed"]
+- ["So18UIFocusEnvironmentP", "NSSet"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "black"]
+- !private ["So18UIFocusEnvironmentP", "challenger"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "green"]
+- !private ["So18UIFocusEnvironmentP", "hideOld"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "isOn"]
+- !private ["So18UIFocusEnvironmentP", "loaded"]
+- !private ["So18UIFocusEnvironmentP", "misc"]
+- !private ["So18UIFocusEnvironmentP", "prepopulateSettings"]
+- !private ["So18UIFocusEnvironmentP", "settingsToExclude"]
+- !private ["So18UIFocusEnvironmentP", "sm"]
+- !private ["So18UIFocusEnvironmentP", "swedishBeachTour"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "isOn"]
+- !private ["So20UIFocusItemContainerP", "isOn"]
+- !private ["So30UIPasteConfigurationSupportingP", "Mixed"]
+- ["So30UIPasteConfigurationSupportingP", "NSSet"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "black"]
+- !private ["So30UIPasteConfigurationSupportingP", "challenger"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "green"]
+- !private ["So30UIPasteConfigurationSupportingP", "hideOld"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "isOn"]
+- !private ["So30UIPasteConfigurationSupportingP", "loaded"]
+- !private ["So30UIPasteConfigurationSupportingP", "misc"]
+- !private ["So30UIPasteConfigurationSupportingP", "prepopulateSettings"]
+- !private ["So30UIPasteConfigurationSupportingP", "settingsToExclude"]
+- !private ["So30UIPasteConfigurationSupportingP", "sm"]
+- !private ["So30UIPasteConfigurationSupportingP", "swedishBeachTour"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "Mixed"]
+- ["So11UIResponderC", "NSSet"]
+- ["So11UIResponderC", "UISwitch"]
+- ["So11UIResponderC", "addSettings"]
+- ["So11UIResponderC", "black"]
+- ["So11UIResponderC", "challenger"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "green"]
+- ["So11UIResponderC", "hideOld"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "isOn"]
+- ["So11UIResponderC", "loaded"]
+- ["So11UIResponderC", "misc"]
+- ["So11UIResponderC", "prepopulateSettings"]
+- ["So11UIResponderC", "settingsToExclude"]
+- ["So11UIResponderC", "sm"]
+- ["So11UIResponderC", "swedishBeachTour"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "Mixed"]
+- ["So30UIResponderStandardEditActionsP", "NSSet"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "black"]
+- !private ["So30UIResponderStandardEditActionsP", "challenger"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "green"]
+- !private ["So30UIResponderStandardEditActionsP", "hideOld"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "isOn"]
+- !private ["So30UIResponderStandardEditActionsP", "loaded"]
+- !private ["So30UIResponderStandardEditActionsP", "misc"]
+- !private ["So30UIResponderStandardEditActionsP", "prepopulateSettings"]
+- !private ["So30UIResponderStandardEditActionsP", "settingsToExclude"]
+- !private ["So30UIResponderStandardEditActionsP", "sm"]
+- !private ["So30UIResponderStandardEditActionsP", "swedishBeachTour"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So20UIScrollViewDelegateP", "Mixed"]
+- ["So20UIScrollViewDelegateP", "NSSet"]
+- ["So20UIScrollViewDelegateP", ""]
+- !private ["So20UIScrollViewDelegateP", "black"]
+- !private ["So20UIScrollViewDelegateP", "challenger"]
+- !private ["So20UIScrollViewDelegateP", "didReceiveMemoryWarning"]
+- !private ["So20UIScrollViewDelegateP", "green"]
+- !private ["So20UIScrollViewDelegateP", "hideOld"]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "loaded"]
+- !private ["So20UIScrollViewDelegateP", "misc"]
+- !private ["So20UIScrollViewDelegateP", "prepopulateSettings"]
+- !private ["So20UIScrollViewDelegateP", "settingsToExclude"]
+- !private ["So20UIScrollViewDelegateP", "sm"]
+- !private ["So20UIScrollViewDelegateP", "swedishBeachTour"]
+- !private ["So20UIScrollViewDelegateP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "Mixed"]
+- ["So16UIStateRestoringP", "NSSet"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "black"]
+- !private ["So16UIStateRestoringP", "challenger"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "green"]
+- !private ["So16UIStateRestoringP", "hideOld"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "loaded"]
+- !private ["So16UIStateRestoringP", "misc"]
+- !private ["So16UIStateRestoringP", "prepopulateSettings"]
+- !private ["So16UIStateRestoringP", "settingsToExclude"]
+- !private ["So16UIStateRestoringP", "sm"]
+- !private ["So16UIStateRestoringP", "swedishBeachTour"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So8UISwitchC", "isOn"]
+- ["So21UITableViewControllerC", "Bool"]
+- ["So21UITableViewControllerC", "Mixed"]
+- ["So21UITableViewControllerC", "NSSet"]
+- ["So21UITableViewControllerC", "UISwitch"]
+- ["So21UITableViewControllerC", ""]
+- ["So21UITableViewControllerC", "addSettings"]
+- ["So21UITableViewControllerC", "black"]
+- ["So21UITableViewControllerC", "challenger"]
+- ["So21UITableViewControllerC", "didReceiveMemoryWarning"]
+- ["So21UITableViewControllerC", "green"]
+- ["So21UITableViewControllerC", "hideOld"]
+- ["So21UITableViewControllerC", "init"]
+- !private ["So21UITableViewControllerC", "init"]
+- ["So21UITableViewControllerC", "loaded"]
+- ["So21UITableViewControllerC", "misc"]
+- ["So21UITableViewControllerC", "prepopulateSettings"]
+- ["So21UITableViewControllerC", "settingsToExclude"]
+- ["So21UITableViewControllerC", "sm"]
+- ["So21UITableViewControllerC", "swedishBeachTour"]
+- ["So21UITableViewControllerC", "viewDidLoad"]
+- !private ["So21UITableViewDataSourceP", "Mixed"]
+- ["So21UITableViewDataSourceP", "NSSet"]
+- ["So21UITableViewDataSourceP", ""]
+- !private ["So21UITableViewDataSourceP", "black"]
+- !private ["So21UITableViewDataSourceP", "challenger"]
+- !private ["So21UITableViewDataSourceP", "didReceiveMemoryWarning"]
+- !private ["So21UITableViewDataSourceP", "green"]
+- !private ["So21UITableViewDataSourceP", "hideOld"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "loaded"]
+- !private ["So21UITableViewDataSourceP", "misc"]
+- !private ["So21UITableViewDataSourceP", "prepopulateSettings"]
+- !private ["So21UITableViewDataSourceP", "settingsToExclude"]
+- !private ["So21UITableViewDataSourceP", "sm"]
+- !private ["So21UITableViewDataSourceP", "swedishBeachTour"]
+- !private ["So21UITableViewDataSourceP", "viewDidLoad"]
+- !private ["So19UITableViewDelegateP", "Mixed"]
+- ["So19UITableViewDelegateP", "NSSet"]
+- ["So19UITableViewDelegateP", ""]
+- !private ["So19UITableViewDelegateP", "black"]
+- !private ["So19UITableViewDelegateP", "challenger"]
+- !private ["So19UITableViewDelegateP", "didReceiveMemoryWarning"]
+- !private ["So19UITableViewDelegateP", "green"]
+- !private ["So19UITableViewDelegateP", "hideOld"]
+- !private ["So19UITableViewDelegateP", "init"]
+- !private ["So19UITableViewDelegateP", "init"]
+- !private ["So19UITableViewDelegateP", "loaded"]
+- !private ["So19UITableViewDelegateP", "misc"]
+- !private ["So19UITableViewDelegateP", "prepopulateSettings"]
+- !private ["So19UITableViewDelegateP", "settingsToExclude"]
+- !private ["So19UITableViewDelegateP", "sm"]
+- !private ["So19UITableViewDelegateP", "swedishBeachTour"]
+- !private ["So19UITableViewDelegateP", "viewDidLoad"]
+- !private ["So18UITraitEnvironmentP", "Mixed"]
+- ["So18UITraitEnvironmentP", "NSSet"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "black"]
+- !private ["So18UITraitEnvironmentP", "challenger"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "green"]
+- !private ["So18UITraitEnvironmentP", "hideOld"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "isOn"]
+- !private ["So18UITraitEnvironmentP", "loaded"]
+- !private ["So18UITraitEnvironmentP", "misc"]
+- !private ["So18UITraitEnvironmentP", "prepopulateSettings"]
+- !private ["So18UITraitEnvironmentP", "settingsToExclude"]
+- !private ["So18UITraitEnvironmentP", "sm"]
+- !private ["So18UITraitEnvironmentP", "swedishBeachTour"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "Mixed"]
+- ["So23UIUserActivityRestoringP", "NSSet"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "black"]
+- !private ["So23UIUserActivityRestoringP", "challenger"]
+- !private ["So23UIUserActivityRestoringP", "didReceiveMemoryWarning"]
+- !private ["So23UIUserActivityRestoringP", "green"]
+- !private ["So23UIUserActivityRestoringP", "hideOld"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isOn"]
+- !private ["So23UIUserActivityRestoringP", "loaded"]
+- !private ["So23UIUserActivityRestoringP", "misc"]
+- !private ["So23UIUserActivityRestoringP", "prepopulateSettings"]
+- !private ["So23UIUserActivityRestoringP", "settingsToExclude"]
+- !private ["So23UIUserActivityRestoringP", "sm"]
+- !private ["So23UIUserActivityRestoringP", "swedishBeachTour"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "isOn"]
+- ["So16UIViewControllerC", "Bool"]
+- ["So16UIViewControllerC", "Mixed"]
+- ["So16UIViewControllerC", "NSSet"]
+- ["So16UIViewControllerC", "UISwitch"]
+- ["So16UIViewControllerC", "addSettings"]
+- ["So16UIViewControllerC", "black"]
+- ["So16UIViewControllerC", "challenger"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "green"]
+- ["So16UIViewControllerC", "hideOld"]
+- ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "loaded"]
+- ["So16UIViewControllerC", "misc"]
+- ["So16UIViewControllerC", "prepopulateSettings"]
+- ["So16UIViewControllerC", "settingsToExclude"]
+- ["So16UIViewControllerC", "sm"]
+- ["So16UIViewControllerC", "swedishBeachTour"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isOn"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Mixed"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSSet"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "challenger"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contains"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "green"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hideOld"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isOn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "loaded"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "misc"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "prepopulateSettings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsToExclude"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sm"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "swedishBeachTour"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isOn"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "SK"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "20Beachvolleytavlingar28FilterSettingsViewControllerC"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- "So17NSFastEnumerationP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- "So5NSSetC"
+- !private "Sq"
+- !private "Sm"
+- "ST"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So20UIScrollViewDelegateP"
+- "So16UIStateRestoringP"
+- !private "So8UISwitchC"
+- "So21UITableViewControllerC"
+- "So21UITableViewDataSourceP"
+- "So19UITableViewDelegateP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/TFHpple.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/SandSports-Bridging-Header.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/SWRevealViewController/SWRevealViewController.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/TFHppleElement.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/carlkenne/Development/beachvolleytavlingar/TFHpple/XPathQuery.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/libxml2/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/carlkenne/Development/beachvolleytavlingar/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "86f65cf521b3677b5bd509fc207c2ef3"

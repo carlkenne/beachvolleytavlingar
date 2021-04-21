@@ -12,14 +12,14 @@ class PlayerRankingsDownloader {
     func downloadHTML(_ type:String, callback:@escaping ([PlayerRanking]) -> Void) {
         //renew the session
         
-        HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/index.php") {
-            (data) -> Void in
+        HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/index.php") {
+            (data, args)  -> Void in
             sleep(1)
             
-            HttpDownloader().httpGetOld("https://www.profixio.com/fx/ranking_beach/visrank.php?k="+type) {
+            HttpDownloader().httpGet("https://www.profixio.com/fx/ranking_beach/visrank.php?k="+type) {
                 (data, error) -> Void in
                 if error != nil {
-                    print(error)
+                    print(error!)
                 } else {
                     let results = self.parseHTML(data!)
                     callback( results )
@@ -81,7 +81,7 @@ class PlayerRankingsDownloader {
         str = str.replacingOccurrences(of: ", '', event)", with: "")
         str = str.replacingOccurrences(of: "'", with: "")
         str = str.replacingOccurrences(of: " ", with: "")
-        var both = str.characters.split {$0 == ","}.map { String($0) }
+        var both = str.split {$0 == ","}.map { String($0) }
         return "rand=0.7901839658152312&spid=\(both[0])&klasse=\(both[1])&tp="
     }
 }

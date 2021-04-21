@@ -34,7 +34,7 @@ class WeatherHelper {
        
     }
     
-    func getWeatherEmoji(symbolID : Int) -> String {
+    func getWeatherEmoji(symbolID : Int?) -> String {
         switch symbolID {
         case 1:
             return "☀️"
@@ -73,18 +73,20 @@ class WeatherHelper {
                 let postTime = post["validTime"] as! String
                 if postTime == dateString {
                     if let parameters = post["parameters"] as? [[String : Any]] {
-                        
+                        print("enter loop")
                         let tempDict = parameters[1] as [String : Any]
-                        let tempValue = tempDict["values"] as! [Float]
+                        print(tempDict)
+                        let tempValue = tempDict["values"] as! [NSNumber]
                         let temp = tempValue[0]
                         
                         let windDict = parameters[4] as [String : Any]
-                        let windValue = windDict["values"] as! [Float]
+                        print(windDict)
+                        let windValue = windDict["values"] as! [NSNumber]
                         let wind = windValue[0]
                         
                         let symbDict = parameters[18] as [String : Any]
-                        let symbValue = symbDict["values"] as! [Float]
-                        let symbol = Int(symbValue[0])
+                        let symbValue = symbDict["values"] as! [NSNumber]
+                        let symbol = Int(exactly: symbValue[0])
                         
                         let resultString = "Väder kl. 12: \(self.getWeatherEmoji(symbolID: symbol))\(temp) ºC, vind: \(wind) m/s"
                         

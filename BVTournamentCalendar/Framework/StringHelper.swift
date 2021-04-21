@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: i)]
+        return self[self.index(self.startIndex, offsetBy: i)]
     }
     
     subscript (i: Int) -> String {
@@ -19,7 +19,7 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substring(with: Range(characters.index(startIndex, offsetBy: r.lowerBound) ..< characters.index(startIndex, offsetBy: r.upperBound)))
+        return substring(with: index(startIndex, offsetBy: r.lowerBound) ..< index(startIndex, offsetBy: r.upperBound))
     }
     
 
@@ -54,16 +54,24 @@ extension String {
         return result
     }
     
-    init(htmlEncodedString: String) {
-            let encodedData = htmlEncodedString.data(using: String.Encoding.unicode)!
-            let attributedOptions = [String: AnyObject]()
-            let attributedString = try! NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
-            self.init(attributedString.string)!
+    func getStringAfter(_ start: String, startAt: String?="") -> String{
+        //print("getStringBetween: '\(start)' '\(end)' ")
+        let theStartIndex = self.range(of: startAt!)
+        var theString = self;
+        if(theStartIndex != nil) {
+            theString = self.substring(from: (theStartIndex?.upperBound)!)
+        }
+        
+        let startIndex = theString.range(of: start)
+        if(startIndex == nil) {
+            return ""
+        }
+        //print("start: \(startIndex)")
+        return theString.substring(from: (startIndex?.upperBound)!)
     }
-  
 
     func replaceOccurancesUTF16(_ utf16Nbr: Int, with: Character) -> String {
-        var chars = Array(self.characters)
+        var chars = Array(self)
         var utf16arr = Array(self.utf16)
         for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {
@@ -75,7 +83,7 @@ extension String {
     }
     
     func removeOccurancesUTF16(_ utf16Nbr: Int) -> String {
-        var chars = Array(self.characters)
+        var chars = Array(self)
         var utf16arr = Array(self.utf16)
         for row in 0 ..< utf16arr.count  {
             if(Int(utf16arr[row]) == utf16Nbr) {
@@ -85,4 +93,9 @@ extension String {
         }
         return String(chars)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToNSAttributedStringDocumentReadingOptionKeyDictionary(_ input: [String: Any]) -> [NSAttributedString.DocumentReadingOptionKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.DocumentReadingOptionKey(rawValue: key), value)})
 }

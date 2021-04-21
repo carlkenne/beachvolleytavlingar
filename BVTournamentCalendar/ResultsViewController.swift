@@ -22,10 +22,10 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
     
     func webView(_ webView: UIWebView,
                  shouldStartLoadWith request: URLRequest,
-                                            navigationType: UIWebViewNavigationType) -> Bool {
+                                            navigationType: UIWebView.NavigationType) -> Bool {
         
-        if (navigationType == UIWebViewNavigationType.linkClicked){
-            UIApplication.shared.openURL(request.url!)
+        if (navigationType == UIWebView.NavigationType.linkClicked){
+            UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
             return false
         }
         return true
@@ -59,11 +59,10 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
             print("zzzzzzzzzzzzz")
             print(res.HTML)
             print("zzzzzzzzzzzzz")
-            let link:String = appDelegate.selectedTournamentDetail!.resultatLink
-            let table = res.HTML
+            let link:String = appDelegate.selectedTournamentDetail!.resultatLinkNew
+            let liveLink:String = appDelegate.selectedTournamentDetail!.liveResultatLink
+            var table = res.HTML
                 .replacingOccurrences(of: " / ", with:"<br/>")
-                //.stringByReplacingOccurrencesOfString("&nbsp;&nbsp;", withString:"")
-                //.stringByReplacingOccurrencesOfString("&nbsp; &nbsp;", withString:"")
                 .replacingOccurrences(of: "        </td>", with:" </td>")
                 .replacingOccurrences(of: "<td/>", with:"")
                 .replacingOccurrences(of: "<td> - </td>", with:"")
@@ -97,7 +96,6 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
                 .replacingOccurrences(of: "e-", with:"e&#8209;")
                 .replacingOccurrences(of: ", ", with:",&nbsp;")
                 .replacingOccurrences(of: "colspan=\"3\"", with:"")
-               // .stringByReplacingOccurrencesOfString("text-decoration:none", withString:"white-space:nowrap; width:0%; display:none;")
                 .replacingOccurrences(of: "<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass D&nbsp;-&nbsp;Damer </span> <br/></td></tr>", with:"")
                  .replacingOccurrences(of: "<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass H&nbsp;-&nbsp;Herrar </span> <br/></td></tr>", with:"")
                 .replacingOccurrences(of: "<tr><td colspan=\"9\"><span class=\"os_klasse\">Klass M&nbsp;-&nbsp;Mixed </span> <br/></td></tr>", with:"")
@@ -126,8 +124,16 @@ class ResultsViewController: UIViewController, UIWebViewDelegate
                 .replacingOccurrences(of: "Sextondel", with:"16-del")
             //print(table)
             
-            var aLink = "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 20px; text-decoration: none;\">Till resultatsidan (Safari) &gt;</a>"
-            if(!res.hasResults){
+            var aLink = "<a href=\"\(liveLink)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 18px; text-decoration: none;\">Liverapportering av resultat (Safari) &gt;</a>" +
+                "<br/><br/>" +
+                "<a href=\"\(link)\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 18px; text-decoration: none;\">Se resultat (Safari) &gt;</a>"
+            
+            if(appDelegate.selectedTournament!.name.contains("Swedish Beach Tour")) {
+                aLink = "<a href=\"http://www.swedishbeachtour.se/resultat-2018\" style=\"!important; padding-bottom:10px; font-family:helvetica; font-size: 18px; text-decoration: none;\">Till Swedishbeachtour.se (Safari) &gt;</a>"
+            }
+            
+            if(!res.hasResults && link == ""){
+                table = "<br/>Resultat ej tillgängligt "
                 aLink = ""
             }
             

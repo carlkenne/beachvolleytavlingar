@@ -11,6 +11,8 @@ import Foundation
 struct TournamentDetail{
     let arena: Arena
     let resultatLink: String
+    let resultatLinkNew: String
+    let liveResultatLink: String
     let registrationLink: String
     let link: String //link to the tournament detail page should always be the same as tournament.link
     let table: String
@@ -18,4 +20,5 @@ struct TournamentDetail{
     let fromHour: String
     let toHour: String
     let maxNoOfParticipants: Int
+    let id: String
 }

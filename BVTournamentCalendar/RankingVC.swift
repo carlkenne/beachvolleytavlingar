@@ -66,16 +66,16 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (self.searchController.isActive)
+        if (self.searchController.isActive && searchController.searchBar.text! != "")
         {
-            let cell = table.dequeueReusableCell(withIdentifier: "SearchResult") as UITableViewCell!
+            let cell = table.dequeueReusableCell(withIdentifier: "SearchResult")
             let data = self.searchData[indexPath.row]
             let rank = (sortBy.selectedSegmentIndex == 0) ? data.rankByPoints : data.rankByEntryPoints
             cell?.detailTextLabel!.text = "Rankingpoäng: \(data.points), Entry points: \(data.entryPoints)"
             cell?.textLabel?.text = "\(rank) - " + data.name
             return cell!
         } else {
-            let cell = table.dequeueReusableCell(withIdentifier: "PlayerRanking") as UITableViewCell!
+            let cell = table.dequeueReusableCell(withIdentifier: "PlayerRanking")
             let data = self.rawDownloadedData[indexPath.row]
             var rank = data.rankByPoints
             if(sortBy.selectedSegmentIndex == 0) {
@@ -91,7 +91,7 @@ class RankingVC : UIViewController, UITableViewDataSource, UISearchResultsUpdati
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (self.searchController.isActive) {
+        if (self.searchController.isActive && searchController.searchBar.text! != "") {
             return 55
         } else {
             return 33
@@ -128,10 +128,14 @@ extension RankingVC
 {
     func updateSearchResults(for searchController: UISearchController)
     {
-        self.searchData = self.rawDownloadedData.filter({(player:PlayerRanking) -> Bool in
-            let stringMatch = player.name.lowercased().range(of: searchController.searchBar.text!.lowercased())
-            return stringMatch != nil
-        })
+        if(searchController.searchBar.text! == "") {
+            self.searchData = self.rawDownloadedData
+        } else {
+            self.searchData = self.rawDownloadedData.filter({(player:PlayerRanking) -> Bool in
+                let stringMatch = player.name.lowercased().range(of: searchController.searchBar.text!.lowercased())
+                return stringMatch != nil
+            })
+        }
     }
 }
 
